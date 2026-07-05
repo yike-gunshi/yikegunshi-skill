@@ -10,6 +10,8 @@ Practical, production-tested skills for content workflows, product analysis, and
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
+**English** · [简体中文](./README.zh-CN.md)
+
 </div>
 
 ---
