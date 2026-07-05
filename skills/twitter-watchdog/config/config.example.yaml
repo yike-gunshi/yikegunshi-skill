@@ -1,0 +1,139 @@
+# Twitter Watchdog 配置示例
+# 复制为 config.yaml 后填入你自己的凭证：cp config.example.yaml config.yaml
+# 架构：X 官方 API 获取关注列表 + twitterapi.io 抓取推文
+
+# X 官方 API 凭证（仅用于获取关注列表，免费）
+twitter_api:
+  consumer_key: "YOUR_X_CONSUMER_KEY"
+  consumer_secret: "YOUR_X_CONSUMER_SECRET"
+
+# twitterapi.io 凭证（用于抓取推文，$0.15/1k tweets）
+twitterapi_io:
+  api_key: "YOUR_TWITTERAPI_IO_KEY"
+
+# Twitter 账户设置
+twitter:
+  username: "your_twitter_username"  # 你的 Twitter 用户名（不带 @）
+  tweets_per_user: 20                # 每个用户最多保留的推文数量
+  exclude_replies: true              # 排除回复
+  exclude_retweets: true             # 排除转推
+  custom_accounts: []                # 额外关注的账号（不在关注列表中也能抓取）
+  # custom_accounts:
+  #   - "AnthropicAI"
+  #   - "OpenAI"
+  #   - "GoogleDeepMind"
+
+# 输出设置
+output:
+  directory: "./output"              # 输出目录（累积历史数据）
+  formats: ["markdown", "json"]      # 输出格式
+  create_summary: true               # 创建汇总报告
+
+# 内容过滤（AI 相关关键词）
+filters:
+  enabled: true
+  keywords:
+    include:
+      # 通用 AI 关键词
+      - "AI"
+      - "artificial intelligence"
+      - "machine learning"
+      - "deep learning"
+      - "neural network"
+      - "LLM"
+      - "GPT"
+      - "ChatGPT"
+      - "Claude"
+      - "Gemini"
+      - "AGI"
+      - "ASI"
+      # 模型与公司
+      - "OpenAI"
+      - "Anthropic"
+      - "DeepMind"
+      - "DeepSeek"
+      - "Midjourney"
+      - "Stable Diffusion"
+      - "Llama"
+      - "Mistral"
+      - "Grok"
+      - "Copilot"
+      - "Sora"
+      - "DALL-E"
+      # 技术概念
+      - "transformer"
+      - "diffusion model"
+      - "fine-tuning"
+      - "RLHF"
+      - "RAG"
+      - "embedding"
+      - "prompt engineering"
+      - "AI agent"
+      - "multimodal"
+      - "computer vision"
+      - "NLP"
+      - "generative AI"
+      - "foundation model"
+      # 中文关键词
+      - "人工智能"
+      - "大模型"
+      - "大语言模型"
+      - "机器学习"
+      - "深度学习"
+    exclude: ["spam", "advertisement", "crypto airdrop"]
+  min_likes: 0
+  min_retweets: 0
+  language: "all"
+
+# AI 智能总结（Claude API）
+ai_summary:
+  enabled: true
+  ai_filter: true                     # 由 Claude 判断推文是否与 AI 相关（替代关键词匹配）
+  style: "standard"                   # 报告风格: concise(一句话) / standard(默认) / advanced(含分析)
+  custom_prompt: ""                   # 自定义指令（追加到 AI prompt 末尾）
+  base_url: ""                        # API 地址（留空则用官方 api.anthropic.com）
+  api_key: "YOUR_ANTHROPIC_API_KEY"
+  model: "claude-sonnet-4-5-20250929" # 模型选择
+  max_tokens: 4096                    # 最大输出 token 数
+
+# 全网热门 AI 搜索（twitterapi.io Advanced Search）
+trending_search:
+  enabled: true
+  queries:   # 多组查询（每组独立搜索，合并去重）
+    - "(AI OR artificial intelligence OR AGI OR ASI) min_faves:100 -is:retweet -is:reply"
+    - "(LLM OR GPT OR ChatGPT OR Claude OR Gemini OR DeepSeek OR Grok) min_faves:100 -is:retweet -is:reply"
+    - "(OpenAI OR Anthropic OR DeepMind OR Mistral) min_faves:100 -is:retweet -is:reply"
+    - "(AI agent OR MCP OR cursor OR copilot OR \"vibe coding\") min_faves:50 -is:retweet -is:reply"
+    - "(transformer OR diffusion OR fine-tuning OR RAG OR prompt engineering) min_faves:50 -is:retweet -is:reply"
+    - "(大模型 OR 人工智能 OR 机器学习 OR 深度学习) min_faves:30 -is:retweet -is:reply"
+  min_views: 1000                    # 最少浏览量
+  max_tweets: 50                     # 最多返回条数
+
+# 推送设置（Telegram Bot）
+push:
+  enabled: false                      # 是否启用推送
+  telegram:
+    bot_token: "YOUR_TELEGRAM_BOT_TOKEN"
+    chat_id: ""                       # 你的 chat id
+    proxy: ""                         # 代理地址（如 http://127.0.0.1:7897）
+
+# 通知设置
+notifications:
+  enabled: true
+  on_new_tweets: true
+  on_keywords_matched: true
+  sound: "Glass"
+  threshold: 1
+
+# 调度设置
+schedule:
+  interval_hours: 1
+
+# 高级设置
+advanced:
+  max_followings: 0                  # 0 表示不限制
+  followings_cache_hours: 24         # 关注列表缓存时长（小时）
+  timeout_seconds: 30
+  retry_attempts: 3
+  deduplicate: true
+  state_file: ".twitter_watchdog_state.json"

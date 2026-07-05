@@ -1,0 +1,219 @@
+/* 墨竹清韵 (Ink Bamboo) — 中国风水墨绿，古雅端庄 */
+
+#wenyan {
+  font-family: "PingFang SC", -apple-system, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333333;
+  letter-spacing: 0.8px;
+  padding: 10px 0;
+}
+
+#wenyan h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e2c;
+  margin: 30px 0 24px;
+  padding-bottom: 12px;
+  letter-spacing: 3px;
+}
+
+#wenyan h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #5b8c5a;
+  margin: 12px auto 0;
+}
+
+#wenyan h2 {
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #2c3e2c;
+  margin: 32px 0 16px;
+  padding: 0 0 10px 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+#wenyan h2::before {
+  content: "◆";
+  color: #5b8c5a;
+  margin-right: 8px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+#wenyan h2::after {
+  content: "◆";
+  color: #5b8c5a;
+  margin-left: 8px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+#wenyan h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #3d5c3d;
+  margin: 24px 0 12px;
+  padding-left: 14px;
+  border-left: 3px solid #5b8c5a;
+}
+
+#wenyan h4 {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #4a6b4a;
+  margin: 20px 0 10px;
+}
+
+#wenyan p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333333;
+  margin: 10px 0;
+  text-align: left;
+}
+
+#wenyan p strong {
+  color: #2c3e2c;
+  font-weight: 700;
+  border-bottom: 2px solid #a8d5a2;
+  padding-bottom: 1px;
+}
+
+#wenyan p em {
+  font-style: italic;
+  color: #7a9a7a;
+}
+
+#wenyan blockquote {
+  background: #f6f9f4;
+  border-left: 3px solid #5b8c5a;
+  padding: 16px 20px;
+  margin: 18px 0;
+}
+
+#wenyan blockquote::before {
+  content: "「";
+  font-size: 28px;
+  color: #5b8c5a;
+  opacity: 0.4;
+  display: block;
+  height: 24px;
+  line-height: 24px;
+}
+
+#wenyan blockquote p {
+  color: #4a5c4a;
+  font-size: 14.5px;
+  line-height: 1.8;
+  margin: 4px 0;
+}
+
+#wenyan a {
+  color: #5b8c5a;
+  text-decoration: none;
+  border-bottom: 1px solid #a8d5a2;
+}
+
+#wenyan img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 14px auto;
+  display: block;
+  border: 1px solid #e8f0e6;
+}
+
+#wenyan ul, #wenyan ol {
+  padding-left: 24px;
+  margin: 10px 0;
+}
+
+#wenyan li {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #333333;
+  margin: 4px 0;
+}
+
+#wenyan p code {
+  background: #eef5ec;
+  color: #3d5c3d;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+#wenyan pre {
+  background: #1e2a1e;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 16px 0;
+  overflow-x: auto;
+}
+
+#wenyan pre code {
+  color: #c5d9c4;
+  font-size: 13px;
+}
+
+#wenyan table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+#wenyan table th {
+  background: #5b8c5a;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+#wenyan table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #d4e5d2;
+  font-size: 14px;
+  color: #333;
+}
+
+#wenyan table tr:nth-child(even) td {
+  background: #f6f9f4;
+}
+
+#wenyan hr {
+  border: none;
+  height: 1px;
+  background: #5b8c5a;
+  margin: 28px 20%;
+  opacity: 0.4;
+}
+
+#wenyan .footnote {
+  color: #5b8c5a;
+  font-size: 12px;
+  vertical-align: super;
+}
+
+#wenyan #footnotes p {
+  display: flex;
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+#wenyan .footnote-num {
+  display: inline;
+  width: 10%;
+}
+
+#wenyan .footnote-txt {
+  display: inline;
+  width: 90%;
+  word-wrap: break-word;
+}

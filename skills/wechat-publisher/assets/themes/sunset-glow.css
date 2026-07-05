@@ -1,0 +1,168 @@
+/* 落日晚霞主题 - Sunset Glow (v3 简洁版) */
+
+#wenyan {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  color: #3f3f3f;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* 标题 - 全部黑色，靠字号区分层级 */
+#wenyan h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 2em 0 1em;
+  padding-bottom: 8px;
+}
+
+#wenyan h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 2.5em 0 0.8em;
+  padding-left: 12px;
+  border-left: 4px solid #e67e22;
+  border-bottom: none;
+}
+
+#wenyan h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 2em 0 0.6em;
+}
+
+/* 段落 - 段间距大 */
+#wenyan p {
+  margin: 22px 0;
+  line-height: 1.85;
+}
+
+/* 强调 */
+#wenyan strong {
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+/* 斜体 - 图片注释，居中，正文色 */
+#wenyan em {
+  color: #999;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  margin: 4px 0 16px;
+}
+
+/* 链接 - 不加下划线角标 */
+#wenyan a {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* 引用块 - 简洁无高亮 */
+#wenyan blockquote {
+  border-left: 4px solid #e0e0e0;
+  background: transparent;
+  padding: 8px 16px;
+  margin: 16px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* 列表 */
+#wenyan ul, #wenyan ol {
+  padding-left: 24px;
+  margin: 14px 0;
+}
+
+#wenyan li {
+  margin: 8px 0;
+  line-height: 1.75;
+}
+
+/* 代码块 - 限制高度 */
+#wenyan pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+
+/* 行内代码 - 无背景 */
+#wenyan p code, #wenyan li code {
+  background: transparent;
+  color: #3f3f3f;
+  padding: 0 2px;
+  font-size: 1em;
+  font-family: Menlo, Monaco, Consolas, monospace;
+}
+
+/* 表格 - 简洁 + 左右滑动 */
+#wenyan .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+}
+
+#wenyan table {
+  border-collapse: collapse;
+  width: max-content;
+  min-width: 100%;
+  margin: 16px 0;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+#wenyan table th {
+  background: #f5f5f5;
+  color: #1a1a1a;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+#wenyan table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 14px;
+  color: #3f3f3f;
+}
+
+#wenyan table tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* 分割线 - 橙色渐变 */
+#wenyan hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e67e22, #f39c12, transparent);
+  margin: 2em 0;
+}
+
+/* 图片 - 圆角居中 */
+#wenyan img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 12px auto;
+  display: block;
+}
+
+/* 去掉脚注/引用角标 */
+#wenyan .footnote,
+#wenyan sup,
+#wenyan #footnotes {
+  display: none;
+}

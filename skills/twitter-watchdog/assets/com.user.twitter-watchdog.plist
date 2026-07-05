@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 任务标识 -->
+    <key>Label</key>
+    <string>com.user.twitter-watchdog</string>
+
+    <!-- 要运行的程序 -->
+    <key>ProgramArguments</key>
+    <array>
+        <string><SKILL_DIR>/venv/bin/python3</string>
+        <string><SKILL_DIR>/scripts/twitter_watchdog.py</string>
+    </array>
+
+    <!-- 运行间隔（秒）- 默认每小时运行一次 -->
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <!-- 工作目录 -->
+    <key>WorkingDirectory</key>
+    <string><HOME></string>
+
+    <!-- 环境变量 -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PYTHONPATH</key>
+        <string><SKILL_DIR>/scripts</string>
+    </dict>
+
+    <!-- 标准输出和错误输出 -->
+    <key>StandardOutPath</key>
+    <string>/tmp/twitter_watchdog.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/twitter_watchdog_errors.log</string>
+
+    <!-- 在后台运行 -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- 保持进程运行 -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <!-- 仅在有网络连接时运行 -->
+    <key>NetworkState</key>
+    <true/>
+</dict>
+</plist>
