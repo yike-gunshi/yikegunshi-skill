@@ -6,7 +6,7 @@
 
 Practical, production-tested skills for content workflows, product analysis, and knowledge management — built and maintained by [@yike-gunshi](https://github.com/yike-gunshi).
 
-![Skills](https://img.shields.io/badge/skills-6-blue)
+![Skills](https://img.shields.io/badge/skills-7-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -32,6 +32,7 @@ This repository is where I keep my own reusable skills under version control, so
 | **[work-logger](./skills/work-logger/)** | Summarize the current session's work into a dated Markdown work log. | `记录工作`, `/work-log` |
 | **[twitter-watchdog](./skills/twitter-watchdog/)** | Monitor Twitter/X for AI news via a three-layer scrape → analyze → report pipeline; generates daily/weekly/monthly digests. | `抓取AI推文`, `AI日报` |
 | **[wechat-publisher](./skills/wechat-publisher/)** | Publish a Markdown article to a WeChat Official Account draft: image compression → OSS upload → theming → draft box. | `发布微信`, `/wechat` |
+| **[prompt-craft](./skills/prompt-craft/)** | Write, revise, and review any LLM prompt: clarify requirements → draft against a 9-module architecture → adversarial review. Produces production-grade prompts that are verifiable, regression-testable, and injection-resistant (distilled from a survey of 14 external frameworks). | `写prompt`, `优化prompt`, `评审prompt` |
 
 ## Installation
 
@@ -70,6 +71,7 @@ yikegunshi-skill/
 │   ├── lark-export/
 │   ├── prd-analyzer/
 │   ├── project-learner/
+│   ├── prompt-craft/
 │   ├── twitter-watchdog/
 │   ├── wechat-publisher/
 │   └── work-logger/
