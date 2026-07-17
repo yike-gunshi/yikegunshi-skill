@@ -36,18 +36,24 @@
 
 ## 安装
 
-克隆仓库，把想用的 skill 链接到代理的 skills 目录（Claude Code 为 `~/.claude/skills/`）：
+克隆仓库，用 `install.sh` 以 symlink 方式安装（不要手动 cp——复制副本会随源仓库更新而漂移）：
 
 ```bash
 git clone https://github.com/yike-gunshi/yikegunshi-skill.git
 cd yikegunshi-skill
 
-# 链接单个 skill
-ln -s "$PWD/skills/lark-export" ~/.claude/skills/lark-export
+# 安装全部 skill 到 ~/.claude/skills
+./install.sh
 
-# 或者全部链接
-for s in skills/*/; do ln -s "$PWD/$s" ~/.claude/skills/"$(basename "$s")"; done
+# 只安装指定 skill
+./install.sh --only lark-export --only prompt-craft
+
+# 查看安装状态（含坏链检测）/ 卸载
+./install.sh --status
+./install.sh --uninstall
 ```
+
+Codex 用户加 `--target codex`（装到 `~/.agents/skills`），`--target both` 两边都装。
 
 重启代理（或开新会话），skill 会在其触发词上激活。
 
