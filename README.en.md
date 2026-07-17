@@ -36,18 +36,24 @@ This repository is where I keep my own reusable skills under version control, so
 
 ## Installation
 
-Clone the repo and link the skills you want into your agent's skills directory (`~/.claude/skills/` for Claude Code):
+Clone the repo and install via `install.sh`, which symlinks skills into your agent's skills directory (avoid manual `cp` — copies drift as the repo updates):
 
 ```bash
 git clone https://github.com/yike-gunshi/yikegunshi-skill.git
 cd yikegunshi-skill
 
-# Link a single skill
-ln -s "$PWD/skills/lark-export" ~/.claude/skills/lark-export
+# Install all skills into ~/.claude/skills
+./install.sh
 
-# …or link them all
-for s in skills/*/; do ln -s "$PWD/$s" ~/.claude/skills/"$(basename "$s")"; done
+# Install selected skills only
+./install.sh --only lark-export --only prompt-craft
+
+# Check status (detects broken links) / uninstall
+./install.sh --status
+./install.sh --uninstall
 ```
+
+Codex users: add `--target codex` (installs into `~/.agents/skills`), or `--target both`.
 
 Restart your agent (or start a new session) and the skills activate on their trigger words.
 
