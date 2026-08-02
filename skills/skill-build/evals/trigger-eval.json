@@ -1,0 +1,132 @@
+{
+  "skill_name": "skill-build",
+  "runs_per_query": 3,
+  "split": { "train": 0.6, "test": 0.4 },
+  "note": "负例全部为 near-miss：与 skill-build 共享「流程/沉淀/构建/指令」等概念，但实际该由别的 skill 或直接回答接走。",
+
+  "should_trigger": [
+    {
+      "id": "t1",
+      "query": "我每周都要把飞书上的产品需求文档整理成一份给研发看的技术评审清单，格式基本固定，来来回回做了快两个月了。这套流程能不能固化下来让 claude 每次自动照做？",
+      "why": "描述重复流程但没说 skill 三个字",
+      "split": "train"
+    },
+    {
+      "id": "t2",
+      "query": "帮我建个 skill，专门做抖音评论区总结的，要能调评论接口翻页、按热度排序，最后出四层倒金字塔的结论",
+      "why": "明说建 skill，业务场景带 tool 编排",
+      "split": "train"
+    },
+    {
+      "id": "t3",
+      "query": "我那个 xhs-note 写得太长了，SKILL.md 快 400 行，红线堆了七八条，感觉模型根本没在听。怎么整",
+      "why": "改已有 skill：控长 + 红线通胀",
+      "split": "train"
+    },
+    {
+      "id": "t4",
+      "query": "我写的这个 skill 该触发的时候老是不触发，用户问了半天它就是不出来，description 是不是得重写",
+      "why": "触发问题，description 优化",
+      "split": "train"
+    },
+    {
+      "id": "t5",
+      "query": "手上有份需求文档，做一个给策略产品用的选品复盘助手。你看这东西适合做成 skill 吗还是加个 tool 就行",
+      "why": "S0 资格判断，这正是拒绝出口的入口",
+      "split": "train"
+    },
+    {
+      "id": "t6",
+      "query": "怎么知道我这个 skill 到底有没有用啊？总不能全靠感觉吧，有没有办法量一下",
+      "why": "S4 基线对照，口语、没提任何术语",
+      "split": "train"
+    },
+    {
+      "id": "t7",
+      "query": "把我们组那套「线上告警 → 拉群 → 定位 → 写复盘」的值班流程封装一下吧，新人每次都问一遍，我讲累了",
+      "why": "重复流程 + 治理动机，没说 skill",
+      "split": "test"
+    },
+    {
+      "id": "t8",
+      "query": "帮我给 book-to-mindmap 补一套评测，要能看出来哪几条规则是真在起作用、哪几条删了也没差",
+      "why": "考点区分度审计，边缘正例",
+      "split": "test"
+    },
+    {
+      "id": "t9",
+      "query": "skill 里那些 references 和 scripts 到底该怎么分？我现在全塞 SKILL.md 里了，一千多行",
+      "why": "S2.8 上下文分层，不常见但合法的切入点",
+      "split": "test"
+    },
+    {
+      "id": "t10",
+      "query": "我这两个 skill 老互相抢活，用户问 A 的事结果 B 跳出来了。边界该怎么划",
+      "why": "路由抢活，与 prompt-craft 竞争但本 skill 该赢",
+      "split": "test"
+    }
+  ],
+
+  "should_not_trigger": [
+    {
+      "id": "n1",
+      "query": "帮我写个 prompt，让模型读一段用户评论然后判断情绪是正面还是负面，要能输出 json 给下游解析",
+      "why": "单条 LLM 指令 → prompt-craft",
+      "split": "train"
+    },
+    {
+      "id": "n2",
+      "query": "claude code 的 skill 是个什么机制？它怎么决定要不要用某个 skill 的",
+      "why": "纯讲解，直接回答即可",
+      "split": "train"
+    },
+    {
+      "id": "n3",
+      "query": "把 https://my.feishu.cn/wiki/E3pvw74DziHhDvkFJRlc8CrEnGc 这个知识库同步到本地来，图片也要",
+      "why": "共享「流程化/工具链」语境 → lark-export",
+      "split": "train"
+    },
+    {
+      "id": "n4",
+      "query": "我这段评分 prompt 老是给中间档，7 分 8 分扎堆，档位标准是不是写得不够清楚",
+      "why": "模型坏习惯 → prompt-craft，与「评测/考点」高度共享词汇",
+      "split": "train"
+    },
+    {
+      "id": "n5",
+      "query": "《认知设计》这本书帮我做成思维导图，我没读过，想靠导图学会",
+      "why": "book-to-mindmap；共享「按流程产出结构化交付物」",
+      "split": "train"
+    },
+    {
+      "id": "n6",
+      "query": "forge-bugfix 跑到 P4 就卡住了，说 worktree 建不出来，你看下咋回事",
+      "why": "forge 体系内的开发流程 → forge-*",
+      "split": "train"
+    },
+    {
+      "id": "n7",
+      "query": "把这份会议纪要整理一下，把决议和待办分开列出来",
+      "why": "一次性整理，不该建包",
+      "split": "test"
+    },
+    {
+      "id": "n8",
+      "query": "我想给团队做一套写周报的规范，大家格式太乱了。先帮我起草一版规范文档",
+      "why": "共享「把重复动作标准化」，但要的是给人读的规范文档",
+      "split": "test"
+    },
+    {
+      "id": "n9",
+      "query": "帮我写篇小红书，就发我那个刚做完的复盘工具，截图我一会儿发你",
+      "why": "xhs-note；共享「按固定流程产出」",
+      "split": "test"
+    },
+    {
+      "id": "n10",
+      "query": "agent skill 和 mcp server 有啥区别？我该用哪个",
+      "why": "概念对比，纯讲解",
+      "split": "test"
+    }
+  ]
+}
