@@ -6,9 +6,10 @@
 真源语法:
   - 节点文字                每行一个节点，2 空格缩进一层
   - 节点文字 @核心 §3.2     行尾 @ 是标记、§ 是标签（溯源章节号），可多个
-  > 解释段落                节点行后面的 > 行是 notes，空 > 行分段
+  > 解释段落                节点行后面的 > 行是 notes，点开小图标才看得到
   > - 要点                  notes 里 - 开头的行会变成列表
   > 用 **文字** 加粗
+  >> 一句关键提示            >> 是标注，气泡挂在节点旁边，不用点就能看见
   # 标题                    另起一张画布（一般不用，一本书就一张）
 
 折叠层深：该层节点默认收起子节点，打开先看骨架（根为 0，常用 2；不传则全展开）
@@ -38,6 +39,28 @@ MARKER_ALIAS = {
 
 # 技术书是层层收束的论证，逻辑图比默认的中心发散图更贴合
 STRUCTURE = "org.xmind.ui.logic.right"
+
+CALLOUT_STYLE = {
+    "callout-shape-class": "org.xmind.calloutTopicShape.balloon.roundedRect",
+    "svg:fill": "#FFF8E1",
+    "fo:font-size": "11pt",
+}
+
+# notes 的第一段会直接显示在节点里，灰色，像一条内嵌的引用，不用点开
+# 富文本样式必须用 fo: 前缀，驼峰命名（fontSize/textColor）XMind 直接忽略——实测确认
+INLINE_STYLE = {"fo:color": "#8A8A8A", "fo:font-size": "14pt"}
+INLINE_WIDTH = 300   # 限宽让长句自动折行，否则节点会被拉成一条
+
+
+def first_paragraph(lines):
+    """取 notes 的第一段（到第一个空行为止），去掉加粗记号"""
+    para = []
+    for raw in lines:
+        if not raw.strip():
+            break
+        para.append(raw.strip().lstrip("- "))
+    text = " ".join(para)
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", text)
 
 
 def parse_attrs(title):
@@ -81,7 +104,8 @@ def note_to_html(lines):
 
 
 def parse_bullets(text):
-    root = {"title": None, "children": [], "notes": [], "markers": [], "labels": []}
+    root = {"title": None, "children": [], "notes": [], "callouts": [],
+            "markers": [], "labels": []}
     stack = [(-1, root)]
     last = None
     for line in text.splitlines():
@@ -89,13 +113,17 @@ def parse_bullets(text):
         if m:
             depth = len(m.group(1)) // 2
             title, markers, labels = parse_attrs(m.group(2))
-            node = {"title": title, "children": [], "notes": [],
+            node = {"title": title, "children": [], "notes": [], "callouts": [],
                     "markers": markers, "labels": labels}
             while stack and stack[-1][0] >= depth:
                 stack.pop()
             stack[-1][1]["children"].append(node)
             stack.append((depth, node))
             last = node
+            continue
+        c = re.match(r"^\s*>>\s?(.*\S)\s*$", line)
+        if c and last is not None:
+            last["callouts"].append(c.group(1))
             continue
         n = re.match(r"^\s*>\s?(.*)$", line)
         if n and last is not None:
@@ -114,6 +142,14 @@ def to_topic(node, depth=0, fold_depth=None, warnings=None):
         plain = "\n".join(node["notes"]).strip()
         topic["notes"] = {"plain": {"content": plain},
                           "realHTML": {"content": note_to_html(node["notes"])}}
+        # 第一段同时进节点内部，灰字显示，完整版仍留在 notes 里
+        inline = first_paragraph(node["notes"])
+        if inline:
+            topic["title"] = f"{node['title']}\n{inline}"
+            topic["attributedTitle"] = [
+                {"text": node["title"]}, {"text": "\n"},
+                {"text": inline, **INLINE_STYLE}]
+            topic["customWidth"] = INLINE_WIDTH
     if node["markers"]:
         for mid in node["markers"]:
             problem = check_marker(mid)
@@ -122,11 +158,20 @@ def to_topic(node, depth=0, fold_depth=None, warnings=None):
         topic["markers"] = [{"markerId": m} for m in node["markers"]]
     if node["labels"]:
         topic["labels"] = node["labels"]
+    children = {}
     if node["children"]:
-        topic["children"] = {"attached": [
-            to_topic(c, depth + 1, fold_depth, warnings) for c in node["children"]]}
+        children["attached"] = [
+            to_topic(c, depth + 1, fold_depth, warnings) for c in node["children"]]
+    if node.get("callouts"):
+        # 标注是气泡，挂在节点旁边直接可见，不用点开
+        children["callout"] = [
+            {"id": uuid.uuid4().hex, "title": text,
+             "style": {"id": uuid.uuid4().hex, "properties": dict(CALLOUT_STYLE)}}
+            for text in node["callouts"]]
+    if children:
+        topic["children"] = children
         # 折叠只作用于节点自身，对子孙没有传染性，所以要逐个打标
-        if fold_depth is not None and depth >= fold_depth:
+        if node["children"] and fold_depth is not None and depth >= fold_depth:
             topic["branch"] = "folded"
     return topic
 
