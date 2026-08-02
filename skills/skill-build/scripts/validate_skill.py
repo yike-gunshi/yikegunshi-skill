@@ -20,7 +20,18 @@ import re
 import sys
 from pathlib import Path
 
-ALLOWED_FRONTMATTER = {"name", "description", "license", "allowed-tools", "metadata"}
+# Claude Code 官方支持的 frontmatter 字段（docs/en/skills「Frontmatter reference」），
+# 加上打包工具认的 license / metadata。字段少了会把合法 skill 误判成 FAIL。
+ALLOWED_FRONTMATTER = {
+    "name", "description", "when_to_use", "license", "metadata",
+    "argument-hint", "arguments", "disable-model-invocation", "user-invocable",
+    "allowed-tools", "disallowed-tools", "model", "effort",
+    "context", "agent", "background", "hooks", "paths", "shell",
+}
+
+# description 与 when_to_use 在 skill 列表里合并后按 1536 字符截断；
+# 打包校验另有 1024 的单字段上限，两者都要守。
+MAX_LISTING_CHARS = 1536
 
 EMPHASIS_WORDS = [
     "必须", "禁止", "严禁", "绝不", "一律", "强制", "不得", "底线",
@@ -134,6 +145,10 @@ def check_frontmatter(fm, rep):
         rep.error(f"description 过长（{len(desc)} 字符，上限 {MAX_DESCRIPTION_CHARS}）")
     else:
         rep.info(f"description {len(desc)} 字符")
+
+    listing = len(desc) + len(str(fm.get("when_to_use", "")).strip())
+    if listing > MAX_LISTING_CHARS:
+        rep.warn(f"description + when_to_use 合计 {listing} 字符，超过列表截断阈值 {MAX_LISTING_CHARS}——尾部会被截掉，把关键触发语境放前面")
 
     if not re.search(r"不处理|不接|不做|排除|交给|走 |不用于"
                      r"|Exclude|Not for|Do not use|Don't use|instead of|goes to", desc, re.I):
