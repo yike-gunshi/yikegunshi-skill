@@ -1,0 +1,80 @@
+{
+  "skill_name": "<hyphen-case-name>",
+  "runs_per_query": 3,
+  "split": { "train": 0.6, "test": 0.4 },
+  "_how_to_use": [
+    "8-10 条 should_trigger + 8-10 条 should_not_trigger。",
+    "每条要像真人打的字：有文件路径、工作背景、列名、公司名、URL、一点前情；有的小写、有缩写、有错别字、有口语；长度混搭。",
+    "聚焦边缘情况而非明确情况。",
+    "负例必须是 near-miss——和 skill 共享关键词但实际需要别的东西。明显无关的负例什么都测不出来。",
+    "query 要够有分量。一步就能干完的请求根本不会触发 skill，用它测的是模型的偷懒倾向。",
+    "造完拿给用户逐条确认再跑。烂的 query 产出烂的 description。",
+    "调 description 时只看 train 的失败案例，按 test 分数选最终版本。"
+  ],
+
+  "should_trigger": [
+    {
+      "id": "t1",
+      "query": "<正式措辞版：需求完整、约束明确的强意图 query>",
+      "why": "标准场景",
+      "split": "train"
+    },
+    {
+      "id": "t2",
+      "query": "<同一意图的口语版，带错别字和缩写>",
+      "why": "同一意图的不同措辞",
+      "split": "train"
+    },
+    {
+      "id": "t3",
+      "query": "<用户没提 skill 名、没提文件类型，但明显需要它>",
+      "why": "隐含需求",
+      "split": "train"
+    },
+    {
+      "id": "t4",
+      "query": "<不常见但合法的用法>",
+      "why": "边缘正例",
+      "split": "test"
+    },
+    {
+      "id": "t5",
+      "query": "<和隔壁 skill 竞争、但本 skill 该赢的>",
+      "why": "抢活场景，本 skill 该赢",
+      "split": "test"
+    }
+  ],
+
+  "should_not_trigger": [
+    {
+      "id": "n1",
+      "query": "<near-miss：共享核心关键词，但实际需要的是别的东西>",
+      "why": "共享关键词 <X>，实际归 <哪个 skill> 管",
+      "split": "train"
+    },
+    {
+      "id": "n2",
+      "query": "<相邻领域，朴素关键词匹配会误触发>",
+      "why": "相邻领域",
+      "split": "train"
+    },
+    {
+      "id": "n3",
+      "query": "<措辞模糊，看起来像但只是想了解/总结>",
+      "why": "讲解需求，不是建包需求",
+      "split": "train"
+    },
+    {
+      "id": "n4",
+      "query": "<隔壁 skill 的典型正例，用来测抢活>",
+      "why": "该由 <哪个 skill> 接",
+      "split": "test"
+    },
+    {
+      "id": "n5",
+      "query": "<一次性需求，直接做即可>",
+      "why": "不该建包",
+      "split": "test"
+    }
+  ]
+}

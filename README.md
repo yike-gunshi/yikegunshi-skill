@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-8-blue)
+![Skills](https://img.shields.io/badge/skills-10-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -34,6 +34,8 @@
 | **[wechat-publisher](./skills/wechat-publisher/)** | 把 Markdown 文章发布到微信公众号草稿箱：图片压缩 → OSS 上传 → 排版 → 草稿箱。 | `发布微信`、`/wechat` |
 | **[prompt-craft](./skills/prompt-craft/)** | 写、改、评审任何 LLM prompt：问清需求 → 按九模块架构撰写 → 对抗审查，产出可验收、可回归、防注入的生产级 prompt（基于 14 组外部框架调研）。 | `写prompt`、`优化prompt`、`评审prompt` |
 | **[book-to-mindmap](./skills/book-to-mindmap/)** | 把书籍、长笔记转成高信息密度的思维导图：判断式枝干 + 图面短句 + notes 长解释 + 默认折叠，产出 .xmind 与多级 bullet。 | `做成思维导图`、`转导图`、`生成xmind` |
+| **[xhs-note](./skills/xhs-note/)** | 写小红书笔记：收料 → 读范文起草 → 去 AI 味终审 → Codex 生封面 → 归档。范文优先，不编造作者没经历过的事。 | `写小红书`、`发小红书`、`/xhs-note` |
+| **[skill-build](./skills/skill-build/)** | 造 skill 的 skill：判该不该做 → 访谈收料 → 设计文档 → 完备性门禁 → 写 SKILL.md → 评测跑基线对照 → 归因迭代。自带包体检与考点区分度审计脚本。 | `做个skill`、`建个skill`、`skill不触发` |
 
 ## 安装
 
@@ -80,9 +82,11 @@ yikegunshi-skill/
 │   ├── prd-analyzer/
 │   ├── project-learner/
 │   ├── prompt-craft/
+│   ├── skill-build/
 │   ├── twitter-watchdog/
 │   ├── wechat-publisher/
-│   └── work-logger/
+│   ├── work-logger/
+│   └── xhs-note/
 ├── LICENSE
 └── README.md
 ```

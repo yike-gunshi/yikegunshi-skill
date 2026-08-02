@@ -1,6 +1,6 @@
 ---
 name: lark-export
-description: Use when mirroring a Feishu/Lark wiki (or a single Feishu doc) to local Markdown with images and attachments, including first-time pull and re-sync/update of an existing local mirror from a Feishu URL.
+description: Mirror a Feishu/Lark wiki subtree or a single Feishu doc to local Markdown, with images and attachments downloaded locally. Use whenever the user wants Feishu content available offline, in the repo, or greppable — 导出飞书文档, 同步知识库到本地, 把 wiki 拉下来, 刷新本地镜像, 备份那篇文档 — even when they never say "export" or "mirror", and even when they only paste a Feishu URL and say they want the content locally. First pull and re-sync are the same command, so updating an existing mirror also goes here. Not for reading, quoting, or summarizing one Feishu doc inside the conversation (use the feishu MCP tools directly — no local mirror needed), and not for writing or publishing back to Feishu (that goes to lark-cli docs +create/+update).
 ---
 
 # lark-export — Feishu/Lark KB → local Markdown
@@ -11,18 +11,20 @@ Mirror a Feishu/Lark wiki or document to local Markdown, with images and attachm
 
 This skill drives a patched build of **`feishu-cli`** (the [larksuite/cli](https://github.com/larksuite/cli) tool, patched so `doc export` / `wiki export` download embedded images and attachments locally instead of leaving `feishu://media/...` references) plus a batch wrapper `feishu_cli_batch_export.py` that walks a wiki tree.
 
-Set one environment variable pointing at where you built that toolchain:
+### Load the environment (do this first)
+
+Three things must be set: `FEISHU_EXPORT_HOME` (the toolchain dir containing `bin/feishu-cli`, `runtime/feishu-cli`, `scripts/`), `FEISHU_APP_ID`, and `FEISHU_APP_SECRET`.
+
+Do not go hunting for these by hand every time — the bundled script finds them:
 
 ```bash
-export FEISHU_EXPORT_HOME=/path/to/feishu-export   # contains bin/feishu-cli, runtime/feishu-cli, scripts/
+python3 scripts/feishu_env.py --check      # report what was found, secret stays masked
+eval "$(python3 scripts/feishu_env.py)"    # load them into the current shell
 ```
 
-App credentials come from the environment (never hard-code them):
+It locates the toolchain by looking for a directory containing `bin/feishu-cli`, and reads the app credentials at call time from the `feishu` MCP server entry in the nearest `.mcp.json` (searching upward from cwd, then `$HOME`). Pass `--config` / `--export-home` to override either.
 
-```bash
-export FEISHU_APP_ID=cli_xxx
-export FEISHU_APP_SECRET=xxx
-```
+Credentials are deliberately not stored in this skill — it is symlinked, packaged, and pushed to GitHub. Reading them from the MCP config at call time keeps them out of the repo. If `--check` reports a missing toolchain, build it (step 1); if it reports a missing config, set the two variables by hand.
 
 ## Sync model (read first)
 
