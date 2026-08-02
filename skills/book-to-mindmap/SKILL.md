@@ -15,6 +15,7 @@ description: 把书籍、长笔记、技术文档转成高信息密度、低阅�
 | `references/long-book.md` | 处理整本书、或原文超过五万 token 时 |
 | `references/non-narrative.md` | 原文含公式、代码、表格、图表、实验、习题时 |
 | `references/coverage-check.md` | 交付前查遗漏时 |
+| `references/xmind-style.md` | 想调 .xmind 的样式或用新字段前，先看哪些实机验证过、哪些是坑 |
 | `references/methodology.md` | 想改规则前，先看这些规则是怎么来的、哪几版被否过 |
 
 ## 一条知识分两层放
