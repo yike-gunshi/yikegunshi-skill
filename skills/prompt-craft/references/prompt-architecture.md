@@ -1,6 +1,6 @@
 # 九模块 Prompt 架构（写作用要点版）
 
-> 来源：对 14 组外部框架的调研（MT-Bench、G-Eval、Prometheus、Anthropic/OpenAI 官方指南、LangGPT、Fabric、Hamel Husain、Evidently AI、DSPy 等），完整版调研报告见飞书文档「如何写好prompt」（https://my.feishu.cn/wiki/XeSHwoFKkiGRp3kZgCCc3JEAnlb）。
+> 来源：对 14 组外部框架的调研（MT-Bench、G-Eval、Prometheus、Anthropic/OpenAI 官方指南、LangGPT、Fabric、Hamel Husain、Evidently AI、DSPy 等），完整版调研报告见作者私有知识库中的《如何写好 prompt》。
 > 本文是写作时的操作手册：每模块给出必须落实的点和自检问题。
 
 ## 模块 1｜背景与目标

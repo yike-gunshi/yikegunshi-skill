@@ -82,7 +82,7 @@
     },
     {
       "id": "n3",
-      "query": "把 https://my.feishu.cn/wiki/E3pvw74DziHhDvkFJRlc8CrEnGc 这个知识库同步到本地来，图片也要",
+      "query": "把 https://my.feishu.cn/wiki/AbCdEfGhIjKlMnOpQrStUvWxYz1 这个知识库同步到本地来，图片也要",
       "why": "共享「流程化/工具链」语境 → lark-export",
       "split": "train"
     },
