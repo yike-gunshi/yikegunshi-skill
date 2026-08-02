@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-7-blue)
+![Skills](https://img.shields.io/badge/skills-8-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -33,6 +33,7 @@
 | **[twitter-watchdog](./skills/twitter-watchdog/)** | 通过「抓取 → 分析 → 报告」三层流水线监控 Twitter/X 上的 AI 动态，生成日报/周报/月报。 | `抓取AI推文`、`AI日报` |
 | **[wechat-publisher](./skills/wechat-publisher/)** | 把 Markdown 文章发布到微信公众号草稿箱：图片压缩 → OSS 上传 → 排版 → 草稿箱。 | `发布微信`、`/wechat` |
 | **[prompt-craft](./skills/prompt-craft/)** | 写、改、评审任何 LLM prompt：问清需求 → 按九模块架构撰写 → 对抗审查，产出可验收、可回归、防注入的生产级 prompt（基于 14 组外部框架调研）。 | `写prompt`、`优化prompt`、`评审prompt` |
+| **[book-to-mindmap](./skills/book-to-mindmap/)** | 把书籍、长笔记转成高信息密度的思维导图：判断式枝干 + 图面短句 + notes 长解释 + 默认折叠，产出 .xmind 与多级 bullet。 | `做成思维导图`、`转导图`、`生成xmind` |
 
 ## 安装
 
@@ -74,6 +75,7 @@ Codex 用户加 `--target codex`（装到 `~/.agents/skills`），`--target both
 ```
 yikegunshi-skill/
 ├── skills/
+│   ├── book-to-mindmap/
 │   ├── lark-export/
 │   ├── prd-analyzer/
 │   ├── project-learner/
