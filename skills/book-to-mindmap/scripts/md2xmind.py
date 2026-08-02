@@ -40,6 +40,11 @@ MARKER_ALIAS = {
 # 技术书是层层收束的论证，逻辑图比默认的中心发散图更贴合
 STRUCTURE = "org.xmind.ui.logic.right"
 
+# 每个一级分支一个颜色。一章两百个节点时，颜色是最省力的定位手段——
+# 扫到一片蓝就知道还在同一支里，不用回头看自己从哪拐进来的
+BRANCH_COLORS = ("#2E6FD9 #E8833A #3AA76D #C0392B #7D5BA6 #1B9AAA "
+                 "#D4A017 #55606E #B5446E #4C6EF5")
+
 CALLOUT_STYLE = {
     "callout-shape-class": "org.xmind.calloutTopicShape.balloon.roundedRect",
     "svg:fill": "#FFF8E1",
@@ -50,7 +55,31 @@ CALLOUT_STYLE = {
 # 富文本样式必须用 fo: 前缀，驼峰命名（fontSize/textColor）XMind 直接忽略——实测确认
 # 只设颜色，字号和字重都不写，交给主题自动决定——主次靠颜色分就够了
 INLINE_STYLE = {"fo:color": "#8A8A8A"}
+# 真源里 **包起来** 的关键词换成这个颜色，标题和灰字里都适用
+KEYWORD_STYLE = {"fo:color": "#2E6FD9"}
 INLINE_WIDTH = 450   # 限宽让长句自动折行，否则节点会被拉成一条
+
+
+def runs(text, style=None):
+    """把 **关键词** 切成独立的富文本片段，换成强调色
+
+    不用加粗：XMind 主题里节点标题默认就是粗体，在粗句子里再加粗等于没加。
+    换色才能制造对比，且不动字重这个维度。
+    """
+    out = []
+    for part in re.split(r"(\*\*.+?\*\*)", text):
+        if not part:
+            continue
+        run = dict(style or {})
+        if part.startswith("**") and part.endswith("**"):
+            run.update(KEYWORD_STYLE)
+            part = part[2:-2]
+        out.append({"text": part, **run})
+    return out
+
+
+def plain(text):
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", text)
 
 
 def split_notes(lines):
@@ -61,8 +90,7 @@ def split_notes(lines):
             rest = lines[i + 1:]
             break
         para.append(raw.strip().lstrip("- "))
-    text = re.sub(r"\*\*(.+?)\*\*", r"\1", " ".join(para))
-    return text, [r for r in rest if r.strip()]
+    return " ".join(para), [r for r in rest if r.strip()]
 
 
 def parse_attrs(title):
@@ -137,16 +165,18 @@ def parse_bullets(text):
 
 
 def to_topic(node, depth=0, fold_depth=None, warnings=None):
-    topic = {"id": uuid.uuid4().hex, "title": node["title"]}
+    title = node["title"]
+    topic = {"id": uuid.uuid4().hex, "title": plain(title)}
+    if "**" in title:
+        topic["attributedTitle"] = runs(title)
 
     if node["notes"]:
         inline, rest = split_notes(node["notes"])
         # 第一段进节点内部灰字显示，不用点开
         if inline:
-            topic["title"] = f"{node['title']}\n{inline}"
-            topic["attributedTitle"] = [
-                {"text": node["title"]}, {"text": "\n"},
-                {"text": inline, **INLINE_STYLE}]
+            topic["title"] = f"{plain(title)}\n{plain(inline)}"
+            topic["attributedTitle"] = (
+                runs(title) + [{"text": "\n"}] + runs(inline, INLINE_STYLE))
             topic["customWidth"] = INLINE_WIDTH
         # 只有还有后续段落时才挂 notes，否则图标点开看到的是同一句话
         if rest or not inline:
@@ -210,6 +240,8 @@ def build_xmind(md_path, out_path, fold_depth=None):
             "rootTopic": root_topic,
             "extensions": [],
             "theme": {},
+            "style": {"id": uuid.uuid4().hex,
+                      "properties": {"multi-line-colors": BRANCH_COLORS}},
         })
     manifest = {"file-entries": {"content.json": {}, "metadata.json": {}}}
     metadata = {"dataStructureVersion": "2",

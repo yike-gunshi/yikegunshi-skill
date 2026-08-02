@@ -29,8 +29,9 @@ ROLE_PREFIX = ("做法：", "第")
 
 
 def strip_attrs(text):
-    """去掉行尾的 @标记 和 §标签——它们不进节点标题，不该算进长度"""
-    return re.sub(r"(\s+[@§][^\s@§]+)+$", "", text)
+    """去掉行尾的 @标记 和 §标签、以及加粗记号——它们都不占节点标题的长度"""
+    text = re.sub(r"(\s+[@§][^\s@§]+)+$", "", text)
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", text)
 
 
 def effective_len(text):
