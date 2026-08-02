@@ -28,7 +28,13 @@ SAME_STYLE_RATIO = 0.6   # 同层兄弟中句式雷同的占比超过此值即�
 ROLE_PREFIX = ("做法：", "第")
 
 
+def strip_attrs(text):
+    """去掉行尾的 @标记 和 §标签——它们不进节点标题，不该算进长度"""
+    return re.sub(r"(\s+[@§][^\s@§]+)+$", "", text)
+
+
 def effective_len(text):
+    text = strip_attrs(text)
     ascii_words = len(re.findall(r"[A-Za-z0-9_/^|.+-]+", text))
     cjk_chars = len(re.findall(r"[^\x00-\x7f]", text))
     return ascii_words + cjk_chars
