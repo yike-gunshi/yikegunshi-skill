@@ -53,15 +53,16 @@ INLINE_STYLE = {"fo:color": "#8A8A8A"}
 INLINE_WIDTH = 450   # 限宽让长句自动折行，否则节点会被拉成一条
 
 
-def first_paragraph(lines):
-    """取 notes 的第一段（到第一个空行为止），去掉加粗记号"""
-    para = []
-    for raw in lines:
+def split_notes(lines):
+    """切成 (第一段, 剩余行)。第一段进节点显示，剩余部分才需要 notes"""
+    para, rest = [], []
+    for i, raw in enumerate(lines):
         if not raw.strip():
+            rest = lines[i + 1:]
             break
         para.append(raw.strip().lstrip("- "))
-    text = " ".join(para)
-    return re.sub(r"\*\*(.+?)\*\*", r"\1", text)
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", " ".join(para))
+    return text, [r for r in rest if r.strip()]
 
 
 def parse_attrs(title):
@@ -139,18 +140,20 @@ def to_topic(node, depth=0, fold_depth=None, warnings=None):
     topic = {"id": uuid.uuid4().hex, "title": node["title"]}
 
     if node["notes"]:
-        # plain 供搜索和第三方解析器，realHTML 负责渲染；XMind 自己两个都写
-        plain = "\n".join(node["notes"]).strip()
-        topic["notes"] = {"plain": {"content": plain},
-                          "realHTML": {"content": note_to_html(node["notes"])}}
-        # 第一段同时进节点内部，灰字显示，完整版仍留在 notes 里
-        inline = first_paragraph(node["notes"])
+        inline, rest = split_notes(node["notes"])
+        # 第一段进节点内部灰字显示，不用点开
         if inline:
             topic["title"] = f"{node['title']}\n{inline}"
             topic["attributedTitle"] = [
                 {"text": node["title"]}, {"text": "\n"},
                 {"text": inline, **INLINE_STYLE}]
             topic["customWidth"] = INLINE_WIDTH
+        # 只有还有后续段落时才挂 notes，否则图标点开看到的是同一句话
+        if rest or not inline:
+            keep = rest if inline else node["notes"]
+            # plain 供搜索和第三方解析器，realHTML 负责渲染；XMind 自己两个都写
+            topic["notes"] = {"plain": {"content": "\n".join(keep).strip()},
+                              "realHTML": {"content": note_to_html(keep)}}
     if node["markers"]:
         for mid in node["markers"]:
             problem = check_marker(mid)
