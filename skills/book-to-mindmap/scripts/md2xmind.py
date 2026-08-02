@@ -48,7 +48,8 @@ CALLOUT_STYLE = {
 
 # notes 的第一段会直接显示在节点里，灰色，像一条内嵌的引用，不用点开
 # 富文本样式必须用 fo: 前缀，驼峰命名（fontSize/textColor）XMind 直接忽略——实测确认
-INLINE_STYLE = {"fo:color": "#A3A3A3", "fo:font-size": "14pt"}
+# 只设颜色，字号和字重都不写，交给主题自动决定——主次靠颜色分就够了
+INLINE_STYLE = {"fo:color": "#8A8A8A"}
 INLINE_WIDTH = 450   # 限宽让长句自动折行，否则节点会被拉成一条
 
 
