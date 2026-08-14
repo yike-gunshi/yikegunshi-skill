@@ -6,7 +6,7 @@
 
 Practical, production-tested skills for content workflows, product analysis, and knowledge management — built and maintained by [@yike-gunshi](https://github.com/yike-gunshi).
 
-![Skills](https://img.shields.io/badge/skills-10-blue)
+![Skills](https://img.shields.io/badge/skills-11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -36,6 +36,7 @@ This repository is where I keep my own reusable skills under version control, so
 | **[book-to-mindmap](./skills/book-to-mindmap/)** | Turn books and long notes into high-density mind maps: claim-bearing branches, short on-canvas judgments, long explanations in notes, collapsed by default. Outputs `.xmind` and nested bullets. | `做成思维导图`, `转导图`, `生成xmind` |
 | **[xhs-note](./skills/xhs-note/)** | Write a Xiaohongshu (RED) note: gather the author's own material → draft from published exemplars → de-AI review gate → generate a cover image with Codex → archive. Exemplar-first; never fabricates experiences the author didn't have. | `写小红书`, `发小红书`, `/xhs-note` |
 | **[skill-build](./skills/skill-build/)** | The skill that builds skills: qualify → interview → design doc → completeness gate → write SKILL.md → eval with a with/without baseline → attribute and iterate. Ships a package linter and a rubric-discrimination auditor. | `做个skill`, `建个skill`, `skill不触发` |
+| **[pm-doc-write](./skills/pm-doc-write/)** | Ghost-write PM work docs the way the user writes them: conclusion-first, table-borne, numbers with baselines, owners on every item. Nine scenario templates (weekly report, OKR, project retro, metric request, strategy iteration, eval verdict, launch review, survey report) plus universal writing constraints and a final-review checklist; outputs Feishu-ready markdown. | `写周报`, `出个文档`, `按我的风格捋一遍` |
 
 ## Installation
 
@@ -78,6 +79,7 @@ Some skills call third-party APIs and need credentials. **No secrets are committ
 yikegunshi-skill/
 ├── skills/
 │   ├── lark-export/
+│   ├── pm-doc-write/
 │   ├── prd-analyzer/
 │   ├── project-learner/
 │   ├── prompt-craft/

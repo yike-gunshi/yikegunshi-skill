@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-10-blue)
+![Skills](https://img.shields.io/badge/skills-11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -36,6 +36,7 @@
 | **[book-to-mindmap](./skills/book-to-mindmap/)** | 把书籍、长笔记转成高信息密度的思维导图：判断式枝干 + 图面短句 + notes 长解释 + 默认折叠，产出 .xmind 与多级 bullet。 | `做成思维导图`、`转导图`、`生成xmind` |
 | **[xhs-note](./skills/xhs-note/)** | 写小红书笔记：收料 → 读范文起草 → 去 AI 味终审 → Codex 生封面 → 归档。范文优先，不编造作者没经历过的事。 | `写小红书`、`发小红书`、`/xhs-note` |
 | **[skill-build](./skills/skill-build/)** | 造 skill 的 skill：判该不该做 → 访谈收料 → 设计文档 → 完备性门禁 → 写 SKILL.md → 评测跑基线对照 → 归因迭代。自带包体检与考点区分度审计脚本。 | `做个skill`、`建个skill`、`skill不触发` |
+| **[pm-doc-write](./skills/pm-doc-write/)** | 写 PM 工作文档：结论先行、表格承载、数字带基线、责任到人。覆盖周报、OKR、项目总结、指标需求、策略迭代说明、评测结论、LR 评审、调研报告 9 类场景模板 + 通用写法约束与终审清单，产出飞书就绪 markdown。 | `写周报`、`出个文档`、`按我的风格捋一遍` |
 
 ## 安装
 
@@ -79,6 +80,7 @@ yikegunshi-skill/
 ├── skills/
 │   ├── book-to-mindmap/
 │   ├── lark-export/
+│   ├── pm-doc-write/
 │   ├── prd-analyzer/
 │   ├── project-learner/
 │   ├── prompt-craft/
