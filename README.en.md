@@ -6,7 +6,7 @@
 
 Practical, production-tested skills for content workflows, product analysis, and knowledge management — built and maintained by [@yike-gunshi](https://github.com/yike-gunshi).
 
-![Skills](https://img.shields.io/badge/skills-10-blue)
+![Skills](https://img.shields.io/badge/skills-11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -28,7 +28,8 @@ This repository is where I keep my own reusable skills under version control, so
 |-------|--------------|---------|
 | **[lark-export](./skills/lark-export/)** | Mirror a Feishu/Lark wiki or single doc to local Markdown, with images and attachments downloaded locally. Re-run to sync/update. | `同步飞书`, `导出飞书知识库` |
 | **[prd-analyzer](./skills/prd-analyzer/)** | Analyze PRD documents (PDF) and product UI screenshots, then output a structured review that surfaces gaps and risks. | `分析PRD`, `/prd` |
-| **[project-learner](./skills/project-learner/)** | Systematically learn any codebase — architecture, data model, core flows — and produce persistent knowledge docs + AI development guidance. | `学习项目`, `/learn-project` |
+| **[project-learner](./skills/project-learner/)** | Systematically learn any codebase and produce a per-module knowledge base (architecture / data model / frontend / backend / business flows) plus AI development guidance, updated incrementally across sessions. Use it when you are about to change the code. | `学习项目`, `/learn-project` |
+| **[repo-study](./skills/repo-study/)** | Read an unfamiliar repository: survey it into a skeleton, take the chosen dimensions down to the mechanism level (open the function bodies, explain the trade-off and its cost), and produce one deep write-up meant for a human, with Mermaid diagrams auto-rendered to SVG. Optionally compares it against another project. | `读一下这个仓库`, `这个项目怎么实现的` |
 | **[work-logger](./skills/work-logger/)** | Summarize the current session's work into a dated Markdown work log. | `记录工作`, `/work-log` |
 | **[twitter-watchdog](./skills/twitter-watchdog/)** | Monitor Twitter/X for AI news via a three-layer scrape → analyze → report pipeline; generates daily/weekly/monthly digests. | `抓取AI推文`, `AI日报` |
 | **[wechat-publisher](./skills/wechat-publisher/)** | Publish a Markdown article to a WeChat Official Account draft: image compression → OSS upload → theming → draft box. | `发布微信`, `/wechat` |
@@ -80,6 +81,7 @@ yikegunshi-skill/
 │   ├── lark-export/
 │   ├── prd-analyzer/
 │   ├── project-learner/
+│   ├── repo-study/
 │   ├── prompt-craft/
 │   ├── skill-build/
 │   ├── twitter-watchdog/

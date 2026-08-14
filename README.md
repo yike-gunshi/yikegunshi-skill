@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-10-blue)
+![Skills](https://img.shields.io/badge/skills-11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -28,7 +28,8 @@
 |-------|------|--------|
 | **[lark-export](./skills/lark-export/)** | 把飞书/Lark 知识库或单篇文档镜像成本地 Markdown，图片和附件一并下载到本地。重复运行即同步更新。 | `同步飞书`、`导出飞书知识库` |
 | **[prd-analyzer](./skills/prd-analyzer/)** | 分析 PRD 文档（PDF）与产品界面截图，输出结构化评审，暴露缺口与风险。 | `分析PRD`、`/prd` |
-| **[project-learner](./skills/project-learner/)** | 系统性学习任意代码库——架构、数据模型、核心流程——产出可持久化的知识文档 + AI 开发指导。 | `学习项目`、`/learn-project` |
+| **[project-learner](./skills/project-learner/)** | 系统性学习任意代码库，产出分模块的结构化知识库（架构 / 数据模型 / 前后端 / 业务流）+ AI 开发指导，跨会话增量更新。接下来要在这个项目上动手改代码时用。 | `学习项目`、`/learn-project` |
+| **[repo-study](./skills/repo-study/)** | 读懂一个陌生仓库：侦察建骨架 → 选定的重点维度下到机制层（打开函数体读，讲清取舍与代价）→ 产出单篇给人读的深度理解文档，多张 Mermaid 图自动渲染成 SVG 插入。可选跟另一个项目逐维度对比，出三档结论与落地动作。 | `读一下这个仓库`、`这个项目怎么实现的`、`学习这个框架` |
 | **[work-logger](./skills/work-logger/)** | 把当前会话完成的工作总结成一份按日期命名的 Markdown 工作日志。 | `记录工作`、`/work-log` |
 | **[twitter-watchdog](./skills/twitter-watchdog/)** | 通过「抓取 → 分析 → 报告」三层流水线监控 Twitter/X 上的 AI 动态，生成日报/周报/月报。 | `抓取AI推文`、`AI日报` |
 | **[wechat-publisher](./skills/wechat-publisher/)** | 把 Markdown 文章发布到微信公众号草稿箱：图片压缩 → OSS 上传 → 排版 → 草稿箱。 | `发布微信`、`/wechat` |
@@ -81,6 +82,7 @@ yikegunshi-skill/
 │   ├── lark-export/
 │   ├── prd-analyzer/
 │   ├── project-learner/
+│   ├── repo-study/
 │   ├── prompt-craft/
 │   ├── skill-build/
 │   ├── twitter-watchdog/
