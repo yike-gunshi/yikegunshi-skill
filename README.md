@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-12-blue)
+![Skills](https://img.shields.io/badge/skills-13-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
