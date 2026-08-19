@@ -38,6 +38,7 @@ This repository is where I keep my own reusable skills under version control, so
 | **[xhs-note](./skills/xhs-note/)** | Write a Xiaohongshu (RED) note: gather the author's own material → draft from published exemplars → de-AI review gate → generate a cover image with Codex → archive. Exemplar-first; never fabricates experiences the author didn't have. | `写小红书`, `发小红书`, `/xhs-note` |
 | **[skill-build](./skills/skill-build/)** | The skill that builds skills: qualify → interview → design doc → completeness gate → write SKILL.md → eval with a with/without baseline → attribute and iterate. Ships a package linter and a rubric-discrimination auditor. | `做个skill`, `建个skill`, `skill不触发` |
 | **[pm-doc-write](./skills/pm-doc-write/)** | Ghost-write PM work docs the way the user writes them: conclusion-first, table-borne, numbers with baselines, owners on every item. Nine scenario templates (weekly report, OKR, project retro, metric request, strategy iteration, eval verdict, launch review, survey report) plus universal writing constraints and a final-review checklist; outputs Feishu-ready markdown. | `写周报`, `出个文档`, `按我的风格捋一遍` |
+| **[paper-card](./skills/paper-card/)** | Read a paper, official best-practice doc, or cookbook end to end and produce a study card: every number carries a how-to-read note, every term is explained by analogy, every takeaway lands on an executable action. Ships a layered-panel SVG diagram with a headless-render self-check. Structure adapts to the source material instead of forcing a fixed template. | `读一下这篇论文`, `整理成卡片`, `这批参考资料做成学习资料` |
 
 ## Installation
 
@@ -80,6 +81,7 @@ Some skills call third-party APIs and need credentials. **No secrets are committ
 yikegunshi-skill/
 ├── skills/
 │   ├── lark-export/
+│   ├── paper-card/
 │   ├── pm-doc-write/
 │   ├── prd-analyzer/
 │   ├── project-learner/

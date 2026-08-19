@@ -38,6 +38,7 @@
 | **[xhs-note](./skills/xhs-note/)** | 写小红书笔记：收料 → 读范文起草 → 去 AI 味终审 → Codex 生封面 → 归档。范文优先，不编造作者没经历过的事。 | `写小红书`、`发小红书`、`/xhs-note` |
 | **[skill-build](./skills/skill-build/)** | 造 skill 的 skill：判该不该做 → 访谈收料 → 设计文档 → 完备性门禁 → 写 SKILL.md → 评测跑基线对照 → 归因迭代。自带包体检与考点区分度审计脚本。 | `做个skill`、`建个skill`、`skill不触发` |
 | **[pm-doc-write](./skills/pm-doc-write/)** | 写 PM 工作文档：结论先行、表格承载、数字带基线、责任到人。覆盖周报、OKR、项目总结、指标需求、策略迭代说明、评测结论、LR 评审、调研报告 9 类场景模板 + 通用写法约束与终审清单，产出飞书就绪 markdown。 | `写周报`、`出个文档`、`按我的风格捋一遍` |
+| **[paper-card](./skills/paper-card/)** | 把论文、官方最佳实践、cookbook 读透，产出学习卡片：每个数字带读法、术语用类比讲透、结论落到可执行动作，配一张分层底板风 SVG 结构图并渲染自查。结构随资料形态调整，不套固定模板。 | `读一下这篇论文`、`整理成卡片`、`这批参考资料做成学习资料` |
 
 ## 安装
 
@@ -81,6 +82,7 @@ yikegunshi-skill/
 ├── skills/
 │   ├── book-to-mindmap/
 │   ├── lark-export/
+│   ├── paper-card/
 │   ├── pm-doc-write/
 │   ├── prd-analyzer/
 │   ├── project-learner/
