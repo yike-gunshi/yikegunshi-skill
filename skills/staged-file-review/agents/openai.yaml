@@ -1,0 +1,4 @@
+interface:
+  display_name: "文件暂存审阅"
+  short_description: "先暂存文件修改，用 HTML 对照和人工标注确认，再仅应用已批准的部分"
+  default_prompt: "使用 $staged-file-review 暂存这些文件的修改建议，生成 HTML 供我标注，原文件先保持不动。"

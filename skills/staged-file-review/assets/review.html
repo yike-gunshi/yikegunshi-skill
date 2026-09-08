@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>文件修改审阅</title>
+<style>
+:root{--paper:#faf9f6;--panel:#fff;--ink:#232c2a;--muted:#737c77;--line:#e3e6df;--soft:#f1f3ee;--accent:#245c4c;--accent-soft:#e8f0ea;--red:#a2474b;--red-bg:#fbeeee;--green:#28614a;--green-bg:#eaf4ed;--amber:#8b641f;--amber-bg:#f8f1e2;--source-size:13px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:13px}button,input,textarea,select{font:inherit}button{cursor:pointer}button,input,textarea,select{border:1px solid var(--line);border-radius:5px;background:white;color:inherit}button{padding:7px 11px;transition:background .12s}button:hover{background:var(--soft)}button:disabled{cursor:default;opacity:.4}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}button.primary{background:var(--accent);color:white;border-color:var(--accent)}button.primary:hover{background:#174737}button.quiet{background:transparent;border-color:transparent}select{padding:6px}input,textarea{padding:8px 10px}textarea{resize:vertical}h1,h2,p{margin:0}[hidden]{display:none!important}
+.app{height:100dvh;display:flex;flex-direction:column;min-height:640px}.masthead{height:75px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 27px;border-bottom:1px solid var(--line);gap:20px}.brand{display:flex;align-items:center;gap:14px}.brand-symbol{height:37px;width:37px;display:grid;place-items:center;background:var(--accent);color:#fff;font-family:Georgia,serif;font-size:22px;border-radius:4px}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--muted);margin-bottom:3px}.brand h1{font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:25px;letter-spacing:1px;font-weight:700}.head-right{display:flex;align-items:center;gap:17px}.progress-text{font-size:12px;white-space:nowrap}.progress-track{height:3px;width:180px;background:#e1e7e0;margin-top:7px;border-radius:2px;overflow:hidden}.progress-track span{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}.export-wrap{position:relative}.export-menu{position:absolute;right:0;top:41px;width:192px;padding:5px;z-index:30;background:#fff;border:1px solid var(--line);border-radius:7px;box-shadow:0 10px 25px #202b231c}.export-menu button{display:block;width:100%;text-align:left;border:0;padding:10px}.save{font-size:11px;color:var(--muted);max-width:220px}.save.error{color:var(--red)}.notice{padding:8px 27px;font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-shrink:0;color:#6b6658;background:#f4f1e9;border-bottom:1px solid #e8e3d7}.notice strong{font-weight:600}.notice-end{color:#878171;white-space:nowrap}
+.workspace{display:flex;flex:1;min-height:0}.sidebar{width:258px;flex-shrink:0;border-right:1px solid var(--line);display:flex;flex-direction:column;background:#f5f6f1}.side-tools{padding:19px 15px 13px}.side-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:600}.counter{font-size:11px;background:#e9ede5;padding:2px 7px;border-radius:10px;font-weight:400;color:#647062}.search{width:100%;background:#fff;font-size:12px}.filters{display:flex;gap:5px;margin-top:9px}.filters button{flex:1;font-size:11px;padding:6px 2px;border-color:transparent;background:transparent}.filters button[aria-pressed=true]{color:var(--accent);background:#e3ebe1;border-color:#d6e2d6}.file-list{overflow:auto;flex:1;padding:0 9px 14px;scrollbar-width:thin}.group-title{font-size:10px;letter-spacing:1px;font-weight:600;color:var(--muted);margin:17px 10px 8px;display:flex;justify-content:space-between}.file-button{width:100%;display:flex;gap:9px;text-align:left;border:1px solid transparent;border-radius:5px;background:transparent;padding:10px 8px;margin:2px 0;align-items:flex-start}.file-button:hover{background:#ebefe7}.file-button[aria-current=true]{background:white;border-color:#cddacc;box-shadow:0 1px 2px #24392a08}.file-dot{font-size:14px;line-height:19px;color:#a4aca1}.file-dot.done{color:var(--accent)}.file-dot.partial{color:var(--amber)}.file-copy{flex:1;min-width:0}.file-name{font-size:12px;font-weight:600;display:block;overflow-wrap:anywhere}.file-detail{font-size:10px;color:var(--muted);display:block;margin-top:4px;overflow-wrap:anywhere;line-height:1.4}.file-progress{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:3px;white-space:nowrap}.side-bottom{padding:12px 17px;border-top:1px solid var(--line);font-size:10px;color:var(--muted);line-height:1.7}.empty{padding:25px 10px;color:var(--muted);line-height:1.8;text-align:center}
+.main{flex:1;min-width:0;display:flex;flex-direction:column;background:var(--panel)}.file-header{padding:20px 25px 13px;border-bottom:1px solid var(--line);flex-shrink:0}.file-title-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.file-kicker{font-size:10px;color:var(--muted);letter-spacing:.8px;margin-bottom:6px}.file-title{overflow-wrap:anywhere;font-size:20px;font-weight:600;letter-spacing:.2px}.file-title .slash{color:#a1a9a2;font-weight:400;padding:0 6px}.file-path{font-family:"SFMono-Regular",Consolas,monospace;font-size:10px;color:var(--muted);margin-top:7px;overflow-wrap:anywhere;line-height:1.6}.file-actions{display:flex;gap:5px;flex-shrink:0}.file-actions button{font-size:11px;padding:6px 9px}.context{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:22px;font-size:11px;line-height:1.8}.context-label{color:var(--accent);font-size:10px;font-weight:600;margin-right:6px}.context-label.risk{color:var(--amber)}.context p{color:#69716b}.context-toggle{display:none}.toolbar{padding:9px 25px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);font-size:11px;flex-shrink:0}.tool-left,.tool-right{display:flex;align-items:center;gap:13px}.check{display:flex;align-items:center;gap:5px;cursor:pointer}.check input{accent-color:var(--accent)}.tool-right select{font-size:11px;padding:4px 5px}.nav-buttons{display:flex;align-items:center;gap:4px}.nav-buttons button{font-size:11px;padding:5px 9px}.jump-label{font-size:11px;color:var(--muted);min-width:55px;text-align:center}.muted{color:var(--muted)}.diff-head{display:grid;grid-template-columns:1fr 1fr;background:#f8f9f5;border-bottom:1px solid var(--line);flex-shrink:0}.diff-head>div{padding:10px 23px;font-size:11px;display:flex;align-items:center;justify-content:space-between;gap:8px}.diff-head>div+div{border-left:1px solid var(--line)}.version-label{font-weight:600}.legend{font-size:10px;font-weight:400;color:var(--muted)}.legend i{display:inline-block;width:7px;height:7px;border-radius:2px;margin-right:5px}.legend i.removed{background:#e2a5a6}.legend i.added{background:#95bf9f}.diff-scroll{flex:1;min-height:140px;overflow:auto;scrollbar-gutter:stable;background:#fff;scrollbar-width:thin;position:relative}.diff-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.cell{display:flex;align-items:stretch;min-width:0;font-family:"SFMono-Regular",Menlo,"PingFang SC",monospace;font-size:var(--source-size);line-height:1.85}.cell+.cell{border-left:1px solid #e6e8e3}.line-num{font-size:10px;text-align:right;color:#a0a89f;flex:0 0 45px;padding:1px 10px 1px 3px;user-select:none;background:#fafbf8;line-height:calc(var(--source-size)*1.85)}.line-text{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;min-width:0;flex:1;margin:0;padding:1px 13px;tab-size:4}.cell.removed{background:var(--red-bg);color:#73373b}.cell.added{background:var(--green-bg);color:#234b37}.cell.removed .line-num{background:#f8e5e5;color:#b9777a}.cell.added .line-num{background:#dfefdf;color:#6d9778}.cell.blank{background:repeating-linear-gradient(135deg,#f9faf7,#f9faf7 4px,#f5f6f2 4px,#f5f6f2 5px)}.cell.blank .line-num{background:transparent}.change-block{position:relative;border-top:1px solid #dce4da;border-bottom:1px solid #dce4da;margin:6px 0}.change-block.active{box-shadow:inset 3px 0 var(--accent);outline:1px solid #94b49f;outline-offset:-1px}.change-block.active .change-heading{background:#e4eee4}.change-heading{width:100%;border:0;border-radius:0;text-align:left;background:#f0f4ec;color:#55705c;display:flex;align-items:center;gap:10px;padding:7px 16px;font-size:10px;line-height:1.5}.hunk-no{font-variant-numeric:tabular-nums;color:var(--accent);font-weight:600}.hunk-title{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.hunk-range{color:#7f8f7e;white-space:nowrap;font-family:Menlo,monospace}.hunk-badge{font-size:10px;padding:1px 6px;background:#fff9;border-radius:3px;white-space:nowrap}.hunk-badge.accept{color:var(--green)}.hunk-badge.keep,.hunk-badge.adjust{color:var(--amber)}.fold{display:block;width:100%;border:0;border-radius:0;border-block:1px solid #e9ece5;text-align:center;background:#f7f9f4;color:#7b8a77;font-size:10px;padding:7px}.end-file{text-align:center;font-size:10px;color:#a1a79f;padding:20px}.review-panel{flex-shrink:0;padding:12px 25px 14px;border-top:1px solid #cfdcce;background:#f8faf5;box-shadow:0 -3px 10px #22332203}.review-top{display:flex;gap:15px;align-items:center;justify-content:space-between}.review-title{font-size:12px;font-weight:600}.review-range{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.5}.decisions{display:flex;gap:5px;flex-wrap:wrap}.decisions button{font-size:11px;background:#fff;border-color:#dce3d7;white-space:nowrap}.decisions button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}.decisions button[data-status=keep][aria-pressed=true],.decisions button[data-status=adjust][aria-pressed=true]{background:#876529;border-color:#876529}.decisions button[data-status=pending][aria-pressed=true]{background:#e8ece4;border-color:#ced9c9;color:#4b5e45}.note-row{display:flex;gap:12px;align-items:center;margin-top:10px}.note-row label{font-size:10px;color:var(--muted);white-space:nowrap}.note-row textarea{width:100%;height:45px;min-height:39px;max-height:170px;font-size:12px;line-height:1.5;background:#fff}.review-hint{font-size:10px;color:#85917f;margin-top:6px;text-align:right}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#253f32;color:#fff;padding:11px 16px;border-radius:7px;box-shadow:0 4px 18px #243a2925;z-index:50;font-size:12px;display:flex;align-items:center;gap:15px;max-width:90vw}.toast button{color:white;background:transparent;border-color:#7d9484;padding:3px 9px}.help{font-size:11px;line-height:1.8}.small-link{font-size:10px;text-decoration:underline;background:none;border:0;padding:0;color:var(--muted)}
+@media(min-width:1750px){.sidebar{width:290px}.line-text{padding-inline:18px}.context{font-size:12px}.file-header{padding-top:23px;padding-bottom:17px}}
+@media(max-width:1150px){.sidebar{width:218px}.masthead{padding:0 18px}.head-right{gap:10px}.save{display:none}.file-header,.toolbar,.review-panel{padding-left:17px;padding-right:17px}.context{gap:15px;font-size:10px}.file-actions{flex-direction:column}.review-top{gap:8px}.decisions{gap:3px}.decisions button{padding:6px 7px}.line-num{flex-basis:35px;padding-right:7px}.line-text{padding-inline:9px}.hunk-range{display:none}.notice-end{display:none}}
+@media(max-width:760px){.app{height:auto;min-height:100dvh}.masthead{height:auto;padding:15px;flex-wrap:wrap;gap:12px}.head-right{width:100%;justify-content:space-between}.brand h1{font-size:22px}.notice{padding:8px 15px}.workspace{display:block}.sidebar{width:100%;height:230px;border-right:0;border-bottom:1px solid var(--line)}.side-tools{padding:10px 15px}.side-heading{display:none}.filters{margin-top:5px}.file-list{display:flex;gap:5px;flex-wrap:wrap;align-content:flex-start}.group-title,.side-bottom{display:none}.file-button{width:210px}.main{height:900px}.file-title{font-size:17px}.context{grid-template-columns:1fr;gap:5px}.file-header{padding:15px}.toolbar{gap:5px;padding:8px}.tool-left,.tool-right{gap:5px}.sync-label{display:none}.diff-head>div{padding:9px}.line-num{flex-basis:25px;font-size:9px;padding-right:4px}.line-text{padding-inline:6px}.review-top{display:block}.decisions{margin-top:9px}.review-hint{display:none}.hunk-title{font-size:9px}.progress-track{width:150px}.note-row{gap:5px}}
+</style>
+</head>
+<body>
+<div class="app">
+ <header class="masthead"><div class="brand"><span class="brand-symbol" aria-hidden="true">R</span><div><div class="eyebrow">STAGED FILES / HUMAN REVIEW</div><h1 id="appTitle">文件修改审阅</h1></div></div><div class="head-right"><div><div class="progress-text" id="progressText">正在读取快照…</div><div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div></div><span id="saveStatus" class="save" role="status">意见保存在此浏览器</span><button id="importButton" class="quiet">导入意见</button><div class="export-wrap"><button id="exportButton" class="primary" aria-expanded="false" aria-controls="exportMenu">导出意见 ↓</button><div id="exportMenu" class="export-menu" hidden><button id="exportJson">JSON · 可恢复审阅</button><button id="exportMarkdown">Markdown · 方便阅读</button></div></div></div></header>
+ <div class="notice"><span><strong>固定对照：</strong>审阅页不写入源文件。这里展示生成时的快照，应用结果另存执行回执。</span><span id="snapshotInfo" class="notice-end"></span></div>
+ <div class="workspace"><aside class="sidebar" aria-label="审阅文件"><div class="side-tools"><div class="side-heading"><span>审阅目录</span><span id="fileCount" class="counter"></span></div><label><span class="muted" hidden>搜索文件路径与内容</span><input id="search" class="search" type="search" placeholder="搜索文件 / 原文内容" aria-label="搜索文件路径与原文内容"></label><div class="filters" aria-label="按审阅状态筛选"><button data-filter="all" aria-pressed="true">全部</button><button data-filter="pending" aria-pressed="false">未审完</button><button data-filter="adjust" aria-pressed="false">需调整</button></div></div><nav id="fileList" class="file-list" aria-label="文件列表"></nav><div class="side-bottom">○ 待审阅　◐ 部分已审　● 已审阅<br>仅保存在当前浏览器，请导出留存。<br>需要调整也计入已审阅，不代表已解决。</div></aside>
+ <main class="main"><section class="file-header"><div class="file-title-row"><div><div id="fileKicker" class="file-kicker"></div><h2 id="fileTitle" class="file-title"></h2><div id="filePath" class="file-path"></div></div><div class="file-actions"><button id="acceptFile">整份接受</button><button id="keepFile">整份保留原文</button></div></div><div class="context"><p><span class="context-label">修改意图</span><span id="fileReason"></span></p><p><span class="context-label risk">可能的代价</span><span id="fileRisk"></span></p></div></section>
+ <div class="toolbar"><div class="tool-left"><label class="check"><input id="compact" type="checkbox">隐藏未变内容</label><span class="muted sync-label">左右同步滚动</span></div><div class="tool-right"><label>字号 <select id="fontSize" aria-label="原文字号"><option value="12">12</option><option value="13" selected>13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option></select></label><div class="nav-buttons"><button id="prevHunk" aria-label="上一处修改">↑ 上一处</button><span id="jumpLabel" class="jump-label"></span><button id="nextHunk" aria-label="下一处修改">下一处 ↓</button></div></div></div>
+ <div class="diff-head"><div><span class="version-label">修改前原文</span><span class="legend"><i class="removed"></i>删除 / 替换 <span id="beforeLines"></span></span></div><div><span class="version-label">本次修改后</span><span class="legend"><i class="added"></i>新增 / 替换 <span id="afterLines"></span></span></div></div>
+ <div id="diffScroll" class="diff-scroll" tabindex="0" aria-label="完整原文左右对照"><div id="diffContent"></div></div>
+ <section class="review-panel" aria-label="当前修改的审阅意见"><div class="review-top"><div><div id="reviewTitle" class="review-title"></div><div id="reviewRange" class="review-range"></div></div><div class="decisions" role="group" aria-label="当前修改结论"><button data-status="accept">接受此处</button><button data-status="keep">保留原文</button><button data-status="adjust">需要调整</button><button data-status="pending">待审阅</button></div></div><div class="note-row"><label for="note">这处的备注</label><textarea id="note" maxlength="20000" placeholder="例如：自主执行可以保留，但合并前仍须我确认。"></textarea></div><div class="review-hint">这些是审阅意见。最终如何修改源文件，仍需你明确确认。</div></section>
+ </main></div>
+</div>
+<div class="toast" id="toast" role="status" hidden><span id="toastText"></span><button id="undoButton" hidden>撤销</button><button id="dismissToast" aria-label="关闭提示">×</button></div>
+<input id="importInput" type="file" accept=".json,application/json" hidden>
+<script id="auditData" type="application/json">/*__AUDIT_DATA__*/</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('auditData').textContent);
+const $=id=>document.getElementById(id);
+const LABELS={pending:'待审阅',accept:'接受修改',keep:'保留原文',adjust:'需要调整'};
+const STORAGE_KEY=DATA.auditId+':review';
+const allIds=new Set(DATA.files.flatMap(f=>f.hunks.map(h=>h.id)));
+let decisions={},currentFile=DATA.files[0],currentHunk=0,filter='all',query='',undo=null,toastTimer=null;
+const expanded=new Set();
+function validDecisions(obj){
+ if(!obj || typeof obj!=='object' || Array.isArray(obj))throw Error('缺少审阅意见对象');
+ const result={};
+ for(const [id,v] of Object.entries(obj)){
+  if(!allIds.has(id)||!v||!Object.hasOwn(LABELS,v.status)||typeof v.note!=='string'||v.note.length>20000)throw Error('意见内容或修改编号不匹配');
+  result[id]={status:v.status,note:v.note};
+ }
+ return result;
+}
+try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');if(saved && saved.auditId===DATA.auditId)decisions=validDecisions(saved.decisions);}catch(e){$('saveStatus').textContent='无法恢复本地意见；可导入备份';$('saveStatus').classList.add('error');}
+const decision=h=>decisions[h.id]||{status:'pending',note:''};
+const counts=f=>{const c={pending:0,accept:0,keep:0,adjust:0};f.hunks.forEach(h=>c[decision(h).status]++);return c;};
+function save(){
+ try{localStorage.setItem(STORAGE_KEY,JSON.stringify({auditId:DATA.auditId,decisions}));$('saveStatus').textContent='已保存到此浏览器 · '+new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'});$('saveStatus').classList.remove('error');}
+ catch(e){$('saveStatus').textContent='浏览器保存失败，请导出意见';$('saveStatus').classList.add('error');toast('浏览器无法保存，当前意见仍在页面中，请导出留存。');}
+}
+function el(tag,cls,text){const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;}
+function toast(message,canUndo=false){clearTimeout(toastTimer);$('toastText').textContent=message;$('undoButton').hidden=!canUndo;$('toast').hidden=false;if(!canUndo)toastTimer=setTimeout(()=>$('toast').hidden=true,6500);}
+function renderProgress(){let done=0,files=0;DATA.files.forEach(f=>{const c=counts(f);done+=f.hunks.length-c.pending;if(!c.pending)files++;});$('progressText').textContent=`已审 ${done} / ${DATA.totalHunks} 处 · ${files} / ${DATA.files.length} 份`;$('progressBar').style.width=(100*done/DATA.totalHunks)+'%';}
+function renderSidebar(){
+ const scroll=$('fileList').scrollTop,frag=document.createDocumentFragment();let n=0;
+ for(const group of DATA.groups){
+  const fs=DATA.files.filter(f=>{const c=counts(f);return f.group===group&&(!query||[f.path,f.before,f.after].some(s=>s.toLowerCase().includes(query)))&&(filter==='all'||filter==='pending'&&c.pending>0||filter==='adjust'&&c.adjust>0);});
+  if(!fs.length)continue;
+  const title=el('div','group-title',group);title.append(el('span','',String(fs.length)));frag.append(title);
+  fs.forEach(f=>{n++;const c=counts(f),done=f.hunks.length-c.pending;const btn=el('button','file-button');btn.dataset.file=f.id;btn.setAttribute('aria-current',String(f.id===currentFile.id));btn.title=f.path;
+   btn.append(el('span','file-dot '+(done===f.hunks.length?'done':done?'partial':''),done===f.hunks.length?'●':done?'◐':'○'));
+   const copy=el('span','file-copy');copy.append(el('span','file-name',f.label),el('span','file-detail',f.detail));btn.append(copy,el('span','file-progress',`${done}/${f.hunks.length}`));frag.append(btn);
+  });
+ }
+ if(!n)frag.append(el('div','empty','没有匹配的文件。\n试试其他关键词或状态。'));
+ $('fileList').replaceChildren(frag);$('fileList').scrollTop=scroll;
+}
+const shortRange=(start,end)=>start===end?`插入点 L${start+1}`:start+1===end?`L${end}`:`L${start+1}–${end}`;
+const exportRange=(start,end)=>start===end?{insertBeforeLine:start+1}:{startLine:start+1,endLine:end};
+const range=(start,end)=>start===end?`第 ${start+1} 行前插入点`:start+1===end?`第 ${end} 行`:`第 ${start+1}–${end} 行`;
+function lineCell(lines,index,cls){const c=el('div','cell '+(index===null?'blank':cls||''));c.append(el('span','line-num',index===null?'':String(index+1)),el('div','line-text',index===null?'':lines[index]));return c;}
+function appendRows(parent,a0,a1,b0,b1,tag){
+ for(let k=0;k<Math.max(a1-a0,b1-b0);k++){
+  const row=el('div','diff-row');row.append(lineCell(currentFile.a,k<a1-a0?a0+k:null,tag==='equal'?'':'removed'),lineCell(currentFile.b,k<b1-b0?b0+k:null,tag==='equal'?'':'added'));parent.append(row);
+ }
+}
+function renderDiff(){
+ const frag=document.createDocumentFragment();
+ currentFile.ops.forEach(([tag,a0,a1,b0,b1,hi],oi)=>{
+  if(tag==='equal'){
+   const key=currentFile.id+'-'+oi;
+   if($('compact').checked&&a1-a0>6&&!expanded.has(key)){
+    appendRows(frag,a0,a0+3,b0,b0+3,'equal');const fold=el('button','fold',`展开 ${a1-a0-6} 行未变内容`);fold.dataset.expand=key;frag.append(fold);appendRows(frag,a1-3,a1,b1-3,b1,'equal');
+   }else appendRows(frag,a0,a1,b0,b1,'equal');
+  }else{
+   const h=currentFile.hunks[hi],block=el('section','change-block'+(hi===currentHunk?' active':''));block.id=h.id;block.dataset.hunk=String(hi);
+   const heading=el('button','change-heading');heading.dataset.selectHunk=String(hi);heading.setAttribute('aria-label',`审阅第 ${hi+1} 处修改：${h.heading}`);
+   heading.append(el('span','hunk-no',String(hi+1).padStart(2,'0')),el('span','hunk-title',h.heading),el('span','hunk-range',`${shortRange(a0,a1)} → ${shortRange(b0,b1)}`),el('span','hunk-badge '+decision(h).status,LABELS[decision(h).status]));block.append(heading);appendRows(block,a0,a1,b0,b1,tag);frag.append(block);
+  }
+ });
+ frag.append(el('div','end-file',`文件结束 · 完整快照已载入 · ${currentFile.hunks.length} 处文本差异`));$('diffContent').replaceChildren(frag);
+}
+function renderInspector(){
+ const h=currentFile.hunks[currentHunk],d=decision(h);$('reviewTitle').textContent=`第 ${currentHunk+1} / ${currentFile.hunks.length} 处修改`;$('reviewRange').textContent=`原文 ${range(h.a0,h.a1)} → 修改后 ${range(h.b0,h.b1)}`;
+ document.querySelectorAll('.decisions button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.status===d.status)));
+ $('note').value=d.note;$('jumpLabel').textContent=`${currentHunk+1} / ${currentFile.hunks.length}`;$('prevHunk').disabled=currentHunk===0;$('nextHunk').disabled=currentHunk===currentFile.hunks.length-1;
+ document.querySelectorAll('.change-block').forEach(block=>{const hi=Number(block.dataset.hunk),s=decision(currentFile.hunks[hi]).status;block.classList.toggle('active',hi===currentHunk);const badge=block.querySelector('.hunk-badge');badge.textContent=LABELS[s];badge.className='hunk-badge '+s;});
+}
+function selectHunk(i,scroll=true){currentHunk=Math.max(0,Math.min(i,currentFile.hunks.length-1));renderInspector();if(scroll)$(currentFile.hunks[currentHunk].id)?.scrollIntoView({block:'start',behavior:'instant'});}
+function selectFile(id){
+ currentFile=DATA.files.find(f=>f.id===id)||DATA.files[0];currentHunk=0;expanded.clear();
+ $('fileKicker').textContent=`${currentFile.group} / ${currentFile.hunks.length} 处文本差异`;
+ $('fileTitle').textContent=(currentFile.detail?currentFile.detail+' / ':'')+currentFile.label;
+ $('filePath').textContent=currentFile.path;$('fileReason').textContent=currentFile.reason;$('fileRisk').textContent=currentFile.risk;$('beforeLines').textContent=`· ${currentFile.a.length} 行 · ${currentFile.beforeFormat}`;$('afterLines').textContent=`· ${currentFile.b.length} 行 · ${currentFile.afterFormat}`;
+ renderSidebar();renderDiff();renderInspector();$('diffScroll').scrollTop=0;
+ try{history.replaceState(null,'','#'+currentFile.id);}catch(e){}
+}
+function invalidateUndo(){if(undo){undo=null;$('toast').hidden=true;$('undoButton').hidden=true;}}
+function setDecision(status){invalidateUndo();const h=currentFile.hunks[currentHunk];decisions[h.id]={...decision(h),status};save();renderInspector();renderSidebar();renderProgress();}
+function bulk(status){const previous={};currentFile.hunks.forEach(h=>{previous[h.id]=decisions[h.id]?{...decisions[h.id]}:null;decisions[h.id]={...decision(h),status};});undo=previous;save();renderInspector();renderSidebar();renderProgress();toast(`已记录本文件 ${currentFile.hunks.length} 处为「${LABELS[status]}」。源文件未改动。`,true);}
+function packet(){
+ return {schema:1,auditId:DATA.auditId,exportedAt:new Date().toISOString(),purpose:'review_only',notice:'这是用户审阅意见，不包含执行修改的指令；源文件的最终处理仍需用户明确确认。',decisions,files:DATA.files.map(f=>({path:f.path,before_sha256:f.before_sha256,after_sha256:f.after_sha256,summary:counts(f),changes:f.hunks.map(h=>({id:h.id,...decision(h),beforeRange:exportRange(h.a0,h.a1),afterRange:exportRange(h.b0,h.b1),before:f.a.slice(h.a0,h.a1).join('\n'),after:f.b.slice(h.b0,h.b1).join('\n')}))}))};
+}
+function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=el('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);$('exportMenu').hidden=true;$('exportButton').setAttribute('aria-expanded','false');toast('已导出当前意见，包含待审阅项。源文件未改动。');}
+function exportMarkdown(){const lines=['# 文件修改审阅意见','',`导出时间：${new Date().toLocaleString('zh-CN')}`,'','这些是审阅意见。最终如何修改源文件，仍需用户明确确认。',''];for(const f of DATA.files){const c=counts(f);lines.push(`## ${f.short}`,'',`接受 ${c.accept} · 保留 ${c.keep} · 需调整 ${c.adjust} · 待审 ${c.pending}`,'');for(const [i,h] of f.hunks.entries()){const d=decision(h);lines.push(`- 第 ${i+1} 处（${h.id}）：**${LABELS[d.status]}**；原文 ${range(h.a0,h.a1)} → 修改后 ${range(h.b0,h.b1)}`);if(d.note)lines.push(...d.note.split('\n').map(l=>'  > '+l));}lines.push('');}download(lines.join('\n'),'文件审阅意见.md','text/markdown;charset=utf-8');}
+$('fileList').addEventListener('click',e=>{const b=e.target.closest('[data-file]');if(b)selectFile(b.dataset.file);});
+$('search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderSidebar();});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderSidebar();}));
+$('diffContent').addEventListener('click',e=>{
+ const fold=e.target.closest('[data-expand]');if(fold){const top=$('diffScroll').scrollTop;expanded.add(fold.dataset.expand);renderDiff();$('diffScroll').scrollTop=top;return;}
+ const block=e.target.closest('[data-hunk]');if(block){if(window.getSelection()?.toString())return;selectHunk(Number(block.dataset.hunk),false);}
+});
+$('prevHunk').addEventListener('click',()=>selectHunk(currentHunk-1));$('nextHunk').addEventListener('click',()=>selectHunk(currentHunk+1));
+$('compact').addEventListener('change',()=>{renderDiff();selectHunk(currentHunk);});
+$('fontSize').addEventListener('change',e=>document.documentElement.style.setProperty('--source-size',e.target.value+'px'));
+document.querySelectorAll('[data-status]').forEach(b=>b.addEventListener('click',()=>setDecision(b.dataset.status)));
+$('note').addEventListener('input',e=>{invalidateUndo();const h=currentFile.hunks[currentHunk];decisions[h.id]={...decision(h),note:e.target.value};save();});
+$('acceptFile').addEventListener('click',()=>bulk('accept'));$('keepFile').addEventListener('click',()=>bulk('keep'));
+$('undoButton').addEventListener('click',()=>{if(!undo)return;for(const [id,d] of Object.entries(undo)){if(d)decisions[id]=d;else delete decisions[id];}undo=null;save();renderInspector();renderSidebar();renderProgress();toast('已撤销上一次整份操作。');});
+$('dismissToast').addEventListener('click',()=>$('toast').hidden=true);
+$('exportButton').addEventListener('click',()=>{const next=$('exportMenu').hidden;$('exportMenu').hidden=!next;$('exportButton').setAttribute('aria-expanded',String(next));});
+document.addEventListener('click',e=>{if(!e.target.closest('.export-wrap')){$('exportMenu').hidden=true;$('exportButton').setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('exportMenu').hidden=true;$('exportButton').setAttribute('aria-expanded','false');$('toast').hidden=true;}});
+$('exportJson').addEventListener('click',()=>download(JSON.stringify(packet(),null,2),'文件审阅意见.json','application/json;charset=utf-8'));$('exportMarkdown').addEventListener('click',exportMarkdown);
+$('importButton').addEventListener('click',()=>$('importInput').click());
+$('importInput').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{
+ if(f.size>10000000)throw Error('文件过大');const p=JSON.parse(await f.text());if(p.auditId!==DATA.auditId||p.schema!==1)throw Error('不是这次审阅的意见文件');
+ if(!Array.isArray(p.files)||p.files.length!==DATA.files.length||!DATA.files.every(f=>p.files.some(x=>x.path===f.path&&x.before_sha256===f.before_sha256&&x.after_sha256===f.after_sha256)))throw Error('快照不匹配');
+ const next=validDecisions(p.decisions);if(Object.keys(decisions).length&&!confirm('导入将替换当前浏览器中的审阅意见。继续导入？（不会改动源文件）'))return;
+ decisions=next;undo=null;save();renderInspector();renderSidebar();renderProgress();toast('已导入审阅意见。源文件未改动。');
+ }catch(err){toast('导入失败：'+err.message+'。当前意见未替换。');}});
+$('appTitle').textContent=DATA.title;document.title=DATA.title;$('fileCount').textContent=DATA.files.length+' 份文件';$('snapshotInfo').textContent='固定快照 · '+DATA.snapshotDate+' · 完整原文';
+renderProgress();selectFile(location.hash.slice(1));
+</script>
+</body>
+</html>
