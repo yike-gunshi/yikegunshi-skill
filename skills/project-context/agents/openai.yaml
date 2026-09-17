@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目完整上下文"
+  short_description: "整理项目全文、详细说明和外部资料，手动增量更新后交给网页版分析"
+  default_prompt: "使用 $project-context 为当前项目建立或更新完整上下文底稿，保留约定范围内的全文和详细说明；有本次讨论目的时单独附加，不裁剪底稿。"

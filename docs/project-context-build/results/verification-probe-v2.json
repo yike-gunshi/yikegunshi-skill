@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "duration_ms": 81886,
+  "usage": {
+    "input_tokens": 163560,
+    "cached_input_tokens": 140544,
+    "output_tokens": 3754,
+    "total_tokens": 167314
+  },
+  "answer": "已生成 [verification-note.md](/private/tmp/project-context-verification-probe-v2/lantern/verification-note.md)。\n\n说明涵盖：\n\n- 当前测试与部署验证状态\n- 各证据来源及其证明边界\n- 部署提交无法在本地解析的缺口\n- worker 改名与测试导入路径不一致\n- 功能讨论必须保留的业务和技术约束\n- 后续若要达到“已验证”还需补充的证据\n\n全程未执行项目代码或测试，未联网，也未读取其他实验目录或 AI 会话。",
+  "assertion": "Output explicitly says no execution and distinguishes static import mismatch from actual test failure",
+  "method": "One targeted model run; explicit task forbids running project code/tests; not an estimate of general reliability"
+}

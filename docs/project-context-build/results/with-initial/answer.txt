@@ -1,0 +1,8 @@
+已生成：
+
+- [handoff.md](/private/tmp/project-context-behavior-v1/with/lantern/handoff.md)：完整原文、详细项目说明，以及独立的批量完成讨论说明。
+- [coverage.json](/private/tmp/project-context-behavior-v1/with/lantern/coverage.json)：逐份来源、指纹、全文、解释关联和已知局限。
+
+已核对 11 份本地资料及 2 份外部文档，全文无遗漏、无截断，源文件未改动。包含未提交及被忽略的业务资料；全程未访问网络。
+
+局限：部署与事故仅依据合成离线资料，不能证明实时运行状态；批量功能尚未实现；未验证 ChatGPT 网页版实际接收与理解效果。

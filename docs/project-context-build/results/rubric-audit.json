@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "applies_to": "Recorded first synthetic with/without comparison, frozen v1",
+  "no_signal_as_improvement_metrics": ["raw_material", "coverage_ledger", "working_state", "product_understanding", "runtime_provenance"],
+  "action": "Retire ceiling criteria from improvement claims for this dataset. Retain them as correctness gates and preserve the historical rubric for reproducibility.",
+  "weak_or_incomplete_criteria": {
+    "brief_isolation": "Original numeric criterion needs same-source topic/plain pair. This experiment changes source content, so no numeric score was invented; deterministic tests and paired document review supply separate evidence.",
+    "honest_delivery": "Judges initially varied when distinguishing a correct static prediction from an unsupported claim of actual execution. Review original execution evidence and apply the declared zero anchor; do not call high total scores successful handoffs.",
+    "technical_relationships": "Small difference in incremental explanations is based on one synthetic project and is not broad efficacy evidence."
+  },
+  "human_spot_check": "pending; not performed",
+  "next_high_value_cases": ["A real project with reviewed source registration", "A large evolving project with cross-module explanation dependencies", "A downstream feature-design task answered only from the exported package"]
+}

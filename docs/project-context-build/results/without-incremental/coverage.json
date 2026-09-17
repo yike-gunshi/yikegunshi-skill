@@ -1,0 +1,623 @@
+{
+  "schema_version": 2,
+  "run_id": "d73d2408-f8b6-462b-87ef-f82be2c5a88d",
+  "created_at": "2026-09-17T03:58:01.888364+00:00",
+  "project_root": "/private/tmp/project-context-behavior-v1/without/lantern",
+  "scope_hash": "bb8ea4f36158e72784be5a9da965fcb7787f09d6229d512393c85e24bb1f8053",
+  "scope_hash_algorithm": "SHA256(UTF8(json.dumps(scope_payload,ensure_ascii=False,sort_keys=True,separators=(comma,colon))))",
+  "scope_payload": {
+    "sources": [
+      {
+        "source_id": "project:.gitignore",
+        "sha256": "9e19fc6b758043fd9e6df8fb1773ba8f587eadcf33180b26b3264cf3686a7df8"
+      },
+      {
+        "source_id": "project:README.md",
+        "sha256": "fd086f768e712756cf890b37d7d01ad193ea891ca86cff9ad971860f8058f518"
+      },
+      {
+        "source_id": "project:db/001_init.sql",
+        "sha256": "f2afa087c459f97777f365cb18816980c8e3df5828ff87a427c11864f610e5c0"
+      },
+      {
+        "source_id": "project:docs/product.md",
+        "sha256": "d468feea217106c15476d1f3325c6c107b887654e6ab7668c6986dd52fc4a864"
+      },
+      {
+        "source_id": "project:exports/shift-notes.md",
+        "sha256": "3db2c6bf1dffa3b3c8ef5457e83ad36577bc81631d757402d9f1793f1b80e6fe"
+      },
+      {
+        "source_id": "project:ops/deploy.json",
+        "sha256": "894d07ff3422f34d98801b03f24b2fc72f88a8d84fe01babfa218f47b07682f0"
+      },
+      {
+        "source_id": "project:src/api.py",
+        "sha256": "d231d6f46c23e9ad0f4d8669d76a1a9ad5e7de98d8f21963d9b563e7b9cf74ec"
+      },
+      {
+        "source_id": "project:src/notification_worker.py",
+        "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513"
+      },
+      {
+        "source_id": "project:src/service.py",
+        "sha256": "dd4a04d9a9bceac90cc0016b73deaf06b9489ec4e0d0607b193401940efea33e"
+      },
+      {
+        "source_id": "project:tests/test_rules.py",
+        "sha256": "f107331faa2b69d4f517dd42ebda925e2f5bc330b43d692538c78bb21d98a283"
+      },
+      {
+        "source_id": "external:raw:current",
+        "sha256": "a720ba96264ccb975b87fbff914b18db6b30704efa37c8c88d4da42b5986b093"
+      },
+      {
+        "source_id": "previous:project:docs/new-work.md",
+        "sha256": "7e663353f79fa33778148b72f805c1ade8f9951fb940427287906856981e6059"
+      },
+      {
+        "source_id": "previous:external:raw",
+        "sha256": "bf10cfd77b666fe78e19f124f414fb61cc744fd850b54b7659152b8627041b3a"
+      },
+      {
+        "source_id": "previous:team-wiki:feature-plan",
+        "sha256": "29cd0a58e0b4bb84a4e4cd2aa901db6a464b30d5f3974fca3fdd591d07020721"
+      },
+      {
+        "source_id": "previous:team-wiki:incident-17",
+        "sha256": "95f59dc2d83f28bc3791ef1e7aeed5f29cce359ddc13fd32c98026a300065070"
+      },
+      {
+        "source_id": "snapshot:HEAD:src/api.py",
+        "sha256": "18facc54334619b0af50d13fb46912caddb88b2f7ce022eac8a362baae0955a2"
+      },
+      {
+        "source_id": "snapshot:INDEX:src/api.py",
+        "sha256": "41ec3471f5eab13c1ca29956f262fdbf03d5106733884c58cfa57b834b3d97ca"
+      },
+      {
+        "source_id": "snapshot:HEAD:src/service.py",
+        "sha256": "84f6d24c82a26a3bd827ee0352b4dc2f2d4feff2b54911ee0e6c6128fae2b1ab"
+      },
+      {
+        "source_id": "snapshot:INDEX:src/service.py",
+        "sha256": "84f6d24c82a26a3bd827ee0352b4dc2f2d4feff2b54911ee0e6c6128fae2b1ab"
+      },
+      {
+        "source_id": "snapshot:HEAD:src/worker.py",
+        "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513"
+      },
+      {
+        "source_id": "snapshot:INDEX:src/worker.py",
+        "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513"
+      },
+      {
+        "source_id": "snapshot:git-status",
+        "sha256": "fc71e26dd5cd5610a68edbaf562d3710dd69f0fce4bc49644a0705b2701ec0dd"
+      },
+      {
+        "source_id": "snapshot:git-log",
+        "sha256": "bb3bf3cffda31ce2f0084d0c0481b09852b6d34c9b21f2fd85758a306bcec82f"
+      },
+      {
+        "source_id": "snapshot:git-diff-unstaged",
+        "sha256": "86daf8065cc2210abde8fcfef0912aa0233b32e428d38fe185d5438239914f28"
+      },
+      {
+        "source_id": "snapshot:git-diff-staged",
+        "sha256": "b332ade9aaa51055c23635aef913048d57e9f53cf1eb609265be2222482ee0fa"
+      }
+    ],
+    "exclusions": [
+      {
+        "scope": ".git internal storage",
+        "reason": "用可读的 Git 状态、日志、HEAD/index 文件和 diff 代替内部对象库。"
+      },
+      {
+        "scope": "AI sessions and other experiment directories",
+        "reason": "用户明确排除；未访问。"
+      },
+      {
+        "scope": "handoff.md and coverage.json as inputs",
+        "reason": "避免递归；但记录上一版产物元数据，并沿用当前无法重采的历史来源。"
+      },
+      {
+        "scope": "network and live external systems",
+        "reason": "用户禁止联网；本地外部快照显示权限失败。"
+      }
+    ]
+  },
+  "git_head": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+  "external_binding": {
+    "source_id": "team-wiki",
+    "current_container_sha256": "a720ba96264ccb975b87fbff914b18db6b30704efa37c8c88d4da42b5986b093",
+    "status": "unavailable",
+    "permissions_verified": false,
+    "enumeration_complete": false,
+    "items_returned": 0,
+    "deleted_ids_returned": 0,
+    "errors": [
+      "permission denied in synthetic source"
+    ],
+    "interpretation": "本轮无法读取；空 items/deleted_ids 不构成删除证据。上一版文档仅作为历史快照沿用。",
+    "prior_run_id": "1f39d8ea-a4cf-4a15-a104-275b7d58a3eb",
+    "prior_scope_hash": "9f780ab2ab23c79fdd21c6c315a40e91d26e2baa6c7bfcd1bc1544806a3fdd23"
+  },
+  "previous_completion_artifact": {
+    "run_id": "1f39d8ea-a4cf-4a15-a104-275b7d58a3eb",
+    "scope_hash": "9f780ab2ab23c79fdd21c6c315a40e91d26e2baa6c7bfcd1bc1544806a3fdd23",
+    "handoff_sha256": "6dcc952850f19ad566cce64cb6dd222e15db048469c49d804a866b5065ec368b",
+    "handoff_bytes": 25116,
+    "preserved_sources": [
+      "previous:project:docs/new-work.md",
+      "previous:external:raw",
+      "previous:team-wiki:feature-plan",
+      "previous:team-wiki:incident-17"
+    ],
+    "note": "原文与哈希嵌入本轮 sources；其中外部文档未在本轮复核。"
+  },
+  "coverage": {
+    "current_project_files": 10,
+    "current_external_snapshot_files": 1,
+    "carried_forward_previous_sources": 4,
+    "git_snapshot_records": 10,
+    "current_external_enumeration_complete": false,
+    "attachments_currently_enumerated": null,
+    "all_current_project_originals_included": true,
+    "all_external_originals_currently_verified": false
+  },
+  "changes_since_previous": [
+    {
+      "path": "docs/new-work.md",
+      "change": "absent",
+      "effect": "上一版未跟踪提案当前缺失；删除时间与操作者不可知。"
+    },
+    {
+      "path": "src/service.py",
+      "change": "POSTPONE_HOURS 24 -> 48 in working tree",
+      "effect": "延后结果增加 48 小时；项目文档仍写 24；无部署证据。"
+    },
+    {
+      "path": "src/worker.py -> src/notification_worker.py",
+      "change": "byte-identical rename candidate, unstaged/untracked",
+      "effect": "实现内容不变，但旧导入路径失效。"
+    },
+    {
+      "path": "tests/test_rules.py",
+      "change": "source unchanged, dependency path stale",
+      "effect": "测试收集失败，0 个业务测试执行。"
+    },
+    {
+      "path": "../external-full.json",
+      "change": "complete export -> unavailable permission failure",
+      "effect": "不能判定旧外部文档删除或本轮采集成功。"
+    }
+  ],
+  "exclusions": [
+    {
+      "scope": ".git internal storage",
+      "reason": "用可读的 Git 状态、日志、HEAD/index 文件和 diff 代替内部对象库。"
+    },
+    {
+      "scope": "AI sessions and other experiment directories",
+      "reason": "用户明确排除；未访问。"
+    },
+    {
+      "scope": "handoff.md and coverage.json as inputs",
+      "reason": "避免递归；但记录上一版产物元数据，并沿用当前无法重采的历史来源。"
+    },
+    {
+      "scope": "network and live external systems",
+      "reason": "用户禁止联网；本地外部快照显示权限失败。"
+    }
+  ],
+  "known_gaps": [
+    "外部来源本轮权限失败，页面和附件无法重新枚举；上一版外部正文未复核。",
+    "没有前端、数据库适配器、队列运行器、依赖清单、真实 HTTP 服务或发布版源码快照。",
+    "48 小时工作树变化与产品文档 24 小时不一致，且没有批准或部署证据。",
+    "worker 重命名后测试导入失败；当前两个规则测试均未执行。",
+    "批量完成仍是项目文档中的未来计划，当前 API 未实现。",
+    "事件因果和准确发生日期仍无法建立。"
+  ],
+  "validation": {
+    "unit_tests": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.13 -m unittest discover -s tests -v",
+      "python": "3.13.1",
+      "executed_tests": 0,
+      "passed": 0,
+      "failed": 0,
+      "collection_errors": 1,
+      "error": "ModuleNotFoundError: No module named 'src.worker'"
+    },
+    "rename_content_comparison": {
+      "old": "HEAD:src/worker.py",
+      "new": "src/notification_worker.py",
+      "byte_identical": true
+    },
+    "all_embedded_content_byte_exact": true,
+    "business_source_files_changed_by_export": false
+  },
+  "handoff": {
+    "path": "handoff.md",
+    "sha256": "940612a18b1535f78d92a0d2a9306f12b0c6615fc0152d1f7c771d140ac1a40a",
+    "bytes": 27275
+  },
+  "sources": [
+    {
+      "source_id": "project:.gitignore",
+      "locator": ".gitignore",
+      "sha256": "9e19fc6b758043fd9e6df8fb1773ba8f587eadcf33180b26b3264cf3686a7df8",
+      "bytes": 45,
+      "complete": true,
+      "known_gaps": [],
+      "content": "exports/\n.env\n.project-context/\n__pycache__/\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "git_state": "tracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-001",
+      "handoff_content_start_utf8": 7068,
+      "handoff_content_end_utf8": 7113
+    },
+    {
+      "source_id": "project:README.md",
+      "locator": "README.md",
+      "sha256": "fd086f768e712756cf890b37d7d01ad193ea891ca86cff9ad971860f8058f518",
+      "bytes": 656,
+      "complete": true,
+      "known_gaps": [],
+      "content": "# Lantern Tasks\n\nLantern Tasks helps small volunteer teams manage equipment-return reminders.\nThe current release is a single-team pilot. People can create tasks, postpone a\nreminder, and mark one task done. It does not support inviting other teams.\n\n## Local use\nRun `python3 src/api.py`. SQLite stores tasks; a separate worker consumes the\noutbox. The worker uses UTC timestamps. A failed message retries at most twice.\nTask completion and its outbox message must commit together.\n\n## Project facts\nThe shipping service still runs commit `fixture-release-a`; the working tree\ncontains the next delay-rule change. See docs/product.md and ops/deploy.json.\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "git_state": "tracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-002",
+      "handoff_content_start_utf8": 7431,
+      "handoff_content_end_utf8": 8087
+    },
+    {
+      "source_id": "project:db/001_init.sql",
+      "locator": "db/001_init.sql",
+      "sha256": "f2afa087c459f97777f365cb18816980c8e3df5828ff87a427c11864f610e5c0",
+      "bytes": 322,
+      "complete": true,
+      "known_gaps": [],
+      "content": "CREATE TABLE tasks (\n    id TEXT PRIMARY KEY,\n    team_id TEXT NOT NULL,\n    due_at TEXT NOT NULL,\n    done INTEGER NOT NULL DEFAULT 0,\n    archived INTEGER NOT NULL DEFAULT 0\n);\nCREATE TABLE outbox (\n    id INTEGER PRIMARY KEY,\n    task_id TEXT NOT NULL,\n    kind TEXT NOT NULL,\n    attempt INTEGER NOT NULL DEFAULT 0\n);\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "git_state": "tracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-003",
+      "handoff_content_start_utf8": 8417,
+      "handoff_content_end_utf8": 8739
+    },
+    {
+      "source_id": "project:docs/product.md",
+      "locator": "docs/product.md",
+      "sha256": "d468feea217106c15476d1f3325c6c107b887654e6ab7668c6986dd52fc4a864",
+      "bytes": 682,
+      "complete": true,
+      "known_gaps": [],
+      "content": "# Product decisions\n\nUsers are volunteer shift leads sharing equipment. A shift lead needs reminders\nto reduce manual follow-up, but recipients must not receive late-night messages.\nEvery task belongs to one team. Team membership is checked before reads/writes.\nArchived tasks cannot be postponed. The current default postponement is 24 hours.\n\n## Planned, not implemented\nBulk completion was approved for a future release. It should complete up to 100\nselected tasks, returning per-task failures. The current API only accepts one id.\nMultiple teams and invitations remain open design questions; do not treat them\nas released capabilities. Audit retention has not yet been decided.\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "git_state": "tracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-004",
+      "handoff_content_start_utf8": 9069,
+      "handoff_content_end_utf8": 9751
+    },
+    {
+      "source_id": "project:exports/shift-notes.md",
+      "locator": "exports/shift-notes.md",
+      "sha256": "3db2c6bf1dffa3b3c8ef5457e83ad36577bc81631d757402d9f1793f1b80e6fe",
+      "bytes": 126,
+      "complete": true,
+      "known_gaps": [],
+      "content": "# Ignored but in scope\nWeekend reminders are currently the largest user complaint.\nThe next shift starts Monday at 07:00 UTC.\n",
+      "version": "working-tree snapshot; see sha256",
+      "git_state": "ignored business material",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-005",
+      "handoff_content_start_utf8": 10088,
+      "handoff_content_end_utf8": 10214
+    },
+    {
+      "source_id": "project:ops/deploy.json",
+      "locator": "ops/deploy.json",
+      "sha256": "894d07ff3422f34d98801b03f24b2fc72f88a8d84fe01babfa218f47b07682f0",
+      "bytes": 228,
+      "complete": true,
+      "known_gaps": [],
+      "content": "{\n  \"environment\": \"fixture-production\",\n  \"commit\": \"fixture-release-a\",\n  \"deployed_at\": \"2026-09-15T08:00:00Z\",\n  \"verification\": \"health endpoint only; bulk API unverified\",\n  \"previous_commit\": \"fixture-release-previous\"\n}\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "git_state": "tracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-006",
+      "handoff_content_start_utf8": 10544,
+      "handoff_content_end_utf8": 10772
+    },
+    {
+      "source_id": "project:src/api.py",
+      "locator": "src/api.py",
+      "sha256": "d231d6f46c23e9ad0f4d8669d76a1a9ad5e7de98d8f21963d9b563e7b9cf74ec",
+      "bytes": 504,
+      "complete": true,
+      "known_gaps": [],
+      "content": "from service import postpone, complete\n\n\ndef handle(method, path, payload, actor, db):\n    if method == 'POST' and path == '/tasks/complete':\n        # Deliberately single-item; batch is only in the product plan.\n        return complete(db, payload['task_id'], actor['team_id'])\n    if method == 'POST' and path == '/tasks/postpone':\n        return postpone(db, payload['task_id'], actor['team_id'])\n    return {'status': 404, 'error': 'unknown_route'}\n\n# STAGED_FIXTURE_CHANGE\n# UNSTAGED_FIXTURE_CHANGE\n",
+      "version": "working-tree snapshot; see sha256",
+      "git_state": "tracked, staged and unstaged changes",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-007",
+      "handoff_content_start_utf8": 11085,
+      "handoff_content_end_utf8": 11589
+    },
+    {
+      "source_id": "project:src/notification_worker.py",
+      "locator": "src/notification_worker.py",
+      "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513",
+      "bytes": 370,
+      "complete": true,
+      "known_gaps": [],
+      "content": "MAX_RETRIES = 2\nQUIET_START_UTC = 22\nQUIET_END_UTC = 7\n\n\ndef dispatch(job, clock, transport):\n    hour = clock.hour\n    if hour >= QUIET_START_UTC or hour < QUIET_END_UTC:\n        return 'defer_until_07_utc'\n    try:\n        transport.send(job['body'])\n    except TimeoutError:\n        return 'retry' if job['attempt'] < MAX_RETRIES else 'dead_letter'\n    return 'sent'\n",
+      "version": "working-tree snapshot; see sha256",
+      "git_state": "untracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-008",
+      "handoff_content_start_utf8": 11934,
+      "handoff_content_end_utf8": 12304
+    },
+    {
+      "source_id": "project:src/service.py",
+      "locator": "src/service.py",
+      "sha256": "dd4a04d9a9bceac90cc0016b73deaf06b9489ec4e0d0607b193401940efea33e",
+      "bytes": 966,
+      "complete": true,
+      "known_gaps": [],
+      "content": "from datetime import timedelta\n\nPOSTPONE_HOURS = 48\n\n\ndef owned_task(db, task_id, team_id):\n    task = db.get_task(task_id)\n    if task is None or task['team_id'] != team_id:\n        return None  # Do not reveal another team's task existence.\n    return task\n\n\ndef postpone(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    if task['archived']:\n        return {'status': 409, 'error': 'archived'}\n    due_at = task['due_at'] + timedelta(hours=POSTPONE_HOURS)\n    with db.transaction():\n        db.set_due(task_id, due_at)\n        db.enqueue('reminder_rescheduled', task_id)\n    return {'status': 200, 'due_at': str(due_at)}\n\n\ndef complete(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    with db.transaction():\n        db.set_done(task_id, True)\n        db.enqueue('task_completed', task_id)\n    return {'status': 200}\n",
+      "version": "working-tree snapshot; see sha256",
+      "git_state": "tracked, unstaged change",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-009",
+      "handoff_content_start_utf8": 12625,
+      "handoff_content_end_utf8": 13591
+    },
+    {
+      "source_id": "project:tests/test_rules.py",
+      "locator": "tests/test_rules.py",
+      "sha256": "f107331faa2b69d4f517dd42ebda925e2f5bc330b43d692538c78bb21d98a283",
+      "bytes": 599,
+      "complete": true,
+      "known_gaps": [],
+      "content": "import unittest\nfrom types import SimpleNamespace\nfrom src.worker import dispatch\n\n\nclass QuietHours(unittest.TestCase):\n    def test_utc_quiet_hour(self):\n        result = dispatch({}, SimpleNamespace(hour=23), None)\n        self.assertEqual('defer_until_07_utc', result)\n\n    def test_third_timeout_dead_letters(self):\n        class Transport:\n            def send(self, body):\n                raise TimeoutError()\n        result = dispatch({'body': 'return equipment', 'attempt': 2},\n                          SimpleNamespace(hour=9), Transport())\n        self.assertEqual('dead_letter', result)\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "git_state": "tracked",
+      "evidence_scope": "current working tree",
+      "handoff_anchor": "source-010",
+      "handoff_content_start_utf8": 13930,
+      "handoff_content_end_utf8": 14529
+    },
+    {
+      "source_id": "external:raw:current",
+      "locator": "../external-full.json",
+      "sha256": "a720ba96264ccb975b87fbff914b18db6b30704efa37c8c88d4da42b5986b093",
+      "bytes": 514,
+      "complete": true,
+      "known_gaps": [],
+      "content": "{\n  \"schema_version\": 1,\n  \"source_id\": \"team-wiki\",\n  \"run_id\": \"REPLACE_WITH_CURRENT_RUN\",\n  \"scope_hash\": \"REPLACE_WITH_SCAN_SCOPE\",\n  \"status\": \"unavailable\",\n  \"mode\": \"full\",\n  \"enumeration_complete\": false,\n  \"permissions_verified\": false,\n  \"next_cursor\": null,\n  \"collected_at\": \"2026-09-16T10:00:00Z\",\n  \"coverage\": {\n    \"pages\": 2,\n    \"scope\": \"configured public fixture pages; attachments: none\"\n  },\n  \"items\": [],\n  \"deleted_ids\": [],\n  \"errors\": [\n    \"permission denied in synthetic source\"\n  ]\n}",
+      "version": "schema_version=1; collected_at=2026-09-16T10:00:00Z",
+      "evidence_scope": "current local snapshot; source access failed",
+      "handoff_anchor": "source-011",
+      "handoff_content_start_utf8": 14898,
+      "handoff_content_end_utf8": 15412
+    },
+    {
+      "source_id": "previous:project:docs/new-work.md",
+      "locator": "docs/new-work.md",
+      "sha256": "7e663353f79fa33778148b72f805c1ade8f9951fb940427287906856981e6059",
+      "bytes": 65,
+      "complete": true,
+      "known_gaps": [],
+      "content": "Untracked proposal: configurable postponement. Not yet approved.\n",
+      "version": "previous working-tree snapshot; now absent",
+      "evidence_scope": "previous completion artifact",
+      "carried_forward": true,
+      "current_run_verified": false,
+      "prior_source_id": "project:docs/new-work.md",
+      "prior_run_id": "1f39d8ea-a4cf-4a15-a104-275b7d58a3eb",
+      "handoff_anchor": "source-012",
+      "handoff_content_start_utf8": 15764,
+      "handoff_content_end_utf8": 15829
+    },
+    {
+      "source_id": "previous:external:raw",
+      "locator": "../external-full.json",
+      "sha256": "bf10cfd77b666fe78e19f124f414fb61cc744fd850b54b7659152b8627041b3a",
+      "bytes": 1275,
+      "complete": true,
+      "known_gaps": [],
+      "content": "{\n  \"schema_version\": 1,\n  \"source_id\": \"team-wiki\",\n  \"run_id\": \"REPLACE_WITH_CURRENT_RUN\",\n  \"scope_hash\": \"REPLACE_WITH_SCAN_SCOPE\",\n  \"status\": \"complete\",\n  \"mode\": \"full\",\n  \"enumeration_complete\": true,\n  \"permissions_verified\": true,\n  \"next_cursor\": null,\n  \"collected_at\": \"2026-09-16T10:00:00Z\",\n  \"coverage\": {\n    \"pages\": 2,\n    \"scope\": \"configured public fixture pages; attachments: none\"\n  },\n  \"items\": [\n    {\n      \"id\": \"feature-plan\",\n      \"title\": \"Future bulk operations\",\n      \"locator\": \"https://example.org/lantern/feature-plan\",\n      \"version\": \"2\",\n      \"updated_at\": \"2026-09-16T08:00:00Z\",\n      \"content\": \"Approved plan: bulk completion up to 100 tasks with per-task results. This is a plan, not a deployed feature. Multiple-team invitations are still undecided.\\n\"\n    },\n    {\n      \"id\": \"incident-17\",\n      \"title\": \"Night reminders incident\",\n      \"locator\": \"https://example.org/lantern/incidents/17\",\n      \"version\": \"1\",\n      \"updated_at\": \"2026-09-15T12:00:00Z\",\n      \"content\": \"Observed incident: 4 delayed notifications in fixture-production between 06:55 and 07:10 UTC. The window includes fixture-release-previous and fixture-release-a. No proven causal attribution.\\n\"\n    }\n  ],\n  \"deleted_ids\": [],\n  \"errors\": []\n}\n",
+      "version": "previous completed external export",
+      "evidence_scope": "previous completion artifact",
+      "carried_forward": true,
+      "current_run_verified": false,
+      "prior_source_id": "external:raw",
+      "prior_run_id": "1f39d8ea-a4cf-4a15-a104-275b7d58a3eb",
+      "handoff_anchor": "source-013",
+      "handoff_content_start_utf8": 16167,
+      "handoff_content_end_utf8": 17442
+    },
+    {
+      "source_id": "previous:team-wiki:feature-plan",
+      "locator": "https://example.org/lantern/feature-plan",
+      "sha256": "29cd0a58e0b4bb84a4e4cd2aa901db6a464b30d5f3974fca3fdd591d07020721",
+      "bytes": 157,
+      "complete": true,
+      "known_gaps": [],
+      "content": "Approved plan: bulk completion up to 100 tasks with per-task results. This is a plan, not a deployed feature. Multiple-team invitations are still undecided.\n",
+      "version": "carried forward; not readable this run",
+      "evidence_scope": "previous completion artifact",
+      "carried_forward": true,
+      "current_run_verified": false,
+      "prior_source_id": "team-wiki:feature-plan",
+      "prior_run_id": "1f39d8ea-a4cf-4a15-a104-275b7d58a3eb",
+      "handoff_anchor": "source-014",
+      "handoff_content_start_utf8": 17812,
+      "handoff_content_end_utf8": 17969
+    },
+    {
+      "source_id": "previous:team-wiki:incident-17",
+      "locator": "https://example.org/lantern/incidents/17",
+      "sha256": "95f59dc2d83f28bc3791ef1e7aeed5f29cce359ddc13fd32c98026a300065070",
+      "bytes": 192,
+      "complete": true,
+      "known_gaps": [],
+      "content": "Observed incident: 4 delayed notifications in fixture-production between 06:55 and 07:10 UTC. The window includes fixture-release-previous and fixture-release-a. No proven causal attribution.\n",
+      "version": "carried forward; not readable this run",
+      "evidence_scope": "previous completion artifact",
+      "carried_forward": true,
+      "current_run_verified": false,
+      "prior_source_id": "team-wiki:incident-17",
+      "prior_run_id": "1f39d8ea-a4cf-4a15-a104-275b7d58a3eb",
+      "handoff_anchor": "source-015",
+      "handoff_content_start_utf8": 18338,
+      "handoff_content_end_utf8": 18530
+    },
+    {
+      "source_id": "snapshot:HEAD:src/api.py",
+      "locator": "HEAD:src/api.py",
+      "sha256": "18facc54334619b0af50d13fb46912caddb88b2f7ce022eac8a362baae0955a2",
+      "bytes": 453,
+      "complete": true,
+      "known_gaps": [],
+      "content": "from service import postpone, complete\n\n\ndef handle(method, path, payload, actor, db):\n    if method == 'POST' and path == '/tasks/complete':\n        # Deliberately single-item; batch is only in the product plan.\n        return complete(db, payload['task_id'], actor['team_id'])\n    if method == 'POST' and path == '/tasks/postpone':\n        return postpone(db, payload['task_id'], actor['team_id'])\n    return {'status': 404, 'error': 'unknown_route'}\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-016",
+      "handoff_content_start_utf8": 18862,
+      "handoff_content_end_utf8": 19315
+    },
+    {
+      "source_id": "snapshot:INDEX:src/api.py",
+      "locator": "INDEX:src/api.py",
+      "sha256": "41ec3471f5eab13c1ca29956f262fdbf03d5106733884c58cfa57b834b3d97ca",
+      "bytes": 478,
+      "complete": true,
+      "known_gaps": [],
+      "content": "from service import postpone, complete\n\n\ndef handle(method, path, payload, actor, db):\n    if method == 'POST' and path == '/tasks/complete':\n        # Deliberately single-item; batch is only in the product plan.\n        return complete(db, payload['task_id'], actor['team_id'])\n    if method == 'POST' and path == '/tasks/postpone':\n        return postpone(db, payload['task_id'], actor['team_id'])\n    return {'status': 404, 'error': 'unknown_route'}\n\n# STAGED_FIXTURE_CHANGE\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-017",
+      "handoff_content_start_utf8": 19649,
+      "handoff_content_end_utf8": 20127
+    },
+    {
+      "source_id": "snapshot:HEAD:src/service.py",
+      "locator": "HEAD:src/service.py",
+      "sha256": "84f6d24c82a26a3bd827ee0352b4dc2f2d4feff2b54911ee0e6c6128fae2b1ab",
+      "bytes": 966,
+      "complete": true,
+      "known_gaps": [],
+      "content": "from datetime import timedelta\n\nPOSTPONE_HOURS = 24\n\n\ndef owned_task(db, task_id, team_id):\n    task = db.get_task(task_id)\n    if task is None or task['team_id'] != team_id:\n        return None  # Do not reveal another team's task existence.\n    return task\n\n\ndef postpone(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    if task['archived']:\n        return {'status': 409, 'error': 'archived'}\n    due_at = task['due_at'] + timedelta(hours=POSTPONE_HOURS)\n    with db.transaction():\n        db.set_due(task_id, due_at)\n        db.enqueue('reminder_rescheduled', task_id)\n    return {'status': 200, 'due_at': str(due_at)}\n\n\ndef complete(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    with db.transaction():\n        db.set_done(task_id, True)\n        db.enqueue('task_completed', task_id)\n    return {'status': 200}\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-018",
+      "handoff_content_start_utf8": 20467,
+      "handoff_content_end_utf8": 21433
+    },
+    {
+      "source_id": "snapshot:INDEX:src/service.py",
+      "locator": "INDEX:src/service.py",
+      "sha256": "84f6d24c82a26a3bd827ee0352b4dc2f2d4feff2b54911ee0e6c6128fae2b1ab",
+      "bytes": 966,
+      "complete": true,
+      "known_gaps": [],
+      "content": "from datetime import timedelta\n\nPOSTPONE_HOURS = 24\n\n\ndef owned_task(db, task_id, team_id):\n    task = db.get_task(task_id)\n    if task is None or task['team_id'] != team_id:\n        return None  # Do not reveal another team's task existence.\n    return task\n\n\ndef postpone(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    if task['archived']:\n        return {'status': 409, 'error': 'archived'}\n    due_at = task['due_at'] + timedelta(hours=POSTPONE_HOURS)\n    with db.transaction():\n        db.set_due(task_id, due_at)\n        db.enqueue('reminder_rescheduled', task_id)\n    return {'status': 200, 'due_at': str(due_at)}\n\n\ndef complete(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    with db.transaction():\n        db.set_done(task_id, True)\n        db.enqueue('task_completed', task_id)\n    return {'status': 200}\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-019",
+      "handoff_content_start_utf8": 21775,
+      "handoff_content_end_utf8": 22741
+    },
+    {
+      "source_id": "snapshot:HEAD:src/worker.py",
+      "locator": "HEAD:src/worker.py",
+      "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513",
+      "bytes": 370,
+      "complete": true,
+      "known_gaps": [],
+      "content": "MAX_RETRIES = 2\nQUIET_START_UTC = 22\nQUIET_END_UTC = 7\n\n\ndef dispatch(job, clock, transport):\n    hour = clock.hour\n    if hour >= QUIET_START_UTC or hour < QUIET_END_UTC:\n        return 'defer_until_07_utc'\n    try:\n        transport.send(job['body'])\n    except TimeoutError:\n        return 'retry' if job['attempt'] < MAX_RETRIES else 'dead_letter'\n    return 'sent'\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-020",
+      "handoff_content_start_utf8": 23079,
+      "handoff_content_end_utf8": 23449
+    },
+    {
+      "source_id": "snapshot:INDEX:src/worker.py",
+      "locator": "INDEX:src/worker.py",
+      "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513",
+      "bytes": 370,
+      "complete": true,
+      "known_gaps": [],
+      "content": "MAX_RETRIES = 2\nQUIET_START_UTC = 22\nQUIET_END_UTC = 7\n\n\ndef dispatch(job, clock, transport):\n    hour = clock.hour\n    if hour >= QUIET_START_UTC or hour < QUIET_END_UTC:\n        return 'defer_until_07_utc'\n    try:\n        transport.send(job['body'])\n    except TimeoutError:\n        return 'retry' if job['attempt'] < MAX_RETRIES else 'dead_letter'\n    return 'sent'\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-021",
+      "handoff_content_start_utf8": 23789,
+      "handoff_content_end_utf8": 24159
+    },
+    {
+      "source_id": "snapshot:git-status",
+      "locator": "git-status",
+      "sha256": "fc71e26dd5cd5610a68edbaf562d3710dd69f0fce4bc49644a0705b2701ec0dd",
+      "bytes": 122,
+      "complete": true,
+      "known_gaps": [],
+      "content": "MM src/api.py\n M src/service.py\n D src/worker.py\n?? coverage.json\n?? handoff.md\n?? src/notification_worker.py\n!! exports/\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-022",
+      "handoff_content_start_utf8": 24481,
+      "handoff_content_end_utf8": 24603
+    },
+    {
+      "source_id": "snapshot:git-log",
+      "locator": "git-log",
+      "sha256": "bb3bf3cffda31ce2f0084d0c0481b09852b6d34c9b21f2fd85758a306bcec82f",
+      "bytes": 264,
+      "complete": true,
+      "known_gaps": [],
+      "content": "commit c25380c7cabf7a294919f92e84ab23e4e66f0793\nAuthor:     Fixture Author <fixture@example.org>\nAuthorDate: Wed Sep 16 20:52:08 2026 -0700\nCommit:     Fixture Author <fixture@example.org>\nCommitDate: Wed Sep 16 20:52:08 2026 -0700\n\n    synthetic fixture baseline\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-023",
+      "handoff_content_start_utf8": 24919,
+      "handoff_content_end_utf8": 25183
+    },
+    {
+      "source_id": "snapshot:git-diff-unstaged",
+      "locator": "git-diff-unstaged",
+      "sha256": "86daf8065cc2210abde8fcfef0912aa0233b32e428d38fe185d5438239914f28",
+      "bytes": 1051,
+      "complete": true,
+      "known_gaps": [],
+      "content": "diff --git a/src/api.py b/src/api.py\nindex 1e483de..8fb9960 100644\n--- a/src/api.py\n+++ b/src/api.py\n@@ -10,3 +10,4 @@ def handle(method, path, payload, actor, db):\n     return {'status': 404, 'error': 'unknown_route'}\n \n # STAGED_FIXTURE_CHANGE\n+# UNSTAGED_FIXTURE_CHANGE\ndiff --git a/src/service.py b/src/service.py\nindex 3d83e20..1c65510 100644\n--- a/src/service.py\n+++ b/src/service.py\n@@ -1,6 +1,6 @@\n from datetime import timedelta\n \n-POSTPONE_HOURS = 24\n+POSTPONE_HOURS = 48\n \n \n def owned_task(db, task_id, team_id):\ndiff --git a/src/worker.py b/src/worker.py\ndeleted file mode 100644\nindex c6bdeb7..0000000\n--- a/src/worker.py\n+++ /dev/null\n@@ -1,14 +0,0 @@\n-MAX_RETRIES = 2\n-QUIET_START_UTC = 22\n-QUIET_END_UTC = 7\n-\n-\n-def dispatch(job, clock, transport):\n-    hour = clock.hour\n-    if hour >= QUIET_START_UTC or hour < QUIET_END_UTC:\n-        return 'defer_until_07_utc'\n-    try:\n-        transport.send(job['body'])\n-    except TimeoutError:\n-        return 'retry' if job['attempt'] < MAX_RETRIES else 'dead_letter'\n-    return 'sent'\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-024",
+      "handoff_content_start_utf8": 25520,
+      "handoff_content_end_utf8": 26571
+    },
+    {
+      "source_id": "snapshot:git-diff-staged",
+      "locator": "git-diff-staged",
+      "sha256": "b332ade9aaa51055c23635aef913048d57e9f53cf1eb609265be2222482ee0fa",
+      "bytes": 367,
+      "complete": true,
+      "known_gaps": [],
+      "content": "diff --git a/src/api.py b/src/api.py\nindex 85e6928..1e483de 100644\n--- a/src/api.py\n+++ b/src/api.py\n@@ -8,3 +8,5 @@ def handle(method, path, payload, actor, db):\n     if method == 'POST' and path == '/tasks/postpone':\n         return postpone(db, payload['task_id'], actor['team_id'])\n     return {'status': 404, 'error': 'unknown_route'}\n+\n+# STAGED_FIXTURE_CHANGE\n",
+      "version": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+      "evidence_scope": "current git snapshot",
+      "handoff_anchor": "source-025",
+      "handoff_content_start_utf8": 26903,
+      "handoff_content_end_utf8": 27270
+    }
+  ]
+}

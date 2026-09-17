@@ -1,0 +1,6 @@
+已更新 [handoff.md](/private/tmp/project-context-behavior-v1/with/lantern/handoff.md) 和 [coverage.json](/private/tmp/project-context-behavior-v1/with/lantern/coverage.json)。
+
+- 保留 12 份全文及详细说明，移除旧讨论附录，保留批量完成的计划状态。
+- 已记录重命名、删除、24/48 小时冲突及测试旧导入失败，区分代码与部署证据。
+- 外部权限失败，两份旧文档保留并标记未刷新，整体为 `partial`。
+- 前一版完整产物已保留；全文与哈希核对通过。未联网、未修改业务文件；网页版交接效果未验证。

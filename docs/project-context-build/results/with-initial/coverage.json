@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "run_id": "20260917T035252-2d7c22130070",
+  "build_id": "20260917T035448-9fdee2c1a1c4",
+  "status": "complete_within_declared_scope",
+  "document": "handoff.md",
+  "document_sha256": "eb52d4e002fd9c36d6f0f17f0d05ec738c512871243ddd10b4d8362a56561240",
+  "material_count": 13,
+  "local_count": 11,
+  "external_count": 2,
+  "materials": [
+    {
+      "source_id": "local:.gitignore",
+      "locator": ".gitignore",
+      "version": null,
+      "sha256": "9e19fc6b758043fd9e6df8fb1773ba8f587eadcf33180b26b3264cf3686a7df8",
+      "snapshot_fingerprint": "7b08c78877bd84c41d1ecabe5fecf8428baaa6c71093f49a8cd46fd3977bf1df",
+      "bytes": 45,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "config"
+      ],
+      "content": "exports/\n.env\n.project-context/\n__pycache__/\n"
+    },
+    {
+      "source_id": "local:README.md",
+      "locator": "README.md",
+      "version": null,
+      "sha256": "fd086f768e712756cf890b37d7d01ad193ea891ca86cff9ad971860f8058f518",
+      "snapshot_fingerprint": "1ef6e3c51a80c034a3ecb9657da09681b381bc842a1dc753d029449435dc19c2",
+      "bytes": 656,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "config",
+        "product",
+        "service",
+        "state",
+        "worker"
+      ],
+      "content": "# Lantern Tasks\n\nLantern Tasks helps small volunteer teams manage equipment-return reminders.\nThe current release is a single-team pilot. People can create tasks, postpone a\nreminder, and mark one task done. It does not support inviting other teams.\n\n## Local use\nRun `python3 src/api.py`. SQLite stores tasks; a separate worker consumes the\noutbox. The worker uses UTC timestamps. A failed message retries at most twice.\nTask completion and its outbox message must commit together.\n\n## Project facts\nThe shipping service still runs commit `fixture-release-a`; the working tree\ncontains the next delay-rule change. See docs/product.md and ops/deploy.json.\n"
+    },
+    {
+      "source_id": "local:db/001_init.sql",
+      "locator": "db/001_init.sql",
+      "version": null,
+      "sha256": "f2afa087c459f97777f365cb18816980c8e3df5828ff87a427c11864f610e5c0",
+      "snapshot_fingerprint": "caf9ea6bae5f4141444620e97d10f569ba44713d7e3534d662c9ad4a1cb04410",
+      "bytes": 322,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "service"
+      ],
+      "content": "CREATE TABLE tasks (\n    id TEXT PRIMARY KEY,\n    team_id TEXT NOT NULL,\n    due_at TEXT NOT NULL,\n    done INTEGER NOT NULL DEFAULT 0,\n    archived INTEGER NOT NULL DEFAULT 0\n);\nCREATE TABLE outbox (\n    id INTEGER PRIMARY KEY,\n    task_id TEXT NOT NULL,\n    kind TEXT NOT NULL,\n    attempt INTEGER NOT NULL DEFAULT 0\n);\n"
+    },
+    {
+      "source_id": "local:docs/new-work.md",
+      "locator": "docs/new-work.md",
+      "version": null,
+      "sha256": "7e663353f79fa33778148b72f805c1ade8f9951fb940427287906856981e6059",
+      "snapshot_fingerprint": "259e4ff7055fb1231866f3d31b4789c419451d960b481f5cfc8a66f9b5c80be8",
+      "bytes": 65,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "config",
+        "state"
+      ],
+      "content": "Untracked proposal: configurable postponement. Not yet approved.\n"
+    },
+    {
+      "source_id": "local:docs/product.md",
+      "locator": "docs/product.md",
+      "version": null,
+      "sha256": "d468feea217106c15476d1f3325c6c107b887654e6ab7668c6986dd52fc4a864",
+      "snapshot_fingerprint": "a8379cd5c5b4af4c0be46b15667f1519c130dbfe0194bdcceef836da1217c704",
+      "bytes": 682,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "product",
+        "state"
+      ],
+      "content": "# Product decisions\n\nUsers are volunteer shift leads sharing equipment. A shift lead needs reminders\nto reduce manual follow-up, but recipients must not receive late-night messages.\nEvery task belongs to one team. Team membership is checked before reads/writes.\nArchived tasks cannot be postponed. The current default postponement is 24 hours.\n\n## Planned, not implemented\nBulk completion was approved for a future release. It should complete up to 100\nselected tasks, returning per-task failures. The current API only accepts one id.\nMultiple teams and invitations remain open design questions; do not treat them\nas released capabilities. Audit retention has not yet been decided.\n"
+    },
+    {
+      "source_id": "local:exports/shift-notes.md",
+      "locator": "exports/shift-notes.md",
+      "version": null,
+      "sha256": "3db2c6bf1dffa3b3c8ef5457e83ad36577bc81631d757402d9f1793f1b80e6fe",
+      "snapshot_fingerprint": "00ff024816d5bace3d90b7155019c98f08f2643684d674861d6a41b1d93e1890",
+      "bytes": 126,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "config",
+        "product",
+        "runtime"
+      ],
+      "content": "# Ignored but in scope\nWeekend reminders are currently the largest user complaint.\nThe next shift starts Monday at 07:00 UTC.\n"
+    },
+    {
+      "source_id": "local:ops/deploy.json",
+      "locator": "ops/deploy.json",
+      "version": null,
+      "sha256": "894d07ff3422f34d98801b03f24b2fc72f88a8d84fe01babfa218f47b07682f0",
+      "snapshot_fingerprint": "c549eaa78bc99e4ea7d38442bcca34d979d2f0335bc89f57b7124a2c5eaf4da7",
+      "bytes": 228,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "runtime",
+        "state"
+      ],
+      "content": "{\n  \"environment\": \"fixture-production\",\n  \"commit\": \"fixture-release-a\",\n  \"deployed_at\": \"2026-09-15T08:00:00Z\",\n  \"verification\": \"health endpoint only; bulk API unverified\",\n  \"previous_commit\": \"fixture-release-previous\"\n}\n"
+    },
+    {
+      "source_id": "local:src/api.py",
+      "locator": "src/api.py",
+      "version": null,
+      "sha256": "d231d6f46c23e9ad0f4d8669d76a1a9ad5e7de98d8f21963d9b563e7b9cf74ec",
+      "snapshot_fingerprint": "32e000ef0cb0502d850b3e7f6d9ff768d19905a3be71bd552d697e2310e13152",
+      "bytes": 504,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "api",
+        "state"
+      ],
+      "content": "from service import postpone, complete\n\n\ndef handle(method, path, payload, actor, db):\n    if method == 'POST' and path == '/tasks/complete':\n        # Deliberately single-item; batch is only in the product plan.\n        return complete(db, payload['task_id'], actor['team_id'])\n    if method == 'POST' and path == '/tasks/postpone':\n        return postpone(db, payload['task_id'], actor['team_id'])\n    return {'status': 404, 'error': 'unknown_route'}\n\n# STAGED_FIXTURE_CHANGE\n# UNSTAGED_FIXTURE_CHANGE\n"
+    },
+    {
+      "source_id": "local:src/service.py",
+      "locator": "src/service.py",
+      "version": null,
+      "sha256": "84f6d24c82a26a3bd827ee0352b4dc2f2d4feff2b54911ee0e6c6128fae2b1ab",
+      "snapshot_fingerprint": "7e30a17ba4a75f7eb8a25189811fed78da97b17598510dc26cc58fa2db900223",
+      "bytes": 966,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "api",
+        "service"
+      ],
+      "content": "from datetime import timedelta\n\nPOSTPONE_HOURS = 24\n\n\ndef owned_task(db, task_id, team_id):\n    task = db.get_task(task_id)\n    if task is None or task['team_id'] != team_id:\n        return None  # Do not reveal another team's task existence.\n    return task\n\n\ndef postpone(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    if task['archived']:\n        return {'status': 409, 'error': 'archived'}\n    due_at = task['due_at'] + timedelta(hours=POSTPONE_HOURS)\n    with db.transaction():\n        db.set_due(task_id, due_at)\n        db.enqueue('reminder_rescheduled', task_id)\n    return {'status': 200, 'due_at': str(due_at)}\n\n\ndef complete(db, task_id, team_id):\n    task = owned_task(db, task_id, team_id)\n    if task is None:\n        return {'status': 404}\n    with db.transaction():\n        db.set_done(task_id, True)\n        db.enqueue('task_completed', task_id)\n    return {'status': 200}\n"
+    },
+    {
+      "source_id": "local:src/worker.py",
+      "locator": "src/worker.py",
+      "version": null,
+      "sha256": "64d2e4ca60a3058c189ccf355af17fe9992a0a6a4d3e4db9e6029761a5cb6513",
+      "snapshot_fingerprint": "7d8ecd8a8439221ca35908362584422eb01830e0c5298007f2b00b9d74a8a7b2",
+      "bytes": 370,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "runtime",
+        "worker"
+      ],
+      "content": "MAX_RETRIES = 2\nQUIET_START_UTC = 22\nQUIET_END_UTC = 7\n\n\ndef dispatch(job, clock, transport):\n    hour = clock.hour\n    if hour >= QUIET_START_UTC or hour < QUIET_END_UTC:\n        return 'defer_until_07_utc'\n    try:\n        transport.send(job['body'])\n    except TimeoutError:\n        return 'retry' if job['attempt'] < MAX_RETRIES else 'dead_letter'\n    return 'sent'\n"
+    },
+    {
+      "source_id": "local:tests/test_rules.py",
+      "locator": "tests/test_rules.py",
+      "version": null,
+      "sha256": "f107331faa2b69d4f517dd42ebda925e2f5bc330b43d692538c78bb21d98a283",
+      "snapshot_fingerprint": "51148003b118c95d3e41ed3701da8708cd85fbbbf5837e5731bba194b76e03ea",
+      "bytes": 599,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "worker"
+      ],
+      "content": "import unittest\nfrom types import SimpleNamespace\nfrom src.worker import dispatch\n\n\nclass QuietHours(unittest.TestCase):\n    def test_utc_quiet_hour(self):\n        result = dispatch({}, SimpleNamespace(hour=23), None)\n        self.assertEqual('defer_until_07_utc', result)\n\n    def test_third_timeout_dead_letters(self):\n        class Transport:\n            def send(self, body):\n                raise TimeoutError()\n        result = dispatch({'body': 'return equipment', 'attempt': 2},\n                          SimpleNamespace(hour=9), Transport())\n        self.assertEqual('dead_letter', result)\n"
+    },
+    {
+      "source_id": "team-wiki:feature-plan",
+      "locator": "https://example.org/lantern/feature-plan",
+      "version": "2",
+      "sha256": "29cd0a58e0b4bb84a4e4cd2aa901db6a464b30d5f3974fca3fdd591d07020721",
+      "snapshot_fingerprint": "3e776ccfef2ee088f325493ab8bb08584361ab24eeb4cb031ad528096e93cc07",
+      "bytes": 157,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "product",
+        "state"
+      ],
+      "content": "Approved plan: bulk completion up to 100 tasks with per-task results. This is a plan, not a deployed feature. Multiple-team invitations are still undecided.\n"
+    },
+    {
+      "source_id": "team-wiki:incident-17",
+      "locator": "https://example.org/lantern/incidents/17",
+      "version": "1",
+      "sha256": "95f59dc2d83f28bc3791ef1e7aeed5f29cce359ddc13fd32c98026a300065070",
+      "snapshot_fingerprint": "14b21ca76b8052fd478b7726b78590989a6bc0c278ec1ff7f6eafe16e7e55638",
+      "bytes": 192,
+      "complete": true,
+      "known_gaps": [],
+      "explanation_sections": [
+        "runtime"
+      ],
+      "content": "Observed incident: 4 delayed notifications in fixture-production between 06:55 and 07:10 UTC. The window includes fixture-release-previous and fixture-release-a. No proven causal attribution.\n"
+    }
+  ],
+  "source_binding": {
+    "source_id": "team-wiki",
+    "original_envelope": "../external-full.json",
+    "original_envelope_sha256": "bf10cfd77b666fe78e19f124f414fb61cc744fd850b54b7659152b8627041b3a",
+    "collected_at": "2026-09-16T10:00:00Z",
+    "scope_hash": "1ca42865747d5a806aea0776748cd01925419a1e3472d4096d5c801036a85a1d",
+    "binding_changes_only": [
+      "run_id",
+      "scope_hash"
+    ],
+    "network_access": false,
+    "permissions_basis": "User confirmed source permissions and scope; offline supplied snapshot",
+    "attachments": []
+  },
+  "workspace": {
+    "branch": "master",
+    "git": true,
+    "head": "c25380c7cabf7a294919f92e84ab23e4e66f0793",
+    "observed_at": "2026-09-17T03:52:52.227042+00:00",
+    "repository_root": "/private/tmp/project-context-behavior-v1/with/lantern",
+    "staged_changes": "2\t0\tsrc/api.py\n",
+    "status_porcelain": "MM src/api.py\n?? .agents/skills/project-context/SKILL.md\n?? .agents/skills/project-context/agents/openai.yaml\n?? .agents/skills/project-context/assets/brief.template.md\n?? .agents/skills/project-context/assets/envelope.template.json\n?? .agents/skills/project-context/assets/notes.template.json\n?? .agents/skills/project-context/assets/sources.example.json\n?? .agents/skills/project-context/references/cli-and-schemas.md\n?? .agents/skills/project-context/references/explanation-and-completeness.md\n?? .agents/skills/project-context/references/sources-and-production.md\n?? .agents/skills/project-context/scripts/collect_source.py\n?? .agents/skills/project-context/scripts/context.py\n?? docs/new-work.md\n",
+    "unstaged_changes": "1\t0\tsrc/api.py\n"
+  },
+  "exclusions": [
+    {
+      "path": ".git/",
+      "reason": "Git internals; actual working files and Git state are captured separately"
+    },
+    {
+      "path": ".project-context/",
+      "reason": "Skill state and exports (prevent recursive capture)"
+    },
+    {
+      "path": ".agents/skills/project-context/",
+      "reason": "用户明确排除本次工具安装目录"
+    }
+  ],
+  "validation": {
+    "all_source_bytes_match_snapshots": true,
+    "all_fulltexts_present_in_handoff": true,
+    "all_materials_explained": true,
+    "business_tests_run": false,
+    "web_chat_handoff_tested": false
+  },
+  "known_limitations": [
+    "仅合成项目与既有离线快照；没有实时业务系统验证",
+    "创建入口、数据库适配器、真实消费调度与身份上游未在项目中提供",
+    "当前工作区不等于 fixture-release-a 部署代码",
+    "事故跨版本且窗口未注明日期，原因未知",
+    "批量完成尚未实现；多团队邀请和审计留存未定",
+    "未上传或验证 ChatGPT 网页版的实际接收与理解效果"
+  ],
+  "collection_gaps": []
+}

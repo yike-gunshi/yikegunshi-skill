@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "p01",
+    "split": "train",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12239,
+    "usage": [
+      {
+        "input_tokens": 45373,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 137,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p01",
+    "split": "train",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12385,
+    "usage": [
+      {
+        "input_tokens": 45378,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 117,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p01",
+    "split": "train",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 13935,
+    "usage": [
+      {
+        "input_tokens": 45381,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 118,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p02",
+    "split": "train",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12337,
+    "usage": [
+      {
+        "input_tokens": 45346,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 114,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p02",
+    "split": "train",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 13065,
+    "usage": [
+      {
+        "input_tokens": 45342,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 110,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p02",
+    "split": "train",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11887,
+    "usage": [
+      {
+        "input_tokens": 45324,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 123,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p03",
+    "split": "train",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12224,
+    "usage": [
+      {
+        "input_tokens": 45378,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 136,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p03",
+    "split": "train",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12727,
+    "usage": [
+      {
+        "input_tokens": 45348,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 130,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p03",
+    "split": "train",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 18041,
+    "usage": [
+      {
+        "input_tokens": 45348,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 125,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p04",
+    "split": "train",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12800,
+    "usage": [
+      {
+        "input_tokens": 45361,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 117,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p04",
+    "split": "train",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 14277,
+    "usage": [
+      {
+        "input_tokens": 45368,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 128,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p04",
+    "split": "train",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11471,
+    "usage": [
+      {
+        "input_tokens": 45366,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 108,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p05",
+    "split": "train",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11146,
+    "usage": [
+      {
+        "input_tokens": 45335,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 108,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p05",
+    "split": "train",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11448,
+    "usage": [
+      {
+        "input_tokens": 45337,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 111,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p05",
+    "split": "train",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11968,
+    "usage": [
+      {
+        "input_tokens": 45341,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 108,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p06",
+    "split": "train",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 13249,
+    "usage": [
+      {
+        "input_tokens": 45362,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 122,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p06",
+    "split": "train",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11904,
+    "usage": [
+      {
+        "input_tokens": 45366,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 124,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p06",
+    "split": "train",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11792,
+    "usage": [
+      {
+        "input_tokens": 45163,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 116,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n01",
+    "split": "train",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12766,
+    "usage": [
+      {
+        "input_tokens": 42706,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 149,
+        "reasoning_output_tokens": 46
+      }
+    ]
+  },
+  {
+    "id": "n01",
+    "split": "train",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 13895,
+    "usage": [
+      {
+        "input_tokens": 42736,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 183,
+        "reasoning_output_tokens": 75
+      }
+    ]
+  },
+  {
+    "id": "n01",
+    "split": "train",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 13195,
+    "usage": [
+      {
+        "input_tokens": 42738,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 181,
+        "reasoning_output_tokens": 71
+      }
+    ]
+  },
+  {
+    "id": "n02",
+    "split": "train",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 9026,
+    "usage": [
+      {
+        "input_tokens": 21104,
+        "cached_input_tokens": 11520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 87,
+        "reasoning_output_tokens": 36
+      }
+    ]
+  },
+  {
+    "id": "n02",
+    "split": "train",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 9594,
+    "usage": [
+      {
+        "input_tokens": 21104,
+        "cached_input_tokens": 11520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 116,
+        "reasoning_output_tokens": 66
+      }
+    ]
+  },
+  {
+    "id": "n02",
+    "split": "train",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 9803,
+    "usage": [
+      {
+        "input_tokens": 21104,
+        "cached_input_tokens": 11520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 102,
+        "reasoning_output_tokens": 52
+      }
+    ]
+  },
+  {
+    "id": "n03",
+    "split": "train",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "forge-review",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12260,
+    "usage": [
+      {
+        "input_tokens": 44603,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 121,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n03",
+    "split": "train",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "forge-review",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 11741,
+    "usage": [
+      {
+        "input_tokens": 44599,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 116,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n03",
+    "split": "train",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "forge-review",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 11652,
+    "usage": [
+      {
+        "input_tokens": 44598,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 117,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n04",
+    "split": "train",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "lark-export",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 11693,
+    "usage": [
+      {
+        "input_tokens": 43252,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 192,
+        "reasoning_output_tokens": 23
+      }
+    ]
+  },
+  {
+    "id": "n04",
+    "split": "train",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "lark-export",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 15093,
+    "usage": [
+      {
+        "input_tokens": 43223,
+        "cached_input_tokens": 22016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 164,
+        "reasoning_output_tokens": 38
+      }
+    ]
+  },
+  {
+    "id": "n04",
+    "split": "train",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "lark-export",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 13843,
+    "usage": [
+      {
+        "input_tokens": 44271,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 124,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n05",
+    "split": "train",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "forge-brainstorm",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12727,
+    "usage": [
+      {
+        "input_tokens": 45741,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 230,
+        "reasoning_output_tokens": 70
+      }
+    ]
+  },
+  {
+    "id": "n05",
+    "split": "train",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "forge-brainstorm",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 13344,
+    "usage": [
+      {
+        "input_tokens": 45732,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 226,
+        "reasoning_output_tokens": 94
+      }
+    ]
+  },
+  {
+    "id": "n06",
+    "split": "train",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "project-learner",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12995,
+    "usage": [
+      {
+        "input_tokens": 44808,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 120,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n05",
+    "split": "train",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "forge-brainstorm",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 20963,
+    "usage": [
+      {
+        "input_tokens": 66843,
+        "cached_input_tokens": 52224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 352,
+        "reasoning_output_tokens": 130
+      }
+    ]
+  },
+  {
+    "id": "n06",
+    "split": "train",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "project-learner",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 10654,
+    "usage": [
+      {
+        "input_tokens": 43714,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 165,
+        "reasoning_output_tokens": 41
+      }
+    ]
+  },
+  {
+    "id": "n06",
+    "split": "train",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "project-learner",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 21803,
+    "usage": [
+      {
+        "input_tokens": 44839,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 121,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p07",
+    "split": "test",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 10658,
+    "usage": [
+      {
+        "input_tokens": 44288,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 175,
+        "reasoning_output_tokens": 55
+      }
+    ]
+  },
+  {
+    "id": "p07",
+    "split": "test",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 10912,
+    "usage": [
+      {
+        "input_tokens": 44276,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 163,
+        "reasoning_output_tokens": 43
+      }
+    ]
+  },
+  {
+    "id": "p07",
+    "split": "test",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 14574,
+    "usage": [
+      {
+        "input_tokens": 44290,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 179,
+        "reasoning_output_tokens": 49
+      }
+    ]
+  },
+  {
+    "id": "p08",
+    "split": "test",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 13134,
+    "usage": [
+      {
+        "input_tokens": 44306,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 171,
+        "reasoning_output_tokens": 55
+      }
+    ]
+  },
+  {
+    "id": "p08",
+    "split": "test",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 14324,
+    "usage": [
+      {
+        "input_tokens": 44346,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 214,
+        "reasoning_output_tokens": 75
+      }
+    ]
+  },
+  {
+    "id": "p08",
+    "split": "test",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11630,
+    "usage": [
+      {
+        "input_tokens": 45341,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 119,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p09",
+    "split": "test",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 10248,
+    "usage": [
+      {
+        "input_tokens": 44304,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 165,
+        "reasoning_output_tokens": 35
+      }
+    ]
+  },
+  {
+    "id": "p09",
+    "split": "test",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 10328,
+    "usage": [
+      {
+        "input_tokens": 44306,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 166,
+        "reasoning_output_tokens": 45
+      }
+    ]
+  },
+  {
+    "id": "p09",
+    "split": "test",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 16029,
+    "usage": [
+      {
+        "input_tokens": 45350,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 117,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "split": "test",
+    "repeat": 1,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 12373,
+    "usage": [
+      {
+        "input_tokens": 44364,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 213,
+        "reasoning_output_tokens": 68
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "split": "test",
+    "repeat": 2,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 11540,
+    "usage": [
+      {
+        "input_tokens": 45170,
+        "cached_input_tokens": 32512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 129,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "split": "test",
+    "repeat": 3,
+    "expected": true,
+    "selected_skill": "project-context",
+    "observed_target_load": true,
+    "triggered": true,
+    "valid": true,
+    "duration_ms": 13206,
+    "usage": [
+      {
+        "input_tokens": 44302,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 150,
+        "reasoning_output_tokens": 31
+      }
+    ]
+  },
+  {
+    "id": "n07",
+    "split": "test",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "forge-dev",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 10892,
+    "usage": [
+      {
+        "input_tokens": 45719,
+        "cached_input_tokens": 20480,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 190,
+        "reasoning_output_tokens": 70
+      }
+    ]
+  },
+  {
+    "id": "n07",
+    "split": "test",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "forge-dev",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 11505,
+    "usage": [
+      {
+        "input_tokens": 45741,
+        "cached_input_tokens": 20480,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 225,
+        "reasoning_output_tokens": 92
+      }
+    ]
+  },
+  {
+    "id": "n07",
+    "split": "test",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "forge-dev",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12088,
+    "usage": [
+      {
+        "input_tokens": 45768,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 223,
+        "reasoning_output_tokens": 91
+      }
+    ]
+  },
+  {
+    "id": "n08",
+    "split": "test",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "prompt-craft",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 11980,
+    "usage": [
+      {
+        "input_tokens": 44307,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 115,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n08",
+    "split": "test",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "prompt-craft",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12520,
+    "usage": [
+      {
+        "input_tokens": 44277,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 116,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  {
+    "id": "n08",
+    "split": "test",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "prompt-craft",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 11215,
+    "usage": [
+      {
+        "input_tokens": 43312,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 181,
+        "reasoning_output_tokens": 65
+      }
+    ]
+  },
+  {
+    "id": "n09",
+    "split": "test",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 8373,
+    "usage": [
+      {
+        "input_tokens": 21097,
+        "cached_input_tokens": 11520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 86,
+        "reasoning_output_tokens": 44
+      }
+    ]
+  },
+  {
+    "id": "n09",
+    "split": "test",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12297,
+    "usage": [
+      {
+        "input_tokens": 42344,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 144,
+        "reasoning_output_tokens": 50
+      }
+    ]
+  },
+  {
+    "id": "n09",
+    "split": "test",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "none",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 8436,
+    "usage": [
+      {
+        "input_tokens": 20632,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 148,
+        "reasoning_output_tokens": 98
+      }
+    ]
+  },
+  {
+    "id": "n10",
+    "split": "test",
+    "repeat": 1,
+    "expected": false,
+    "selected_skill": "book-to-mindmap",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12908,
+    "usage": [
+      {
+        "input_tokens": 45155,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 262,
+        "reasoning_output_tokens": 105
+      }
+    ]
+  },
+  {
+    "id": "n10",
+    "split": "test",
+    "repeat": 2,
+    "expected": false,
+    "selected_skill": "book-to-mindmap",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 12327,
+    "usage": [
+      {
+        "input_tokens": 45133,
+        "cached_input_tokens": 31488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 239,
+        "reasoning_output_tokens": 79
+      }
+    ]
+  },
+  {
+    "id": "n10",
+    "split": "test",
+    "repeat": 3,
+    "expected": false,
+    "selected_skill": "book-to-mindmap",
+    "observed_target_load": false,
+    "triggered": false,
+    "valid": true,
+    "duration_ms": 20574,
+    "usage": [
+      {
+        "input_tokens": 46104,
+        "cached_input_tokens": 32384,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 126,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  }
+]

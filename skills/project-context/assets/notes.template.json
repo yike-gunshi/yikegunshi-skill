@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "REPLACE_WITH_CURRENT_RUN_ID",
+  "sections": [
+    {
+      "id": "product-overview",
+      "title": "项目与产品全貌",
+      "category": "product",
+      "content": "替换为依据实际材料写出的背景、用户、全部功能、流程、规则与异常状态。扩展所需章节；不按议题缩减。",
+      "covers": {
+        "REPLACE_WITH_ACTUAL_MATERIAL_KEY": "REPLACE_WITH_CURRENT_FINGERPRINT"
+      }
+    },
+    {
+      "id": "technical-overview",
+      "title": "技术架构与模块关系",
+      "category": "technical",
+      "content": "替换为实际架构与跨模块关系说明，并增加逐模块章节，解释文件职责、调用、接口、数据、配置、默认值、异常分支、权限、测试和部署。",
+      "covers": {
+        "REPLACE_WITH_ACTUAL_MATERIAL_KEY": "REPLACE_WITH_CURRENT_FINGERPRINT"
+      }
+    },
+    {
+      "id": "state-and-history",
+      "title": "当前状态与历史演化",
+      "category": "state",
+      "content": "替换为依据任务、代码、Issue、PR 和部署记录确认的当前工作、困难、尝试及决策；区分计划、实现、合并、部署和验证。未记录的信息写未知。",
+      "covers": {
+        "REPLACE_WITH_ACTUAL_MATERIAL_KEY": "REPLACE_WITH_CURRENT_FINGERPRINT"
+      }
+    },
+    {
+      "id": "runtime-evidence",
+      "title": "实际运行证据与限制",
+      "category": "runtime",
+      "content": "替换为实际采集的环境、时间窗口、查询口径、单位、观测与限制，绑定对应材料。无运行来源时写明未登记或未采集及原因，不推断生产正常。",
+      "covers": {}
+    },
+    {
+      "id": "conflicts-and-gaps",
+      "title": "资料冲突与已知缺口",
+      "category": "coverage",
+      "content": "替换为本轮实际冲突、未知、合理排除、脱敏与无法取得的材料；保留冲突双方的证据和时间。未发现冲突与未检查冲突分开表达。",
+      "covers": {}
+    }
+  ],
+  "deleted_ids": []
+}

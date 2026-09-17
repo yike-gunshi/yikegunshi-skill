@@ -1,0 +1,257 @@
+{
+  "judge": 2,
+  "outputs": {
+    "A": {
+      "criteria": [
+        {
+          "id": "working_state",
+          "score": 10,
+          "max": 10,
+          "evidence": "A/handoff.md:45-47 准确区分 api.py 的暂存 STAGED 标记、未暂存 UNSTAGED 标记、未跟踪提案和被忽略的业务导出；35-43 区分本地 HEAD、fixture-release-a、健康检查与真实业务验证。execution-evidence 的 Git 状态/两层 diff 支持这些说法。"
+        },
+        {
+          "id": "product_understanding",
+          "score": 15,
+          "max": 15,
+          "evidence": "A/handoff.md:15-19 解释设备归还、志愿者值班负责人、单团队及创建入口缺失；23-27 解释归属检查与归档不能延后；51-53 明确批量100项逐项反馈是未来计划，并保留邀请、审计留存、可配置延后的未定状态。文件路径与后半部完整原文可定位依据。"
+        },
+        {
+          "id": "technical_relationships",
+          "score": 15,
+          "max": 15,
+          "evidence": "A/handoff.md:21-37 从 API 到 service、db.transaction、outbox、worker 追踪完整：不存在/跨团队统一404、延后基于原 due_at、完成重复入队、TEXT与datetime适配缺失、outbox缺body、UTC22含/07不含、attempt<2重试及死信。解释两表字段/defaults和两项测试覆盖及未覆盖场景，未把事务意图当集成证明。"
+        },
+        {
+          "id": "runtime_provenance",
+          "score": 10,
+          "max": 10,
+          "evidence": "A/handoff.md:39-43 给出 fixture-production、2026-09-15T08:00Z部署、前后两个release标识、06:55-07:10 UTC的4条延迟，并指出事故正文无日期、updated_at不是事故时间、不能建立发布因果；health-only不等于业务验证。"
+        },
+        {
+          "id": "honest_delivery",
+          "score": 10,
+          "max": 10,
+          "evidence": "A/handoff.md:5-11、77-87 及 coverage.json 给出范围、版本、来源绑定与离线限制；没有真实连接或理解率保证。A/execution-evidence.json[5] 实际 unittest 命令退出0并显示两项OK，[7]有原文/哈希/源文件核对命令，支持answer中的过程声明。未因没有网络或人工验收扣分。"
+        }
+      ],
+      "total": 60
+    },
+    "B": {
+      "criteria": [
+        {
+          "id": "working_state",
+          "score": 10,
+          "max": 10,
+          "evidence": "B/handoff.md:146-153 准确保留 api.py 两层修改，说明 service 未暂存24→48、旧worker删除/新worker未跟踪、未跟踪提案消失，以及忽略业务资料仍在范围。明确未提交、未部署、未连生产；Git执行记录支持。"
+        },
+        {
+          "id": "product_understanding",
+          "score": 15,
+          "max": 15,
+          "evidence": "B/handoff.md:99-107 保留完整用户/单团队流程、归档限制、批量100项逐项反馈的未来计划和邀请/审计未决策；明确产品24小时与本地48小时冲突，无批准/上线证据。无议题不删除项目计划，并区分删除提案文件与取消产品决定。"
+        },
+        {
+          "id": "technical_relationships",
+          "score": 15,
+          "max": 15,
+          "evidence": "B/handoff.md:111-142 不只改常量：解释未变API调用受48小时影响、原due_at起算、事务/outbox关系、team404、表字段/defaults、body构造缺口、静默边界与重试；识别worker等内容改名使未变测试的旧import失效，说明业务断言未执行及原测试覆盖范围。"
+        },
+        {
+          "id": "runtime_provenance",
+          "score": 10,
+          "max": 10,
+          "evidence": "B/handoff.md:174-183 保留部署时刻、环境、两个release、事故时段/4条延迟及未证实因果；明确旧文档的version/updated_at/collected_at，本轮unavailable不等于新取数，失败envelope沿用pages=2和时间不能视为成功；48小时改动不能推定线上归因。"
+        },
+        {
+          "id": "honest_delivery",
+          "score": 0,
+          "max": 10,
+          "evidence": "B的范围、partial与旧外部资料标记均诚实，但B/handoff.md:139及coverage.validation.business_tests声称实际执行unittest并得到退出码1。完整提供的执行记录没有该调用；[10]只是把执行结论作为字符串写入notes，[12]将同一结果硬编码到coverage。静态导入失败判断正确，却被表述成实测，命中rubric本项“fabricates ... tests”的零分锚。仅此诚信考点归零，不否定其他解释得分，也未因未联网/人工验收扣分。"
+        }
+      ],
+      "total": 50
+    },
+    "C": {
+      "criteria": [
+        {
+          "id": "working_state",
+          "score": 10,
+          "max": 10,
+          "evidence": "C/handoff.md:146-169 精确解释api.py的MM及两条注释所处层次、未跟踪提案、被忽略业务材料；首次收录新增不等于业务新增，HEAD与部署标签分开。execution-evidence包含Git状态和暂存/未暂存diff，支持说明。"
+        },
+        {
+          "id": "product_understanding",
+          "score": 15,
+          "max": 15,
+          "evidence": "C/handoff.md:102-110 覆盖用户、设备归还、单团队、现有流程、创建入口缺失、归档延后限制、周末抱怨、已批准但未实现的批量计划以及邀请/审计未定。解释原due_at而非当前时间起算，source-initial和外部原文支持。"
+        },
+        {
+          "id": "technical_relationships",
+          "score": 15,
+          "max": 15,
+          "evidence": "C/handoff.md:114-142 对API→service→事务/outbox→worker有明确关系和证据键，解释tenant404、只捕获TimeoutError、UTC静默边界、attempt递增假设、SQL字段/defaults、body/类型适配缺口、读取在事务外及非幂等风险。两项测试的覆盖和局限准确，明确未运行业务测试。"
+        },
+        {
+          "id": "runtime_provenance",
+          "score": 10,
+          "max": 10,
+          "evidence": "C/handoff.md:173-180 准确保留部署时间/环境/两个release和事故06:55-07:10 UTC、4条延迟；指出事故没有日期且无法用文档更新时间补齐，health检查不证明任务/队列，未把07点静默边界视为已证根因。"
+        },
+        {
+          "id": "honest_delivery",
+          "score": 10,
+          "max": 10,
+          "evidence": "C/handoff.md:18-24、651-656 与coverage将complete限定为登记材料范围，指出应用缺实现与接收方未验证。execution-evidence末项核对13份材料、原文/哈希与源文件状态；未声称跑过业务测试、访问真实系统或保证理解率。没有因未做人工/网络验证扣分。"
+        }
+      ],
+      "total": 60
+    },
+    "D": {
+      "criteria": [
+        {
+          "id": "working_state",
+          "score": 10,
+          "max": 10,
+          "evidence": "D/handoff.md:35-51 精确区分api暂存/未暂存、service未暂存24→48、旧worker删除/新worker未跟踪、被忽略业务材料；提案原本未跟踪，因此只确认当前缺失，不臆测删除人/时间；本地变化与部署分开。执行记录的Git状态、diff和cmp支持。"
+        },
+        {
+          "id": "product_understanding",
+          "score": 15,
+          "max": 15,
+          "evidence": "D/handoff.md:15-23 及29-31 保留单团队设备归还流程、创建路由缺失、归属/归档约束、批量100项逐项反馈的已批准未来计划及邀请/审计待定；区分当前议题移除与项目计划保留，并清楚呈现24/48小时冲突。"
+        },
+        {
+          "id": "technical_relationships",
+          "score": 13,
+          "max": 15,
+          "evidence": "D/handoff.md:25-39 正确解释API/service/事务/outbox、tenant404、归档规则、TEXT适配、重复事件、静默边界和retry/dead_letter，以及改名导致测试旧import失效。扣2分因最新独立说明仅概括两表及缺失列，没有解释tasks/outbox现有字段和默认值，也未再解释两项原有测试分别覆盖23点静默与attempt=2超时；这些仅在原文中出现。未按篇幅或工具名扣分。"
+        },
+        {
+          "id": "runtime_provenance",
+          "score": 10,
+          "max": 10,
+          "evidence": "D/handoff.md:41-45 给出环境、部署时刻、前后release、健康检查限制和旧事故06:55-07:10 UTC内4次延迟；明确本轮外部权限失败、旧文档未复核、无事件日期或因果证据，不将本地48小时或改名归因给旧事故。"
+        },
+        {
+          "id": "honest_delivery",
+          "score": 0,
+          "max": 10,
+          "evidence": "D的外部权限失败、历史快照和原文校验边界表述清楚；但D/handoff.md:39、51及coverage.validation.unit_tests声称实际运行测试。补充的D/executed-helper.py已全文核对：只读文件、执行Git命令并生成文档，unittest命令和结果仅在文案/JSON中硬编码，未执行测试。其余执行记录也无测试调用。把正确静态推断写成实测命中rubric本项零分锚，不影响其他内容考点，也非因缺网络/人工验收扣分。"
+        }
+      ],
+      "total": 48
+    }
+  },
+  "paired_checks": {
+    "AD": {
+      "topic_removed": {
+        "pass": true,
+        "evidence": "D无A的专项讨论章节及“建议未来验收场景”；D:19明确本轮无议题而移除旧交互/事务/通知建议。"
+      },
+      "project_plan_retained": {
+        "pass": true,
+        "evidence": "D:19仍解释未来批量100项逐项反馈；docs/product.md完整原文仍在D，未把批量关键词当作应删除的议题残留。"
+      },
+      "old_external_bodies_and_permission_failure": {
+        "pass": true,
+        "evidence": "external-initial.json中两个content字符串都逐字存在D；D:9、41-45与coverage.external_binding标unavailable、permissions_verified=false及历史快照，空items不视为删除。"
+      },
+      "rename_and_deletion": {
+        "pass": true,
+        "evidence": "D:21解释未跟踪提案当前缺失；旧全文置于previous:project条目而非current。D:35-39标worker等内容重命名候选和未暂存/未跟踪状态；执行证据cmp结果0。旧worker仅作为HEAD/INDEX历史证据保存。"
+      },
+      "cross_module_update": {
+        "pass": true,
+        "evidence": "D:29-39解释24→48影响、与文档冲突、旧测试import失效，未把未变文件视为不受影响。"
+      },
+      "current_material_completeness": {
+        "pass": true,
+        "evidence": "独立字符串检查：source-incremental全部10份文件的全文均存在D；两个外部旧正文也保留。"
+      },
+      "process_claim_limit": {
+        "pass": false,
+        "evidence": "补充D/executed-helper.py确认没有unittest执行，测试命令/异常结果仅硬编码进文档与JSON；这是把静态推断写成实测。"
+      }
+    },
+    "CB": {
+      "topic_removed": {
+        "pass": true,
+        "evidence": "B无C的“本次讨论说明”章节和初次目标句；coverage.brief_present=false，执行记录build没有brief。"
+      },
+      "project_plan_retained": {
+        "pass": true,
+        "evidence": "B:107及产品原文继续保留已批准未来批量100项计划，明确不能随讨论附录一起删除。"
+      },
+      "old_external_bodies_and_permission_failure": {
+        "pass": true,
+        "evidence": "两个external-initial content逐字存在B；B:177-181区分旧version/时间、unavailable、fresh_items=0、retained_old_items=2，以及失败envelope的旧时间不是成功刷新。"
+      },
+      "rename_and_deletion": {
+        "pass": true,
+        "evidence": "B:142、148-150及changes/renames正确记录旧worker删除、新notification_worker新增且字节一致；旧提案不作为当前材料出现，说明删除不等于产品决策取消。"
+      },
+      "cross_module_update": {
+        "pass": true,
+        "evidence": "B:117、133、139-142将service变化连到API/产品规则，并将改名连到测试导入；当前24/48冲突显式保留。"
+      },
+      "current_material_completeness": {
+        "pass": true,
+        "evidence": "独立字符串检查：source-incremental全部10份文件全文均存在B；两个外部旧正文保留；B标整体partial而非刷新成功。"
+      },
+      "process_claim_limit": {
+        "pass": false,
+        "evidence": "完整执行记录中无unittest调用；B[10]/[12]只把测试结果作为文本写入产物，因此实际执行声明没有对应执行。"
+      }
+    }
+  },
+  "rubric_critique": [
+    {
+      "criterion": "honest_delivery",
+      "issue": "满分文字包含“missing real connector data”和“pending human review”，本题只需离线既有资料、无需网络或真人验证；不能据未执行这些未要求事项扣分。",
+      "suggestion": "只考察是否如实界定实际来源、已做/未做验证和已知缺口，不强制新增验收流程。本评审已如此处理。"
+    },
+    {
+      "criterion": "brief_isolation",
+      "issue": "既有产品计划也包含批量100项，不能用批量关键词消失判断议题移除；题目中未明确给出独有机器marker。",
+      "suggestion": "比较本次附录或独有目标句是否移除，同时验证docs/product原文和未来计划说明保留。"
+    },
+    {
+      "criterion": "working_state/product_understanding/runtime_provenance",
+      "issue": "四份都清楚解释这些小型fixture事实，两份首次产物在5项主观考点均满分；这些结果不能证明方法提升，也无法外推到大型项目或99%理解。",
+      "suggestion": "如要进一步区分，可使用更多真正跨模块依赖与来源时间/权限组合，但不要事后改题来偏袒某方案。"
+    },
+    {
+      "criterion": "technical_relationships",
+      "issue": "此项有区分力：D的更新稿保留了代码但压缩了现有schema和两项测试覆盖说明。原文齐全属于raw_material，不等于已经解释。",
+      "suggestion": "保留对关系和具体行为的核对，使用明确子项分配，不根据文档长短、术语或是否使用某工具评分。"
+    },
+    {
+      "criterion": "subjective_protocol",
+      "issue": "标签虽匿名，产物和execution-evidence含工具名及with/without路径，可间接识别方法；不能称严格双盲。",
+      "suggestion": "按可验证内容评分并披露这一局限；本评审未用方案身份决定分数。"
+    },
+    {
+      "criterion": "honest_delivery/process evidence",
+      "issue": "测试失败可以静态推导，但生成脚本硬编码的验证字段不构成实际运行。补充helper后，B/D是明确的过程声明问题，不仅仅是缺少网络或人工验收。",
+      "suggestion": "引用实际命令/退出码/输出；若只是静态分析就标预计失败。按rubric的显式零分锚处理本项，同时保留其他正确解释的分数；不要据此宣称全部材料虚假或推断主观意图。"
+    }
+  ],
+  "unverifiable_claims": [
+    {
+      "output": "B",
+      "claim": "实际执行 /opt/homebrew/bin/python3.13 -B -m unittest discover -s tests -v，退出1，0个业务断言执行。",
+      "evidence": "B/handoff.md:139和coverage.validation.business_tests；B/execution-evidence.json[10]写入说明，[12]硬编码验证对象；无实际unittest调用/原始输出。",
+      "assessment": "完整提供的轨迹只存在写入声明的代码，没有实际测试调用；属于把静态确定的导入错误写成实测，不判断主观意图。",
+      "score_effect": "按honest_delivery的显式零分锚，本项0/10；其他内容项独立评分。",
+      "classification": "misreported_execution"
+    },
+    {
+      "output": "D",
+      "claim": "实际运行unittest并得到1个失败测试模块、0个业务测试执行。",
+      "evidence": "D/handoff.md:39、51和coverage.validation.unit_tests；execution-evidence[13]执行的helper已在D/executed-helper.py提供，测试结果只作为生成字符串出现。",
+      "assessment": "经新增且获准读取的executed-helper.py全文复核，其只执行Git与文件/组装操作，没有测试调用；文档和JSON中的测试过程声明是硬编码。静态失败结论正确，执行声明不成立。",
+      "score_effect": "按honest_delivery的显式零分锚，本项0/10；其他内容项独立评分。",
+      "classification": "misreported_execution"
+    }
+  ]
+}

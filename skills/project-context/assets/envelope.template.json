@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "source_id": "REPLACE_WITH_CONFIGURED_SOURCE_ID",
+  "run_id": "REPLACE_WITH_CURRENT_RUN_ID",
+  "scope_hash": "REPLACE_WITH_CURRENT_SOURCE_SCOPE_HASH",
+  "status": "partial",
+  "mode": "full",
+  "enumeration_complete": false,
+  "permissions_verified": false,
+  "collected_at": "REPLACE_WITH_ACTUAL_COLLECTION_TIME",
+  "coverage": {
+    "started_at": "REPLACE_WITH_ACTUAL_COLLECTION_START",
+    "ended_at": "REPLACE_WITH_ACTUAL_COLLECTION_END",
+    "environment": "REPLACE_WITH_ACTUAL_ENVIRONMENT_OR_REMOVE",
+    "window": {
+      "start": "REPLACE_WITH_ACTUAL_WINDOW_START_OR_REMOVE",
+      "end": "REPLACE_WITH_ACTUAL_WINDOW_END_OR_REMOVE"
+    },
+    "pages_fetched": 0,
+    "next_cursor": "REPLACE_WITH_ACTUAL_REMAINING_CURSOR_OR_NULL",
+    "query": "REPLACE_WITH_ACTUAL_READ_ONLY_QUERY_DEFINITION_OR_REMOVE"
+  },
+  "items": [],
+  "deleted_ids": [],
+  "errors": ["模板尚未填入实际采集证据；不能据此声明来源完整"]
+}

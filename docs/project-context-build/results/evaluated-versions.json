@@ -1,0 +1,28 @@
+{
+  "behavior_frozen": {
+    "SKILL.md": "60cebb38dce2bff626f8ad40cf95ba79a68d9000a02ec393e883ffdce304922c",
+    "agents/openai.yaml": "63d776ff47d9ba2402d39051ccd2afd6ab9c2df6604a7c525969e87e6366e15d",
+    "assets/brief.template.md": "39b89b2f420c2b8bdadc2028148d66250212268d00cf72ac95da0e8644b4e0f9",
+    "assets/envelope.template.json": "2f78c5dfc6fea7f4a592150c56e27391ed398e965976a73b363acee85d2e1443",
+    "assets/notes.template.json": "f24c4f9a3df7e6560abdf006372b413ed602bb603039f298c2f2ad5074697768",
+    "assets/sources.example.json": "199032afc2a15cd60b1bf266b8364230c0ead9be2ed0b45f1f7f1a5d07cb75cd",
+    "references/cli-and-schemas.md": "fb0cc3c85c937c8272ee81f46f3a061802a243dc740b0c2c4b3377ffded30dc7",
+    "references/explanation-and-completeness.md": "6b8f9390ca9b2d9a1e8622d0770fb5f9baeddd4720f0b78ae36273cda922e98b",
+    "references/sources-and-production.md": "f96e89e5da206d1650b441005b711756c8b7684f67a1eacb9712d376da95fa35",
+    "scripts/collect_source.py": "f5548735126aef32ef766ca58af379191d4efe992ebf42fcd9bb71078ad2c49e",
+    "scripts/context.py": "1d92a680ae1495c775651f82d08bcffcffdc4c7a587f4b5bb27a9e878662f3dc"
+  },
+  "current": {
+    "SKILL.md": "d3cebbc1a21c256fb30f0ae7c0fba3c92e7c0be64bd8e340156ec3ce77a2a995",
+    "agents/openai.yaml": "63d776ff47d9ba2402d39051ccd2afd6ab9c2df6604a7c525969e87e6366e15d",
+    "assets/brief.template.md": "39b89b2f420c2b8bdadc2028148d66250212268d00cf72ac95da0e8644b4e0f9",
+    "assets/envelope.template.json": "2f78c5dfc6fea7f4a592150c56e27391ed398e965976a73b363acee85d2e1443",
+    "assets/notes.template.json": "f24c4f9a3df7e6560abdf006372b413ed602bb603039f298c2f2ad5074697768",
+    "assets/sources.example.json": "199032afc2a15cd60b1bf266b8364230c0ead9be2ed0b45f1f7f1a5d07cb75cd",
+    "references/cli-and-schemas.md": "b94f8e3750fe8ff64196223538c8690c987f590450c8688fd089d4dd050e1bc7",
+    "references/explanation-and-completeness.md": "ef741fefbe68258495033ef7a35b97296c16762d1647bb707c2dcacf604f769b",
+    "references/sources-and-production.md": "f96e89e5da206d1650b441005b711756c8b7684f67a1eacb9712d376da95fa35",
+    "scripts/collect_source.py": "6156bdfe95352be60e2a6f5c2216ff050bd360f99150a17124b474cc18ce1f53",
+    "scripts/context.py": "b32442b4344618f0afa04847f1252a3fa76dcfb0de52fdfef9fe73f07ef408aa"
+  }
+}

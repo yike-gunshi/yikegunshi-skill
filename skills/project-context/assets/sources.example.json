@@ -1,0 +1,78 @@
+{
+  "sources": [
+    {
+      "id": "project-docs",
+      "kind": "lark",
+      "label": "示例：项目飞书文档",
+      "scope": {
+        "documents": ["REPLACE_WITH_CONFIRMED_DOCUMENT_TOKEN"],
+        "comments": true
+      },
+      "budget": {
+        "max_requests": 100,
+        "timeout_seconds": 30,
+        "max_response_bytes": 20971520
+      }
+    },
+    {
+      "id": "project-history",
+      "kind": "github",
+      "label": "示例：项目 Issue、PR 与发布记录",
+      "scope": {
+        "repo": "REPLACE_OWNER/REPLACE_REPOSITORY",
+        "include": ["issues", "pulls", "releases", "deployments"]
+      },
+      "budget": {
+        "max_requests": 100,
+        "timeout_seconds": 30,
+        "max_response_bytes": 20971520
+      }
+    },
+    {
+      "id": "production-records",
+      "kind": "production",
+      "label": "示例：经约定范围的生产记录，尚未授权",
+      "transport": "http-json",
+      "environment": "REPLACE_WITH_TARGET_ENVIRONMENT",
+      "scope": {
+        "service": "REPLACE_WITH_APPROVED_SERVICE",
+        "dataset": "REPLACE_WITH_APPROVED_DATASET"
+      },
+      "approval": {
+        "confirmed": false,
+        "confirmed_at": null
+      },
+      "read_only": {
+        "mechanism": "REPLACE_WITH_VERIFIED_READ_ONLY_MECHANISM",
+        "verified": false
+      },
+      "fields": ["id", "observed_at", "metric_value"],
+      "window": {
+        "start": "2026-01-01T00:00:00Z",
+        "end": "2026-01-02T00:00:00Z"
+      },
+      "budget": {
+        "max_requests": 10,
+        "timeout_seconds": 30,
+        "max_response_bytes": 1048576
+      },
+      "request": {
+        "url": "https://api.example.invalid/records",
+        "start_param": "start",
+        "end_param": "end",
+        "timestamp_field": "observed_at",
+        "id_field": "id",
+        "fields_param": "fields",
+        "params": {},
+        "headers_env": {
+          "Authorization": "PROJECT_CONTEXT_READ_AUTHORIZATION"
+        }
+      },
+      "pagination": {
+        "items_path": "items",
+        "next_cursor_path": "next_cursor",
+        "cursor_param": "cursor"
+      }
+    }
+  ]
+}

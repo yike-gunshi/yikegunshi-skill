@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "suite": "test_context.py + test_collect_source.py",
+  "command": "/opt/homebrew/bin/python3.13 -m unittest discover -s docs/project-context-build/evals -p 'test_*.py' -v",
+  "observed_result": "48 tests passed",
+  "tests_run": 48,
+  "failures": 0,
+  "errors": 0,
+  "duration_seconds": 15.193,
+  "total_tokens": null,
+  "environment": "Local macOS, Python 3.13, synthetic temporary projects and git repositories; no production network requests",
+  "previous_findings": [
+    "Default python3 was Python 3.7.5, which cannot run Path.is_relative_to. Core now reports an explicit Python >=3.10 requirement.",
+    "A nonempty top-level next_cursor was wrongly accepted as complete. Core now downgrades the result to partial.",
+    "The generic filename history.jsonl was excluded as an AI conversation. Core now preserves ordinary business history and checks known conversation structures."
+  ],
+  "test_correction": "Tests originally required rejection for contradictory completeness flags. Safe partial downgrade is valid and is now asserted instead.",
+  "scorer_controls": {
+    "healthy_full_body_fixture": {
+      "score": 20,
+      "max": 20,
+      "bodies": 13
+    },
+    "file_paths_only": {
+      "score": 0,
+      "max": 20
+    }
+  },
+  "not_established": [
+    "Quality or correctness of model-written explanations",
+    "99 percent reader understanding",
+    "Real Feishu, GitHub or production connector success",
+    "Trigger reliability or with-versus-without skill improvement",
+    "Human label review or output spot-check"
+  ],
+  "added_regressions": [
+    "File read failure retains old item, records retained_old_snapshot, builds partial and preserves latest complete.",
+    "Directory enumeration failure retains previous subtree, reports retained_old_items and builds partial.",
+    "Modified tracked AI conversation bodies do not leak through Git change evidence into snapshots or exports.",
+    "Runtime explanations with nonempty material references invalidate when source availability or source-window configuration changes.",
+    "Deferred delta deletion survives to final complete page, including scan restart; later item restoration cancels deletion and full authoritative reconciliation replaces it."
+  ],
+  "scorer_phase_controls": {
+    "initial_full_body_score": 20,
+    "incremental_full_body_score": 20,
+    "stale_initial_scored_as_incremental": 18.33,
+    "max": 20,
+    "oracle_hash_mutation": "rejected",
+    "mutated_live_worktree": "ignored when immutable initial/source exists"
+  },
+  "suite_counts": {
+    "core": 32,
+    "collectors": 16
+  },
+  "scorer_format_correction": {
+    "reason": "Original objective parser assumed an undocumented items mapping and falsely scored valid materials/sources lists zero. Fixed evaluator only; model artifacts unchanged and no skill improvement implied.",
+    "with_initial": {
+      "raw_material": 20,
+      "coverage_ledger": 10
+    },
+    "without_initial": {
+      "raw_material": 20,
+      "coverage_ledger": 10
+    },
+    "controls": {
+      "sources_locator_explicit_false": 10,
+      "invalid_sha256": 6.67,
+      "title_names_only": 0
+    },
+    "max_ledger": 10
+  }
+}
