@@ -1,0 +1,20 @@
+已更新：
+
+- [handoff.md](/private/tmp/project-context-behavior-v1/without/lantern/handoff.md)
+- [coverage.json](/private/tmp/project-context-behavior-v1/without/lantern/coverage.json)
+
+主要更新：
+
+- 移除上一版批量完成功能的专项讨论，保留项目文档中的“已批准、尚未实现”状态。
+- 记录延后时间从 24 小时改为 48 小时，但文档仍写 24 小时，且没有部署证据。
+- 记录 `src/worker.py` 到 `src/notification_worker.py` 的等内容重命名及影响。
+- 记录 `docs/new-work.md` 当前缺失，同时保留上一版原文。
+- 外部权限失败被标为未完成枚举；旧外部文档作为历史快照保留，未标成删除或本轮采集成功。
+- 明确区分项目计划、工作树实现、Git 状态与部署记录。
+
+验证结果：
+
+- 25 份来源的字节数、SHA-256 和嵌入区间全部一致。
+- `coverage.json` 通过 JSON 解析及范围哈希校验。
+- 当前测试因仍导入 `src.worker` 而在收集阶段失败；0 个业务测试实际执行。
+- 未修改、暂存或提交任何业务源文件。

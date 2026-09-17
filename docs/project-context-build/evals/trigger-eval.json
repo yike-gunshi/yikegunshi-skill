@@ -1,0 +1,36 @@
+{
+  "skill": "project-context",
+  "dataset_version": 1,
+  "label_status": "author-proposed; not confirmed or sampled by user",
+  "execution_status": "planned; no model runs recorded in this file",
+  "protocol": {
+    "repeats_per_query": 3,
+    "train_fraction": 0.6,
+    "test_fraction": 0.4,
+    "environment": "Expose project-context and adjacent skills plus normal read/search/execute tools. Static label review is not empirical router triggering.",
+    "selection": "Tune description using train failures only, then evaluate frozen version on test. Do not relabel after seeing results.",
+    "human_review": "User label confirmation and 10 percent scored-run spot-check remain pending."
+  },
+  "queries": [
+    {"id":"p01","split":"train","should_trigger":true,"tag":"whole-project","query":"把当前 /workspace/lantern 项目的完整资料整理好，我要给 ChatGPT 网页版接着聊。代码、测试、配置、飞书、Issue 和部署记录都要，长没关系，别只挑重点。"},
+    {"id":"p02","split":"train","should_trigger":true,"tag":"manual-increment","query":"更新昨天的项目底稿，分支上的未提交改动也算，把已登记飞书目录、PR 评论和生产窗口重新核对一遍。"},
+    {"id":"p03","split":"train","should_trigger":true,"tag":"brief-additive","query":"想讨论新增多人协作，先把这个项目全貌交接文档更新出来，再在最前面补我这次的目的和诉求；别因为聊协作把别的材料删掉。"},
+    {"id":"p04","split":"train","should_trigger":true,"tag":"resume","query":"上回 .project-context 底稿生成到一半挂了。今天又改了任务 API，帮我从已有进度接着做，最后给能独立上传的完整版本。"},
+    {"id":"p05","split":"train","should_trigger":true,"tag":"no-topic","query":"这回没特定问题，给我现在项目的大而全背景文档就行，不要继续上次那个订阅功能的话题。"},
+    {"id":"p06","split":"train","should_trigger":true,"tag":"external-failure","query":"项目交接包需要更新，但飞书可能没权限了。能拿到的照常整理，旧资料和缺口标清楚，别把页面读不到当成删了。"},
+    {"id":"n01","split":"train","should_trigger":false,"tag":"single-function","query":"我给网页版看过 src/service.py 了，解释一下 postpone 的 409 为什么返回；只看这个函数和调用它的地方，别整理整个项目。"},
+    {"id":"n02","split":"train","should_trigger":false,"tag":"ai-chat","query":"把我们今天这段 AI 对话总结一下，写清我的决定和待办，好让我开新窗口继续；不用看仓库。"},
+    {"id":"n03","split":"train","should_trigger":false,"tag":"release","query":"结合当前项目背景 review 这个 PR，没问题就 ship 并部署，报告说明本地和线上证据。"},
+    {"id":"n04","split":"train","should_trigger":false,"tag":"single-export","query":"这篇飞书需求页 https://example.org/doc/reminders 我要离线读，全文和图片下载成 Markdown 就好，不用汇总项目。"},
+    {"id":"n05","split":"train","should_trigger":false,"tag":"feature-brainstorm","query":"我想给当前项目加订阅提醒，先跟我聊聊什么体验才好用，现在不用准备交接材料。"},
+    {"id":"n06","split":"train","should_trigger":false,"tag":"architecture-only","query":"学习一下 /workspace/lantern 的架构，画调用关系图帮我理解就行，不需要导出全文底稿。"},
+    {"id":"p07","split":"test","should_trigger":true,"tag":"no-explicit-skill-name","query":"我要把这个小程序搬到网页版找它帮忙设计新功能。麻烦把所有实现和产品背景装成一份能带走的材料，外部登记的文档也得全。"},
+    {"id":"p08","split":"test","should_trigger":true,"tag":"gitignore","query":"重新生成完整底稿时，exports/ 被 gitignore 忽略的运营笔记也别落下；删掉的旧接口和新名字在说明里一起更正。"},
+    {"id":"p09","split":"test","should_trigger":true,"tag":"production-budget","query":"项目全量资料包按旧配置刷新。生产日志只读采集沿用已确认字段和最近七天窗口，拿不齐要标出来，不能截前 100 行说完事。"},
+    {"id":"p10","split":"test","should_trigger":true,"tag":"large-document","query":"我们仓库底稿会几十万字，分卷也可以，但每份代码原文和原来的详细说明都要在，我手动传给 ChatGPT；再附上这次讨论批量导入的背景。"},
+    {"id":"n07","split":"test","should_trigger":false,"tag":"implementation","query":"需求和上下文都在 docs/product.md 里了，直接实现批量完成，每批最多 100 个；不要再生成项目资料包。"},
+    {"id":"n08","split":"test","should_trigger":false,"tag":"prompt-edit","query":"帮我改这段发给 ChatGPT 的 prompt，让它按项目背景问我问题。我已经有材料了，这次只改提示词。"},
+    {"id":"n09","split":"test","should_trigger":false,"tag":"single-query","query":"生产只读工具已经配置好，查昨天提醒任务失败数量并解释趋势，给一张图；不用做完整项目底稿。"},
+    {"id":"n10","split":"test","should_trigger":false,"tag":"mindmap","query":"把这份已经导出的项目上下文文档转成 XMind，保留产品和技术关系；不更新任何项目来源。"}
+  ]
+}

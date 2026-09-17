@@ -1,0 +1,8 @@
+已生成：
+
+- [handoff.md](/private/tmp/project-context-behavior-v1/without/lantern/handoff.md)：完整项目底稿，以及批量最多 100 项、逐项反馈对用户流程、数据一致性和后台通知的影响说明。
+- [coverage.json](/private/tmp/project-context-behavior-v1/without/lantern/coverage.json)：来源、版本、指纹、完整性、缺口及原文内容。
+
+已逐字节核对 11 份项目文件、2 份外部文档及 Git 状态资料；源文件未改，现有 2 项测试通过。外部占位符通过导出绑定记录关联本次运行，原 JSON 保持不变。
+
+局限：仅依据提供的离线资料，未核验真实部署；缺少前端、数据库适配器和队列运行实现。批量功能仍未实现，文档已明确区分事实与建议。

@@ -1,0 +1,1001 @@
+{
+  "routing_method": "Explicit workflow selection and successful skill read; not naturalistic task trigger rate",
+  "routing": {
+    "train": {
+      "runs": 36,
+      "valid": 36,
+      "correct": 36,
+      "true_positive": 18,
+      "false_positive": 0,
+      "false_negative": 0,
+      "median_duration_ms": 12361.0,
+      "usage": {
+        "input_tokens": 1563932,
+        "cached_input_tokens": 1111424,
+        "output_tokens": 5018,
+        "total_tokens": 1568950
+      }
+    },
+    "test": {
+      "runs": 24,
+      "valid": 24,
+      "correct": 24,
+      "true_positive": 12,
+      "false_positive": 0,
+      "false_negative": 0,
+      "median_duration_ms": 12034.0,
+      "usage": {
+        "input_tokens": 1024232,
+        "cached_input_tokens": 699776,
+        "output_tokens": 4016,
+        "total_tokens": 1028248
+      }
+    },
+    "all": {
+      "runs": 60,
+      "valid": 60,
+      "correct": 60,
+      "true_positive": 30,
+      "false_positive": 0,
+      "false_negative": 0,
+      "median_duration_ms": 12278.5,
+      "usage": {
+        "input_tokens": 2588164,
+        "cached_input_tokens": 1811200,
+        "output_tokens": 9034,
+        "total_tokens": 2597198
+      }
+    }
+  },
+  "behavior": {
+    "with-initial": {
+      "exit_code": 0,
+      "duration_ms": 196068,
+      "usage": {
+        "input_tokens": 385884,
+        "cached_input_tokens": 346880,
+        "output_tokens": 5777,
+        "total_tokens": 391661
+      },
+      "model": "CLI configured default; no per-group override",
+      "objective": {
+        "schema_version": 1,
+        "method": "Exact whole material body containment and enumerated provenance records.",
+        "phase": "initial",
+        "oracle": "Immutable initial source snapshot, expected SHA-256 validation, and the published deterministic incremental mutations.",
+        "criteria": [
+          {
+            "id": "raw_material",
+            "score": 20.0,
+            "max": 20,
+            "evidence": {
+              "whole_bodies_found": 13,
+              "whole_bodies_expected": 13,
+              "missing": []
+            }
+          },
+          {
+            "id": "coverage_ledger",
+            "score": 10.0,
+            "max": 10,
+            "evidence": {
+              "local:README.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:.gitignore": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:tests/test_rules.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:docs/product.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:docs/new-work.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:exports/shift-notes.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:db/001_init.sql": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:ops/deploy.json": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/worker.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/service.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/api.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:feature-plan": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:incident-17": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              }
+            }
+          },
+          {
+            "id": "brief_isolation",
+            "score": null,
+            "max": 10,
+            "reason": "Paired topic/plain exports with an exclusive brief marker not supplied."
+          }
+        ],
+        "observed_score": 30.0,
+        "observed_max": 30,
+        "subjective_points_unscored": 60,
+        "human_review": "not performed",
+        "limitations": "Does not judge explanation correctness or prove 99 percent understanding. Incremental retained external bodies are checked; their stale/permission-failure labeling needs judge review."
+      },
+      "skill_loaded": true,
+      "artifact_sha256": "eb52d4e002fd9c36d6f0f17f0d05ec738c512871243ddd10b4d8362a56561240"
+    },
+    "with-incremental": {
+      "exit_code": 0,
+      "duration_ms": 204428,
+      "usage": {
+        "input_tokens": 516613,
+        "cached_input_tokens": 469120,
+        "output_tokens": 6048,
+        "total_tokens": 522661
+      },
+      "model": "CLI configured default; no per-group override",
+      "objective": {
+        "schema_version": 1,
+        "method": "Exact whole material body containment and enumerated provenance records.",
+        "phase": "incremental",
+        "oracle": "Immutable initial source snapshot, expected SHA-256 validation, and the published deterministic incremental mutations.",
+        "criteria": [
+          {
+            "id": "raw_material",
+            "score": 20.0,
+            "max": 20,
+            "evidence": {
+              "whole_bodies_found": 12,
+              "whole_bodies_expected": 12,
+              "missing": []
+            }
+          },
+          {
+            "id": "coverage_ledger",
+            "score": 10.0,
+            "max": 10,
+            "evidence": {
+              "local:README.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:.gitignore": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:tests/test_rules.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:docs/product.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:exports/shift-notes.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:db/001_init.sql": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:ops/deploy.json": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/service.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/api.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/notification_worker.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:feature-plan": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:incident-17": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              }
+            }
+          },
+          {
+            "id": "brief_isolation",
+            "score": null,
+            "max": 10,
+            "reason": "Incremental source content changed. Compare topic removal with the subjective judge; source-body equality across versions is not a valid criterion."
+          }
+        ],
+        "observed_score": 30.0,
+        "observed_max": 30,
+        "subjective_points_unscored": 60,
+        "human_review": "not performed",
+        "limitations": "Does not judge explanation correctness or prove 99 percent understanding. Incremental retained external bodies are checked; their stale/permission-failure labeling needs judge review."
+      },
+      "skill_loaded": true,
+      "artifact_sha256": "4692a851e118ba1ba9bb9c523173b5567afab3dc789ec08237e19c22fb9e373b"
+    },
+    "without-initial": {
+      "exit_code": 0,
+      "duration_ms": 202679,
+      "usage": {
+        "input_tokens": 181587,
+        "cached_input_tokens": 161024,
+        "output_tokens": 6155,
+        "total_tokens": 187742
+      },
+      "model": "CLI configured default; no per-group override",
+      "objective": {
+        "schema_version": 1,
+        "method": "Exact whole material body containment and enumerated provenance records.",
+        "phase": "initial",
+        "oracle": "Immutable initial source snapshot, expected SHA-256 validation, and the published deterministic incremental mutations.",
+        "criteria": [
+          {
+            "id": "raw_material",
+            "score": 20.0,
+            "max": 20,
+            "evidence": {
+              "whole_bodies_found": 13,
+              "whole_bodies_expected": 13,
+              "missing": []
+            }
+          },
+          {
+            "id": "coverage_ledger",
+            "score": 10.0,
+            "max": 10,
+            "evidence": {
+              "local:README.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:.gitignore": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:tests/test_rules.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:docs/product.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:docs/new-work.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:exports/shift-notes.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:db/001_init.sql": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:ops/deploy.json": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/worker.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/service.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/api.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:feature-plan": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:incident-17": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              }
+            }
+          },
+          {
+            "id": "brief_isolation",
+            "score": null,
+            "max": 10,
+            "reason": "Paired topic/plain exports with an exclusive brief marker not supplied."
+          }
+        ],
+        "observed_score": 30.0,
+        "observed_max": 30,
+        "subjective_points_unscored": 60,
+        "human_review": "not performed",
+        "limitations": "Does not judge explanation correctness or prove 99 percent understanding. Incremental retained external bodies are checked; their stale/permission-failure labeling needs judge review."
+      },
+      "skill_loaded": false,
+      "artifact_sha256": "6dcc952850f19ad566cce64cb6dd222e15db048469c49d804a866b5065ec368b"
+    },
+    "without-incremental": {
+      "exit_code": 0,
+      "duration_ms": 177363,
+      "usage": {
+        "input_tokens": 268111,
+        "cached_input_tokens": 211072,
+        "output_tokens": 8984,
+        "total_tokens": 277095
+      },
+      "model": "CLI configured default; no per-group override",
+      "objective": {
+        "schema_version": 1,
+        "method": "Exact whole material body containment and enumerated provenance records.",
+        "phase": "incremental",
+        "oracle": "Immutable initial source snapshot, expected SHA-256 validation, and the published deterministic incremental mutations.",
+        "criteria": [
+          {
+            "id": "raw_material",
+            "score": 20.0,
+            "max": 20,
+            "evidence": {
+              "whole_bodies_found": 12,
+              "whole_bodies_expected": 12,
+              "missing": []
+            }
+          },
+          {
+            "id": "coverage_ledger",
+            "score": 10.0,
+            "max": 10,
+            "evidence": {
+              "local:README.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:.gitignore": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:tests/test_rules.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:docs/product.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:exports/shift-notes.md": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:db/001_init.sql": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:ops/deploy.json": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/service.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/api.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "local:src/notification_worker.py": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:feature-plan": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              },
+              "team-wiki:incident-17": {
+                "listed": true,
+                "provenance": true,
+                "state": true,
+                "hash_fields_checked": [
+                  "sha256"
+                ],
+                "hashes_match": true,
+                "declared_content_matches": true
+              }
+            }
+          },
+          {
+            "id": "brief_isolation",
+            "score": null,
+            "max": 10,
+            "reason": "Incremental source content changed. Compare topic removal with the subjective judge; source-body equality across versions is not a valid criterion."
+          }
+        ],
+        "observed_score": 30.0,
+        "observed_max": 30,
+        "subjective_points_unscored": 60,
+        "human_review": "not performed",
+        "limitations": "Does not judge explanation correctness or prove 99 percent understanding. Incremental retained external bodies are checked; their stale/permission-failure labeling needs judge review."
+      },
+      "skill_loaded": false,
+      "artifact_sha256": "940612a18b1535f78d92a0d2a9306f12b0c6615fc0152d1f7c771d140ac1a40a"
+    }
+  },
+  "subjective": {
+    "without-initial": {
+      "criteria_medians": {
+        "working_state": 10,
+        "product_understanding": 15,
+        "technical_relationships": 15,
+        "runtime_provenance": 10,
+        "honest_delivery": 10
+      },
+      "total_of_medians": 60,
+      "samples": {
+        "working_state": [
+          10,
+          10,
+          10
+        ],
+        "product_understanding": [
+          15,
+          15,
+          15
+        ],
+        "technical_relationships": [
+          15,
+          15,
+          15
+        ],
+        "runtime_provenance": [
+          10,
+          10,
+          10
+        ],
+        "honest_delivery": [
+          10,
+          10,
+          10
+        ]
+      },
+      "max": 60
+    },
+    "with-incremental": {
+      "criteria_medians": {
+        "working_state": 10,
+        "product_understanding": 15,
+        "technical_relationships": 15,
+        "runtime_provenance": 10,
+        "honest_delivery": 0
+      },
+      "total_of_medians": 50,
+      "samples": {
+        "working_state": [
+          10,
+          10,
+          10
+        ],
+        "product_understanding": [
+          15,
+          15,
+          15
+        ],
+        "technical_relationships": [
+          15,
+          15,
+          15
+        ],
+        "runtime_provenance": [
+          10,
+          10,
+          10
+        ],
+        "honest_delivery": [
+          0,
+          0,
+          0
+        ]
+      },
+      "max": 60
+    },
+    "with-initial": {
+      "criteria_medians": {
+        "working_state": 10,
+        "product_understanding": 15,
+        "technical_relationships": 15,
+        "runtime_provenance": 10,
+        "honest_delivery": 10
+      },
+      "total_of_medians": 60,
+      "samples": {
+        "working_state": [
+          10,
+          10,
+          10
+        ],
+        "product_understanding": [
+          15,
+          15,
+          15
+        ],
+        "technical_relationships": [
+          15,
+          15,
+          15
+        ],
+        "runtime_provenance": [
+          10,
+          10,
+          10
+        ],
+        "honest_delivery": [
+          10,
+          10,
+          10
+        ]
+      },
+      "max": 60
+    },
+    "without-incremental": {
+      "criteria_medians": {
+        "working_state": 10,
+        "product_understanding": 15,
+        "technical_relationships": 13,
+        "runtime_provenance": 10,
+        "honest_delivery": 0
+      },
+      "total_of_medians": 48,
+      "samples": {
+        "working_state": [
+          10,
+          10,
+          10
+        ],
+        "product_understanding": [
+          14,
+          15,
+          15
+        ],
+        "technical_relationships": [
+          14,
+          13,
+          13
+        ],
+        "runtime_provenance": [
+          10,
+          10,
+          10
+        ],
+        "honest_delivery": [
+          0,
+          0,
+          0
+        ]
+      },
+      "max": 60
+    }
+  },
+  "judges_completed": 3,
+  "judge_label_mapping": {
+    "A": "without-initial",
+    "B": "with-incremental",
+    "C": "with-initial",
+    "D": "without-incremental"
+  },
+  "final_targeted_probe": {
+    "exit_code": 0,
+    "duration_ms": 81886,
+    "usage": {
+      "input_tokens": 163560,
+      "cached_input_tokens": 140544,
+      "output_tokens": 3754,
+      "total_tokens": 167314
+    },
+    "answer": "已生成 [verification-note.md](/private/tmp/project-context-verification-probe-v2/lantern/verification-note.md)。\n\n说明涵盖：\n\n- 当前测试与部署验证状态\n- 各证据来源及其证明边界\n- 部署提交无法在本地解析的缺口\n- worker 改名与测试导入路径不一致\n- 功能讨论必须保留的业务和技术约束\n- 后续若要达到“已验证”还需补充的证据\n\n全程未执行项目代码或测试，未联网，也未读取其他实验目录或 AI 会话。",
+    "assertion": "Output explicitly says no execution and distinguishes static import mismatch from actual test failure",
+    "method": "One targeted model run; explicit task forbids running project code/tests; not an estimate of general reliability"
+  },
+  "regression": {
+    "schema_version": 1,
+    "suite": "test_context.py + test_collect_source.py",
+    "command": "/opt/homebrew/bin/python3.13 -m unittest discover -s docs/project-context-build/evals -p 'test_*.py' -v",
+    "observed_result": "48 tests passed",
+    "tests_run": 48,
+    "failures": 0,
+    "errors": 0,
+    "duration_seconds": 15.193,
+    "total_tokens": null,
+    "environment": "Local macOS, Python 3.13, synthetic temporary projects and git repositories; no production network requests",
+    "previous_findings": [
+      "Default python3 was Python 3.7.5, which cannot run Path.is_relative_to. Core now reports an explicit Python >=3.10 requirement.",
+      "A nonempty top-level next_cursor was wrongly accepted as complete. Core now downgrades the result to partial.",
+      "The generic filename history.jsonl was excluded as an AI conversation. Core now preserves ordinary business history and checks known conversation structures."
+    ],
+    "test_correction": "Tests originally required rejection for contradictory completeness flags. Safe partial downgrade is valid and is now asserted instead.",
+    "scorer_controls": {
+      "healthy_full_body_fixture": {
+        "score": 20,
+        "max": 20,
+        "bodies": 13
+      },
+      "file_paths_only": {
+        "score": 0,
+        "max": 20
+      }
+    },
+    "not_established": [
+      "Quality or correctness of model-written explanations",
+      "99 percent reader understanding",
+      "Real Feishu, GitHub or production connector success",
+      "Trigger reliability or with-versus-without skill improvement",
+      "Human label review or output spot-check"
+    ],
+    "added_regressions": [
+      "File read failure retains old item, records retained_old_snapshot, builds partial and preserves latest complete.",
+      "Directory enumeration failure retains previous subtree, reports retained_old_items and builds partial.",
+      "Modified tracked AI conversation bodies do not leak through Git change evidence into snapshots or exports.",
+      "Runtime explanations with nonempty material references invalidate when source availability or source-window configuration changes.",
+      "Deferred delta deletion survives to final complete page, including scan restart; later item restoration cancels deletion and full authoritative reconciliation replaces it."
+    ],
+    "scorer_phase_controls": {
+      "initial_full_body_score": 20,
+      "incremental_full_body_score": 20,
+      "stale_initial_scored_as_incremental": 18.33,
+      "max": 20,
+      "oracle_hash_mutation": "rejected",
+      "mutated_live_worktree": "ignored when immutable initial/source exists"
+    },
+    "suite_counts": {
+      "core": 32,
+      "collectors": 16
+    },
+    "scorer_format_correction": {
+      "reason": "Original objective parser assumed an undocumented items mapping and falsely scored valid materials/sources lists zero. Fixed evaluator only; model artifacts unchanged and no skill improvement implied.",
+      "with_initial": {
+        "raw_material": 20,
+        "coverage_ledger": 10
+      },
+      "without_initial": {
+        "raw_material": 20,
+        "coverage_ledger": 10
+      },
+      "controls": {
+        "sources_locator_explicit_false": 10,
+        "invalid_sha256": 6.67,
+        "title_names_only": 0
+      },
+      "max_ledger": 10
+    }
+  },
+  "limitations": [
+    "One synthetic project, two phases, one run per group/phase; no broad significance claim",
+    "Producer labels anonymized; artifacts may reveal implementation, two reviewers had prior implementation context",
+    "No user label review or human spot-check; no actual external service or ChatGPT web handoff tested",
+    "Behavior tests used recorded frozen v1; later edge-case fixes verified by final deterministic suite",
+    "Brief isolation has regression evidence and paired review; no fabricated 100-point aggregate"
+  ]
+}

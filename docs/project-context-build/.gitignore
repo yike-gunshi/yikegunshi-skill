@@ -1,0 +1,6 @@
+# Raw local model traces and generated fixture copies; compact evidence is in results/.
+evals/model-trigger-*/
+evals/model-behavior-*/
+evals/catalog-preflight-*/
+evals/model-judge-*/
+evals/model-verification-*/

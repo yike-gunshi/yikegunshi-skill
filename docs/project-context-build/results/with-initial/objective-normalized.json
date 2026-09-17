@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "method": "Exact whole material body containment and enumerated provenance records.",
+  "phase": "initial",
+  "oracle": "Immutable initial source snapshot, expected SHA-256 validation, and the published deterministic incremental mutations.",
+  "criteria": [
+    {
+      "id": "raw_material",
+      "score": 20.0,
+      "max": 20,
+      "evidence": {
+        "whole_bodies_found": 13,
+        "whole_bodies_expected": 13,
+        "missing": []
+      }
+    },
+    {
+      "id": "coverage_ledger",
+      "score": 10.0,
+      "max": 10,
+      "evidence": {
+        "local:README.md": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:.gitignore": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:tests/test_rules.py": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:docs/product.md": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:docs/new-work.md": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:exports/shift-notes.md": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:db/001_init.sql": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:ops/deploy.json": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:src/worker.py": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:src/service.py": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "local:src/api.py": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "team-wiki:feature-plan": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        },
+        "team-wiki:incident-17": {
+          "listed": true,
+          "provenance": true,
+          "state": true,
+          "hash_fields_checked": [
+            "sha256"
+          ],
+          "hashes_match": true,
+          "declared_content_matches": true
+        }
+      }
+    },
+    {
+      "id": "brief_isolation",
+      "score": null,
+      "max": 10,
+      "reason": "Paired topic/plain exports with an exclusive brief marker not supplied."
+    }
+  ],
+  "observed_score": 30.0,
+  "observed_max": 30,
+  "subjective_points_unscored": 60,
+  "human_review": "not performed",
+  "limitations": "Does not judge explanation correctness or prove 99 percent understanding. Incremental retained external bodies are checked; their stale/permission-failure labeling needs judge review."
+}
