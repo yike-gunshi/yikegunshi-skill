@@ -6,7 +6,7 @@
 
 Practical, production-tested skills for content workflows, product analysis, and knowledge management — built and maintained by [@yike-gunshi](https://github.com/yike-gunshi).
 
-![Skills](https://img.shields.io/badge/skills-15-blue)
+![Skills](https://img.shields.io/badge/skills-16-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -26,6 +26,7 @@ This repository is where I keep my own reusable skills under version control, so
 
 | Skill | What it does | Trigger |
 |-------|--------------|---------|
+| **[knowledge-canvas](./skills/knowledge-canvas/)** | Turn code, PDFs, books, courses, and documents into a zoomable, pannable Chinese HTML knowledge canvas, with explicit key nodes and relationships plus hover details and raw input/output examples. Includes an interactive template, browser regression checks, and Feishu inline delivery guidance. | `梳理完整链路`, `做一张能交互的全图`, `$knowledge-canvas` |
 | **[lark-export](./skills/lark-export/)** | Mirror a Feishu/Lark wiki or single doc to local Markdown, with images and attachments downloaded locally. Re-run to sync/update. | `同步飞书`, `导出飞书知识库` |
 | **[prd-analyzer](./skills/prd-analyzer/)** | Analyze PRD documents (PDF) and product UI screenshots, then output a structured review that surfaces gaps and risks. | `分析PRD`, `/prd` |
 | **[project-learner](./skills/project-learner/)** | Systematically learn any codebase and produce a per-module knowledge base (architecture / data model / frontend / backend / business flows) plus AI development guidance, updated incrementally across sessions. Use it when you are about to change the code. | `学习项目`, `/learn-project` |
@@ -81,6 +82,7 @@ Some skills call third-party APIs and need credentials. **No secrets are committ
 ```
 yikegunshi-skill/
 ├── skills/
+│   ├── knowledge-canvas/
 │   ├── lark-export/
 │   ├── paper-card/
 │   ├── pm-doc-write/

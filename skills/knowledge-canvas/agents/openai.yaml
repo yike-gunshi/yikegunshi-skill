@@ -1,0 +1,5 @@
+interface:
+  display_name: "知识画布"
+  short_description: "把代码、书籍与文档整理为可缩放、可交互的中文 HTML 知识画布"
+  default_prompt: "使用 $knowledge-canvas 将我提供的材料整理为交互画布，先对齐结构和节点效果，再生成 HTML"
+

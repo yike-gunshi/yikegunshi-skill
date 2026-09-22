@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-15-blue)
+![Skills](https://img.shields.io/badge/skills-16-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -26,6 +26,7 @@
 
 | Skill | 作用 | 触发词 |
 |-------|------|--------|
+| **[knowledge-canvas](./skills/knowledge-canvas/)** | 把代码、PDF、书籍、课程与文档整理为可缩放、可平移的中文 HTML 知识画布，展开关键节点与关系，悬停查看说明和原始输入输出样例。附交互模板、浏览器回归脚本与飞书正文交付指引。 | `梳理完整链路`、`做一张能交互的全图`、`$knowledge-canvas` |
 | **[lark-export](./skills/lark-export/)** | 把飞书/Lark 知识库或单篇文档镜像成本地 Markdown，图片和附件一并下载到本地。重复运行即同步更新。 | `同步飞书`、`导出飞书知识库` |
 | **[prd-analyzer](./skills/prd-analyzer/)** | 分析 PRD 文档（PDF）与产品界面截图，输出结构化评审，暴露缺口与风险。 | `分析PRD`、`/prd` |
 | **[project-learner](./skills/project-learner/)** | 系统性学习任意代码库，产出分模块的结构化知识库（架构 / 数据模型 / 前后端 / 业务流）+ AI 开发指导，跨会话增量更新。接下来要在这个项目上动手改代码时用。 | `学习项目`、`/learn-project` |
@@ -82,6 +83,7 @@ Codex 用户加 `--target codex`（装到 `~/.agents/skills`），`--target both
 yikegunshi-skill/
 ├── skills/
 │   ├── book-to-mindmap/
+│   ├── knowledge-canvas/
 │   ├── lark-export/
 │   ├── paper-card/
 │   ├── pm-doc-write/
