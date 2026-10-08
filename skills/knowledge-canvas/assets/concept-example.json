@@ -1,0 +1,37 @@
+{
+  "meta":{"title":"理解一个论证","subtitle":"虚构教学示例 · 区分组成、核心依赖与辅助反例","mode":"concept","version":"模板示例"},
+  "width":1450,"height":760,
+  "groups":[
+    {"id":"parts","title":"论证的组成","summary":"前提与结论承担不同角色","color":"cyan","x":30,"y":40,"w":380,"h":600},
+    {"id":"criteria","title":"两种判断","summary":"推理关系与陈述真假分开理解","color":"violet","x":500,"y":40,"w":405,"h":600},
+    {"id":"connections","title":"综合理解","summary":"合并标准，并用反例检查边界","color":"amber","x":995,"y":40,"w":400,"h":670}
+  ],
+  "nodes":[
+    {"id":"premise","group":"parts","title":"前提","english":"Premise","summary":"被用作理由的陈述","shape":"document","x":60,"y":190,"w":300,"h":110,
+      "explanation":[{"label":"含义","body":"论证中用于支持结论的陈述"},{"label":"边界","body":["一条陈述是前提，说明它在论证中的角色","它被当作理由使用，不代表它已经被证明为真"]}],
+      "samples":[{"title":"一个完整的演绎例子","type":"构造示例","source":"模板作者编写的教学材料","blocks":[{"label":"两条前提与结论","format":"text","raw":"前提一：所有鲸都是哺乳动物。\n前提二：蓝鲸是鲸。\n结论：蓝鲸是哺乳动物。"}]}]},
+    {"id":"conclusion","group":"parts","title":"结论","english":"Conclusion","summary":"由前提支持的陈述","shape":"document","x":60,"y":395,"w":300,"h":110,
+      "explanation":[{"label":"含义","body":"论证希望通过前提建立的陈述"},{"label":"判断","body":"区分结论本身是否为真，以及给出的理由能否支持这个结论"}],
+      "samples":[{"title":"同一论证中的结论","type":"构造示例","source":"模板作者编写的教学材料","blocks":[{"label":"结论原句","format":"quote","raw":"蓝鲸是哺乳动物。"}]}]},
+    {"id":"validity","group":"criteria","title":"有效性","english":"Validity","summary":"前提为真时结论能否为假","shape":"process","x":565,"y":185,"w":300,"h":110,
+      "explanation":[{"label":"含义","body":"演绎有效指不存在前提全部为真而结论为假的情形"},{"label":"检查","body":["先假定所有前提为真","寻找结论仍然可能为假的情形","找到这样的情形，就能说明该论证无效"]},{"label":"边界","body":"有效性考察推理关系，不直接保证实际前提为真"}],
+      "samples":[{"title":"保持有效的推理形式","type":"构造示例","source":"模板作者编写的教学材料","blocks":[{"label":"形式","format":"math","raw":"P → Q\nP\n∴ Q"},{"label":"实例","format":"text","raw":"如果这盏灯通电，它就会亮。\n这盏灯通电。\n所以，这盏灯会亮。"}]}]},
+    {"id":"truth","group":"criteria","title":"真实性","english":"Truth","summary":"陈述与实际情况是否相符","shape":"text","x":565,"y":370,"w":300,"h":110,
+      "explanation":[{"label":"含义","body":"在这里指一条陈述是否符合实际情况"},{"label":"区分","body":"一条陈述可以为真或为假，有效性则用于评价前提与结论之间的推理关系"}],
+      "samples":[{"title":"陈述真假与论证角色无关","type":"构造示例","source":"模板作者编写的教学材料","blocks":[{"label":"一真一假","format":"text","raw":"真陈述：蓝鲸是哺乳动物。\n假陈述：所有哺乳动物都会飞。"}]}]},
+    {"id":"soundness","group":"connections","title":"健全性","english":"Soundness","summary":"有效推理与真实前提同时成立","shape":"process","x":1050,"y":220,"w":300,"h":110,
+      "explanation":[{"label":"含义","body":"演绎论证有效，并且它的所有前提为真"},{"label":"条件","body":["推理有效","所有前提真实"]},{"label":"结论","body":"同时满足这两个条件，结论必然为真"}],
+      "samples":[{"title":"判断要同时检查两部分","type":"构造示例","source":"模板作者编写的教学材料","blocks":[{"label":"检查记录","format":"text","raw":"论证：所有鲸都是哺乳动物；蓝鲸是鲸；所以蓝鲸是哺乳动物。\n推理关系：有效。\n两条前提：均为真。\n判断：这是一个健全的演绎论证。"}]}]},
+    {"id":"counterexample","group":"connections","title":"反例","english":"Counterexample","summary":"前提为真，结论却为假","shape":"document","x":1050,"y":465,"w":300,"h":110,
+      "explanation":[{"label":"用途","body":"用一个满足前提但不满足结论的情形，说明演绎论证无效"},{"label":"边界","body":"只给出与结论不同的意见不够，必须同时满足原论证的前提"}],
+      "samples":[{"title":"前提成立，结论仍可不成立","type":"构造示例","source":"模板作者编写的教学材料","blocks":[{"label":"待检查论证","format":"text","raw":"如果下雨，地面就湿。\n地面湿了。\n所以，下雨了。"},{"label":"反例情形","format":"text","raw":"今天没有下雨，有人用水冲洗地面。\n在这个情形中，两条前提可以同时为真，结论却为假。"}]}]}
+  ],
+  "edges":[
+    {"id":"premise-validity","from":"premise","to":"validity","relation":"dependency","importance":"primary","points":[[360,230],[565,230]]},
+    {"id":"conclusion-validity","from":"conclusion","to":"validity","relation":"dependency","importance":"primary","points":[[360,445],[430,445],[430,270],[565,270]]},
+    {"id":"validity-soundness","from":"validity","to":"soundness","relation":"dependency","importance":"primary","points":[[865,235],[1050,235]]},
+    {"id":"truth-soundness","from":"truth","to":"soundness","relation":"dependency","importance":"primary","points":[[865,420],[960,420],[960,292],[1050,292]]},
+    {"id":"counterexample-validity","from":"counterexample","to":"validity","relation":"reference","importance":"auxiliary","points":[[1050,525],[935,525],[935,150],[715,150],[715,185]],"label":"用反例检查","labelAt":[750,143]}
+  ],
+  "faq":[{"question":"结论为真，就能说明推理有效吗？","answer":[{"label":"结论","body":"不能"},{"label":"原因","body":"有效性要求前提全真时结论不可能为假，一次碰巧得到真结论不能证明这一点"}],"nodeIds":["validity","truth"],"source":"模板作者编写的教学问答，非用户历史问题"}]
+}

@@ -5,271 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="use-iframe" content="true">
 <meta name="html-box-height-mode" content="auto">
-<meta name="description" content="虚构资料交互画布，默认100%阅读比例，640像素高操作区，全屏时画布填满剩余空间，支持缩放、平移与悬停详情">
-<title>知识画布 · 结构化理解</title>
+<title>知识画布</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;max-width:100%;background:#020617;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}button{font:inherit;cursor:pointer}button:focus-visible{outline:2px solid #a78bfa;outline-offset:3px}[hidden]{display:none!important}.shell{position:relative;background:#020617;display:flex;flex-direction:column;padding:18px;gap:12px}header{flex-shrink:0;display:flex;justify-content:space-between;gap:12px;align-items:center}h1{font-size:19px;margin:0 0 5px;font-weight:600}.subtitle{font-size:12px;color:#94a3b8;margin:0}.viewport{flex:none;height:640px;min-height:200px;position:relative;overflow:hidden;touch-action:none;cursor:grab;background-color:#081020;background-image:radial-gradient(#263147 .8px,transparent .8px);background-size:24px 24px;border:1px solid #263147;border-radius:12px}.viewport.dragging{cursor:grabbing}.world{position:absolute;width:1100px;height:570px;transform-origin:0 0}.world svg{position:absolute;inset:0;width:1100px;height:570px;pointer-events:none}.group{position:absolute;border:1px dashed #42526f;border-radius:16px;pointer-events:none}.group h2{font-size:15px;color:#a5b4cf;margin:18px}.group.outer{left:25px;top:35px;width:1050px;height:500px}.group.inner{left:650px;top:100px;width:390px;height:400px;background:#a78bfa05;border-color:#655887}.node{position:absolute;width:210px;min-height:86px;padding:17px;text-align:left;border:1px solid var(--accent,#22d3ee);border-radius:11px;background:#101d30;color:#f1f5f9;box-shadow:0 8px 20px #0003}.node:hover,.node.active{background:#1e2942;box-shadow:0 0 0 2px #a78bfa30}.node strong{display:block;font-size:20px;font-weight:600;line-height:1.5}.node small{display:block;margin-top:5px;color:#a8b6ca;font-size:13px;line-height:1.5}.node.document{border-radius:3px 18px 3px 3px;--accent:#a78bfa;background:linear-gradient(135deg,#221c39,#151e30)}.node.database{border-radius:45% / 16%;--accent:#34d399;padding-top:22px;padding-bottom:22px}.node.unavailable{border-color:#566172;background:#162031;opacity:.62}.note{position:absolute;left:70px;top:350px;width:480px;color:#8a9ab4;font-size:14px;line-height:1.9}.controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.controls button,.panel button{border:1px solid #41516b;border-radius:5px;color:#dbeafe;background:#142036;padding:6px 10px;font-size:12px}.controls output{font-size:12px;min-width:46px;text-align:center}.bottom{flex-shrink:0;display:flex;align-items:center;justify-content:flex-end;gap:10px}.panel{position:absolute;z-index:20;width:455px;overflow:auto;border:1px solid #70618f;border-radius:12px;background:#101827;box-shadow:0 18px 70px #0009;cursor:default}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:15px;border-bottom:1px solid #334155}.panel-head h2{font-size:16px;margin:0}.panel-body{padding:16px}.panel h3{font-size:13px;color:#c4b5fd;margin:0 0 12px}.panel ul{font-size:13px;line-height:1.9;padding-left:19px;margin:0 0 19px}.panel li{margin-bottom:7px}.panel pre{font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;overflow:auto;background:#080f1d;padding:12px;border:1px solid #263147;border-radius:7px;margin:0}.sample-label{font-size:11px;color:#94a3b8;margin:0 0 8px}.actions{display:flex;gap:6px}.noscript{padding:12px;color:#fbbf24}@media(max-width:540px){.shell{padding:10px;gap:9px}h1{font-size:16px}.bottom{align-items:flex-start;flex-direction:column}.subtitle{font-size:11px}}
-.shell:fullscreen{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;overflow:hidden}.shell:fullscreen .viewport{flex:1 1 0;height:auto;min-height:0}.shell::backdrop{background:#020617}.module-nav{display:flex;align-items:center;gap:8px;flex-shrink:0;font-size:12px;color:#94a3b8}.module-nav select{font:inherit;color:#e2e8f0;background:#142036;border:1px solid #41516b;border-radius:5px;padding:5px}.node.text{border-color:transparent;background:transparent;box-shadow:none}.node.decision{clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%)}.rules{font-size:13px;line-height:1.9;margin-bottom:19px}.rule{margin:0 0 10px}.rule ul{margin:5px 0 0}.sample-item+.sample-item{margin-top:20px;border-top:1px solid #334155;padding-top:16px}.sample-item h4{font-size:12px;margin:12px 0 7px;color:#cbd5e1}.sample-source{font-size:11px;line-height:1.7;color:#94a3b8;margin:10px 0 0;overflow-wrap:anywhere}.display-status{flex-shrink:0;margin:0;font-size:12px;line-height:1.6;color:#a8b6ca}.display-status[data-warning="true"]{color:#fbbf24}.controls button[data-unavailable="true"]{color:#94a3b8;border-style:dashed}
+:root{color-scheme:dark;--bg:#070e19;--panel:#101c2d;--line:#31445e;--text:#e5edf8;--muted:#9aadc5;--accent:#83d7c1;--radius:12px;--gap:12px;--node-title:20px;--node-summary:13px;--group-title:25px;--detail-width:455px;--embed-height:640px}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,.node:focus-visible{outline:2px solid var(--accent);outline-offset:3px}[hidden]{display:none!important}.shell{position:relative;display:flex;flex-direction:column;gap:var(--gap);padding:20px;height:100dvh;min-height:0;overflow:hidden}.shell.embedded{height:auto;overflow:visible}.shell:fullscreen{position:fixed;inset:0;height:100%;width:100%;max-height:none;padding:20px;overflow:hidden}.shell::backdrop{background:var(--bg)}header{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-shrink:0}h1{font-size:21px;margin:0 0 8px}.subtitle{color:var(--muted);font-size:12px;margin:0;line-height:1.7}.version{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:8px;border-radius:6px}.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);padding-bottom:7px;flex-shrink:0}.tabs button{padding:9px 23px;background:transparent;border:0;border-radius:7px;color:var(--muted);font-size:13px}.tabs button[aria-selected=true]{background:#1c2b40;color:var(--text);box-shadow:inset 0 -2px var(--accent)}.view{display:flex;flex-direction:column;flex:1;min-height:0;gap:var(--gap)}.navline{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;flex-shrink:0}.module-nav,.view-options,.controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.module-nav{font-size:12px;color:var(--muted)}select,button.control{color:var(--text);border:1px solid var(--line);border-radius:6px;background:#122035;padding:6px 9px;font-size:12px}button.control[aria-pressed=true]{border-color:var(--accent);color:#b2f4e0}.legend{display:flex;gap:12px;font-size:10px;color:var(--muted)}.legend i{display:inline-block;width:18px;vertical-align:middle;margin-right:5px;border-top:1px solid #92b8c4}.legend i.dashed{border-top-style:dashed;border-color:#9186a9}.legend i.composition{border-color:#aaa0be}.viewport{position:relative;flex:1;min-height:100px;overflow:hidden;touch-action:none;cursor:grab;border:1px solid var(--line);border-radius:var(--radius);background-color:#091322;background-image:radial-gradient(#23344d .8px,transparent .8px);background-size:24px 24px}.embedded .viewport{flex:none;height:var(--embed-height)}.shell:fullscreen .viewport{flex:1;height:auto;min-height:0}.viewport.dragging{cursor:grabbing}.world{position:absolute;inset:0;contain:layout paint}.world>svg{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}.motion-layer{pointer-events:none}.group-frame,.surface,.fold,.edge{vector-effect:non-scaling-stroke}.group-title{font-size:var(--group-title);font-weight:650}.group-summary{font-size:13px;fill:#afbed1}.node{cursor:pointer;outline:none}.surface{fill:#142136;stroke:#526681;stroke-width:1}.node:hover .surface,.node.active .surface,.node:focus-visible .surface{fill:#20334d;stroke:var(--node-color);stroke-width:1.8}.fold{fill:none;stroke:#637690;stroke-width:.7}.node-title{fill:var(--text);font-size:var(--node-title);font-weight:600}.node-summary{fill:#a6b8cf;font-size:var(--node-summary)}.node-english{fill:#b3c4dd;font-size:12px}.node-status{fill:#cbbceb;font-size:11px}.node.disabled .surface{fill:#121b29;stroke:#3b4658}.node.disabled .node-title,.node.disabled .node-summary,.node.disabled .node-english{fill:#7c8da5}.node.text .surface{fill:transparent;stroke:transparent}.edge{fill:none;stroke:#8caeba;stroke-width:1.2;opacity:.8;stroke-linecap:round;stroke-linejoin:round}.edge-set.secondary .edge{opacity:.55;stroke-width:1}.edge-set.auxiliary{display:none}.show-dependencies .edge-set.auxiliary{display:inline}.edge-set.auxiliary .edge{stroke:#9587ad;stroke-width:1;opacity:.4;stroke-dasharray:4 7}.edge-set.condition .edge,.edge-set.reference .edge{stroke:#998caf;stroke-dasharray:6 6}.edge-set.composition .edge{stroke:#aaa0be;stroke-dasharray:none;stroke-width:1}.edge-set.loop.primary .edge{stroke:#65ceb2}.edge-label{font-size:12px;fill:#a8b8ce;paint-order:stroke;stroke:#0b1423;stroke-width:5;stroke-linejoin:round}.motion-particle{fill:none;stroke:#b1f0db;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:none}.bottom{flex-shrink:0;display:flex;justify-content:space-between;align-items:center;gap:12px}.controls output{min-width:44px;text-align:center;font-size:12px;color:var(--muted)}.hint,.motion-note{font-size:10px;color:#8296b0;line-height:1.6}.status{font-size:12px;color:#f0c687;margin:0;flex-shrink:0}.reading-view{display:grid;grid-template-columns:210px minmax(0,1fr);overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:#0d1726}.embedded .reading-view{flex:none;height:760px}.shell:fullscreen .reading-view{flex:1;height:auto}.doc-nav{overflow:auto;padding:18px;border-right:1px solid var(--line);font-size:12px}.doc-nav a{display:block;color:#afc2db;text-decoration:none;line-height:1.7;padding:7px 8px;border-radius:5px}.doc-nav a:hover{background:#1a2b41}.doc-scroll,.faq-scroll{overflow:auto;padding:28px 36px 70px;overscroll-behavior:contain}.doc-body{max-width:940px;margin:auto;font-size:14px;line-height:1.9;overflow-wrap:anywhere}.doc-body h2{font-size:23px;margin:16px 0 24px;color:#90dec7}.doc-body h3{font-size:20px;color:#b9b0ea;margin:28px 0 16px}.doc-body h4,.doc-body h5,.doc-body h6{font-size:17px;margin:24px 0 15px;color:var(--text)}.doc-node{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:22px}.doc-path{font-size:11px;color:#8198b4;margin:0 0 15px}.rule{margin:0 0 12px}.rule strong{color:var(--text)}.rule ul{margin:6px 0 0;padding-left:21px}.rule li{margin:4px 0}.doc-body details{margin-top:16px}.doc-body summary{cursor:pointer;color:#9fbad8;font-size:12px}.faq-scroll{border:1px solid var(--line);border-radius:var(--radius);background:#0d1726;flex:1}.faq-item{margin:0 0 30px;border-bottom:1px solid var(--line);padding-bottom:20px}.faq-empty{display:grid;place-content:center;text-align:center;height:100%;color:var(--muted)}.faq-links{display:flex;gap:6px;flex-wrap:wrap}.panel{position:fixed;z-index:30;width:var(--detail-width);max-width:calc(100vw - 28px);display:flex;flex-direction:column;overflow:hidden;border:1px solid #61718c;border-radius:var(--radius);background:#0f1a2b;box-shadow:0 18px 60px #0009}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:15px 16px;background:#19283e;border-bottom:1px solid var(--line);flex-shrink:0}.panel-head h2{font-size:15px;margin:0;line-height:1.5}.actions{display:flex;gap:5px;flex-shrink:0}.actions button,.copy{font-size:11px;color:#c9d6e9;background:transparent;border:1px solid #4c607c;border-radius:5px;padding:4px 7px}.panel-body{padding:17px 16px;overflow:auto;overflow-anchor:none;overscroll-behavior:contain;font-size:13px;line-height:1.85;scrollbar-width:thin}.section-title{font-size:13px;color:#c6d5eb;margin:0 0 14px}.sample{border-top:1px solid var(--line);padding-top:15px;margin-top:18px}.sample h4{font-size:12px;color:#b7c9e2;margin:0 0 10px}.sample-meta,.source{font-size:11px;color:#899fbd;line-height:1.8;overflow-wrap:anywhere}.sample-meta{margin-bottom:12px}.sample-block{margin:12px 0}.block-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 10px;font-size:11px;background:#1a2940;border:1px solid var(--line);border-radius:6px 6px 0 0}.sample-raw{margin:0;padding:12px;background:#080f1d;border:1px solid var(--line);border-top:0;border-radius:0 0 6px 6px;font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,'PingFang SC',monospace;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;max-height:290px;scrollbar-width:thin}.sample-raw.quote{font-family:inherit;border-left:3px solid #9186b7}.source{margin:16px 0 0}.panel-foot{padding:8px 16px;background:#162439;border-top:1px solid var(--line);font-size:10px;color:#879dbb}.noscript{padding:20px;color:#e5bd7b}
+@media(max-width:1000px){.legend,.version{display:none}.hint{display:none}.reading-view{grid-template-columns:170px minmax(0,1fr)}.doc-scroll{padding:22px}.bottom{justify-content:flex-end}}@media(max-width:600px){.shell,.shell:fullscreen{padding:10px;gap:9px}h1{font-size:17px}.subtitle{font-size:11px}.tabs button{padding:8px 17px}.reading-view{grid-template-columns:1fr}.doc-nav{display:none}.doc-scroll,.faq-scroll{padding:18px}.controls{gap:4px}.controls button.control{padding:6px 7px;font-size:11px}.motion-note{display:none}.bottom{justify-content:center}.view-options{margin-left:0}.version{display:none}.panel-head{padding:12px}.panel-body{padding:14px}.doc-body{font-size:13px}}
 </style>
 </head>
 <body>
-<main class="shell" id="canvas-app">
-<header><div><h1>知识画布 · 结构化理解</h1><p class="subtitle">全部内容为虚构示例 · 不含业务资料与外部资源</p></div></header>
-<nav class="module-nav" aria-label="定位模块"><label for="module-select">定位模块</label><select id="module-select"><option value="">选择模块</option></select></nav>
-<div class="viewport" id="viewport" aria-label="可缩放与平移的示例画布">
-<div class="world" id="world">
-<div class="group outer" data-group="overview"><h2>示例资料整理</h2></div>
-<div class="group inner" data-group="results"><h2>整理结果 · 包含关系</h2></div>
-<svg aria-hidden="true" viewBox="0 0 1100 570"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#7b8ca5"/></marker></defs><g fill="none" stroke="#7b8ca5" stroke-width="1.5" marker-end="url(#arrow)"><path d="M280 220 H365"/><path d="M580 220 H620 V205 H690"/><path d="M580 235 H610 V345 H690"/></g><g fill="#8a9ab4" font-size="12"><text x="305" y="204">读取</text><text x="606" y="175">归纳</text><text x="620" y="332">举例</text></g></svg>
-<button class="node" data-node="source" style="left:70px;top:175px"><strong>读取示例材料</strong><small>取得正文与章节信息</small></button>
-<button class="node" data-node="extract" style="left:370px;top:175px"><strong>提取关键单元</strong><small>识别概念与关联</small></button>
-<button class="node document" data-node="summary" style="left:695px;top:165px;width:305px"><strong>概念摘要</strong><small>整理后的文本内容</small></button>
-<button class="node database" data-node="examples" style="left:695px;top:300px;width:305px"><strong>样例资料</strong><small>结构化示例与对应关系</small></button>
-<button class="node unavailable" data-node="audio" style="left:695px;top:423px;width:305px;min-height:54px;padding:9px 17px"><strong style="font-size:16px">音频资料</strong><small>本示例未提供</small></button>
-<p class="note">箭头表示处理关系<br>容器表示归属，内部内容不强行串成执行顺序</p>
-</div></div>
-<div class="bottom"><div class="controls"><button id="zoom-out" aria-label="缩小">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="放大">＋</button><button id="readable">100% 阅读</button><button id="fit">适配全图</button><button id="fullscreen" aria-describedby="display-status">全屏</button></div></div>
-<p class="display-status" id="display-status" role="status" hidden></p>
-<noscript><div class="noscript">当前环境未运行 JavaScript，交互验证尚未通过</div></noscript>
-<aside class="panel" id="panel" hidden role="dialog" aria-modal="false" aria-labelledby="panel-title"><div class="panel-head"><h2 id="panel-title"></h2><div class="actions"><button id="pin" aria-pressed="false">固定</button><button id="close" aria-label="关闭详情">关闭</button></div></div><div class="panel-body"><h3>说明</h3><div id="explanation" class="rules"></div><h3>样例</h3><div id="samples"></div></div></aside>
+<main id="canvas-app" class="shell">
+ <header><div><h1 id="page-title"></h1><p id="page-subtitle" class="subtitle"></p></div><span id="version" class="version" hidden></span></header>
+ <nav class="tabs" role="tablist" aria-label="内容视图"><button id="tab-canvas" role="tab" aria-controls="view-canvas" aria-selected="true" tabindex="0" data-view="canvas">画布</button><button id="tab-document" role="tab" aria-controls="view-document" aria-selected="false" tabindex="-1" data-view="document">文档</button><button id="tab-faq" role="tab" aria-controls="view-faq" aria-selected="false" tabindex="-1" data-view="faq" hidden>FAQ</button></nav>
+ <section id="view-canvas" class="view" role="tabpanel" aria-labelledby="tab-canvas">
+  <div class="navline"><div class="module-nav"><label for="module-select">定位模块</label><select id="module-select"><option value="">选择模块</option></select></div><div class="view-options"><button id="dependencies" class="control" aria-pressed="false" aria-controls="world" hidden>显示全部依赖</button><div id="legend" class="legend"></div></div></div>
+  <div id="viewport" class="viewport" aria-label="可缩放、平移的知识画布"><div id="world" class="world"><svg id="base-layer" aria-label="知识结构"></svg><svg id="motion-layer" class="motion-layer" aria-hidden="true"></svg></div></div>
+  <div class="bottom"><span class="hint">滚轮缩放 · 拖动平移 · 悬停查看 · 点击固定</span><div class="controls"><button id="zoom-out" class="control" aria-label="缩小">−</button><output id="zoom-value">100%</output><button id="zoom-in" class="control" aria-label="放大">＋</button><button id="readable" class="control">100%</button><button id="fit" class="control">适配全图</button><button id="fullscreen" class="control">全屏</button><button id="motion" class="control" aria-pressed="false" hidden>暂停流动</button></div></div>
+  <div id="motion-note" class="motion-note" hidden>主流程按序示意 · 条件与辅助关系静态 · 动效不代表真实执行</div>
+ </section>
+ <section id="view-document" class="view reading-view" role="tabpanel" aria-labelledby="tab-document" hidden><nav id="doc-nav" class="doc-nav" aria-label="文档目录"></nav><div id="doc-scroll" class="doc-scroll" tabindex="0"><article id="doc-body" class="doc-body"></article></div></section>
+ <section id="view-faq" class="view" role="tabpanel" aria-labelledby="tab-faq" hidden><div class="faq-scroll"><article id="faq-body" class="doc-body"></article></div></section>
+ <p id="display-status" class="status" role="status" hidden></p>
+ <aside id="panel" class="panel" hidden role="dialog" aria-modal="false" aria-labelledby="panel-title"><div class="panel-head"><h2 id="panel-title"></h2><div class="actions"><button id="pin" aria-pressed="false">固定</button><button id="close" aria-label="关闭详情">关闭 ×</button></div></div><div id="panel-body" class="panel-body" tabindex="0"></div><div class="panel-foot">Esc 关闭 · 样例保留原始内容</div></aside>
+ <noscript><div class="noscript">当前环境未运行 JavaScript，交互画布不可用</div></noscript>
 </main>
+<script type="application/json" id="canvas-data">
+{
+ "meta":{"title":"资料核验与整理","subtitle":"虚构流程示例 · 展示组成、条件、回路和辅助依赖","mode":"process","version":"模板示例"},
+ "width":1780,"height":970,
+ "groups":[
+  {"id":"prepare","title":"材料准备","summary":"读取原文与提取待核验条目","color":"cyan","x":30,"y":40,"w":390,"h":540},
+  {"id":"work","title":"整理与核验","summary":"规则组成与实际处理分别展示","color":"green","x":470,"y":40,"w":880,"h":890},
+  {"id":"rules","parent":"work","title":"核验依据","summary":"同级组成项，不表示执行顺序","color":"violet","x":500,"y":145,"w":365,"h":470},
+  {"id":"checking","parent":"work","title":"核验过程","summary":"主线向下，补充资料回到核验","color":"green","x":900,"y":145,"w":415,"h":700},
+  {"id":"result","title":"整理结果","summary":"结论与来源一起保留","color":"amber","x":1390,"y":40,"w":340,"h":660}
+ ],
+ "nodes":[
+  {"id":"source","group":"prepare","title":"读取材料","summary":"正文与来源记录","shape":"database","x":65,"y":155,"w":320,"h":90,"explanation":[{"label":"用途","body":"取得本次整理可以使用的原始材料"},{"label":"读取内容","body":["原文正文",{"text":"来源信息","children":["材料名称","章节与版本"]}]},{"label":"边界","body":"本示例全部为虚构数据，不表示已访问外部服务"}],"samples":[{"title":"一份虚构资料","type":"构造示例","source":"模板作者编写","blocks":[{"label":"材料记录","format":"json","raw":"{\n  \"document_id\": \"18446744073709551615\",\n  \"title\": \"观察笔记\",\n  \"text\": \"样本在室温条件下完成记录。\"\n}"}]}]},
+  {"id":"extract","group":"prepare","title":"提取条目","summary":"原文中的观点与条件","shape":"process","x":65,"y":345,"w":320,"h":90,"explanation":[{"label":"用途","body":"找出需要核验的观点，并保留它的前提"},{"label":"处理","body":"将结论与适用条件一起记录，避免只摘取孤立结论"}],"samples":[{"title":"保留条件","type":"构造示例","source":"模板作者编写","blocks":[{"label":"原文","format":"quote","raw":"样本在室温条件下完成记录。"},{"label":"提取结果","format":"text","raw":"记录条件：室温\n对象：该样本"}]}]},
+  {"id":"criterion","group":"rules","title":"核验标准","summary":"哪些条件需要确认","shape":"document","x":530,"y":235,"w":240,"h":75,"explanation":[{"label":"作用","body":"规定核验时需要保留的判断依据"},{"label":"内容","body":["结论有对应材料","适用条件没有被遗漏"]}],"samples":[{"title":"标准示例","type":"构造示例","source":"模板作者编写","blocks":[{"label":"规则","format":"text","raw":"结论必须能够对应到提供的材料\n适用条件必须与结论一起保留"}]}]},
+  {"id":"reference","group":"rules","title":"来源目录","summary":"章节与版本索引","shape":"document","x":530,"y":345,"w":240,"h":75,"explanation":[{"label":"作用","body":"提供查找原文的入口，不代表原文已完成核验"}],"samples":[{"title":"目录示例","type":"构造示例","source":"模板作者编写","blocks":[{"label":"条目","format":"text","raw":"观察笔记 · 第一节 · 示例版本"}]}]},
+  {"id":"basis","group":"rules","title":"核验清单","summary":"标准与来源合并使用","shape":"document","x":530,"y":495,"w":240,"h":75,"explanation":[{"label":"组成","body":["核验标准","来源目录"]},{"label":"产物","body":"本次核验的规则与可查阅入口"}],"samples":[{"title":"清单示例","type":"构造示例","source":"模板作者编写","blocks":[{"label":"清单","format":"markdown","raw":"- 确认结论对应的原文\n- 确认原文中的适用条件"}]}]},
+  {"id":"check","group":"checking","title":"核对内容","summary":"对照原文与适用条件","shape":"process","x":945,"y":260,"w":320,"h":90,"explanation":[{"label":"用途","body":"检查提取的观点是否被所给材料支持"},{"label":"处理","body":"结合原文、条件与来源逐项核对，记录缺失内容"}],"samples":[{"title":"一次核对","type":"构造示例","source":"模板作者编写","blocks":[{"label":"输入 JSON","format":"json","raw":"{\"claim\":\"记录在室温下完成\",\"source\":\"观察笔记\"}"},{"label":"输出 JSON","format":"json","raw":"{\"supported\":true,\"condition\":\"室温\"}"}]}]},
+  {"id":"decision","group":"checking","title":"判断完整性","summary":"完成整理或继续补充","shape":"decision","x":945,"y":450,"w":320,"h":90,"explanation":[{"label":"判断","body":"检查当前材料是否足以支持整理后的结论"},{"label":"分支","body":["材料充分时保留结论","材料缺失时补充依据后再次核对"]}],"samples":[{"title":"判断示例","type":"构造示例","source":"模板作者编写","blocks":[{"label":"判断结果","format":"text","raw":"原文与条件已提供，可以整理结论"}]}]},
+  {"id":"supplement","group":"checking","title":"补充资料","summary":"补齐当前缺失的依据","shape":"process","status":{"kind":"conditional","label":"按条件"},"x":945,"y":670,"w":320,"h":90,"explanation":[{"label":"条件","body":"发现材料缺失且存在可授权取得的补充来源"},{"label":"产物","body":"带回补充材料重新核对，未取得资料时明确保留缺口"}],"samples":[{"title":"待补充项","type":"构造示例","source":"模板作者编写","blocks":[{"label":"缺口","format":"text","raw":"缺少样本记录的日期，需要补充原始记录"}]}]},
+  {"id":"summary","group":"result","title":"保留结论","summary":"结论、条件与来源","shape":"document","x":1420,"y":210,"w":280,"h":90,"explanation":[{"label":"产物","body":"可以追溯来源并带有适用条件的结论"},{"label":"边界","body":"整理结论不表示它在材料之外仍普遍成立"}],"samples":[{"title":"整理后的结论","type":"构造示例","source":"模板作者编写","blocks":[{"label":"正文","format":"text","raw":"该样本在室温条件下完成记录\n来源：观察笔记"}]}]},
+  {"id":"publish","group":"result","title":"展示结果","summary":"结构与说明同步呈现","shape":"process","x":1420,"y":420,"w":280,"h":90,"explanation":[{"label":"作用","body":"用画布展示关系，用文档连续阅读相同的节点说明"}],"samples":[{"title":"展示原则","type":"构造示例","source":"模板作者编写","blocks":[{"label":"要点","format":"text","raw":"图与文档使用同一份内容\n证据不足的部分明确标注"}]}]}
+ ],
+ "edges":[
+  {"id":"read-extract","from":"source","to":"extract","relation":"flow","importance":"primary","points":[[225,245],[225,345]]},
+  {"id":"extract-check","from":"extract","to":"check","relation":"flow","importance":"primary","points":[[385,390],[445,390],[445,640],[885,640],[885,305],[945,305]]},
+  {"id":"criterion-basis","from":"criterion","to":"basis","relation":"composition","importance":"secondary","points":[[770,272.5],[810,272.5],[810,532.5],[770,532.5]],"renderPoints":[[770,272.5],[810,272.5]],"arrow":false},
+  {"id":"reference-basis","from":"reference","to":"basis","relation":"composition","importance":"secondary","points":[[770,382.5],[810,382.5],[810,532.5],[770,532.5]],"renderPoints":[[770,382.5],[810,382.5]],"arrow":false},
+  {"id":"basis-check","from":"basis","to":"check","relation":"dependency","importance":"secondary","points":[[770,532.5],[870,532.5],[870,370],[925,370],[925,325],[945,325]],"label":"核验依据","labelAt":[780,515]},
+  {"id":"source-reference","from":"source","to":"reference","relation":"reference","importance":"auxiliary","points":[[385,190],[440,190],[440,382.5],[530,382.5]],"label":"来源索引","labelAt":[450,370]},
+  {"id":"check-decision","from":"check","to":"decision","relation":"flow","importance":"primary","points":[[1105,350],[1105,450]]},
+  {"id":"decision-supplement","from":"decision","to":"supplement","relation":"condition","importance":"secondary","points":[[1105,540],[1105,670]],"label":"资料不足","labelAt":[1118,605]},
+  {"id":"supplement-check","from":"supplement","to":"check","relation":"loop","importance":"secondary","points":[[1265,715],[1295,715],[1295,305],[1265,305]]},
+  {"id":"decision-summary","from":"decision","to":"summary","relation":"flow","importance":"primary","points":[[1265,495],[1370,495],[1370,255],[1420,255]],"label":"确认完成","labelAt":[1275,478]},
+  {"id":"summary-publish","from":"summary","to":"publish","relation":"flow","importance":"primary","points":[[1560,300],[1560,420]]}
+ ],
+ "connectors":[{"id":"basis-spine","relation":"composition","importance":"secondary","points":[[810,272.5],[810,532.5]],"arrow":false},{"id":"basis-out","relation":"composition","importance":"secondary","points":[[810,532.5],[770,532.5]]}],
+ "motion":{"steps":[["read-extract"],["extract-check"],["check-decision"],["decision-summary"],["summary-publish"]]},
+ "faq":[]
+}
+</script>
 <script>
 (()=>{
-const nodes={
-  "source": {
-    "title": "读取示例材料",
-    "points": [
-      [
-        "用途",
-        "取得本次整理的材料"
-      ],
-      [
-        "输出",
-        [
-          "材料名称和章节",
-          "正文原文"
-        ]
-      ]
-    ],
-    "samples": [
-      {
-        "type": "构造示例",
-        "input": {
-          "file": "示例手册.txt"
-        },
-        "output": {
-          "title": "示例手册",
-          "chapter": "第一章",
-          "text": "先明确问题，再组织证据，最后形成说明"
-        },
-        "source": "虚构教学数据，仅用于演示交互；生成成品时替换为本次材料"
-      }
-    ]
-  },
-  "extract": {
-    "title": "提取关键单元",
-    "points": [
-      [
-        "用途",
-        "提取可以独立解释的概念与关系"
-      ],
-      [
-        "输入",
-        "材料中的正文片段"
-      ],
-      [
-        "输出",
-        "三个关键单元及其关联"
-      ]
-    ],
-    "samples": [
-      {
-        "type": "构造示例",
-        "input": {
-          "title": "示例手册",
-          "chapter": "第一章",
-          "text": "先明确问题，再组织证据，最后形成说明"
-        },
-        "output": {
-          "units": [
-            "明确问题",
-            "组织证据",
-            "形成说明"
-          ],
-          "relations": [
-            {
-              "from": "明确问题",
-              "to": "组织证据",
-              "type": "学习顺序"
-            },
-            {
-              "from": "组织证据",
-              "to": "形成说明",
-              "type": "支撑"
-            }
-          ]
-        },
-        "source": "虚构教学数据，仅用于演示交互；生成成品时替换为本次材料"
-      }
-    ]
-  },
-  "summary": {
-    "title": "概念摘要",
-    "points": [
-      [
-        "用途",
-        "解释关键概念"
-      ],
-      [
-        "归属",
-        "属于整理结果，与样例资料并列"
-      ]
-    ],
-    "samples": [
-      {
-        "type": "构造示例",
-        "input": {
-          "units": [
-            "明确问题",
-            "组织证据",
-            "形成说明"
-          ],
-          "relations": [
-            {
-              "from": "明确问题",
-              "to": "组织证据",
-              "type": "学习顺序"
-            },
-            {
-              "from": "组织证据",
-              "to": "形成说明",
-              "type": "支撑"
-            }
-          ]
-        },
-        "output": {
-          "concept": "组织证据",
-          "summary": "为每个关键判断保留对应依据",
-          "source": "虚构示例手册 · 第一章"
-        },
-        "source": "虚构教学数据，仅用于演示交互；生成成品时替换为本次材料"
-      }
-    ]
-  },
-  "examples": {
-    "title": "样例资料",
-    "points": [
-      [
-        "用途",
-        "展示抽象概念对应的具体形态"
-      ],
-      [
-        "结构",
-        "保留 JSON 字段与层次"
-      ]
-    ],
-    "samples": [
-      {
-        "type": "构造示例",
-        "input": {
-          "question": "如何验证提取结果"
-        },
-        "output": {
-          "item_id": "demo-001",
-          "claim": "示例材料包含三个关键单元",
-          "evidence": {
-            "chapter": "第一章",
-            "units_count": 3
-          }
-        },
-        "source": "虚构教学数据，仅用于演示交互；生成成品时替换为本次材料"
-      }
-    ]
-  },
-  "audio": {
-    "title": "音频资料",
-    "points": [
-      [
-        "状态",
-        "本示例未提供音频资料"
-      ],
-      [
-        "说明",
-        "材料缺席不代表平台不支持这类资料"
-      ]
-    ],
-    "samples": [
-      {
-        "type": "构造示例",
-        "input": {
-          "provided": false
-        },
-        "output": {
-          "result": null,
-          "reason": "本次输入仅含虚构文本"
-        },
-        "source": "虚构教学数据，仅用于演示交互；生成成品时替换为本次材料"
-      }
-    ]
-  }
-};
-const app=document.getElementById('canvas-app'),viewport=document.getElementById('viewport'),world=document.getElementById('world'),panel=document.getElementById('panel'),pin=document.getElementById('pin');
-const state=window.canvasState={ready:true,scale:1,x:0,y:0,active:null,pinned:false};
-let openTimer,closeTimer,drag=null;
-const cancelOpen=()=>clearTimeout(openTimer);
-function refresh(){world.style.transform=`translate(${state.x}px,${state.y}px) scale(${state.scale})`;document.getElementById('zoom-value').textContent=Math.round(state.scale*100)+'%';}
-function close(){cancelOpen();clearTimeout(closeTimer);panel.hidden=true;state.active=null;state.pinned=false;pin.textContent='固定';pin.setAttribute('aria-pressed','false');document.querySelectorAll('.node').forEach(n=>n.classList.remove('active'));}
-function setPinned(value){state.pinned=value;pin.textContent=value?'取消固定':'固定';pin.setAttribute('aria-pressed',String(value));}
-function place(anchor){
- const bounds=app.getBoundingClientRect(),r=anchor.getBoundingClientRect();
- const width=app.clientWidth,height=document.fullscreenElement===app?app.clientHeight:Math.min(app.clientHeight,innerHeight);
- panel.style.maxWidth=Math.max(0,width-20)+'px';panel.style.maxHeight=Math.max(0,height-20)+'px';
- const w=panel.offsetWidth,h=panel.offsetHeight;let x=r.right-bounds.left+12;
- if(x+w>width-10)x=r.left-bounds.left-w-12;if(x<10)x=Math.max(10,(width-w)/2);
- panel.style.left=x+'px';panel.style.top=Math.max(10,Math.min(r.top-bounds.top,height-h-10))+'px';
+'use strict';
+const DATA=JSON.parse(document.getElementById('canvas-data').textContent),$=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const app=$('canvas-app'),viewport=$('viewport'),world=$('world'),base=$('base-layer'),motion=$('motion-layer'),panel=$('panel'),panelBody=$('panel-body');
+const nodes=new Map(DATA.nodes.map(n=>[n.id,n])),groups=new Map(DATA.groups.map(g=>[g.id,g])),edges=new Map(DATA.edges.map(e=>[e.id,e]));
+const colors={cyan:['#0e202d','#173144','#55b7d0'],green:['#0e2428','#163b38','#65cdb0'],violet:['#1b1d31','#29283f','#ad9cde'],amber:['#272218','#3a3020','#d8b66d'],slate:['#142032','#1d2c40','#98adc9']};
+const timing={hover:600,leave:320};
+const state=window.canvasState={ready:false,scale:1,x:12,y:12,active:null,pinned:false,view:'canvas',dependencies:false,userPaused:false};
+let hoverTimer,closeTimer,drag=null;
+app.classList.toggle('embedded',window.self!==window.top);
+function element(tag,attrs={},text){const el=document.createElement(tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;return el}
+function svg(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;return el}
+function path(points){let d='M'+points[0].join(' ');for(let i=1;i<points.length-1;i++){const a=points[i-1],b=points[i],c=points[i+1],u=Math.hypot(b[0]-a[0],b[1]-a[1]),v=Math.hypot(c[0]-b[0],c[1]-b[1]),r=Math.min(13,u/2,v/2);if(!r)continue;const p=[b[0]+(a[0]-b[0])*r/u,b[1]+(a[1]-b[1])*r/u],q=[b[0]+(c[0]-b[0])*r/v,b[1]+(c[1]-b[1])*r/v];d+=' L'+p.join(' ')+' Q'+b.join(' ')+' '+q.join(' ')}return d+' L'+points.at(-1).join(' ')}
+function depth(g){return g.parent?depth(groups.get(g.parent))+1:0}
+function ancestors(id){const g=groups.get(id);return g?[...ancestors(g.parent),g.title]:[]}
+$('page-title').textContent=DATA.meta.title;document.title=DATA.meta.title;$('page-subtitle').textContent=DATA.meta.subtitle||'';
+$('tab-canvas').textContent=DATA.meta.canvasLabel||(DATA.meta.mode==='process'?'链路':'画布');
+if(DATA.meta.version){$('version').textContent=DATA.meta.version;$('version').hidden=false}
+const defs=svg('defs'),marker=svg('marker',{id:'arrow',markerWidth:11,markerHeight:11,refX:8,refY:5.5,orient:'auto',markerUnits:'userSpaceOnUse'});marker.append(svg('path',{d:'M2 2 L8 5.5 L2 9',fill:'none',stroke:'#9db8c6','stroke-width':1.6,'stroke-linecap':'round','stroke-linejoin':'round'}));defs.append(marker);base.append(defs);
+for(const g of [...DATA.groups].sort((a,b)=>depth(a)-depth(b))){const c=colors[g.color||'slate'],el=svg('g',{'data-group':g.id});el.append(svg('rect',{class:'group-frame',x:g.x,y:g.y,width:g.w,height:g.h,rx:14,fill:c[0],stroke:c[2],'stroke-opacity':.65,'stroke-width':depth(g)?1:1.5}),svg('rect',{x:g.x+1,y:g.y+1,width:g.w-2,height:77,rx:13,fill:c[1]}),svg('text',{class:'group-title',x:g.x+20,y:g.y+33,fill:c[2]},g.title),svg('text',{class:'group-summary',x:g.x+20,y:g.y+59},g.summary||''));base.append(el);$('module-select').append(element('option',{value:g.id},'　'.repeat(depth(g))+g.title))}
+function drawEdge(e,connector=false){const el=svg('g',{class:'edge-set '+e.relation+' '+e.importance,[connector?'data-connector':'data-edge']:e.id}),p=svg('path',{class:'edge',d:path(e.renderPoints||e.points)});if(e.arrow!==false)p.setAttribute('marker-end','url(#arrow)');el.append(p);if(e.label)el.append(svg('text',{class:'edge-label',x:e.labelAt[0],y:e.labelAt[1]},e.label));base.append(el)}
+DATA.edges.forEach(e=>drawEdge(e));(DATA.connectors||[]).forEach(e=>drawEdge(e,true));
+function shape(n){const {x,y,w,h}=n;let d;if(n.shape==='decision')d=`M${x+24} ${y} H${x+w-24} L${x+w} ${y+h/2} L${x+w-24} ${y+h} H${x+24} L${x} ${y+h/2} Z`;if(n.shape==='document')d=`M${x} ${y} H${x+w-18} L${x+w} ${y+18} V${y+h} H${x} Z`;if(n.shape==='database')d=`M${x} ${y+14} C${x} ${y-4} ${x+w} ${y-4} ${x+w} ${y+14} V${y+h-14} C${x+w} ${y+h+4} ${x} ${y+h+4} ${x} ${y+h-14} Z`;return d?svg('path',{class:'surface',d}):svg('rect',{class:'surface',x,y,width:w,height:h,rx:9})}
+for(const n of DATA.nodes){const el=svg('g',{id:'node-'+n.id,class:'node '+n.shape+(n.status?.kind==='disabled'?' disabled':''),'data-node':n.id,tabindex:0,role:'button','aria-label':n.title+' '+n.summary,'aria-haspopup':'dialog','aria-controls':'panel','aria-expanded':'false'});el.style.setProperty('--node-color',colors[groups.get(n.group)?.color||'slate'][2]);el.append(shape(n));const centered=n.shape==='decision',x=centered?n.x+n.w/2:n.x+16,align=centered?'middle':'start',y=n.y+(n.shape==='database'?38:30);el.append(svg('text',{class:'node-title',x,y,'text-anchor':align},n.title));if(n.english)el.append(svg('text',{class:'node-english',x,y:y+24,'text-anchor':align},n.english));String(n.summary||'').split('\n').forEach((line,i)=>el.append(svg('text',{class:'node-summary',x,y:y+(n.english?49:25)+i*19,'text-anchor':align},line)));if(n.shape==='document')el.append(svg('path',{class:'fold',d:`M${n.x+n.w-18} ${n.y} V${n.y+18} H${n.x+n.w}`}));if(n.shape==='database')el.append(svg('path',{class:'fold',d:`M${n.x} ${n.y+14} C${n.x} ${n.y+30} ${n.x+n.w} ${n.y+30} ${n.x+n.w} ${n.y+14}`}));if(n.status)el.append(svg('text',{class:'node-status',x:n.x+n.w-8,y:n.y-7,'text-anchor':'end'},n.status.label));base.append(el);
+ el.addEventListener('pointerenter',ev=>{if(ev.pointerType==='touch'||drag||state.pinned)return;cancelHover();clearTimeout(closeTimer);if(state.active!==n.id)hide();hoverTimer=setTimeout(()=>{if(el.matches(':hover')&&!drag&&!state.pinned)show(n.id)},timing.hover)});
+ el.addEventListener('pointerleave',scheduleClose);el.addEventListener('focus',()=>{if(el.matches(':focus-visible')&&!state.pinned)show(n.id)});el.addEventListener('blur',scheduleClose);
+ el.addEventListener('click',ev=>{ev.stopPropagation();show(n.id);setPinned(true)});el.addEventListener('keydown',ev=>{if(['Enter',' '].includes(ev.key)){ev.preventDefault();show(n.id);setPinned(true)}});
 }
-function show(el,mode){cancelOpen();clearTimeout(closeTimer);const id=el.dataset.node,n=nodes[id];state.active=id;document.getElementById('panel-title').textContent=n.title;const list=document.getElementById('explanation');list.replaceChildren();n.points.forEach(([label,body])=>{const li=document.createElement('div'),b=document.createElement('b');li.className='rule';b.textContent=label+'：';li.append(b);if(Array.isArray(body)){const sub=document.createElement('ul');body.forEach(text=>{const item=document.createElement('li');item.textContent=text;sub.append(item);});li.append(sub);}else li.append(document.createTextNode(body));list.append(li);});const samples=document.getElementById('samples');samples.replaceChildren();
- n.samples.forEach(sample=>{const article=document.createElement('section');article.className='sample-item';
- ['input','output'].forEach(key=>{const heading=document.createElement('h4'),pre=document.createElement('pre'),code=document.createElement('code');heading.textContent=key==='input'?'输入 JSON':'输出 JSON';code.dataset.io=key;code.textContent=typeof sample[key]==='string'?sample[key]:JSON.stringify(sample[key],null,2);pre.append(code);article.append(heading,pre);});
- const source=document.createElement('p');source.className='sample-source';source.textContent=sample.type+' · '+sample.source;article.append(source);samples.append(article);
- });panel.hidden=false;document.querySelectorAll('.node').forEach(e=>e.classList.toggle('active',e===el));if(mode==='click')setPinned(true);place(el);refresh();}
-function scheduleClose(){cancelOpen();clearTimeout(closeTimer);closeTimer=setTimeout(()=>{if(!state.pinned&&!panel.matches(':hover')&&!panel.contains(document.activeElement))close();},320);}
-document.querySelectorAll('.node').forEach(el=>{el.addEventListener('pointerenter',e=>{if(e.pointerType==='touch'||drag||state.pinned)return;cancelOpen();clearTimeout(closeTimer);openTimer=setTimeout(()=>show(el,'hover'),600);});el.addEventListener('pointerleave',scheduleClose);el.addEventListener('click',()=>show(el,'click'));el.addEventListener('focus',()=>{if(el.matches(':focus-visible'))show(el,'focus');});el.addEventListener('blur',scheduleClose);});
-panel.addEventListener('pointerenter',()=>clearTimeout(closeTimer));panel.addEventListener('pointerleave',scheduleClose);pin.onclick=()=>{setPinned(!state.pinned);if(!state.pinned)scheduleClose();};document.getElementById('close').onclick=close;document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
-function zoom(factor,cx=viewport.clientWidth/2,cy=viewport.clientHeight/2){cancelOpen();if(!state.pinned)close();const minimum=Math.min(.1,(viewport.clientWidth-24)/world.offsetWidth,(viewport.clientHeight-24)/world.offsetHeight),old=state.scale,next=Math.max(minimum,Math.min(2.5,old*factor));state.x=cx-(cx-state.x)*next/old;state.y=cy-(cy-state.y)*next/old;state.scale=next;refresh();}
-function readable(){cancelOpen();close();state.scale=1;state.x=12;state.y=12;refresh();}
-function fit(){cancelOpen();close();state.scale=Math.min(1,(viewport.clientWidth-24)/world.offsetWidth,(viewport.clientHeight-24)/world.offsetHeight);state.x=(viewport.clientWidth-world.offsetWidth*state.scale)/2;state.y=(viewport.clientHeight-world.offsetHeight*state.scale)/2;refresh();}
-document.getElementById('zoom-in').onclick=()=>zoom(1.2);document.getElementById('zoom-out').onclick=()=>zoom(1/1.2);document.getElementById('fit').onclick=fit;document.getElementById('readable').onclick=readable;
-viewport.addEventListener('wheel',e=>{e.preventDefault();const r=viewport.getBoundingClientRect();zoom(Math.exp(-e.deltaY*.002),e.clientX-r.left,e.clientY-r.top);},{passive:false});
-viewport.addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('.node'))return;close();drag={px:e.clientX,py:e.clientY,x:state.x,y:state.y};viewport.setPointerCapture(e.pointerId);viewport.classList.add('dragging');});
-viewport.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.px,dy=e.clientY-drag.py;state.x=drag.x+dx;state.y=drag.y+dy;refresh();});
-function stopDrag(){drag=null;viewport.classList.remove('dragging');refresh();}viewport.addEventListener('pointerup',stopDrag);viewport.addEventListener('pointercancel',stopDrag);
-const fullscreenButton=document.getElementById('fullscreen'),displayStatus=document.getElementById('display-status');
-function fullscreenStatus(message){
- const active=Boolean(document.fullscreenElement),available=Boolean(document.fullscreenEnabled&&app.requestFullscreen);
- state.fullscreenAvailable=available;state.fullscreen=active;
- fullscreenButton.textContent=active?'退出全屏':available?'全屏':'全屏限制';
- fullscreenButton.dataset.unavailable=String(!active&&!available);
- displayStatus.dataset.warning=String(Boolean(message)||!available);
- displayStatus.textContent=message||(!available?'当前浏览器或嵌入容器未开放全屏，仍可在正文中缩放与平移':'');
- displayStatus.hidden=!displayStatus.textContent;
-}
-fullscreenButton.onclick=async()=>{
- if(!document.fullscreenElement&&!state.fullscreenAvailable){fullscreenStatus('当前浏览器或嵌入容器未开放全屏，HTML 无法自行扩大到文档之外，正文内仍可缩放与平移');return;}
- try{if(document.fullscreenElement)await document.exitFullscreen();else await app.requestFullscreen();}
- catch{fullscreenStatus('全屏请求未获允许，请检查浏览器或嵌入容器限制，正文内仍可缩放与平移');}
-};
-document.addEventListener('fullscreenchange',()=>{close();fullscreenStatus();});
-window.addEventListener('resize',()=>{if(state.active)place(document.querySelector('[data-node="'+state.active+'"]'));});
-const moduleSelect=document.getElementById('module-select');
- document.querySelectorAll('[data-group]').forEach(group=>{const option=document.createElement('option');option.value=group.dataset.group;option.textContent=group.querySelector('h2').textContent;moduleSelect.append(option);});
- moduleSelect.onchange=()=>{const group=Array.from(document.querySelectorAll('[data-group]')).find(g=>g.dataset.group===moduleSelect.value);if(!group)return;close();state.scale=Math.min(1,(viewport.clientWidth-24)/group.offsetWidth,(viewport.clientHeight-24)/group.offsetHeight);state.x=(viewport.clientWidth-group.offsetWidth*state.scale)/2-group.offsetLeft*state.scale;state.y=(viewport.clientHeight-group.offsetHeight*state.scale)/2-group.offsetTop*state.scale;refresh();moduleSelect.value='';};
- readable();fullscreenStatus();
+const motionDefs=svg('defs'),mask=svg('mask',{id:'motion-mask',maskUnits:'userSpaceOnUse',x:0,y:0,width:DATA.width,height:DATA.height});mask.append(svg('rect',{width:DATA.width,height:DATA.height,fill:'white'}));DATA.nodes.forEach(n=>mask.append(svg('rect',{x:n.x-2,y:n.y-2,width:n.w+4,height:n.h+4,fill:'black'})));motionDefs.append(mask);motion.append(motionDefs);const particles=svg('g',{mask:'url(#motion-mask)'});motion.append(particles);
+const steps=DATA.motion?.steps||[],plan=[];let clock=.4;
+for(const step of steps){const duration=Math.min(3.2,Math.max(.85,...step.map(id=>{const p=edges.get(id).points;return p.slice(1).reduce((sum,b,i)=>sum+Math.hypot(b[0]-p[i][0],b[1]-p[i][1]),0)/500})));step.forEach(id=>plan.push({id,start:clock,end:clock+duration}));clock+=duration+.18}const cycle=clock+2;
+for(const t of plan){const e=edges.get(t.id),a=t.start/cycle,b=t.end/cycle,fade=(b-a)*.15,p=svg('g',{class:'motion-particle','data-edge':e.id,'data-start':t.start,'data-end':t.end,opacity:0}),glyph=svg('g',{class:'motion-glyph'});glyph.append(svg('path',{d:'M-6 -3 L0 0 L-6 3'}));p.append(glyph,svg('animateMotion',{dur:cycle+'s',repeatCount:'indefinite',path:path(e.points),keyPoints:'0;0;1;1',keyTimes:`0;${a};${b};1`,calcMode:'linear',rotate:'auto'}),svg('animate',{attributeName:'opacity',values:'0;0;1;1;0;0',keyTimes:`0;${a};${a+fade};${b-fade};${b};1`,dur:cycle+'s',repeatCount:'indefinite'}));particles.append(p)}
+$('motion').hidden=!plan.length;$('motion-note').hidden=!plan.length;
+const auxiliary=[...DATA.edges,...(DATA.connectors||[])].some(e=>e.importance==='auxiliary');$('dependencies').hidden=!auxiliary;
+const legendEntries=[];if(DATA.edges.some(e=>e.importance==='primary'))legendEntries.push(['','主要关系']);if(DATA.edges.some(e=>['condition','reference'].includes(e.relation)))legendEntries.push(['dashed','条件 / 引用']);if(DATA.edges.some(e=>e.relation==='composition'))legendEntries.push(['composition','组成']);for(const [cls,label] of legendEntries){const item=element('span');item.append(element('i',{class:cls}),document.createTextNode(label));$('legend').append(item)}
+function list(items){const ul=element('ul');for(const item of items){const li=element('li',{},typeof item==='string'?item:item.text);if(typeof item==='object'&&item.children?.length)li.append(list(item.children));ul.append(li)}return ul}
+function explain(rows){const box=element('div',{class:'explanation'});for(const row of rows){const line=element('div',{class:'rule'});line.append(element('strong',{},row.label+'：'));if(Array.isArray(row.body))line.append(list(row.body));else line.append(document.createTextNode(row.body));box.append(line)}return box}
+function sampleContent(n){const box=element('div',{class:'samples'});n.samples.forEach((sample,si)=>{const article=element('section',{class:'sample'});article.append(element('h4',{},sample.title),element('div',{class:'sample-meta'},sample.type+' · '+sample.source));sample.blocks.forEach((b,bi)=>{const block=element('div',{class:'sample-block'}),head=element('div',{class:'block-head'}),copy=element('button',{class:'copy'},'复制'),pre=element('pre',{class:'sample-raw '+b.format,'data-sample':n.id+':'+si+':'+bi});head.append(element('span',{},b.label+' · '+b.format),copy);pre.textContent=b.raw;copy.onclick=async()=>{if(panel.contains(copy))setPinned(true);try{await navigator.clipboard.writeText(b.raw);copy.textContent='已复制'}catch{const range=document.createRange();range.selectNodeContents(pre);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);copy.textContent='已选中，可复制'}setTimeout(()=>copy.textContent='复制',1600)};block.append(head,pre);article.append(block)});box.append(article)});return box}
+function sourceContent(n){return element('p',{class:'source'},(n.sources||[]).join('\n'))}
+function setPinned(value){state.pinned=value;$('pin').setAttribute('aria-pressed',String(value));$('pin').textContent=value?'已固定':'固定'}
+function cancelHover(){clearTimeout(hoverTimer)}
+function hide(){cancelHover();clearTimeout(closeTimer);panel.hidden=true;state.active=null;setPinned(false);base.querySelectorAll('.node.active').forEach(el=>{el.classList.remove('active');el.setAttribute('aria-expanded','false')})}
+function show(id){cancelHover();clearTimeout(closeTimer);state.active=id;const n=nodes.get(id);$('panel-title').textContent=n.title;panelBody.replaceChildren(element('div',{class:'doc-path'},ancestors(n.group).join(' › ')),element('h3',{class:'section-title'},'说明'),explain(n.explanation),element('h3',{class:'section-title'},'样例与依据'),sampleContent(n),sourceContent(n));if(!n.samples.length)panelBody.append(element('p',{class:'source'},'本节点没有可展示的样例，请查看说明中的证据范围'));panel.hidden=false;base.querySelectorAll('.node').forEach(el=>{const on=el.dataset.node===id;el.classList.toggle('active',on);el.setAttribute('aria-expanded',String(on))});place();const reset=()=>{if(state.active===id){panelBody.scrollTop=0;panelBody.scrollLeft=0;panelBody.querySelectorAll('pre').forEach(el=>{el.scrollTop=0;el.scrollLeft=0})}};reset();requestAnimationFrame(reset)}
+function place(){if(panel.hidden)return;const gap=14,r=$('node-'+state.active).getBoundingClientRect(),w=Math.min(parseFloat(getComputedStyle(app).getPropertyValue('--detail-width')),innerWidth-gap*2);panel.style.width=w+'px';panel.style.maxHeight=Math.max(120,innerHeight-gap*2)+'px';let x=r.right+gap;if(x+w>innerWidth-gap)x=r.left-w-gap;panel.style.left=Math.max(gap,Math.min(x,innerWidth-w-gap))+'px';panel.style.top=Math.max(gap,Math.min(r.top-12,innerHeight-panel.offsetHeight-gap))+'px'}
+function scheduleClose(){cancelHover();clearTimeout(closeTimer);closeTimer=setTimeout(()=>{if(!state.pinned&&!panel.matches(':hover')&&!panel.contains(document.activeElement))hide()},timing.leave)}
+panel.addEventListener('pointerenter',()=>{cancelHover();clearTimeout(closeTimer)});panel.addEventListener('pointerleave',scheduleClose);panel.addEventListener('focusout',scheduleClose);$('pin').onclick=()=>setPinned(!state.pinned);$('close').onclick=hide;
+document.addEventListener('pointerdown',ev=>{if(!panel.hidden&&!panel.contains(ev.target)&&!ev.target.closest('.node'))hide()});
+function render(){const w=viewport.clientWidth,h=viewport.clientHeight;if(!w||!h)return;const view=[-state.x/state.scale,-state.y/state.scale,w/state.scale,h/state.scale].join(' ');for(const layer of [base,motion]){layer.setAttribute('viewBox',view);layer.setAttribute('width',w);layer.setAttribute('height',h)}motion.querySelectorAll('.motion-glyph').forEach(el=>el.setAttribute('transform','scale('+1/state.scale+')'));$('zoom-value').textContent=Math.round(state.scale*100)+'%';place()}
+function zoom(value,cx=viewport.clientWidth/2,cy=viewport.clientHeight/2){cancelHover();if(!state.pinned)hide();const next=Math.max(.08,Math.min(2.5,value));state.x=cx-(cx-state.x)*next/state.scale;state.y=cy-(cy-state.y)*next/state.scale;state.scale=next;render()}
+function fit(id){hide();const box=groups.get(id)||nodes.get(id)||{x:0,y:0,w:DATA.width,h:DATA.height};state.scale=Math.min(id?1.35:1,(viewport.clientWidth-40)/box.w,(viewport.clientHeight-40)/box.h);state.x=(viewport.clientWidth-box.w*state.scale)/2-box.x*state.scale;state.y=(viewport.clientHeight-box.h*state.scale)/2-box.y*state.scale;render()}
+$('readable').onclick=()=>{hide();state.scale=1;state.x=12;state.y=12;render()};$('fit').onclick=()=>fit();$('zoom-in').onclick=()=>zoom(state.scale*1.2);$('zoom-out').onclick=()=>zoom(state.scale/1.2);$('module-select').onchange=ev=>{if(ev.target.value)fit(ev.target.value)};
+viewport.addEventListener('wheel',ev=>{ev.preventDefault();const r=viewport.getBoundingClientRect();zoom(state.scale*Math.exp(-ev.deltaY*.0018),ev.clientX-r.left,ev.clientY-r.top)},{passive:false});
+viewport.addEventListener('pointerdown',ev=>{if(ev.button!==0||ev.target.closest('.node'))return;hide();drag={x:ev.clientX,y:ev.clientY,tx:state.x,ty:state.y};viewport.setPointerCapture(ev.pointerId);viewport.classList.add('dragging')});
+viewport.addEventListener('pointermove',ev=>{if(drag){state.x=drag.tx+ev.clientX-drag.x;state.y=drag.ty+ev.clientY-drag.y;render()}});const stop=()=>{drag=null;viewport.classList.remove('dragging');cancelHover()};viewport.addEventListener('pointerup',stop);viewport.addEventListener('pointercancel',stop);
+$('dependencies').onclick=()=>{state.dependencies=!state.dependencies;world.classList.toggle('show-dependencies',state.dependencies);$('dependencies').setAttribute('aria-pressed',String(state.dependencies))};
+function syncMotion(){const paused=state.userPaused||state.view!=='canvas'||document.hidden;if(paused)motion.pauseAnimations();else motion.unpauseAnimations();$('motion').textContent=state.userPaused?'播放流动':'暂停流动';$('motion').setAttribute('aria-pressed',String(state.userPaused))}
+const preference=matchMedia('(prefers-reduced-motion: reduce)');state.userPaused=preference.matches;preference.addEventListener('change',ev=>{state.userPaused=ev.matches;syncMotion()});$('motion').onclick=()=>{state.userPaused=!state.userPaused;syncMotion()};document.addEventListener('visibilitychange',syncMotion);
+function switchView(view){hide();state.view=view;document.querySelectorAll('[data-view]').forEach(el=>{const on=el.dataset.view===view;el.setAttribute('aria-selected',String(on));el.tabIndex=on?0:-1;$('view-'+el.dataset.view).hidden=!on});syncMotion();if(view==='canvas')requestAnimationFrame(render)}
+const faq=DATA.faq||[];$('tab-faq').hidden=!faq.length&&!DATA.meta.reserveFAQ;
+const tabs=[...document.querySelectorAll('[data-view]')].filter(el=>!el.hidden);tabs.forEach((el,i)=>{el.onclick=()=>switchView(el.dataset.view);el.onkeydown=ev=>{let next;if(ev.key==='ArrowRight')next=(i+1)%tabs.length;else if(ev.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;else if(ev.key==='Home')next=0;else if(ev.key==='End')next=tabs.length-1;else return;ev.preventDefault();tabs[next].focus();switchView(tabs[next].dataset.view)}});
+function documentNode(n,level){const article=element('section',{id:'doc-node-'+n.id,class:'doc-node','data-doc-node':n.id});article.append(element('h'+Math.min(6,level),{},n.title));if(n.english)article.append(element('p',{class:'doc-path'},n.english));article.append(explain(n.explanation));if(n.samples.length){const details=element('details');details.append(element('summary',{},'样例与依据'),sampleContent(n));article.append(details)}article.append(sourceContent(n));return article}
+function documentGroup(g,level){const section=element('section',{id:'doc-group-'+g.id});section.append(element('h'+Math.min(6,level),{},g.title),element('p',{class:'doc-path'},g.summary||''));const link=element('a',{href:'#doc-group-'+g.id},'　'.repeat(Math.min(2,level-2))+g.title);link.onclick=ev=>{ev.preventDefault();section.scrollIntoView({block:'start'})};$('doc-nav').append(link);DATA.nodes.filter(n=>n.group===g.id).forEach(n=>section.append(documentNode(n,level+1)));DATA.groups.filter(child=>child.parent===g.id).forEach(child=>section.append(documentGroup(child,level+1)));return section}
+$('doc-body').append(element('h2',{},DATA.meta.title),element('p',{},DATA.meta.subtitle||''));DATA.nodes.filter(n=>!n.group).forEach(n=>$('doc-body').append(documentNode(n,3)));DATA.groups.filter(g=>!g.parent).forEach(g=>$('doc-body').append(documentGroup(g,3)));
+for(const f of faq){const article=element('section',{class:'faq-item'});article.append(element('h3',{},f.question),explain(f.answer));const links=element('div',{class:'faq-links'});for(const id of f.nodeIds||[]){const b=element('button',{class:'control'},nodes.get(id).title);b.onclick=()=>{switchView('canvas');requestAnimationFrame(()=>{fit(id);show(id);setPinned(true)})};links.append(b)}article.append(links);if(f.source)article.append(element('p',{class:'source'},f.source));$('faq-body').append(article)}if(!faq.length){$('faq-body').classList.add('faq-empty');$('faq-body').append(element('h2',{},'FAQ'),element('p',{},'待补充，收到问题后再整理'))}
+function fullscreenStatus(message=''){const available=Boolean(document.fullscreenEnabled&&app.requestFullscreen);$('fullscreen').textContent=document.fullscreenElement?'退出全屏':'全屏';$('display-status').textContent=message||(!available?'当前浏览器或嵌入容器未开放全屏，仍可缩放与平移':'');$('display-status').hidden=!$('display-status').textContent}
+$('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.fullscreenEnabled&&app.requestFullscreen)await app.requestFullscreen();else fullscreenStatus('当前浏览器或嵌入容器未开放全屏，仍可缩放与平移')}catch{fullscreenStatus('全屏请求未获允许，仍可缩放与平移')}};
+document.addEventListener('fullscreenchange',()=>{cancelHover();fullscreenStatus();render()});document.addEventListener('keydown',ev=>{if(ev.key==='Escape')hide()});new ResizeObserver(()=>{cancelHover();render()}).observe(viewport);
+// Read-only data plus small controls make the regression checker independent of demo names
+window.canvasAPI={data:DATA,show,hide,fit,zoom,render,switchView,motionPlan:plan,motionCycle:cycle};
+state.ready=true;render();syncMotion();fullscreenStatus();
 })();
 </script>
 </body>
 </html>
-
-
-
-
