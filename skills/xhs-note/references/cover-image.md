@@ -65,13 +65,17 @@ find "$_IMAGE_ROOT" -type f -name "*.png" -newer "$SCRATCH/img-marker"
 
 `-i` 可以重复；纯文字的笔记不带 `-i`。
 
-**一定要加 `-c model_reasoning_effort="low"`。** 五次实测：low 档两次全部出图；不加这个参数走 config.toml 的默认 high 档，四次里三次挂死（17 分、24 分、29 分，日志全空、一张图没出），只有最早一次侥幸成功。跟 prompt 写得细不细无关，写死的 prompt 在 high 档下照样挂。
+**加 `-c model_reasoning_effort="low"`。** 本机六次实测：low 档两次都出图，默认 high 档四次里三次跑到 17、24、29 分钟仍无产出，只有第一次在 8 分钟内成功。
 
-低推理档不影响成图质量。画面质量由生图模型决定，文本侧的推理预算只用来决定"要不要调工具、传什么参数"，这一步不需要深思。目前出得最好的一张就是 low 档生的。
+这不是"high 一定失败"。openai/codex issue #24260 记录了同类现象并给出分布：高推理档下首个输出前的静默期 p95 约 1 分钟，最大值能到 30 分 38 秒。所以更准确的说法是**高档位把静默期的长尾拉得很长，而长尾在体感上等价于挂死**。low 档把这个长尾压掉了。
+
+低推理档不影响成图质量。这个档位管的是 Codex 主模型的思考量，画面由 gpt-image-2 负责，两者是分开的。
 
 生成的图落在 `~/.codex/generated_images/{thread_id}/`。用 marker 文件加 `find -newer` 捞出这次新增的那张，复制到笔记目录，原图留在那儿。
 
-单次十分钟上下，放后台执行。超过 15 分钟既没出图也没日志就是挂住了，杀掉重跑。
+单次十分钟上下，放后台执行，启动时套一层 `timeout 900`，别靠人工盯。
+
+**判死活不能看 stdout。** 官方设计是进度走 stderr、只有最终消息走 stdout，所以运行期间 stdout 必然全空，这个信号零信息量。要判断就加 `--json` 看有没有新的 JSONL 事件流出，或者另开终端 tail 最新的 `~/.codex/sessions/YYYY/MM/DD/rollout-*.jsonl` 看文件有没有增长。事件流长时间零增长才算真挂住。
 
 ## 环境前置条件
 
@@ -81,7 +85,11 @@ find "$_IMAGE_ROOT" -type f -name "*.png" -newer "$SCRATCH/img-marker"
 2. **挑 nvm 下的那份 codex**（脚本里的 `ls -t` 就是干这个的）。它跟得上 config.toml 里的 `model` 和 `service_tier` 设置，`/usr/local/bin/codex` 那份版本落后，会以"requires a newer version"拒掉
 3. **代理走本机 Clash 的 127.0.0.1:39178**。codex 要连 `wss://chatgpt.com/backend-api/codex/responses`，这个出口连得上。.zshrc 里给 codex 配的是 Decodo ISP 出口，那条通道到这个 websocket 端点会被 connection reset
 
-卡住时的排查顺序：先做冒烟测试 `codex exec -c model_reasoning_effort="low" "只回复两个字：正常"`，半分钟内该返回。回得来说明网络和版本都没问题，问题在 prompt；回不来才去查代理和二进制。
+卡住时的排查顺序：
+
+1. 冒烟测试 `codex exec -c model_reasoning_effort="low" "只回复两个字：正常"`，半分钟内该返回。它只能排除网络、代理、二进制、登录态四项，**不能用来判断问题出在 prompt**——它跑的是 low 档且不触发任何工具调用，和故障场景差着两个变量
+2. 要定位就单变量重跑：同一段 prompt 只换推理档，或同一档位只换 prompt，一次改一个
+3. 事件流零增长才算真挂住，杀掉重跑
 
 生不出来时降级：把 prompt 存成 `封面.prompt.md` 留在笔记目录，明确说"封面待生成"。
 
