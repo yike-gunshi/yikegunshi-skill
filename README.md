@@ -6,7 +6,7 @@
 
 面向内容工作流、产品分析与知识管理的实用 skill，由 [@yike-gunshi](https://github.com/yike-gunshi) 构建与维护。
 
-![Skills](https://img.shields.io/badge/skills-16-blue)
+![Skills](https://img.shields.io/badge/skills-17-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/Claude%20Code-compatible-8A2BE2)
 
@@ -41,6 +41,7 @@
 | **[skill-build](./skills/skill-build/)** | 造 skill 的 skill：判该不该做 → 访谈收料 → 设计文档 → 完备性门禁 → 写 SKILL.md → 评测跑基线对照 → 归因迭代。自带包体检与考点区分度审计脚本。 | `做个skill`、`建个skill`、`skill不触发` |
 | **[pm-doc-write](./skills/pm-doc-write/)** | 写 PM 工作文档：结论先行、表格承载、数字带基线、责任到人。覆盖周报、OKR、项目总结、指标需求、策略迭代说明、评测结论、LR 评审、调研报告 9 类场景模板 + 通用写法约束与终审清单，产出飞书就绪 markdown。 | `写周报`、`出个文档`、`按我的风格捋一遍` |
 | **[paper-card](./skills/paper-card/)** | 把论文、官方最佳实践、cookbook 读透，产出学习卡片：每个数字带读法、术语用类比讲透、结论落到可执行动作，配一张分层底板风 SVG 结构图并渲染自查。结构随资料形态调整，不套固定模板。 | `读一下这篇论文`、`整理成卡片`、`这批参考资料做成学习资料` |
+| **[codex-delegate](./skills/codex-delegate/)** | Claude Code 把代码实现派给本机 Codex CLI 后台作业：写任务书 → 派活 → 判活 → 按任务书验收 → 返工接回原会话（最多两轮）→ 收回 → 提交；附盲解仲裁。脚本 `delegate.sh` 管作业状态与 resume，需本机装有 ChatGPT App 内置的 Codex CLI。 | `派给codex`、`让codex实现你验收`、`codex后台跑` |
 
 ## 安装
 
@@ -83,6 +84,7 @@ Codex 用户加 `--target codex`（装到 `~/.agents/skills`），`--target both
 yikegunshi-skill/
 ├── skills/
 │   ├── book-to-mindmap/
+│   ├── codex-delegate/
 │   ├── knowledge-canvas/
 │   ├── lark-export/
 │   ├── paper-card/
