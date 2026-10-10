@@ -83,6 +83,7 @@ Some skills call third-party APIs and need credentials. **No secrets are committ
 ```
 yikegunshi-skill/
 ├── skills/
+│   ├── codex-delegate/
 │   ├── knowledge-canvas/
 │   ├── lark-export/
 │   ├── paper-card/
