@@ -7,13 +7,13 @@
 错误（E，退出码 1）：
   E1 正文引用的 [n] 不在「来源」节或 sources.json
   E2 正文出现【高】【中】【低】置信度标签
-  E3 缺固定小节或顺序不对（先看结论 / 一 / 二 / 三 / 四 / 五 / 六 / 来源）
+  E3 缺固定小节或顺序不对（导语 / 一 … 八 / 口径与来源）
   E4 表格有空格子
-  E5 「先看结论」不是 3—5 条
+  E5 「导语」没有 2—4 个编号问题
 警告（W）：
   W1 正文含估算词（约 / 大约 / 估计 / 大概 / 据说）却没有来源编号
   W2 一句话里超过 2 个来源编号
-  W3 正文字数（不含来源）超出 2500—4500 字太多（<2000 或 >5500）
+  W3 正文字数（不含来源）偏离 8000—12000 字太多（<6000 或 >14000）
   W4 「来源」节列了正文没引用的编号
   W5 正文出现过渡废话（值得注意的是 / 综上所述 / 不难看出 / 由此可见）
 """
@@ -27,14 +27,16 @@ TAG_RE = re.compile(r"【(高|中|低)】")
 EST_WORDS = ("约", "大约", "估计", "大概", "据说")
 FILLERS = ("值得注意的是", "综上所述", "不难看出", "由此可见")
 REQUIRED = [
-    ("先看结论", r"先看结论"),
+    ("导语", r"^导语"),
     ("一", r"^一[、.]"),
     ("二", r"^二[、.]"),
     ("三", r"^三[、.]"),
     ("四", r"^四[、.]"),
     ("五", r"^五[、.]"),
     ("六", r"^六[、.]"),
-    ("来源", r"^来源"),
+    ("七", r"^七[、.]"),
+    ("八", r"^八[、.]"),
+    ("口径与来源", r"来源"),
 ]
 
 
@@ -57,9 +59,9 @@ def main() -> int:
         pos.append(hit)
     found = [p for p in pos if p is not None]
     if found != sorted(found):
-        errors.append("E3 小节顺序不对，应为 先看结论 / 一 … 六 / 来源")
+        errors.append("E3 小节顺序不对，应为 导语 / 一 … 八 / 口径与来源")
 
-    src_idx = next((i for i, t in h2 if t.startswith("来源")), len(lines))
+    src_idx = next((i for i, t in h2 if "来源" in t), len(lines))
     body = lines[:src_idx]
     src_lines = lines[src_idx:]
     body_text = "\n".join(body)
@@ -94,18 +96,18 @@ def main() -> int:
 
     for i, l in enumerate(body, 1):
         s = l.strip()
-        if s.startswith("|") and not re.match(r"^\|\s*:?-", s):
+        if s.startswith("|") and not re.match(r"^\|\s*:?-", s) and not re.match(r"^\|\s*\|", s):
             cells = [c.strip() for c in s.strip("|").split("|")]
             if any(c == "" for c in cells[1:]):
                 errors.append(f"E4 第 {i} 行表格有空格子")
 
-    # 先看结论条数
+    # 导语问题数
     if pos[0] is not None:
         start = h2[pos[0]][0]
         end = h2[pos[0] + 1][0] if pos[0] + 1 < len(h2) else len(lines)
-        items = [l for l in lines[start:end] if re.match(r"^\s*(\d+[.、]|[-*])\s+", l)]
-        if not 3 <= len(items) <= 5:
-            errors.append(f"E5 「先看结论」应为 3—5 条，现为 {len(items)} 条")
+        items = [l for l in lines[start:end] if re.match(r"^\s*\d+[.、]\s+", l)]
+        if not 2 <= len(items) <= 4:
+            errors.append(f"E5 「导语」应列 2—4 个问题，现为 {len(items)} 个")
 
     for i, l in enumerate(body, 1):
         s = l.strip()
@@ -122,8 +124,8 @@ def main() -> int:
                 warns.append(f"W5 第 {i} 行过渡废话「{f}」")
 
     chars = len(re.findall(r"[一-鿿]", body_text)) + len(re.findall(r"[A-Za-z0-9]+", body_text))
-    if chars < 2000 or chars > 5500:
-        warns.append(f"W3 正文约 {chars} 字，目标 2500—4500")
+    if chars < 6000 or chars > 14000:
+        warns.append(f"W3 正文约 {chars} 字，目标 8000—12000")
 
     for e in errors:
         print(e)
