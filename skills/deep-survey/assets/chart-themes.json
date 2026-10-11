@@ -1,0 +1,311 @@
+{
+  "_说明": "图表主题。make_chart.py 按 --theme <名称> 或图表 JSON 里的 \"theme\" 字段取用。三个风格家族：clean（干净信息图）、magazine（电子杂志：衬线标题、纸感底色、墨色单色）、swiss（瑞士国际主义：无衬线、直角、单一高亮色）。杂志与瑞士两族的颜色取自 op7418/guizang-ppt-skill 的主题预设。一份报告只用一套主题。",
+  "families": {
+    "clean": {
+      "font_title": [
+        "Hiragino Sans GB",
+        "Helvetica Neue"
+      ],
+      "font_body": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ],
+      "font_num": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ],
+      "font_mono": [
+        "Menlo",
+        "Hiragino Sans GB"
+      ],
+      "title_size": 13,
+      "title_weight": "bold",
+      "num_weight": "bold",
+      "kpi_size": 22,
+      "kpi_weight": "bold",
+      "bar_px": 22,
+      "radius_px": 4,
+      "line_px": 2.0,
+      "grid": true,
+      "top_rule": 0,
+      "title_rule": 0,
+      "unit_shape": "circle",
+      "kpi_style": "card",
+      "font_kpi": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ]
+    },
+    "magazine": {
+      "font_title": [
+        "PT Serif",
+        "Songti SC"
+      ],
+      "font_body": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ],
+      "font_num": [
+        "PT Serif",
+        "Songti SC"
+      ],
+      "font_mono": [
+        "Menlo",
+        "Hiragino Sans GB"
+      ],
+      "title_size": 15,
+      "title_weight": "bold",
+      "num_weight": "normal",
+      "kpi_size": 30,
+      "kpi_weight": "normal",
+      "bar_px": 16,
+      "radius_px": 0,
+      "line_px": 1.6,
+      "grid": false,
+      "top_rule": 0,
+      "title_rule": 0.8,
+      "unit_shape": "circle",
+      "kpi_style": "rule",
+      "font_kpi": [
+        "Bodoni 72",
+        "PT Serif",
+        "Songti SC"
+      ]
+    },
+    "swiss": {
+      "font_title": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ],
+      "font_body": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ],
+      "font_num": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ],
+      "font_mono": [
+        "Menlo",
+        "Hiragino Sans GB"
+      ],
+      "title_size": 15,
+      "title_weight": "light",
+      "num_weight": "normal",
+      "kpi_size": 34,
+      "kpi_weight": "light",
+      "bar_px": 26,
+      "radius_px": 0,
+      "line_px": 2.6,
+      "grid": true,
+      "top_rule": 3.0,
+      "title_rule": 0,
+      "unit_shape": "square",
+      "kpi_style": "block",
+      "font_kpi": [
+        "Helvetica Neue",
+        "Hiragino Sans GB"
+      ]
+    }
+  },
+  "themes": {
+    "clean-默认": {
+      "family": "clean",
+      "适合": "通用；与 dataviz 参考调色板一致",
+      "paper": "#fcfcfb",
+      "ink": "#0b0b0b",
+      "ink2": "#52514e",
+      "muted": "#898781",
+      "grid": "#e1e0d9",
+      "card": "#f3f2ef",
+      "hi": "#2a78d6",
+      "dim": "#c9c7bf",
+      "series": [
+        "#2a78d6",
+        "#eb6834",
+        "#1baf7a"
+      ],
+      "hi_on": "#ffffff"
+    },
+    "杂志-墨水经典": {
+      "family": "magazine",
+      "适合": "不知道选什么时的默认；商业、产品、通用",
+      "paper": "#f1efea",
+      "ink": "#0a0a0b",
+      "ink2": "#3d3c39",
+      "muted": "#7d7a73",
+      "grid": "#dcd8cf",
+      "card": "#e8e5de",
+      "hi": "#0a0a0b",
+      "dim": "#c9c4b9",
+      "series": [
+        "#0a0a0b",
+        "#8a857a",
+        "#c9c4b9"
+      ],
+      "hi_on": "#f1efea"
+    },
+    "杂志-靛蓝瓷": {
+      "family": "magazine",
+      "适合": "AI、科技、研究、数据",
+      "paper": "#f1f3f5",
+      "ink": "#0a1f3d",
+      "ink2": "#2f4260",
+      "muted": "#6d7a8c",
+      "grid": "#d6dce3",
+      "card": "#e4e8ec",
+      "hi": "#0a1f3d",
+      "dim": "#c2cbd6",
+      "series": [
+        "#0a1f3d",
+        "#5a6f8f",
+        "#b3c0d0"
+      ],
+      "hi_on": "#f1f3f5"
+    },
+    "杂志-森林墨": {
+      "family": "magazine",
+      "适合": "行业观察、文化、内容、可持续",
+      "paper": "#f5f1e8",
+      "ink": "#1a2e1f",
+      "ink2": "#3b4d3f",
+      "muted": "#7a8070",
+      "grid": "#dfd9cb",
+      "card": "#ece7da",
+      "hi": "#1a2e1f",
+      "dim": "#cfc9b8",
+      "series": [
+        "#1a2e1f",
+        "#6b7d68",
+        "#c4c6b2"
+      ],
+      "hi_on": "#f5f1e8"
+    },
+    "杂志-牛皮纸": {
+      "family": "magazine",
+      "适合": "人文、阅读、历史、生活方式",
+      "paper": "#eedfc7",
+      "ink": "#2a1e13",
+      "ink2": "#4d3d2c",
+      "muted": "#85725a",
+      "grid": "#d8c6a8",
+      "card": "#e0d0b6",
+      "hi": "#2a1e13",
+      "dim": "#ccb796",
+      "series": [
+        "#2a1e13",
+        "#8a7254",
+        "#c9b28e"
+      ],
+      "hi_on": "#eedfc7"
+    },
+    "杂志-沙丘": {
+      "family": "magazine",
+      "适合": "设计、艺术、品牌、时尚",
+      "paper": "#f0e6d2",
+      "ink": "#1f1a14",
+      "ink2": "#433a30",
+      "muted": "#857a68",
+      "grid": "#dccfb6",
+      "card": "#e3d7bf",
+      "hi": "#1f1a14",
+      "dim": "#d0c2a6",
+      "series": [
+        "#1f1a14",
+        "#80745f",
+        "#c9bb9e"
+      ],
+      "hi_on": "#f0e6d2"
+    },
+    "杂志-墨水夜": {
+      "family": "magazine",
+      "适合": "深色页、封面图、需要压场的关键数据",
+      "paper": "#121213",
+      "ink": "#f1efea",
+      "ink2": "#c9c5bc",
+      "muted": "#8d8a83",
+      "grid": "#2b2b2d",
+      "card": "#1d1d1f",
+      "hi": "#f1efea",
+      "dim": "#4a4945",
+      "series": [
+        "#f1efea",
+        "#9b978e",
+        "#4a4945"
+      ],
+      "hi_on": "#121213"
+    },
+    "瑞士-克莱因蓝": {
+      "family": "swiss",
+      "适合": "不知道选什么时的默认；AI、科技、设计",
+      "paper": "#fafaf8",
+      "ink": "#0a0a0a",
+      "ink2": "#3a3a3a",
+      "muted": "#737373",
+      "grid": "#e4e4e2",
+      "card": "#f0f0ee",
+      "hi": "#002FA7",
+      "dim": "#d4d4d2",
+      "series": [
+        "#002FA7",
+        "#0a0a0a",
+        "#a3a3a1"
+      ],
+      "hi_on": "#ffffff"
+    },
+    "瑞士-柠檬黄": {
+      "family": "swiss",
+      "适合": "年轻、消费、零售、活力",
+      "paper": "#fafaf8",
+      "ink": "#0a0a0a",
+      "ink2": "#3a3a3a",
+      "muted": "#737373",
+      "grid": "#e4e4e2",
+      "card": "#f0f0ee",
+      "hi": "#FFD500",
+      "dim": "#d4d4d2",
+      "series": [
+        "#FFD500",
+        "#0a0a0a",
+        "#a3a3a1"
+      ],
+      "hi_on": "#0a0a0a"
+    },
+    "瑞士-柠檬绿": {
+      "family": "swiss",
+      "适合": "新兴科技、可持续、Z 世代",
+      "paper": "#fafaf8",
+      "ink": "#0a0a0a",
+      "ink2": "#3a3a3a",
+      "muted": "#737373",
+      "grid": "#e4e4e2",
+      "card": "#f0f0ee",
+      "hi": "#C5E803",
+      "dim": "#d4d4d2",
+      "series": [
+        "#C5E803",
+        "#0a0a0a",
+        "#a3a3a1"
+      ],
+      "hi_on": "#0a0a0a"
+    },
+    "瑞士-安全橙": {
+      "family": "swiss",
+      "适合": "警示、决策、转折点、工业",
+      "paper": "#fafaf8",
+      "ink": "#0a0a0a",
+      "ink2": "#3a3a3a",
+      "muted": "#737373",
+      "grid": "#e4e4e2",
+      "card": "#f0f0ee",
+      "hi": "#FF6B35",
+      "dim": "#d4d4d2",
+      "series": [
+        "#FF6B35",
+        "#0a0a0a",
+        "#a3a3a1"
+      ],
+      "hi_on": "#ffffff"
+    }
+  }
+}

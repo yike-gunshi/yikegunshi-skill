@@ -26,7 +26,7 @@
 1. **定结论**：「一分钟看懂」的定义、反差和 5—7 条要点，直接回答 intake 的问题。写不出来，回去读核查结果。
 2. **定图表清单**：按文风第 4 条，逐节列出要用的图和表（目标：每节至少一个，全文 10 张以上图表）。只为有数据的地方画数据图。
 3. **做图**：
-   - 数据图：写 `charts/data/<名字>.json`（格式见 `scripts/make_chart.py` 开头），跑 `python3 <skill 目录>/scripts/make_chart.py --all charts/data --out-dir charts`。缺来源它会报错，补上编号再跑。
+   - 数据图：写 `charts/data/<名字>.json`（格式见 `scripts/make_chart.py` 开头），跑 `python3 <skill 目录>/scripts/make_chart.py --all charts/data --out-dir charts --theme <主题>`。主题按话题从 `--themes` 列表里选一套，任务书指定了就用指定的。缺来源它会报错，补上编号再跑。
    - 结构图：写 `charts/<名字>.mmd`，跑 `python3 <skill 目录>/scripts/render_visual.py mermaid charts/<名字>.mmd`。
    - 截图：`python3 <skill 目录>/scripts/render_visual.py shot <URL> --out charts/shot-<名字>.png`，优先应用商店页面；被拦截就换页面，不要放拦截页。截图的 URL 追加进 sources.json。
    - 竞品表：`python3 <skill 目录>/scripts/render_table.py 40-dossier/<表>.csv [--cols ...]`，把输出贴进正文。
