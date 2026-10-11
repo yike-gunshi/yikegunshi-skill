@@ -24,6 +24,19 @@ BLOCK_HINTS = ("you have been blocked", "just a moment", "verify you are human",
                "attention required", "captcha", "unusual traffic", "请完成安全验证", "访问被拒绝")
 
 
+MAX_W = 2000  # 太宽的图在部分编辑器里会显示成空白，统一缩到 2000 像素宽
+
+
+def shrink(path: Path):
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    im = Image.open(path)
+    if im.width > MAX_W:
+        im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS).save(path, optimize=True)
+
+
 def launch(p):
     proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY") or os.environ.get("https_proxy")
     kw = {"proxy": {"server": proxy}} if proxy else {}
@@ -53,6 +66,7 @@ mermaid.run().then(()=>document.body.setAttribute("data-done","1"))
         out.parent.mkdir(parents=True, exist_ok=True)
         pg.locator("#c").screenshot(path=str(out))
         b.close()
+    shrink(out)
     print(f"ok  {out}")
 
 
@@ -72,6 +86,7 @@ def shot(url: str, out: Path, width: int, height: int, selector: str | None, ful
         else:
             pg.screenshot(path=str(out), full_page=full)
         b.close()
+    shrink(out)
     print(f"ok  {out}")
 
 

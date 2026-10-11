@@ -102,7 +102,7 @@ def header_footer(fig, spec, top_frac, bottom_frac):
         fig.text(0.04, 1 - 0.48 / fig.get_figheight(), spec["subtitle"], fontsize=9, color=TEXT2,
                  ha="left", va="top")
     srcs = collect_sources(spec)
-    foot = "来源：" + "".join(f"[{n}]" for n in srcs)
+    foot = "来源：[" + ",".join(str(n) for n in srcs) + "]"
     if spec.get("note"):
         foot = spec["note"] + "　" + foot
     fig.text(0.04, 0.12 / fig.get_figheight(), foot, fontsize=8, color=MUTED, ha="left", va="bottom")
@@ -410,7 +410,7 @@ def render_file(spec_path: Path, out: Path):
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, dpi=DPI, facecolor=SURFACE)
     plt.close(fig)
-    srcs = "".join(f"[{n}]" for n in collect_sources(spec))
+    srcs = "[" + ",".join(str(n) for n in collect_sources(spec)) + "]"
     return f"![{spec['title']}]({out.name if out.parent.name == 'charts' else out})", srcs
 
 

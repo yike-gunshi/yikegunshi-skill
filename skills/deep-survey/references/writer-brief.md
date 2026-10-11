@@ -41,7 +41,7 @@
 
 ## 收尾
 
-图片路径用相对路径 `charts/<名字>.png`，报告与 `charts/` 放同一目录。
+图片路径用相对路径 `charts/<名字>.png`，报告与 `charts/` 放同一目录。图片单独成段，图注空一行后另起。多个来源编号合并写成 `[38,17]`。
 
 运行 `python3 <skill 目录>/scripts/check_report.py report.md --sources sources.json`：错误修到 0；段落过长、连续大段文字这类警告逐条改。
 

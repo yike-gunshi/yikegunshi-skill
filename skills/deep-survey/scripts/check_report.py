@@ -11,6 +11,7 @@
   E4 表格有空格子
   E5 「一分钟看懂」不合规：要点不是 5—7 条，或有要点超 45 字、含 2 个以上数字、带引用编号
   E6 图片文件不存在
+  E7 两个编号方括号紧挨着（如 [38][17]），会被 Markdown 渲染成链接；应合并写成 [38,17]
 警告（W）：
   W1 正文含估算词（约 / 大约 / 估计 / 大概 / 据说）却没有来源编号
   W2 一句话里超过 2 个来源编号
@@ -20,13 +21,22 @@
   W6 段落超过 120 字
   W7 连续 600 字以上没有表、图、列表或引语
   W8 截图下一行没有带来源编号的图注；数据图缺 charts/data/<同名>.json
+  W9 图片和文字挤在同一段（图片下一行不是空行），部分编辑器会显示成空白
 """
 import json
 import re
 import sys
 from pathlib import Path
 
-CITE_RE = re.compile(r"\[(\d{1,3})\]")
+CITE_RE = re.compile(r"\[(\d{1,3}(?:\s*,\s*\d{1,3})*)\]")
+ADJ_RE = re.compile(r"\[\d{1,3}(?:\s*,\s*\d{1,3})*\]\[\d{1,3}")
+
+
+def cite_nums(text: str) -> list[int]:
+    out = []
+    for g in CITE_RE.findall(text):
+        out += [int(x) for x in g.split(",")]
+    return out
 TAG_RE = re.compile(r"【(高|中|低)】")
 IMG_RE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)\)")
 EST_WORDS = ("约", "大约", "估计", "大概", "据说")
@@ -87,7 +97,7 @@ def main() -> int:
     if "--sources" in sys.argv:
         sp = Path(sys.argv[sys.argv.index("--sources") + 1])
         known = {int(s["n"]) for s in json.loads(sp.read_text(encoding="utf-8"))}
-    cited = {int(n) for n in CITE_RE.findall(body_text)}
+    cited = set(cite_nums(body_text))
     if not listed:
         errors.append("E1 「口径与来源」节没有列出任何编号")
     if listed and (cited - listed):
@@ -98,6 +108,8 @@ def main() -> int:
         warns.append(f"W4 来源节列了正文没引用的编号: {sorted(listed - cited)}")
 
     for i, l in enumerate(body, 1):
+        if ADJ_RE.search(l):
+            errors.append(f"E7 第 {i} 行编号方括号相邻，会被渲染成链接: {ADJ_RE.search(l).group(0)}…")
         if TAG_RE.search(l):
             errors.append(f"E2 第 {i} 行有置信度标签: {l.strip()[:40]}")
         s = l.strip()
@@ -130,7 +142,7 @@ def main() -> int:
         for sent in re.split(r"(?<=[。！？])", s):
             if any(w in sent for w in EST_WORDS) and NUM_RE.search(sent) and not CITE_RE.search(sent):
                 warns.append(f"W1 第 {i} 行估算数字无来源: {sent[:40]}")
-            if len(CITE_RE.findall(sent)) > 2:
+            if len(cite_nums(sent)) > 2:
                 warns.append(f"W2 第 {i} 行一句超过 2 个编号: {sent[:40]}")
         for f in FILLERS:
             if f in s:
@@ -176,8 +188,10 @@ def main() -> int:
                 errors.append(f"E6 图片不存在: {src}")
                 continue
             stem = Path(src).stem
+            if i + 1 < len(body) and body[i + 1].strip():
+                warns.append(f"W9 第 {i + 1} 行图片 {src} 和下一行文字在同一段，图注前空一行")
             if stem.startswith("shot-"):
-                nxt = next((x for x in body[i + 1:i + 3] if x.strip()), "")
+                nxt = next((x for x in body[i + 1:i + 4] if x.strip()), "")
                 if not CITE_RE.search(nxt):
                     warns.append(f"W8 截图 {src} 下一行缺带编号的图注")
             elif not (p.parent / "data" / f"{stem}.json").exists() and not (p.parent / f"{stem}.mmd").exists():
