@@ -1,0 +1,78 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条明确写「积分商城 10 月 30 日上线（林舟拍板，四人均无异议）」"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "签到入口放在「没谈拢的问题」，并写明看完数据再定；附注也专门说明未进结论"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "团建地点列在「没谈拢的问题」，待办里只写统计/投票安排，未写成已定地点"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "「没谈拢的问题」第1条完整复述三方立场与「数据出来后再定」"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "赵一鸣，10/27 提测，与转写稿一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "王蕾，周四之前（10/22），换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "孙晓两版设计，周五（10/23）换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "写「负责人待定」且截止「未说定」，符合会上无人认领、未定期限"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "陈默，10/19 下午，修完同步林舟，均有原话支撑"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "积分商城提测后执行两到三轮测试",
+      "why": "王蕾原话是「多测两轮」「两到三天」，转写稿无「两到三轮」的说法，把天数混成了轮数"
+    }
+  ],
+  "confirm": [],
+  "critique": "标准答案无误。纪要把 neutral 里的「王蕾执行测试」和「团建行政统计」都写成待办并标注未说定，符合规则允许范围；唯一可挑的是「两到三轮」这个数字由「两到三天」误转，属轻微失真而非实质编造，判定上略偏两可。",
+  "_meta": {
+    "cost": 0.105731,
+    "duration_ms": 23836
+  }
+}

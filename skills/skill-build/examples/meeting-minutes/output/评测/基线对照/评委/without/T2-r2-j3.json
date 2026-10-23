@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论区第1条明确'场地确定：滨江会展中心 B 厅'，并说明城西备选被否"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区写'暂定 11月15日，但尚未最终锁定'，并指向周四答复，未当已定"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12万只出现在待办（出方案/争取预算）与未决区，未决区明确'需刘总拍板'"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": true,
+      "note": "结论区第3条'经销商邀请规模扩到 100 家左右'写成已定，实为郑佳想法、无人拍板"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼放在未决区，注明周岚'下次再说'"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未决区第1条写明研发/市场分歧与周四答复为关键节点"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未决区第2条写明周岚批不了、需刘总，可能 12/10/8 万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 吴凯，10/22（周四）前，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 钱一诺，10/21（周三）上午，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 周岚向刘总争取预算，截止标注'会上未定时间'"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5 负责人写'销售部（具体承接人未定）'，截止 10/26（下周一）正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3 郑佳按12万出方案，截止标注未定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "结论区第4条'档期两头占（15/22）'严格说是钱一诺自提、周岚仅回'好，辛苦'，属默认认可且与A2待办一致，故未计入额外假结论，但边界略模糊。另：标准答案未将'邀请名单承接人未定'列为未决项，纪要把它写进未决区属合理增量，不扣分。",
+  "_meta": {
+    "cost": 0.103369,
+    "duration_ms": 24722
+  }
+}

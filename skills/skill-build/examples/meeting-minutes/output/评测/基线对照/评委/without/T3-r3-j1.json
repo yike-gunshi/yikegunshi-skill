@@ -1,0 +1,63 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明'首次响应时效定为 4 小时，当场确认通过'"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论4写'夜班外包：暂不推进，先问报价再议'，与会上'先放着'一致"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1条完整记录了倾向试、报价顾虑、培训顾虑及'先搁置等报价'"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办表写[说话人2]、10/28（下周三）前，与'我来吧…下周三之前弄好'一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "写[说话人2]、完成时间'未定'，会上确实未说截止"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "写[小蒋]、10/23（本周五）前，与'小蒋…周五之前给我'一致，换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "两处边界值得说明：(1) 结论2'工单临近超时由系统自动提醒——确定要做'在严格意义上会上只有说话人2认领、说话人1答'好'，并未作为独立决议拍板；按规则'把待办写进结论区也不算'，且该项同时出现在待办表中，故未计入 extra_false_conclusions，但'确定要做'的措辞比转写稿略强。(2) 标准答案 neutral 项说投诉数核实的负责人'应写说话人3'，而纪要写'[小蒋]'——转写稿中小蒋被点名做排班、小江被提及排表，标准答案自己也承认'小蒋很可能是说话人3但未明说'，纪要用[小蒋]并在附注中提示同音歧义，处理合理，不宜算错。",
+  "_meta": {
+    "cost": 0.09025,
+    "duration_ms": 25290
+  }
+}

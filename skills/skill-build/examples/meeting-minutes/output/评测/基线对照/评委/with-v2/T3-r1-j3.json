@@ -1,0 +1,63 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条即「首次响应时效定为 4 小时」，并注明说话人1拍板、2、3同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "外包仅出现在「没谈拢」区，明确写「外包先放着，先问报价」，未当作已定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "「没谈拢」第1条完整复现说话人1倾向试、说话人2看报价、说话人3担心培训，以及先放着先问报价"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1写说话人2对接系统方做临近超时提醒，截止下周三（10/28），与「我来吧…下周三之前弄好」及10/21为周三的换算一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2写说话人2问一家外包报价，截止标「未说定」，会上确未提期限"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3写小蒋排本月剩余夜班表交说话人1，截止周五（10/23），换算正确，并附小蒋/小江写法待确认"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "标准答案的 open 只列了外包一项，但转写稿中说话人2明确提出「四个小时行，就是晚上的单可能会超」、说话人1回「晚上的单我们另外想办法」，夜间工单是否适用 4 小时首响确实未收口；纪要把它单列为未决项属于合理补充，不应视为多写。另，标准答案 neutral 项（投诉数待查）纪要已落成待办并归到说话人3，处理得当。纪要在引用时间戳时把「00:00:03」写作「00:03」，属格式小瑕疵，不影响判断。",
+  "_meta": {
+    "cost": 0.09799300000000001,
+    "duration_ms": 28353
+  }
+}

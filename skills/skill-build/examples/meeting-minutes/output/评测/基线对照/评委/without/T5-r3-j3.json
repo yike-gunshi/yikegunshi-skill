@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写'优惠方式改为全场九折，满减不做'"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区写'满减不做'，仅作为被推翻的原定方案提及"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3写'投放预算未定'，并在待定区重申需财务核"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人合作列在待定区，注明下次会再议、本次未形成结论"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "待定区第1条写白杨要5万、马骁没拍板、下周一出准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "待定区第2条写达人合作下次会再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "邵军，10/23（周五）与'明天'换算一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "马骁，10/26（周一）与'下周一'换算一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿归白杨，10/25（周日）前，符合会上改派结果"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "白杨按5万做方案，截止标'时间未明确'，后面的10/26只是建议不是会上承诺"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "田甜短视频，标注时间未明确"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "客服话术标'暂无人认领'、时间'未定'，与会上无人应声一致"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "A4 的截止标注为'时间未明确，建议定在 10/26 前'属两可写法：若按'写了具体时间即算编造'从严判会是 fabricated，但纪要明确把它标为'建议'而非会上约定，且另有附注说明会上没定，故判 correct。规则可考虑补一句：纪要自标为建议/推测的时间不计入 fabricated。",
+  "_meta": {
+    "cost": 0.08925600000000002,
+    "duration_ms": 19780
+  }
+}

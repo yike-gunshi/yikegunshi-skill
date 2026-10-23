@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1528" viewBox="0 0 1600 1528">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z"/></marker></defs>
+<rect id="canvas" x="0" y="0" width="1600" height="1528" fill="#efe7d4"/>
+<text id="t1" x="60" y="94" font-family="Noto Sans SC" font-size="30" font-weight="700" fill="#2e4a2a" text-anchor="start">AGI 还要十年：问题可解，但仍然很难</text>
+<text id="t2" x="60" y="128" font-family="Noto Sans SC" font-size="20" font-weight="400" fill="#1a1a17" text-anchor="start">Andrej Karpathy × Dwarkesh Patel：智能体缺什么、模型怎么学、经济会不会起飞、自动驾驶的教训、教育</text>
+<rect id="r3" x="44" y="148" width="1512" height="152" rx="10" fill="#e6dcc4"/>
+<rect id="r4" x="60" y="197" width="270" height="54" rx="6" fill="#2e4a2a"/>
+<text id="t5" x="195" y="227" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">A 智能体为什么要十年</text>
+<rect id="r6" x="354" y="160" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t7" x="378" y="199" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">A1 智能体还缺持续学习、</text>
+<text id="t8" x="378" y="227" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">多模态和操作电脑的能力，</text>
+<text id="t9" x="378" y="255" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">问题可解但难，需要十年</text>
+<rect id="r10" x="757" y="160" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t11" x="781" y="199" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">A2 行业几次太早去做完整</text>
+<text id="t12" x="781" y="227" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">的智能体，要先有大模型</text>
+<text id="t13" x="781" y="255" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">的表征</text>
+<rect id="r14" x="1161" y="160" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t15" x="1185" y="199" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">A3 编程智能体擅长样板代</text>
+<text id="t16" x="1185" y="227" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">码，写「从没写过的代码」</text>
+<text id="t17" x="1185" y="255" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">帮不上忙</text>
+<rect id="r18" x="44" y="312" width="1512" height="248" rx="10" fill="#e6dcc4"/>
+<rect id="r19" x="60" y="409" width="270" height="54" rx="6" fill="#2e4a2a"/>
+<text id="t20" x="195" y="439" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">B 模型和人怎么学</text>
+<rect id="r21" x="354" y="324" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t22" x="378" y="363" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">B1 我们在造「幽灵」，预训练是「蹩脚的进化」</text>
+<rect id="r23" x="959" y="324" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t24" x="983" y="363" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">B2 权重里是「模糊的回忆」，上下文里是「工作</text>
+<text id="t25" x="983" y="391" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">记忆」</text>
+<rect id="r26" x="354" y="448" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t27" x="378" y="487" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">B3 强化学习很糟，只是以前的方法更糟，它像在</text>
+<text id="t28" x="378" y="515" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">「用吸管吸监督信号」</text>
+<rect id="r29" x="959" y="448" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t30" x="983" y="487" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">B4 人读书是在做「合成数据」，模型自己生成的</text>
+<text id="t31" x="983" y="515" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">数据却会「悄悄坍缩」</text>
+<rect id="r32" x="44" y="572" width="1512" height="152" rx="10" fill="#e6dcc4"/>
+<rect id="r33" x="60" y="621" width="270" height="54" rx="6" fill="#2e4a2a"/>
+<text id="t34" x="195" y="651" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">C 十年后的模型</text>
+<rect id="r35" x="354" y="584" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t36" x="378" y="623" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">C1 十年后大概率还是用梯</text>
+<text id="t37" x="378" y="651" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">度下降训练的大神经网络，</text>
+<text id="t38" x="378" y="679" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">进步来自各方面同时改进</text>
+<rect id="r39" x="757" y="584" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t40" x="781" y="623" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">C2 「认知核心」应该剥掉</text>
+<text id="t41" x="781" y="651" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">记忆、留下思考的算法，</text>
+<text id="t42" x="781" y="679" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">十亿参数可能就够</text>
+<rect id="r43" x="1161" y="584" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t44" x="1185" y="623" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">C3 模型还缺睡眠式的记忆</text>
+<text id="t45" x="1185" y="651" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">沉淀、文化和自我对弈，</text>
+<text id="t46" x="1185" y="679" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">还像「学者症候群的孩子」</text>
+<rect id="r47" x="44" y="736" width="1512" height="248" rx="10" fill="#e6dcc4"/>
+<rect id="r48" x="60" y="833" width="270" height="54" rx="6" fill="#2e4a2a"/>
+<text id="t49" x="195" y="863" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">D AI 和经济、社会</text>
+<rect id="r50" x="354" y="748" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t51" x="378" y="787" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">D1 按「能做任何有经济价值的任务」这个定义，</text>
+<text id="t52" x="378" y="815" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">AI 还没造成大冲击，客服会先被改变</text>
+<rect id="r53" x="959" y="748" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t54" x="983" y="787" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">D2 编程最先被改变，因为代码天生是文本，配套</text>
+<text id="t55" x="983" y="815" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">工具都现成</text>
+<rect id="r56" x="354" y="872" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t57" x="378" y="911" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">D3 Karpathy 认为 AI 会融进约 2% 的 GDP</text>
+<text id="t58" x="378" y="939" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">增长曲线，Dwarkesh 认为增长率会跳升</text>
+<rect id="r59" x="959" y="872" width="581" height="100" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t60" x="983" y="911" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">D4 超级智能最可能的结局是人类逐渐失去理解和</text>
+<text id="t61" x="983" y="939" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">控制</text>
+<rect id="r62" x="44" y="996" width="1512" height="152" rx="10" fill="#e6dcc4"/>
+<rect id="r63" x="60" y="1045" width="270" height="54" rx="6" fill="#2e4a2a"/>
+<text id="t64" x="195" y="1075" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">E 自动驾驶的教训</text>
+<rect id="r65" x="354" y="1008" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t66" x="378" y="1047" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">E1 从演示到产品是「九的</text>
+<text id="t67" x="378" y="1075" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">行军」，每多一个 9 都要</text>
+<text id="t68" x="378" y="1103" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">同样多的工作</text>
+<rect id="r69" x="757" y="1008" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t70" x="781" y="1047" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">E2 自动驾驶还远没完成：</text>
+<text id="t71" x="781" y="1075" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">规模小、不赚钱，远程操</text>
+<text id="t72" x="781" y="1103" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">作员藏在幕后</text>
+<rect id="r73" x="1161" y="1008" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t74" x="1185" y="1047" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">E3 和 AI 落地的类比：</text>
+<text id="t75" x="1185" y="1075" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">比特比原子容易得多，但</text>
+<text id="t76" x="1185" y="1103" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">法律和社会这一层也要补</text>
+<rect id="r77" x="44" y="1160" width="1512" height="304" rx="10" fill="#e6dcc4"/>
+<rect id="r78" x="60" y="1285" width="270" height="54" rx="6" fill="#2e4a2a"/>
+<text id="t79" x="195" y="1315" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">F 教育：让人跟上 AI</text>
+<rect id="r80" x="354" y="1172" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t81" x="378" y="1211" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">F1 他最怕人类被晾在一边，</text>
+<text id="t82" x="378" y="1239" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">所以去做教育，要建「星</text>
+<text id="t83" x="378" y="1267" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">际舰队学院」</text>
+<rect id="r84" x="757" y="1172" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t85" x="781" y="1211" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">F2 好导师的门槛太高，现</text>
+<text id="t86" x="781" y="1239" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">在的 AI 还做不到</text>
+<rect id="r87" x="1161" y="1172" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t88" x="1185" y="1211" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">F3 教育是搭「通往知识的</text>
+<text id="t89" x="1185" y="1239" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">坡道」，目标是提高每秒</text>
+<text id="t90" x="1185" y="1267" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">顿悟数</text>
+<rect id="r91" x="354" y="1324" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t92" x="378" y="1363" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">F4 AGI 之前教育有用，</text>
+<text id="t93" x="378" y="1391" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">AGI 之后教育是乐趣，人</text>
+<text id="t94" x="378" y="1419" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">会像去健身房一样去上学</text>
+<rect id="r95" x="757" y="1324" width="379" height="128" rx="6" fill="#efe7d4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t96" x="781" y="1363" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">F5 想学懂就动手造一遍，</text>
+<text id="t97" x="781" y="1391" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#1a1a17" text-anchor="start">按需深挖，再讲给别人听</text>
+</svg>

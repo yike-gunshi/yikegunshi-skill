@@ -1,0 +1,338 @@
+[
+  {
+    "n": 1,
+    "title": "豆包 - 生活工作 AI 助手 · App Store 中国区",
+    "url": "https://apps.apple.com/cn/app/id6459478672",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "apple.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 2,
+    "title": "豆包隐私政策",
+    "url": "https://www.doubao.com/legal/privacy",
+    "date": "2026-09-10",
+    "type": "一方",
+    "family": "doubao.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 3,
+    "title": "iTunes 搜索接口返回的 App Store 中国区数据",
+    "url": "https://itunes.apple.com/search?term=%E6%99%BA%E8%83%BD%E5%8A%A9%E6%89%8B&country=cn&entity=software&limit=50",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "apple.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 4,
+    "title": "DeepSeek 隐私政策",
+    "url": "https://cdn.deepseek.com/policies/zh-CN/deepseek-privacy-policy.html",
+    "date": "2026-02-10",
+    "type": "一方",
+    "family": "deepseek.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 5,
+    "title": "Kimi · App Store 中国区",
+    "url": "https://apps.apple.com/cn/app/id6474233312",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "apple.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 6,
+    "title": "Kimi 隐私政策",
+    "url": "https://www.kimi.com/user/agreement/userprivacy?version=v2",
+    "date": "2026-08-24",
+    "type": "一方",
+    "family": "kimi.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 7,
+    "title": "千问 - 阿里AI助手 · App Store 中国区",
+    "url": "https://apps.apple.com/cn/app/id6466733523",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "apple.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 8,
+    "title": "千问产品隐私政策",
+    "url": "https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20231011201849846/20231011201849846.html",
+    "date": "2026-09-30",
+    "type": "一方",
+    "family": "alicdn.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 9,
+    "title": "元宝-腾讯全能AI助手 · App Store 中国区",
+    "url": "https://apps.apple.com/cn/app/id6480446430",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "apple.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 10,
+    "title": "元宝隐私政策",
+    "url": "https://privacy.qq.com/document/preview/eb9be56572ab4886b6ca124e72abf413",
+    "date": "2026-09-17",
+    "type": "一方",
+    "family": "qq.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 11,
+    "title": "关于发布生成式人工智能服务已备案信息的公告（2026年3月至4月）",
+    "url": "https://www.cac.gov.cn/2026-05/13/c_1780413225190669.htm",
+    "date": "2026-05-13",
+    "type": "官方",
+    "family": "cac.gov.cn",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 12,
+    "title": "ChatGPT Supported Countries - OpenAI Help Center（Wayback 存档）",
+    "url": "https://web.archive.org/web/20261021154709/https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+    "date": "2026-10-21",
+    "type": "一方（存档）",
+    "family": "archive.org",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 13,
+    "title": "Supported Regions Policy - Anthropic",
+    "url": "https://www.anthropic.com/legal/supported-regions",
+    "date": "2026-10-20",
+    "type": "一方",
+    "family": "anthropic.com",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 14,
+    "title": "Where you can use the Gemini web app - Gemini Apps Help",
+    "url": "https://support.google.com/gemini/answer/13575153?hl=en",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "google.com",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 15,
+    "title": "Google AI Pro & Ultra — get access to Gemini 4 Argon & more",
+    "url": "https://gemini.google/subscriptions",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "gemini.google",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 16,
+    "title": "Plans & pricing - Claude by Anthropic",
+    "url": "https://claude.com/pricing",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "claude.com",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 17,
+    "title": "What is ChatGPT Plus? - OpenAI Help Center（Wayback 存档）",
+    "url": "https://web.archive.org/web/20261014181134/https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+    "date": "2026-10-14",
+    "type": "一方（存档）",
+    "family": "archive.org",
+    "cited_in": [
+      "主笔补查"
+    ]
+  },
+  {
+    "n": 18,
+    "title": "豆包付费服务协议（含自动续费服务规则）",
+    "url": "https://www.doubao.com/legal/ey01",
+    "date": "2026-08-15",
+    "type": "一方",
+    "family": "doubao.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 19,
+    "title": "DeepSeek V4.1 Flash 新版本：许愿式编程一键成真",
+    "url": "https://api-docs.deepseek.com/zh-cn/news/news261017",
+    "date": "约 2026-10-17",
+    "type": "一方",
+    "family": "deepseek.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 20,
+    "title": "Text Arena: LLM Rankings & AI Model Benchmarks（arena.ai 总榜，Wayback 存档）",
+    "url": "https://web.archive.org/web/20261012022223/https://arena.ai/leaderboard/chat/text",
+    "date": "2026-10-08",
+    "type": "第三方评测（存档）",
+    "family": "archive.org",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 21,
+    "title": "Best LLM for Chinese (中文): Text Arena Rankings（arena.ai 中文分榜，Wayback 存档）",
+    "url": "https://web.archive.org/web/20261012021908/https://arena.ai/leaderboard/chat/text/chinese",
+    "date": "2026-10-08",
+    "type": "第三方评测（存档）",
+    "family": "archive.org",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 22,
+    "title": "SuperCLUE评测基准：大模型排名与测试结果 - DataLearnerAI",
+    "url": "https://www.datalearner.com/benchmarks/superclue",
+    "date": "2026-10-22",
+    "type": "聚合站",
+    "family": "datalearner.com",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ],
+    "weak": "聚合站转录，非 SuperCLUE 官方原文"
+  },
+  {
+    "n": 23,
+    "title": "QuestMobile 2026年AI应用市场发展半年报（界面新闻转载）",
+    "url": "https://m.jiemian.com/article/14760182.html",
+    "date": "2026-07-14",
+    "type": "第三方研报",
+    "family": "jiemian.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 24,
+    "title": "Kimi 会员订阅页",
+    "url": "https://www.kimi.com/membership/pricing",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "kimi.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 25,
+    "title": "千问专业会员服务协议（含自动续费服务规则）",
+    "url": "https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20260728154300619/20260728154300619.html",
+    "date": "2026-08-07",
+    "type": "一方",
+    "family": "alicdn.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 26,
+    "title": "DeepSeek - AI 智能助手 · App Store 中国区",
+    "url": "https://apps.apple.com/cn/app/id6737597349",
+    "date": "2026-10-22",
+    "type": "一方",
+    "family": "apple.com",
+    "cited_in": [
+      "10-01-国内五款.md",
+      "对比.csv"
+    ]
+  },
+  {
+    "n": 27,
+    "title": "How your data is used to improve model performance - OpenAI Help Center（Wayback 存档）",
+    "url": "https://web.archive.org/web/20261019170943/https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance",
+    "date": "2026-10-19",
+    "type": "一方（存档）",
+    "family": "archive.org",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 28,
+    "title": "Is my data used for model training? - Anthropic Privacy Center",
+    "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+    "date": "2026-03-16",
+    "type": "一方",
+    "family": "claude.com",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  },
+  {
+    "n": 29,
+    "title": "Gemini Apps Privacy Hub",
+    "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+    "date": "2026-10-19",
+    "type": "一方",
+    "family": "google.com",
+    "cited_in": [
+      "10-02-海外三款与横向参照.md"
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="530" viewBox="0 0 1600 530">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z"/></marker></defs>
+<rect id="canvas" x="0" y="0" width="1600" height="530" fill="#efe7d4"/>
+<text id="t1" x="60" y="88" font-family="Noto Sans SC" font-size="26" font-weight="700" fill="#2e4a2a" text-anchor="start">B3 强化学习：一整条解法只换来一个「对 / 错」</text>
+<rect id="r2" x="60" y="120" width="440" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c3" cx="94" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t4" x="94" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">1</text>
+<text id="t5" x="122" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">并行尝试上百种解法</text>
+<text id="t6" x="84" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">每条都可能走过弯路</text>
+<text id="t7" x="84" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">他举例：另外 97 个没对</text>
+<line id="a8" x1="508" y1="194" x2="572" y2="194" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect id="r9" x="580" y="120" width="440" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c10" cx="614" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t11" x="614" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">2</text>
+<text id="t12" x="642" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">最后对一次答案</text>
+<text id="t13" x="604" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">只拿到一个对或错</text>
+<text id="t14" x="604" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">信号像用吸管吸上来</text>
+<line id="a15" x1="1028" y1="194" x2="1092" y2="194" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect id="r16" x="1100" y="120" width="440" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c17" cx="1134" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t18" x="1134" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">3</text>
+<text id="t19" x="1162" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">做对的整条都加权</text>
+<text id="t20" x="1124" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">每个 token 都「多这样做」</text>
+<text id="t21" x="1124" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">弯路也一起被奖励</text>
+<path id="l22" d="M60 304 L1540 304" stroke="#2e4a2a" stroke-width="2" fill="none"/>
+<text id="t23" x="60" y="292" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#2e4a2a" text-anchor="start">对照</text>
+<rect id="r24" x="60" y="338" width="728" height="132" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t25" x="84" y="377" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">人会怎么做</text>
+<text id="t26" x="84" y="406" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">不会尝试上百次</text>
+<text id="t27" x="84" y="440" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">找到解法后复盘：哪部分做得好，哪部分不好</text>
+<rect id="r28" x="812" y="338" width="728" height="132" rx="6" fill="#e89cb1" stroke="#d27e96" stroke-width="2"/>
+<text id="t29" x="836" y="377" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#243a21" text-anchor="start">改成每步打分为什么难</text>
+<text id="t30" x="836" y="406" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#243a21" text-anchor="start">LLM 裁判会被钻空子：10 到 20 步后，「dhdhdhdh」也能拿满分</text>
+</svg>

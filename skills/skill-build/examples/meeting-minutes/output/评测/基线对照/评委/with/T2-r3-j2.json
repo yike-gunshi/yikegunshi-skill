@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明场地定为滨江会展中心B厅，并注明周岚拍板、郑佳吴凯同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "11/15 只出现在「没谈拢」区，明确写成周岚倾向暂排、待吴凯周四答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12 万放在「没谈拢」区并写明需请示刘总、可能 10 万或维持 8 万；待办4只是「先按12万做方案」"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "「经销商邀请预算与邀请规模」条中写「规模一并未定」"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼列在「没谈拢」区，注明周岚说下次再说"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢第1条完整覆盖 11/15 vs 11/20 分歧与周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "没谈拢第2条写明 12 万需刘总审批、去年 8 万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 吴凯，周四=10/22 换算正确（10/20 为周二）"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 钱一诺，明天上午=10/21 上午，含 15/22 两档期"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3 周岚找刘总，截止标「原话找个机会，未说定」"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6 标「负责人待定」并附原话，下周一=10/26 换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 郑佳按12万做方案，截止未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案无明显错误。两点可议：一是纪要额外拆出「待办5：郑佳回部门碰一下确定名单由谁做」，与 A4 部分重叠，但有郑佳原话支撑，不算编造或重复计分；二是结论区写「吴凯同意」场地，转写稿为「我都行」，属无异议的合理书面化。",
+  "_meta": {
+    "cost": 0.099637,
+    "duration_ms": 21358
+  }
+}

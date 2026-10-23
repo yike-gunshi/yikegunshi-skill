@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条即滨江会展中心B厅，并注明周岚拍板、郑佳吴凯无异议"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "11/15 放入「没谈拢」，明确写「当前按11月15日暂排，实在不行再挪」"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12万仅作为待办「先按12万做方案」及未决项，注明需请示刘总、可能10万或8万"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "100家写入「没谈拢」第3条，并注明会上无人确认"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼写入「没谈拢」第4条，注明周岚「下次再说」、本次搁置"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "第1条完整呈现15号与20号分歧及吴凯周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "第2条呈现8万→12万及需刘总审批"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "吴凯，周四之前即10/22，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "钱一诺致电占11/15与11/22档期，明天上午即10/21"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周岚找刘总沟通预算，截止只引原话未编造具体时间"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "标为「负责人待定」并附原话，下周一即10/26换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "郑佳按12万做方案，截止写未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": null,
+  "_meta": {
+    "cost": 0.09073400000000001,
+    "duration_ms": 16184
+  }
+}

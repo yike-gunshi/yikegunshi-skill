@@ -1,0 +1,48 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明11月1日起全走新系统、不收纸质单，并标注冯琳拍板、二人同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算放在「没谈拢的问题」，并注明冯琳说了不算、需找老板"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "冯琳整理操作说明，截止写「回头」即原话，未杜撰日期"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "许诺行政群通知，截止今天10/20，与「我今天就发」一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周小川交打车票，周五即10/23，换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案 open 为空而 neutral 允许把年会抽奖预算列入「没谈拢」，纪要正是这样处理的，按规则既不扣分也无对应 open 条目可判；另纪要自行增加的「操作说明建议补日期」提醒属合理增益，标准答案 confirm 为空，不影响判定。",
+  "_meta": {
+    "cost": 0.067592,
+    "duration_ms": 14717
+  }
+}

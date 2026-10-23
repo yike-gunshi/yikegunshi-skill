@@ -1,0 +1,13 @@
+{
+  "duration_ms": 40514,
+  "wall_s": 42.0,
+  "num_turns": 2,
+  "total_cost_usd": 0.093398,
+  "input_tokens": 14922,
+  "output_tokens": 2571,
+  "is_error": false,
+  "arm": "with",
+  "query_id": "T3",
+  "run": 1,
+  "stderr": ""
+}

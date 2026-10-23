@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论区第1条明确写场地定为滨江会展中心 B 厅"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区第2条写'暂按11/15排期，但未最终确认'，并注明等吴凯答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论区未写预算定12万，未决区明确说需刘总批、可能10万或8万"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": true,
+      "note": "结论区第4条'经销商邀请规模扩大：从去年60家扩到约100家'写成已定，实际只是郑佳的想法，无人拍板"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": true,
+      "note": "结论区虽写'本次不议'，但未决区第4条又写'确认不再送同款充电宝'，周岚只说'下次再说'，并未确认换掉"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1条完整写出市场15号与研发20号的分歧及等吴凯答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未达成一致第2条写12万需刘总审批、可能12/10/8万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "吴凯复核排期，截止10/22周四，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "钱一诺致电滨江锁定两档期，10/21上午，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周岚与刘总沟通预算，截止写'未定（找个机会聊）'"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "写'销售部（具体执行人待定）'符合未落实到人；10/26下周一换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "郑佳按12万编制方案，截止写'未定'"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "X4 的判断略两可：纪要在结论区正确写了'伴手礼本次不议，择期再定'，只是在未决区措辞上用了'确认不再送同款充电宝'，严格按规则2的'在别处用确定类说法陈述'需判为写成已定，但其实质倾向并未把伴手礼当已拍板的事推进，扣分力度可酌情从轻。另外结论区第3条'档期双占'严格说也是待执行的待办（钱一诺明天才打电话），表述为'同时锁定'略超前于事实，但因同条已列入待办区，按规则不计为额外伪结论。",
+  "_meta": {
+    "cost": 0.113742,
+    "duration_ms": 30214
+  }
+}

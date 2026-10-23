@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明场地定为滨江会展中心 B 厅，并注明周岚拍板、郑佳吴凯无异议"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "11/15 只出现在'没谈拢的问题'第1条，明确写'暂按11/15排期、实在不行再挪'，待吴凯周四答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12 万仅作为'方案先按12万做'的待办和待审批事项，没谈拢区明确写需刘总定、可能10万或8万"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "100 家写在没谈拢区，表述为'郑佳提出从60家扩到约100家'，未写成已定"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼列入没谈拢区，写'周岚决定本次不议、下次再谈'，未写成已换"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢第1条完整呈现 11/15 与 11/20 的分歧及周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "没谈拢第2条写明 8万→12万、需刘总审批、可能10万或维持8万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 吴凯梳理排期答复能否15号，截止周四（10/22）前，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 钱一诺占 11/15 与 11/22 档期，截止明天上午（10/21），换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3 周岚找刘总沟通预算，截止标注'未说定'，与转写稿一致"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6 标为'负责人待定'并附郑佳原话，截止下周一（10/26），换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 郑佳按12万出方案，截止'未说定'，对应周岚'方案你可以先按十二万做'"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "纪要把 A4 拆成两条（待办5'郑佳跟部门碰一下定由谁来做'与待办6'出名单，负责人待定'），严格说待办5 给郑佳派了一个转写稿里并未明确认领的协调动作（郑佳只说'我回去跟我们部门碰一下'，可算自述认领），属两可；本次按有原话依据、不视为编造或 wrong_person 处理。另外标准答案 A4 的 owner 判定依赖'销售这边出一下'是否算指向郑佳，规则下'待定'与'郑佳'两种写法都可能被接受，建议标准答案显式说明这点。",
+  "_meta": {
+    "cost": 0.10276300000000001,
+    "duration_ms": 25588
+  }
+}

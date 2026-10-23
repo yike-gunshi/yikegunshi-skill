@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="524" viewBox="0 0 1600 524">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z"/></marker></defs>
+<rect id="canvas" x="0" y="0" width="1600" height="524" fill="#efe7d4"/>
+<text id="t1" x="60" y="88" font-family="Noto Sans SC" font-size="26" font-weight="700" fill="#2e4a2a" text-anchor="start">C1 复现 1989 年 LeCun 网络：只换算法错误减半，再往下要几样一起改</text>
+<rect id="r2" x="60" y="120" width="467" height="142" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t3" x="84" y="159" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">算法</text>
+<text id="t4" x="84" y="202" font-family="Noto Sans SC" font-size="34" font-weight="700" fill="#2e4a2a" text-anchor="start">错误减半</text>
+<text id="t5" x="84" y="232" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">把算法「穿越」33 年</text>
+<rect id="r6" x="567" y="120" width="467" height="142" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t7" x="591" y="159" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">数据</text>
+<text id="t8" x="591" y="202" font-family="Noto Sans SC" font-size="34" font-weight="700" fill="#2e4a2a" text-anchor="start">10 倍</text>
+<text id="t9" x="591" y="232" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">训练集扩大 10 倍</text>
+<rect id="r10" x="1073" y="120" width="467" height="142" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t11" x="1097" y="159" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">算力与训练</text>
+<text id="t12" x="1097" y="188" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">做计算优化</text>
+<text id="t13" x="1097" y="222" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">用 dropout 等正则化训练更久</text>
+<polyline id="a14" points="293,262 293,302 800,302 800,332" fill="none" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line id="a15" x1="800" y1="262" x2="800" y2="332" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline id="a16" points="1307,262 1307,302 800,302 800,332" fill="none" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect id="r17" x="420" y="332" width="760" height="132" rx="6" fill="#2e4a2a"/>
+<text id="t18" x="444" y="371" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#efe7d4" text-anchor="start">错误继续下降</text>
+<text id="t19" x="444" y="400" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#efe7d4" text-anchor="start">没有哪一项赢太多，几乎一样重要</text>
+<text id="t20" x="444" y="434" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#efe7d4" text-anchor="start">对接下来的预期：每样都 +20%</text>
+</svg>

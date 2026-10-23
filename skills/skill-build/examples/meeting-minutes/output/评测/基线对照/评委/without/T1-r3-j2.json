@@ -1,0 +1,78 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论区第1条明确写「积分商城 10 月 30 日上线」并附 10/27 提测节奏"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区第2条写「首页签到入口暂不决策，先拉数据再定加不加」，符合暂不定表述"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论区第3条只写交行政统计、群里投票，候选并列未定去哪"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未谈拢区第1条完整复述孙晓提议、陈默性能顾虑、林舟倾向加但看数据再定"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1赵一鸣，10/27（周二）提测，与原话一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2王蕾，10/22（周四）前，周四换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4孙晓，10/23（周五），换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6负责人「未指定」、时间「未定」，与会上无人认领、回头再说一致"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5陈默，10/19 当天下午，并含修完同步林舟"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "测试 2~3 轮（结论区第1条节奏、待办3）",
+      "why": "王蕾原话是「多测两轮…给我两天吧，两到三天」，2~3 指的是天数而非轮数，纪要把天数误记成轮数"
+    }
+  ],
+  "confirm": [],
+  "critique": "两点说明：(1) 标准答案 neutral 中允许把「团建交行政统计、群里投票」写成待办，纪要把它放进了结论区第3条——林舟确实在会上作了这个安排，且未写成「团建去哪已定」，故按规则3不计为假结论，但位置略欠妥，属边界判断。(2) 纪要「测试2~3轮」是把「两到三天」误转为轮数，虽然数字来源于转写稿，但单位被改变导致语义失真，按 fabrications 口径我判为编造性数字失真，而非合理书面化改写；若评审口径更宽松，此条也可不计。",
+  "_meta": {
+    "cost": 0.102867,
+    "duration_ms": 25640
+  }
+}

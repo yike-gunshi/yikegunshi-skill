@@ -1,0 +1,82 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论区第1条明确写「积分商城 10 月 30 日上线」，并列出 10/27 提测→10/30 上线节奏"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区第2条写「首页签到入口暂不决策，先拉数据再定加不加」，未当成已定"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论区第3条只写交行政统计、群里投票（候选剧本杀/爬山），未把团建地点写成已定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "「未谈拢/待确认」第1条完整复述孙晓提议、陈默性能顾虑、林舟倾向加但看数据再定"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 赵一鸣，10/27（周二）提测，与原话一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 王蕾，10/22（周四）前发群，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 孙晓，10/23（周五）出轻量版+常规版两版设计"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6 负责人标「未指定」、时间标「未定」，并在未谈拢区提示会后补人，符合会上无人认领的事实"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5 陈默，10/19 当天下午修复并同步林舟"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "测试 2~3 轮（结论1、待办3）",
+      "why": "王蕾原话是「多测两轮……给我两天吧，两到三天」，2~3 指的是天数而非轮数，纪要把工期误写成轮次"
+    },
+    {
+      "text": "建议确认是按 2 天（10/27–10/29）",
+      "why": "27 号提测、测两天应为 10/28–10/29；此区间与林舟「29、30 号这样」均不对应，属纪要自行推演出的错误日期区间"
+    }
+  ],
+  "confirm": [],
+  "critique": "X2（团建）判定偏两可：林舟确实说过「让行政去统计吧，你们自己在群里投票」，纪要把这句写进结论区虽非「地点已定」，但行政并未在场认领，容易被读作已落实；规则3把「待办写进结论区」一律豁免，使这类闲聊安排进结论区无法被扣分，建议规则对「非在场方被安排」单列判断。另：标准答案 neutral 中写王蕾测试截止「29、30 号左右」，本纪要写成「10/27 提测后开始」只给起点不给终点，按现有规则不在 todos 评分项内，实际上漏掉了林舟给出的时间口径。",
+  "_meta": {
+    "cost": 0.118647,
+    "duration_ms": 35573
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明11月1日起全部走新系统、纸质单财务不再收取"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算放在『没谈拢/待定』区，并写明需老板决策、会上未定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "负责人冯琳正确；截止先写『未约定』，10/30仅标为建议并在附注中请用户确认或删除"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "许诺认领『我今天就发』，纪要写10月20日当天"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周小川交上月打车票，周五换算为10/23（10/20为周二），正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两处两可：(1) A1 的截止列同时出现『未约定』和『建议 10/30 前』，按规则第5条字面可读作『会上没说却写了具体时间』=fabricated，但纪要已明确标注为建议并在附注中请用户确认/删除，故判 correct；规则宜补充『明确标注为推测并提示确认』的处理口径。(2) 结论2『新系统操作方式以手机拍照上传为主』源自冯琳『拍个照就行』，属系统现状描述而非拍板事项，按『陈述现状不算』未计入 extra_false_conclusions。另：纪要把『老员工/领导贴票习惯过渡』列入没谈拢，标准答案 open 为空（冯琳以『不习惯也得习惯』收口），此为额外新增的未决项，规则未对多列 open 作惩罚，但其中『可能出现卡单』『一对一辅导』属纪要自行补充的风险推断，转写稿无对应内容，建议作为提示而非事实呈现。",
+  "_meta": {
+    "cost": 0.09907700000000001,
+    "duration_ms": 31409
+  }
+}

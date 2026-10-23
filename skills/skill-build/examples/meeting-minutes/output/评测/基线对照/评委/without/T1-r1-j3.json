@@ -1,0 +1,78 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写\"积分商城 10月30日上线，已定档\"并列出前置节点"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论3写\"暂不决定加或不加\"，看完数据再定，并在未谈拢区重复说明"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论4明确写团建地点不在本次决策范围，仅记录投票安排与现有提议"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未谈拢区第1项完整记录孙晓提议、陈默性能顾虑、结论挂在数据上"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 赵一鸣，10月27日（周二）提测，与原话一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 王蕾，周四换算为10月22日正确（会议日10/19为周一）"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 孙晓，周五换算为10月23日正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5 负责人标\"待定（会上未指定）\"、时间标\"未定\"，与会上无人认领、无截止一致"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6 陈默，10月19日下午，与\"今天下午先修一下\"一致"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "积分商城测试执行（计划2–3轮）",
+      "why": "王蕾原话是\"想多测两轮\"\"给我两天吧，两到三天\"，\"2–3轮\"把天数误作轮数，转写稿无此依据"
+    }
+  ],
+  "confirm": [],
+  "critique": "标准答案与规则无明显问题。两处两可：一是待办5时间写\"未定，需在设计产出前确定\"带有推断成分，但主体标注了\"未定\"，按规则仍判 correct；二是纪要把\"数据组是否已有现成看板\"列入待明确项，标准答案未列为疑点，属于加分性质的额外提示，不影响判定。",
+  "_meta": {
+    "cost": 0.10207100000000001,
+    "duration_ms": 23602
+  }
+}

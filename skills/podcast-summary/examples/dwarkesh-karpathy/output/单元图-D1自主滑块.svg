@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="452" viewBox="0 0 1600 452">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z"/></marker></defs>
+<rect id="canvas" x="0" y="0" width="1600" height="452" fill="#efe7d4"/>
+<text id="t1" x="60" y="88" font-family="Noto Sans SC" font-size="26" font-weight="700" fill="#2e4a2a" text-anchor="start">D1 客服的自主滑块：AI 处理大部分量，人退到监督位</text>
+<rect id="r2" x="60" y="120" width="1184" height="96" rx="4" fill="#2e4a2a"/>
+<text id="t3" x="80" y="160" font-family="Noto Sans SC" font-size="22" font-weight="700" fill="#efe7d4" text-anchor="start">AI 处理</text>
+<text id="t4" x="80" y="192" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#efe7d4" text-anchor="start">80% 的量</text>
+<rect id="r5" x="1244" y="120" width="296" height="96" rx="4" fill="#e89cb1"/>
+<text id="t6" x="1264" y="160" font-family="Noto Sans SC" font-size="22" font-weight="700" fill="#243a21" text-anchor="start">转给人</text>
+<text id="t7" x="1264" y="192" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#243a21" text-anchor="start">20%</text>
+<rect id="r8" x="60" y="276" width="477" height="98" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t9" x="84" y="315" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">人的新位置</text>
+<text id="t10" x="84" y="344" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">一个人监督 5 个 AI 组成的小组</text>
+<rect id="r11" x="561" y="276" width="477" height="98" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t12" x="585" y="315" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">为什么客服先变</text>
+<text id="t13" x="585" y="344" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">任务简单、重复、上下文封闭、纯数字化</text>
+<rect id="r14" x="1063" y="276" width="477" height="98" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t15" x="1087" y="315" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">还要再等等看</text>
+<text id="t16" x="1087" y="344" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">公司可能换上 AI 后又回头招人</text>
+<text id="t17" x="60" y="410" font-family="Noto Sans SC" font-size="16" font-weight="400" fill="#1a1a17" text-anchor="start">比例是 Karpathy 的设想，节目里没有数据来源</text>
+</svg>

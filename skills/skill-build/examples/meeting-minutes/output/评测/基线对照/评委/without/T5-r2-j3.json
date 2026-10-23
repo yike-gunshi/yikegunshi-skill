@@ -1,0 +1,95 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写'优惠形式改为全场九折，满减不做'，并复述了邵军的11%核销率依据"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "满200减30仅作为'原方案'背景出现，结论明确为九折"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3写'白杨申请预算5万……金额待定见下'，并在未决区列为待财务核"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人只出现在未决区，标为马骁定下次会议再议"
+    }
+  ],
+  "extra_false_conclusions": [
+    {
+      "text": "投放渠道维持信息流 + 搜索",
+      "why": "渠道只是白杨申报方案中的一句描述，马骁全程只回应了预算要跟财务核，没有对渠道做出任何拍板或确认，'维持'的措辞把提案抬成了已定事项"
+    }
+  ],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未决区1写明白杨申请5万、马骁未当场拍板、下周一给准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未决区2写明达人合作提议、白杨反对理由、下次会再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办表'去年双十一分渠道转化数据整理 | 邵军 | 10/23（周五）'，与'明天给你'换算一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "'跟财务核投放预算 | 马骁 | 10/26（下周一）'，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿归白杨、10/25（周日）前，正确反映了会上从田甜改派给白杨"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "'按5万先出投放方案 | 白杨 | 待预算确认后调整'，未编造具体日期，等同于未说定"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "'短视频+九折口径文案 | 田甜 | 会上未定具体时间'"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "'客服话术更新为九折口径 | 未指派 | 未定'，并在附注中提醒补责任人和时间"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两点说明：（1）'投放渠道维持信息流+搜索'是否算虚假结论两可——它本质在复述白杨方案内容，而非凭空新增决定，但放在结论区并用'维持'一词确实超出了转写稿中的拍板范围，我按偏严判定；（2）纪要在未决区写达人'本次未讨论'与同句'田甜提出……白杨认为预算不够'自相矛盾，实际会上有简短讨论，属表述瑕疵而非编造，不单独计入 fabrications。标准答案本身与转写稿一致，无错误。",
+  "_meta": {
+    "cost": 0.116966,
+    "duration_ms": 38264
+  }
+}

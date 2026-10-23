@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写'优惠形式：全场九折，满减不做'，并说明是被邵军数据推翻"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区仅作为被推翻的历史陈述出现，现行方案写的是九折"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3标题即'投放预算待定'，注明需与财务核、下周一给准数"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "结论4写'本次不议，下次会上再讨论'，未作已定处理"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1条：5万 vs 去年3万，下周一出结论"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未达成一致第2条：田甜提出、白杨反对、搁置到下次会"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1邵军，10/23（周五）与'明天'一致，10-22为周四换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2马骁，10/26（周一）与'下周一'一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4海报初稿写白杨（改派后），10/25（周日）前与'周日之前'一致"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3白杨按5万出方案，标注'暂无明确截止'，会上确未说定"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5田甜短视频，标注'本次未定截止时间'"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6负责人与时间均标'未指定'，与会上无人认领、无截止一致，且附注提醒补齐"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案的 decided 只列了 D1，但转写稿中'海报给白杨吧'—'行，我来，周日之前给初稿'同样是会上明确拍板的决定（标准答案在 A3 的 owner 注释里也承认这是会上改派），纪要把它写进结论2 是正确的，不应被算作多余的已定项。另外纪要在未决区新增了'短视频数量与排期（双十一期间总量、交付节奏未定）'，转写稿只提到本周6条偏满，这条属于合理推断而非捏造事实，故未计入 fabrications，但严格说超出了会议讨论范围。",
+  "_meta": {
+    "cost": 0.10544100000000001,
+    "duration_ms": 28559
+  }
+}

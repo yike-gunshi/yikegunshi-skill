@@ -1,0 +1,48 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明11月1日起报销全走新系统、财务不收纸质单，并注明冯琳拍板、二人同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算/手机一等奖放在「没谈拢」区，并写明冯琳说了不算、下一步找老板"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1为冯琳整理操作说明发群，截止写「未说定」并附原话'回头'"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2许诺行政群通知，截止今天(10/20)，与许诺'我今天就发'一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3周小川交打车票，周五之前换算为10/23，2026-10-20为周二，换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "纪要「没谈拢」区多出第2条「老同事的纸质报销习惯」，标准答案的 open 为空。但转写稿中许诺确实提出该顾虑、冯琳只以'不习惯也得习惯'带过，未就过渡办法安排，列为未决并不违反任何规则（规则3只约束结论区），也未将其写成已定，故不扣。可视为对标准答案 open 的合理补充。",
+  "_meta": {
+    "cost": 0.069034,
+    "duration_ms": 14160
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "skill_name": "meeting-minutes",
+  "runs_per_query": 3,
+  "split": { "train": 0.6, "test": 0.4 },
+  "_说明": "8 条该触发 + 8 条不该触发（都是 near-miss：同样带转写稿、会议、纪要这些词，但实际要的是别的）。题里提到的文件在评测沙盒里都真实存在。调 description 时只看 train 的失败，按 test 选版本。演示中由 AI 按 Skill 的模板造题，没有经过真实用户逐条确认。",
+
+  "should_trigger": [
+    {"id": "t1", "split": "train", "why": "标准场景，正式措辞",
+     "query": "这是今天下午产品评审会的妙记转写 transcripts/1021-产品评审会.txt，帮我出一版会议纪要，结论、待办、遗留问题分开列，我要发项目群"},
+    {"id": "t2", "split": "train", "why": "同一意图的口语版，不带标点",
+     "query": "刚开完会 累死 妙记导出来了在 transcripts/周会1019.txt 帮我整理下纪要 发群里那种 待办别漏了 谁负责要写清楚"},
+    {"id": "t3", "split": "train", "why": "隐含需求：没说纪要两个字",
+     "query": "transcripts/客户对齐会.txt 你帮我看看，会上到底定了啥，谁要干啥，我怕漏了"},
+    {"id": "t4", "split": "train", "why": "抢活场景：像播客的对谈式复盘会，本 skill 该赢 podcast-summary",
+     "query": "我们部门上午开了个一个小时的复盘会，基本就是两个人对谈，转写在 transcripts/Q3复盘会.txt，帮我整理成会议纪要，后面要跟进的事列清楚"},
+    {"id": "t5", "split": "train", "why": "中英混说",
+     "query": "standup 的 transcript 在 transcripts/standup-1021.txt，整个 minutes，action items 要有 owner 和 ddl"},
+    {"id": "t6", "split": "test", "why": "直接粘贴转写文本，没有文件",
+     "query": "帮我把下面这段整理成会议记录，重点是谁负责什么、什么时候交：\n说话人1 00:00:12 嗯那个我们先说下周的上线，嗯\n说话人2 00:00:40 我这边接口周三能好，就是联调还差一点\n说话人1 00:01:05 行那就周四上线吧，小王你把上线公告写一下\n说话人3 00:01:20 好的我明天给\n说话人1 00:01:31 还有回滚方案，嗯，回头谁看一下"},
+    {"id": "t7", "split": "test", "why": "带着场景压力和防错要求",
+     "query": "老板让我每次开完会半小时内把纪要发群里，这次是供应商沟通会，转写稿 transcripts/供应商沟通会.txt，帮我弄一下，没定的事别写成定了"},
+    {"id": "t8", "split": "test", "why": "隐含需求：描述症状，没提纪要",
+     "query": "transcripts/双十一运营会.txt 这个会开完我脑子是乱的，你帮我理一下：哪些定了，哪些还悬着，每个人回去要干嘛"}
+  ],
+
+  "should_not_trigger": [
+    {"id": "n1", "split": "train", "why": "共享'转写稿''整理'，实际是播客学习笔记，归 podcast-summary",
+     "query": "我昨天听了一期商业播客，转写稿在 transcripts/播客-E88.txt，帮我整理成学习笔记，金句和要点都要"},
+    {"id": "n2", "split": "train", "why": "共享'录音转写'，实际是用户研究，要洞察不要待办",
+     "query": "interviews/ 下面是三个用户访谈的录音转写，帮我提炼用户痛点和需求洞察，做个汇总"},
+    {"id": "n3", "split": "train", "why": "共享'会议转写稿'，实际只要清洗逐字稿",
+     "query": "把 transcripts/周会1019.txt 里的嗯啊口头禅和重复都去掉，整理成通顺的逐字稿，内容一句都别删，我要存档"},
+    {"id": "n4", "split": "train", "why": "共享'纪要'，实际是多份纪要汇总周报",
+     "query": "minutes/ 里是这周五场会的纪要，帮我汇总成一份周报发老板，按项目分"},
+    {"id": "n5", "split": "train", "why": "共享'会议纪要''skill'，实际要造 skill，归 skill-build",
+     "query": "我每周都要把会议转写稿整理成纪要，能不能帮我把这个做成一个 skill，以后自动用"},
+    {"id": "n6", "split": "test", "why": "共享'录音转文字'，实际是课程转导图，归 book-to-mindmap",
+     "query": "这是一节线上课的录音转文字 transcripts/课程-第3讲.txt，帮我做成思维导图，xmind 格式"},
+    {"id": "n7", "split": "test", "why": "共享'会议'，实际是会前议程",
+     "query": "下周三要开项目启动会，帮我拟个会议议程和要讨论的问题清单，参会的有产品、研发、测试"},
+    {"id": "n8", "split": "test", "why": "共享'纪要'，实际是拿纪要写邮件",
+     "query": "根据 minutes/1021-客户对齐会纪要.md 给客户写一封跟进邮件，语气正式点，把双方要做的事列一下"}
+  ]
+}

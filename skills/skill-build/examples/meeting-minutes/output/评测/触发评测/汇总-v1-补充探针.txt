@@ -1,0 +1,8 @@
+题号   集合     应触发    触发次数     去向（每次）
+p1   probe  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+p2   probe  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+
+train  正例触发 0/0 · 负例误触发 0/0
+test   正例触发 0/0 · 负例误触发 0/0
+全部     正例触发 2/2 · 负例误触发 0/0
+按单次运行算：正例 6/6 次触发，负例 0/0 次误触发

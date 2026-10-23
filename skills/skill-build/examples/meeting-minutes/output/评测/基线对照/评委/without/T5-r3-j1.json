@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写'优惠方式改为全场九折，满减不做'"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "满200减30仅作为'原定'背景出现，结论是'满减不做'"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3写'投放预算未定'，待办中5万标注为'暂按'"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人合作列在待定区，注明'本次未形成结论'"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "待定区1条写预算给多少、取决于财务、下周一出准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "待定区2条写是否做达人合作、下次会再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "邵军，10/23（周五），'明天'换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "马骁，10/26（周一），'下周一'换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿记为白杨、10/25周日前，与改派后一致"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "白杨按5万做方案，写'时间未明确'并把10/26标为建议而非会议决定"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "田甜短视频，时间未明确"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "客服话术标'暂无人认领'、时间'未定'，与会上无人应声一致"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "A4 的处理属边界：纪要在'未明确'之外附了'建议定在 10/26 前'，但已明确标为建议、且与会议决定分离，按规则不计为 fabricated。另外纪要把'客服话术谁来更新'同时放进待办和待定区，规则未规定此类重复出现是否扣分，本次按未虚报已定处理。",
+  "_meta": {
+    "cost": 0.09264100000000002,
+    "duration_ms": 23291
+  }
+}

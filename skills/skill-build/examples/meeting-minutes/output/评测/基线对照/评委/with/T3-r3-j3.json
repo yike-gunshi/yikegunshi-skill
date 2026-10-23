@@ -1,0 +1,63 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明首响4小时，说话人1拍板、2和3同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "外包仅出现在'没谈拢'区，并注明'先放着，先问报价再议'，附注也明确说明未写进结论"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "'没谈拢的问题'第1条完整记录三方立场及'先放着、先问报价'"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1写说话人2做自动提醒，截止下周三（10/28），与'我来吧…下周三之前弄好'一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3写说话人2问外包报价，截止标注'未说定'"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2写说话人3（会上称小蒋），截止周五（10/23），10/21为周三，换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "纪要额外列出的'查投诉具体数量（说话人3）'属标准答案 neutral 项，负责人与截止均处理得当，不算多余待办；另加的'晚间是否增加人力'未决项也有转写依据（'再看晚上要不要调人'），不构成问题。标准答案无误。",
+  "_meta": {
+    "cost": 0.076568,
+    "duration_ms": 14594
+  }
+}

@@ -1,0 +1,2621 @@
+{
+  "with/T1-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [
+        {
+          "text": "积分商城测试，两到三轮（截止：提测后 2–3 天……）",
+          "why": "王蕾原话是「多测两轮……给我两天吧，两到三天」，「两到三轮」在转写稿中无依据，轮数与天数被混用；天数部分无误"
+        }
+      ],
+      []
+    ],
+    "critique": [
+      "两点小瑕疵（均未达扣分项标准）：待办3把王蕾原话'多测两轮…两到三天'写成'两到三轮'，轮次与天数略有混淆；其余换算与归类准确。标准答案confirm为空，但纪要把'签到数据来源（数据组看板是否存在）'单列为未决并提醒确认，属合理增量，可考虑在标准答案中补为疑点项。",
+      "结论第2条（10/27提测、测试留2–3天）在标准答案里未列为 decided，而是归入 A1 截止与 neutral；但转写稿中林舟确有「27号提测，好」「一鸣你27号务必提测啊」的明确要求，把它写进结论区属于两可，本次未计为 extra_false_conclusion。另：纪要额外增设未决项「签到历史数据从哪取」，标准答案无此项，但有转写稿依据（林舟「好像有，也好像没有，回头再说」），属合理补充。",
+      "结论2（27号提测、测试留2–3天）标准答案未列入decided，但转写稿中林舟确认'27号提测，好''务必提测'、王蕾认同2–3天，视为D1的执行细节而非虚假已定，故未计入extra_false_conclusions；待办3（王蕾执行测试）属标准答案neutral项，截止写法符合允许范围。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T1-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "积分商城提测后执行两到三轮测试",
+          "why": "王蕾原话是「多测两轮」「两到三天」，转写稿无「两到三轮」的说法，把天数混成了轮数"
+        }
+      ],
+      [
+        {
+          "text": "积分商城提测后执行两到三轮测试",
+          "why": "王蕾原话是「多测两轮」「两到三天」，「两到三轮」把天数误写成轮数，转写稿无此说法（属轻微失真）"
+        }
+      ],
+      [
+        {
+          "text": "王蕾：积分商城提测后执行两到三轮测试",
+          "why": "王蕾原话是「想多测两轮」「给我两天吧，两到三天」，「两到三」修饰的是天数而非轮数，转写稿没有「两到三轮」的说法"
+        }
+      ]
+    ],
+    "critique": [
+      "标准答案无误。纪要把 neutral 里的「王蕾执行测试」和「团建行政统计」都写成待办并标注未说定，符合规则允许范围；唯一可挑的是「两到三轮」这个数字由「两到三天」误转，属轻微失真而非实质编造，判定上略偏两可。",
+      "标准答案无明显错误。两点可商量：(1)「两到三轮测试」只是把「两到三天」误作轮数，严格按规则属无依据数字，但影响很小，按实质理解也可不计；(2) 团建统计一条，会上林舟明确说「让行政去统计」，纪要写「负责人待定」并在括注里保留原话，标准答案将其列为 neutral，未给出判定口径，此类「指向会外角色」的归属最好在规则里明确算 correct 还是 over_flagged。",
+      "结论第1条把「测试排在 10 月 29–30 日」并入已定事项，严格说林舟只说了「那就是 29、30 号这样」属排期推算而非单独拍板，但它依附于 30 日上线这个确定结论，按规则不单列为伪结论。另外标准答案把团建统计归入 neutral，而本纪要同时写进待办（负责人待定）和没谈拢区，两处处理都未把地点写成已定，判为未踩陷阱。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T1-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      [
+        {
+          "text": "积分商城测试安排两到三轮，排在 10/29–10/30（林舟拍板）",
+          "why": "林舟只是顺口推算「那就是 29、30 号这样」用以推导上线日，并未拍板测试排期；标准答案也只把它列为可写成待办的 neutral 项，纪要已在待办3写过，再升格进结论区并标注「林舟拍板」属于拔高"
+        }
+      ]
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "积分商城测试安排两到三轮，排在 10/29–10/30（林舟拍板）",
+          "why": "王蕾原话是“多测两轮”“给我两天吧，两到三天”，转写稿中没有“两到三轮”的说法；林舟只说“那就是29、30号这样”作推算，并未就测试轮次“拍板”"
+        }
+      ],
+      [
+        {
+          "text": "结论2「积分商城测试安排两到三轮，排在 10/29–10/30（林舟拍板）」",
+          "why": "王蕾原话是「想多测两轮」「给我两天吧，两到三天」，转写稿中没有「两到三轮」的说法；且林舟只说「那就是 29、30 号这样」，并未就测试轮次/排期单独拍板，「林舟拍板」属拔高"
+        }
+      ],
+      [
+        {
+          "text": "积分商城测试安排两到三轮",
+          "why": "转写中王蕾说的是「多测两轮」「给我两天吧，两到三天」，没有「两到三轮」这个说法，轮次与天数被混为一谈"
+        }
+      ]
+    ],
+    "critique": [
+      "结论区第2条（测试排期）属于两可：标准答案 neutral 已允许把王蕾执行测试写成待办并填29、30号，纪要同时在待办3写了同一件事，放进结论区更像排期安排而非凭空拍板，故按“待办写进结论区不算”未计入 extra_false_conclusions；但其中“两到三轮”把原话的“两到三天”误记为轮次，且加注“林舟拍板”略有拔高，已计入 fabrications。此外纪要在“没谈拢”区多列了“签到历史数据从哪取”，标准答案无此项，但有转写稿依据（林舟“好像有，也好像没有，回头再说”），不作扣分项。",
+      "结论2是否构成 extra_false_conclusion 两可：它本质上是待办3（王蕾执行测试）的排期，按规则3「把待办写进结论区也不算」我未计入；但其中「两到三轮」与「林舟拍板」确有与转写稿不符之处，故按规则6单列为编造。另：标准答案 neutral 已覆盖该项，对纪要把它放进结论区未给明确倾向，建议后续标准答案对这类「排期类附带项」给出归属指引。",
+      "结论2的判定两可：它所含的时间窗（10/29–10/30）确实源自林舟原话「那就是 29、30 号这样」，并且是 10/30 上线这一决议的内在推导环节，按宽松标准可视为决议的附属说明而非独立的伪结论；本次按严格口径计入 extra_false_conclusions，主要因为它被单列为结论并标注「林舟拍板」，且把「两到三天」误写为「两到三轮」。另外，标准答案 neutral 中「王蕾执行测试」一项已被纪要写成待办3，处理得当，该项未纳入 todos 评分。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T2-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "纪要把 A4 拆成两条（待办5『郑佳跟部门碰一下定由谁做』+ 待办6『出名单，负责人待定』），两条都有转写稿依据，不构成编造或重复计分，但规则未明确此类拆分如何处理；附注中『建议发群时@郑佳』属于写给用户的操作建议而非会议决定，按规则亦不计入编造。",
+      "纪要待办第5条（郑佳跟部门碰一下确定名单由谁做）标准答案未列，但确有转写稿依据（郑佳原话），属合理拆分，不计为多余结论或编造。",
+      "纪要把 A4 拆成两条（待办5'郑佳跟部门碰一下定由谁来做'与待办6'出名单，负责人待定'），严格说待办5 给郑佳派了一个转写稿里并未明确认领的协调动作（郑佳只说'我回去跟我们部门碰一下'，可算自述认领），属两可；本次按有原话依据、不视为编造或 wrong_person 处理。另外标准答案 A4 的 owner 判定依赖'销售这边出一下'是否算指向郑佳，规则下'待定'与'郑佳'两种写法都可能被接受，建议标准答案显式说明这点。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T2-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "伴手礼一条在没谈拢区写「下一步：周岚定为'下次再说'」措辞略拗口，但不构成把X4写成已定；其余判断无两可之处。",
+      "两处可商榷但不影响判定：一是「没谈拢」第4条'下一步：周岚定为\"下次再说\"'表述别扭，伴手礼实际是被周岚搁置而非待议，不过标准答案 neutral 已允许写入未决区；二是第3条中'与预算额度绑定'是纪要的合理推断（会上未明说家数与预算挂钩），属弱化的书面归纳，尚不构成编造。",
+      null
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T2-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      null,
+      "标准答案无明显错误。两点可议：一是纪要额外拆出「待办5：郑佳回部门碰一下确定名单由谁做」，与 A4 部分重叠，但有郑佳原话支撑，不算编造或重复计分；二是结论区写「吴凯同意」场地，转写稿为「我都行」，属无异议的合理书面化。",
+      "纪要把'回部门碰一下确定名单由谁做'（待办5）与'出名单'（待办6）拆成两条，标准答案只有 A4 一条；该拆分有转写稿依据（郑佳原话），不算编造，仅属更细的颗粒度。另：标准答案 neutral 已允许伴手礼进'没谈拢'，本纪要正是如此处理。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T3-r1": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "工单首次响应时效定为 4 小时，白天夜间统一适用",
+          "why": "转写稿只说“首响就按四个小时”，并紧接着说“晚上的单我们另外想办法”，“白天夜间统一适用”是纪要新增的范围断言，与纪要自己在未决区列的“夜间如何满足4小时首响未定”亦有张力"
+        }
+      ],
+      [],
+      [
+        {
+          "text": "工单首次响应时效定为 4 小时，白天夜间统一适用",
+          "why": "转写稿只说「首响就按四个小时，定了」，并补充「晚上的单我们另外想办法」，并未说白天夜间统一适用；纪要自己在未决区也承认夜间如何达标未定，前后自相矛盾"
+        }
+      ]
+    ],
+    "critique": [
+      "两点：1) “白天夜间统一适用”属两可——可理解为对“定了啊”的概括，但转写稿未排除夜间例外，且说话人1明说夜间另想办法，故仍按加码计入编造；2) 标准答案把投诉数核查列为 neutral，纪要将其写为待办4并挂说话人3、截止未说定，符合 neutral 允许的处理方式，不计入错误；标准答案的日期换算（10/28、10/23）经核对无误。",
+      "结论1中'白天夜间统一适用'属于纪要添加的推断：转写稿只有'首响就按四个小时，定了啊。晚上的单我们另外想办法'，未明说夜间同样适用。考虑到未设例外且纪要在未决区另列'夜间如何满足4小时首响'，我按合理书面化处理，未计为编造，但属两可，可提示撰写者弱化。另外纪要把说话人3'具体我得查一下'列为待办4（负责人说话人3、截止未说定），与标准答案neutral项的处理建议一致，不扣分。",
+      "标准答案与转写稿一致，日期换算（10/21为周三、周五=10/23、下周三=10/28）核对无误。纪要额外把说话人3查投诉数写成待办4，属标准答案 neutral 允许范围且负责人正确，不扣分。唯一瑕疵是结论区自行添加的「白天夜间统一适用」限定，与会上「晚上的单另外想办法」相抵触，按编造计。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T3-r2": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案的日期换算可核实无误（2026-10-21 确为周三，周五=10/23、下周三=10/28）。纪要在'没谈拢'区多列了两条（夜班内部调人、晚八点后覆盖方案），均有转写依据且属未决事项，按规则不扣；neutral 项（投诉数待查）纪要写成待办并归给说话人3，与标准答案的建议一致。",
+      "纪要把'小蒋/小江'直接等同于说话人3，转写稿只有小蒋答'好的好的'这一间接证据；不过纪要同时在会后确认区点出了两种写法需核实，按标准答案口径可接受。另：纪要新增的'查投诉具体数量'待办属标准答案neutral项，负责人写说话人3正确，不扣分。",
+      "纪要在'没谈拢'区多列了两项（夜班是否调内部人力、晚八点后覆盖方案），转写稿中确有依据（'再看晚上要不要调人''另外想办法'），属合理补充，现行规则对未决区的多余条目无惩罚也无奖励，判断上无歧义但规则未覆盖。另外纪要把'小蒋/小江'等同于说话人3，与标准答案一样属推断，纪要已在确认区点出，不计为编造。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T3-r3": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "纪要额外把'查投诉数'列为说话人3的待办，属标准答案neutral项且负责人正确，不扣分；额外新增的'晚间是否增加人力'未决项也有转写稿依据（'再看晚上要不要调人'）。另注：转写稿中说话人3说的是'一百七十多单超时'，纪要归属正确。",
+      "标准答案与转写稿一致，无误。纪要多列的'查投诉具体数量'（说话人3）属标准答案neutral项，处理得当；多列的开放项'晚间是否增加人力'也有转写稿依据（'再看晚上要不要调人'），不构成编造。另：纪要把'小蒋'对应到说话人3，与标准答案的推测一致且已在会后确认区提示，不算 wrong_person。",
+      "纪要额外列出的'查投诉具体数量（说话人3）'属标准答案 neutral 项，负责人与截止均处理得当，不算多余待办；另加的'晚间是否增加人力'未决项也有转写依据（'再看晚上要不要调人'），不构成问题。标准答案无误。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T4-r1": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案 open 为空、neutral 允许把年会抽奖写进'没谈拢'，纪要正是这么处理的，因此该条既不计漏项也不计误判为已定，判断一致；纪要在'没谈拢'区写的'下一步：找老板确认（会上未指定由谁去找）'属于合理备注，不构成待办或编造。",
+      "标准答案 open 为空、但 neutral 允许把年会抽奖预算写进「没谈拢」，纪要正是这么写的，按 neutral 处理不扣分；此处规则略有两可，建议标准答案直接把它列为可选 open 项。",
+      "标准答案 open 为空数组，但 neutral 注明年会抽奖可写进“没谈拢”；本纪要正是这样处理的，故不按多余未决项扣。另纪要在“没谈拢”里加了“下一步：找老板确认（会上未指定由谁去找）”，这是对冯琳原话的忠实延伸、且明确标注无人认领，不构成伪造承诺或虚假待办。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T4-r2": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "附注称「老同事习惯贴票的担忧已收口，所以归入结论」措辞不严谨——结论区实际并未写这一条，只写了D1，故按规则3不计入虚假结论；标准答案的 neutral 项（年会预算可写进没谈拢）与纪要处理一致，无冲突。",
+      "标准答案 open 为空，但 neutral 已明确允许把年会抽奖预算放进'没谈拢'，纪要这样处理不应算扣分项；此外纪要附注中'老同事贴票担忧已收口，归入结论'的表述略含歧义，但结论区并未因此新增未拍板条目，故不计为 extra_false_conclusions。",
+      "附注中'老同事习惯贴票……归入结论'措辞略含糊（结论区并未单列该条），但结论区实际未新增未拍板项，不影响判定；标准答案与规则本身无问题。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T4-r3": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案 open 为空、但 neutral 已注明「年会抽奖预算写进没谈拢也可以」，纪要将其列入没谈拢区属于标准答案允许的中性处理，不扣分；此处规则对「陷阱项同时被允许写进没谈拢区」的两可情形依赖 neutral 字段消解，建议标准答案直接把该项列为 O 项或明确其双重身份。另：许诺对「老同事贴票习惯」的顾虑在会上被其本人『好，那就这么来』收口，纪要将其归入结论并在附注说明，判断合理。",
+      "标准答案 open 为空，但 neutral 已说明年会抽奖可记入「没谈拢」，纪要按此处理合理；此处与「traps 不得写成已定」并无冲突，判定无歧义。",
+      "两点可商议：1) 标准答案 open 为空，但 neutral 允许把年会抽奖预算写进「没谈拢」，纪要正是这样处理，按规则不扣分，此处标准答案与 neutral 的边界略模糊；2) 纪要称「许诺、周小川倾向把手机作为一等奖」，转写稿中确有许诺「我觉得可以搞个手机当一等奖」与周小川「对对对，手机好」，属合理概括，不算编造。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T5-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案的 decided 只列了优惠口径一条，但转写稿 00:06:33–00:06:51 马骁明确拍板'海报给白杨吧'、白杨应'我来'，这同样是会上拍定的分工变更；纪要把它写进结论区是合理的，不应按 extra_false_conclusions 扣。建议标准答案补一条 D2 或在 A3 备注中说明该项同时构成结论。",
+      "标准答案的 decided 只列了 D1，但转写稿中'海报给白杨、田甜专心做视频'同样是马骁拍板且白杨应下的明确决定（并已体现在 A3 的改派里），纪要把它写进结论区是合理的，故未计入 extra_false_conclusions；建议标准答案补一条 D2。",
+      "标准答案的 decided 只列了一条（九折），但转写稿里「海报改由白杨出、田甜专心做视频」同样是马骁当场拍板且白杨应下的决定（00:06:33–00:06:51），标准答案把它只折进 A3 的负责人改派。待评纪要把它写进结论区是合理的，故不计入 extra_false_conclusions。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T5-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案的 decided 只列了 D1，但转写稿中'海报从田甜改派给白杨、田甜专心做视频'同样是马骁当场拍板且白杨应承的决定（00:06:33–00:07:02），纪要把它写进结论区并无不当，标准答案的 decided 清单略有遗漏；按规则3不计为虚假结论。",
+      "标准答案的 decided 只列了优惠方案一条，但转写稿里'海报从田甜改派给白杨、田甜专心做视频'同样是马骁当场拍板且白杨应承的决议（00:06:33–00:07:02），纪要把它写进结论区是有依据的，不应算 extra_false_conclusions；建议标准答案补一条 D2，或至少在 neutral 中说明。",
+      "标准答案的 decided 只列了 D1，但转写稿中「海报改由白杨出、田甜专心做短视频」同样是马骁当场拍板且白杨应承的决定（00:06:33–00:07:02），纪要将其写入结论区是合理的，不应按规则3记为多余的假结论；建议标准答案补一条 D2，否则该条目在评分上两可。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with/T5-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案的 decided 只列了九折一条，但转写稿中\"海报给白杨吧\"—\"行，我来，周日之前给初稿\"同样是当场拍板并应下的决定，纪要把它写进结论2 是合理的，不应被当作多余结论。建议标准答案补一条 D2（海报改派给白杨），否则该项易被误判为 extra_false_conclusion。",
+      "标准答案的 decided 只列了 D1，但转写中'那海报给白杨吧'—'行，我来'同样是会上拍板的分工调整（标准答案自己在 A3 里也承认是会上改派）。纪要把它写进结论区属于有依据的真结论，因此未计入 extra_false_conclusions；建议标准答案补一条 D2。",
+      "标准答案的 decided 只列了优惠方式一条，但转写稿里'海报改派给白杨、田甜专注短视频'（马骁提出、白杨应下）同样是当场拍板的决定；纪要把它写进结论区是合理的，故未计入 extra_false_conclusions。建议标准答案补一条 D2。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T1-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案无误；纪要把 neutral 项（王蕾执行测试、团建行政统计）写成待办且负责人标注谨慎，按规则不算问题。标准答案 confirm 为空，而纪要主动列了三条确认点（测试时长口径、数据谁拉、白屏是否已修），属于加分性质的谨慎处理，规则中无对应评判项。",
+      "两点小意见：(1) 标准答案 decided 只列了上线日期，但林舟对「先看数据再定加不加」其实也是明确拍板的流程性决定，纪要把它写进结论区是合理的，按现行规则不扣分但标准答案可考虑补一条；(2) 纪要待办7把「让行政去统计」写成「负责人待定（会上提到让行政去统计）」，既未编造具体人名也保留了原话，符合 neutral 项要求。",
+      "标准答案 confirm 为空，但纪要主动提示了王蕾'两天/两到三天'口径不一致、数据组看板是否已有等确认点，属于加分而非失分项；另纪要把 neutral 项（王蕾执行测试、团建统计）都按标准答案允许的方式处理，截止'10/29–10/30'符合 neutral 说明。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T1-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "纪要把'签到数据从哪取'与'团建去向'也归入'没谈拢'区，严格说这两项更接近'未落实/待办'而非立场分歧，但均未被写成已定，不影响陷阱与结论判定；另标准答案 neutral 中的王蕾执行测试一项，纪要写了并标注林舟推算的10/29–10/30，属合规处理。",
+      null,
+      "两处边界说明：一是纪要把'签到历史数据从哪取'单列为未决项，标准答案未列但确有依据（林舟'好像有，也好像没有，回头再说'），不应算多余；二是团建同时出现在待办和未决区，标准答案 neutral 已允许写进待办，且未指派具体人、只照搬'让行政统计'原话，不构成编造。标准答案本身与转写稿无冲突。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T1-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案的 decided 只列了「10/30 上线」一条，但转写稿里「27 号提测」同样经过林舟确认并要求「务必提测」，纪要把它写进结论区是合理的，不应被当作多余的已定项；建议标准答案把提测日期并入 D 项或列入 neutral。另外纪要待办3把「两到三天」换算为 10/29–10/30，并同时在会后确认里指出测试期与上线日撞在 10/30，与标准答案 neutral 项允许的写法一致，属加分而非错误。",
+      "纪要结论2（10/27 提测、测试 2–3 天）本质是排期安排而非新决议，但会上林舟确有拍板（「一鸣你 27 号务必提测啊」/赵一鸣应下），按规则3「把待办写进结论区也不算」，未计为假结论。另外待办3「提测后执行测试，截止 10/29–10/30」落在标准答案 neutral 允许范围内，也未扣分。标准答案本身与转写稿一致，无错误。",
+      "两点可商议：(1) 纪要结论2「10/27 提测、测试 2–3 天」被我判为可接受的已定项——林舟两次确认「27 号务必提测」且赵一鸣应下，属实际拍板，标准答案 decided 只列 D1 略有遗漏；若严格按标准答案字面比对，这条会被误判为 extra_false_conclusion，故规则 3 在标准答案 decided 不完整时容易产生两可判断。(2) 纪要把「团建地点」「谁拉数据」放进「没谈拢」区，标准答案将团建归为闲聊陷阱而非 open 项，这属于合理扩展、不构成错误，但规则未明确此类归类是否扣分。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T2-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "结论2属两可边界：'方案先按12万编制'有周岚原话支撑（'方案你可以先按十二万做'），但与陷阱 X2（预算定12万）高度相邻；该纪要已加'预算金额本身尚待审批'并在未决区重复说明，故按非误判处理。另：附注称'待办1的截止日就是今天（10/22）'与评审日期一致，属正确提示而非编造。",
+      "结论2（方案先按12万编制）属两可：它既对应标准答案的待办A5（周岚确实说'方案你可以先按12万做'），又紧贴陷阱X2的措辞。本评审认定其不算把X2写成已定，因为纪要同句明确写了'预算金额本身尚待审批'且没谈拢区重复说明需刘总批。若标准答案希望这类'已拍板的动作性结论'只出现在待办区，应在规则中明确。",
+      "标准答案的 X2 表述为'经销商邀请预算定为12万'，而转写稿中周岚确实拍板了'方案你可以先按十二万做'——'按12万做方案'本身是一项已获许可的动作，与'预算定为12万'是两件事。本纪要把前者写进结论并显式标注预算待审批，我判为未落入陷阱；但若评判从严、认为结论区出现'12万'即算踩坑，则存在两可空间，建议标准答案把 X2 措辞收紧为'预算金额已定为12万'以避免歧义。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T2-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案无误。唯一两可处：结论2「经销商邀请方案先按12万预算编制」与陷阱 X2（预算定为12万）字面接近，但转写稿中周岚确有'方案你可以先按十二万做'的明确指示，且纪要紧跟'实际预算能否批下来另说'并在没谈拢区列出预算分歧，故不判为把 X2 写成已定；严格说该条属于待办(A5)而非结论，放在结论区略显冗余，但按规则不扣。",
+      "结论2「方案先按12万编制」属两可：它确实是周岚当场给出的指令（「方案你可以先按十二万做」），且纪要明确切割了「预算批不批另说」，故不判为把陷阱X2写成已定；但同一事项同时出现在结论区与待办区（A5），严格看略有重复。标准答案其余部分与转写稿一致，无误。",
+      "X2 的判定存在两可：周岚确实拍板'方案你可以先按十二万做'（即 A5），而标准答案的陷阱是'预算定为12万'。本纪要把这条放进结论区但明确加了'实际预算能否批下来另说'，与转写稿一致，故不计为写成已定；若纪要只写'预算12万'则应算踩陷阱。此外该条同时出现在结论与待办中，略有重复但不构成错误。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T2-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      null,
+      "A3 的截止栏用原话'找个机会跟刘总聊一下'代替'未说定'，严格说不是标准写法，但未捏造具体时间、读者不会误读，按规则判 correct。另附注中称吴凯周四答复'今天'——会议日期10/20为周二，周四应是10/22，与当前日期巧合一致，不构成错误。",
+      "A3 截止处写成“原话‘找个机会跟刘总聊一下’”而非直接写“未说定”，严格看属于略含糊但不构成编造具体时间，按规则判 correct；附注中“吴凯周四（今天）的答复”依当前日期 2026-10-22 成立，非臆造。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T3-r1": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "两点小瑕疵不足以计为编造但值得指出：（1）纪要称说话人2'两次提出\"晚上的单可能会超\"'，该原话只出现一次（00:01:58），另一次是00:00:51的'晚上八点以后基本没人接'，引号内容与次数不完全对应；（2）纪要给137单标注时间戳'00:03'，实际出自00:00:03那段发言的末尾，标注略粗但无实质错误。标准答案本身与转写稿一致，137/170多单的矛盾确实存在且已被纪要捕捉。",
+      "纪要额外列出的'4小时首响对夜间是否适用'属标准答案未覆盖但转写稿确有依据（说话人2两次提'晚上的单可能会超'，说话人1说'另外想办法'），应算合理补充而非扣分项；待办5（排班表出来后复看是否调人）同理，有原话支撑且负责人标待定，不算编造。标准答案把'查投诉数'仅列为neutral，而纪要将其列为待办并指派说话人3，符合neutral说明。",
+      "标准答案的 open 只列了外包一项，但转写稿中说话人2明确提出「四个小时行，就是晚上的单可能会超」、说话人1回「晚上的单我们另外想办法」，夜间工单是否适用 4 小时首响确实未收口；纪要把它单列为未决项属于合理补充，不应视为多写。另，标准答案 neutral 项（投诉数待查）纪要已落成待办并归到说话人3，处理得当。纪要在引用时间戳时把「00:00:03」写作「00:03」，属格式小瑕疵，不影响判断。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T3-r2": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "纪要额外列的第4条待办（说话人3查投诉具体数量）对应标准答案 neutral 项，负责人与截止标注均无误，不扣分。'没谈拢'区多出的第1条'夜间工单无人接'是对 O1 的拆分重述，与 O1 部分重叠但不构成错误。",
+      "纪要额外把'夜间工单无人接、只说另外想办法'单列为未决项，并把说话人3查投诉数列为待办（owner正确、截止标未说定），均有转写稿依据，属标准答案neutral/未穷举范围，不扣分。另：纪要在确认区断言'小蒋'与'小江'指同一人，这是推断而非原文，但同时请当事人确认，处理得当，不计编造。",
+      "两点小注记：(1) 转写稿并未明说'小蒋/小江'就是说话人3，纪要把A3负责人直接写成'说话人3'属于推断，但已附'会上被称小蒋'并在确认区提示叫法问题，按标准答案允许'小蒋（说话人3）'的口径判为correct；(2) 标准答案的neutral项（说话人3查投诉数）纪要写成了待办4并署说话人3、截止未说定，符合neutral描述，不扣分。纪要额外新增的'夜间工单无人接'未决项有转写稿依据（'晚上的单我们另外想办法'），属合理补充。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T3-r3": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案把外包同时列为陷阱X1和未决O1，判定上无冲突但存在重叠；另纪要额外列的'夜间是否增加人力'未决项与'小江排的表出来后再看晚上要不要调人'原话相符，不属编造。",
+      "两点说明：(1) 纪要在'没谈拢'区多列了'夜间是否增加人力'，转写稿末尾'那小江排的那个表出来以后，我们再看晚上要不要调人'确有依据，标准答案未收录但不应视为编造或虚假结论；(2) A3 的负责人，标准答案自己也承认'小蒋'与说话人3的对应关系转写稿没有明说，纪要写'说话人3'并同时标注了待确认，按规则判 correct，但严格说这是推断而非转写稿直述。",
+      "标准答案中 X1（外包）与 O1 实质是同一件事的两面，判定时易重复计分。另：纪要新增的'夜间是否增加人力（等排班表出来再看）'虽不在标准答案中，但有转写稿依据（'那小江排的那个表出来以后，我们再看晚上要不要调人'），应视为合理补充而非扣分项；投诉数核查作为 neutral 项纪要也按说话人3归属处理，符合标准答案提示。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T4-r1": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案 open 为空，而纪要把年会抽奖放入'没谈拢'区——这与标准答案 neutral 中'年会抽奖预算写进没谈拢也可以'一致，不应视为失分；此处规则下 traps 判定与 open 区归属存在重叠，但按既有规则该写法不构成写成已定。",
+      "标准答案 open 为空、同时在 neutral 里允许把年会抽奖预算写进「没谈拢」，两种处理都不扣分；本纪要写入「没谈拢」属 neutral 允许范围，故 open 判空数组而非视为多写。另外纪要末尾「会后需确认」只是建议补发时间，不构成对转写稿外事实的编造。",
+      "标准答案 open 为空数组，但 neutral 已注明年会抽奖写进「没谈拢」可接受，故纪要把它列入未决不扣分；此处规则对 open 区多出的合理条目没有明确判法，建议标准答案把该项列为可选 open 项以减少两可。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T4-r2": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "纪要在「没谈拢」区多列了一条「老同事的纸质报销习惯」，而冯琳已用「不习惯也得习惯」实质驳回、三人随后一致同意改制，严格说这不是未决分歧；但该项被明确标注为「会上未就过渡办法做安排」，未被写成已定结论，且现行规则对「多列的未决项」没有扣分位，故未计入任何负面判项。",
+      "纪要在“没谈拢”区多列了一条“老同事的纸质报销习惯”，标准答案的 open 为空。但转写稿中许诺确实提出该顾虑、冯琳仅口头带过未作过渡安排，列为未决合理，且未写入结论区，不构成虚假结论，故不扣。另：标准答案 neutral 已允许年会预算列入未决，纪要处理与之一致。",
+      "纪要「没谈拢」区多出第2条「老同事的纸质报销习惯」，标准答案的 open 为空。但转写稿中许诺确实提出该顾虑、冯琳只以'不习惯也得习惯'带过，未就过渡办法安排，列为未决并不违反任何规则（规则3只约束结论区），也未将其写成已定，故不扣。可视为对标准答案 open 的合理补充。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T4-r3": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "A1 的截止写成「截止：回头」略显生硬——严格说「回头」不是时间，但它是会上原话且附注与「会后需确认」都明确指出未定时间、未代估日期，按规则（只写原话不换算也算对）判 correct。其余判断无歧义；标准答案与转写稿一致。",
+      "标准答案 open 为空而 neutral 允许把年会抽奖预算列入「没谈拢」，纪要正是这样处理的，按规则既不扣分也无对应 open 条目可判；另纪要自行增加的「操作说明建议补日期」提醒属合理增益，标准答案 confirm 为空，不影响判定。",
+      "A1 的「截止：回头」属原话照录而非具体日期，按规则判 correct；若要求待办区必须显式写「未说定」，此条存在两可空间，但纪要已在附注与「会后需确认」中明确标出无时间，判为合格。另：标准答案 neutral 允许年会预算入「没谈拢」，纪要正是如此处理，未扣分。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T5-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "2026-10-22（周三）",
+          "why": "2026年10月22日为星期四，转写稿无星期信息，纪要自行补成周三且与事实不符（下文'下周一=10/26'的换算反而是按周四算的，前后矛盾）"
+        }
+      ],
+      [
+        {
+          "text": "2026-10-22（周三）",
+          "why": "转写稿只给了日期未给星期，2026-10-22 实为周四，纪要标注的星期与事实不符（下文的 10/23、10/25、10/26 换算仍按周四推算，自相矛盾）"
+        }
+      ],
+      [
+        {
+          "text": "2026-10-22（周三）",
+          "why": "2026-10-22 实为星期四，转写稿未提星期，纪要自行补了错误的星期"
+        }
+      ]
+    ],
+    "critique": [
+      "标准答案的 decided 只列了优惠方式一条，漏了会上同样明确拍板的'海报改由白杨负责、田甜专心做视频'（马骁'那海报给白杨吧'+白杨'行，我来'），纪要把它写进结论区是正确的，因此未计入 extra_false_conclusions。此外纪要开场白称'一处改过口、一处改派，都按最后一次为准'与正文一致，不构成额外问题。",
+      "标准答案的 decided 只收录了 D1，但转写稿中'海报给白杨吧'→白杨'行，我来'同样是会上明确拍板并认领的改派决定，纪要把它写进结论区是合理的，不应按 extra_false_conclusions 处罚；建议标准答案补一条 D2 或将其标为 neutral，否则该判断两可。",
+      "标准答案的 decided 只列了优惠方式一条，但'海报改由白杨负责、田甜专心做视频'在会上同样由马骁拍板并被白杨认领（'那海报给白杨吧'—'行，我来'），纪要把它写进结论区应视为合理，而非多余的已定项；建议标准答案补一条 D2，否则该条容易被误判为 extra_false_conclusion。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T5-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案 decided 只列了 D1，但转写稿中'海报给白杨吧'—'行，我来'同样是会上明确拍板并认领的决定，纪要结论2写入是合理的，不应被视为多余结论；建议标准答案补一条 D2。",
+      "标准答案的 decided 只列了优惠形式一条，但转写稿中「海报改由白杨做、田甜专注短视频」同样经马骁拍板且白杨当场认领（00:06:33-00:07:02），属于已拍板决议。本纪要把它写进结论区是合理的，标准答案把这一点只藏在 A3 的 owner 备注里，decided 清单存在遗漏；按规则 3 判断时需注意不要误判为 extra_false_conclusion。",
+      "纪要结论第2条「海报改由白杨承接、田甜专注短视频」是会上马骁拍板、白杨应下的真实决定（00:06:33–00:07:02），但标准答案的 decided 只列了 D1，漏了这条改派决议；按规则它不构成 extra_false_conclusions，建议标准答案补入。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "with-v2/T5-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案的 decided 只列了九折一条，但转写稿里'海报给白杨吧'—白杨'行，我来，周日之前给初稿'同样是会上明确拍板的分工调整；纪要把它写进结论区是合理的，故未计入 extra_false_conclusions。建议标准答案补一条 D2（海报改派白杨、田甜专注短视频），否则该项在规则 3 下易被误判为虚假结论。另：标准答案 confirm 为空，但 A6 负责人未落实确实值得提醒，纪要主动加了'会后需确认'属加分而非扣分。",
+      "标准答案的 decided 只列了 D1，但转写稿中'海报给白杨、田甜专心做视频'同样由马骁拍板且白杨当场应下（'行，我来，周日之前给初稿'），属于明确决议。纪要把它写进结论区是合理的，不应按 extra_false_conclusions 处理；建议标准答案补一条 D2。",
+      "标准答案的 decided 只列了 D1，但转写稿里「海报由田甜改派给白杨、田甜专心做视频」同样是马骁当场拍板且白杨应下的决议（00:06:33–00:07:02），纪要把它写进结论区是正确的；建议标准答案补一条 D2，否则容易被误判为多余结论。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T1-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "积分商城测试执行（计划2–3轮）",
+          "why": "王蕾原话是「多测两轮」「给我两天吧，两到三天」，2–3 指天数不是轮数；纪要结论1处写的「测试2–3天」才与转写稿一致"
+        }
+      ],
+      [
+        {
+          "text": "积分商城测试执行（计划2–3轮）",
+          "why": "王蕾原话是「多测两轮」「给我两天吧，两到三天」，转写稿无「2–3轮」说法；纪要同时在结论1写「测试2–3天」，把轮数与天数混用了"
+        }
+      ],
+      [
+        {
+          "text": "积分商城测试执行（计划2–3轮）",
+          "why": "王蕾原话是\"想多测两轮\"\"给我两天吧，两到三天\"，\"2–3轮\"把天数误作轮数，转写稿无此依据"
+        }
+      ]
+    ],
+    "critique": [
+      "标准答案无明显错误。两点说明：（1）待办3「测试执行」属标准答案 neutral 项，写入待办且时间 10月29–30日 符合林舟原话，不扣；仅其中「2–3轮」的表述与转写稿的「两到三天」不符，按编造的数字处理。（2）A4 的「未定，需在设计产出前确定」严格说超出转写稿，但它明确标注了「未定」，属于纪要的行动建议而非伪造会上承诺，按规则判 correct。",
+      "两处可商榷：（1）结论区第4条把「由行政统计、大家群内投票」写入结论，这确为林舟原话，但属闲聊安排，按规则第3条「把待办写进结论区不算」，故未计为假结论；（2）A4 的时间栏除「未定」外附加了「需在设计产出前确定」，这是建议而非虚构截止，判为 correct。另外标准答案的 neutral 项「王蕾执行测试」纪要已收录且截止写 10/29–30，符合预期，仅轮数表述有瑕疵。标准答案本身与转写稿一致，无错误。",
+      "标准答案与规则无明显问题。两处两可：一是待办5时间写\"未定，需在设计产出前确定\"带有推断成分，但主体标注了\"未定\"，按规则仍判 correct；二是纪要把\"数据组是否已有现成看板\"列入待明确项，标准答案未列为疑点，属于加分性质的额外提示，不影响判定。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T1-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "积分商城测试（计划 2–3 轮，重点扣积分逻辑）",
+          "why": "王蕾原话是\"想多测两轮\"\"给我两天吧，两到三天\"，\"2–3 轮\"把天数误当轮数，转写稿无\"2-3 轮\"依据"
+        }
+      ],
+      [],
+      []
+    ],
+    "critique": [
+      "两处判断两可：(1) 待办6\"积分商城上线 / 负责人：全体 / 10/30\"——会上没有指派上线执行人，\"全体\"属纪要自行填补，但它是泛指而非具体人名，且该条不在标准答案 todos 列表内，按规则无处归类，我未计入 fabrications；(2) 结论区第4条\"签到卡片先出两版设计\"本质是待办（A3），放在结论区属分区不当，但按规则\"把待办写进结论区不算\"假结论，故未扣。另外纪要附注指出待办1（10/19 下午）已过期需向陈默核实，属超出标准答案的有效提醒，标准答案 confirm 为空无法体现这一加分。",
+      "两处边缘：(1) 结论区第4条「签到卡片先出两版设计」本质是待办而非决议，按规则「把待办写进结论区也不算」故未计为假结论，但它与第3条「暂不拍板」并列易被误读为签到入口已推进；(2) 待办6「积分商城上线｜全体｜10/30」中的负责人「全体」转写稿并无依据，但因上线是集体事件且非标准答案列出的待办，未计入编造，属两可。",
+      "两点小瑕疵，未按规则扣在既有条目上：(1) 待办表第6行「积分商城上线 / 全体 / 10/30」把上线动作派给「全体」，转写稿中无人认领上线执行，属轻度填充（非具体人名，故未计入 fabrications）；(2) 结论区第2条（后端接口进度）、第4条（出两版设计）严格说是现状与待办，放在「已定结论」标题下略有混淆，但按规则均不计为虚假结论。另外标准答案 neutral 提到的「王蕾执行测试 29-30 号」纪要写为待办5，与 neutral 允许范围一致。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T1-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "测试 2~3 轮（结论区第1条及待办3）",
+          "why": "王蕾原话是「多测两轮…给我两天吧，两到三天」，即天数两到三天、轮次两轮；「2~3 轮」把天数误记为轮次，转写稿无此表述"
+        }
+      ],
+      [
+        {
+          "text": "测试 2~3 轮（结论区第1条节奏、待办3）",
+          "why": "王蕾原话是「多测两轮…给我两天吧，两到三天」，2~3 指的是天数而非轮数，纪要把天数误记成轮数"
+        }
+      ],
+      [
+        {
+          "text": "测试 2~3 轮（结论1、待办3）",
+          "why": "王蕾原话是「多测两轮……给我两天吧，两到三天」，2~3 指的是天数而非轮数，纪要把工期误写成轮次"
+        },
+        {
+          "text": "建议确认是按 2 天（10/27–10/29）",
+          "why": "27 号提测、测两天应为 10/28–10/29；此区间与林舟「29、30 号这样」均不对应，属纪要自行推演出的错误日期区间"
+        }
+      ]
+    ],
+    "critique": [
+      "标准答案 confirm 为空，但纪要指出的「两到三天测试窗口与 10/30 上线日期挤压」是转写稿里真实存在的隐患（林舟自己说「那就是 29、30 号这样」），这类主动提醒现行规则无处计分，略有失衡；另外纪要把「签到数据谁来拉」放进未谈拢区同时在待办里标未指定，属合理冗余，不扣分。",
+      "两点说明：(1) 标准答案 neutral 中允许把「团建交行政统计、群里投票」写成待办，纪要把它放进了结论区第3条——林舟确实在会上作了这个安排，且未写成「团建去哪已定」，故按规则3不计为假结论，但位置略欠妥，属边界判断。(2) 纪要「测试2~3轮」是把「两到三天」误转为轮数，虽然数字来源于转写稿，但单位被改变导致语义失真，按 fabrications 口径我判为编造性数字失真，而非合理书面化改写；若评审口径更宽松，此条也可不计。",
+      "X2（团建）判定偏两可：林舟确实说过「让行政去统计吧，你们自己在群里投票」，纪要把这句写进结论区虽非「地点已定」，但行政并未在场认领，容易被读作已落实；规则3把「待办写进结论区」一律豁免，使这类闲聊安排进结论区无法被扣分，建议规则对「非在场方被安排」单列判断。另：标准答案 neutral 中写王蕾测试截止「29、30 号左右」，本纪要写成「10/27 提测后开始」只给起点不给终点，按现有规则不在 todos 评分项内，实际上漏掉了林舟给出的时间口径。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T2-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "True",
+      "X4": "True"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "两处判断偏两可：（1）A4 的负责人，纪要表格写「销售部 / 郑佳」，但待决区3和文末附注都明确说明执行人会上未落实、请用户替换，透明度很高，按字段判为 wrong_person 略显严苛，按整体表达也可算 correct。（2）X4 伴手礼，结论区处理正确（写「本次不议」），只是待决区用了「确认不再沿用去年充电宝」这一肯定表述；虽然吴凯和郑佳都吐槽土、郑佳说「今年送个好点的吧」，但周岚作为拍板人只说下次再说，故仍判为写成已定。另：标准答案 neutral 已说明伴手礼写进没谈拢可以，纪要两边都放了，不另扣。",
+      "两处判断偏两可：(1) A4 负责人填了'销售部 / 郑佳'，字面上点到了具体人，严格按规则可判 wrong_person；但纪要同时在待决区标注'名单执行人未明确'并在附注明确说明会上没落实，整体没有误导读者，故判 correct——规则宜补充'表格内写人但他处明确标注未落实'的处理口径。(2) X4 的结论区处理是正确的（写'本次不议'），只是待决区用了'确认不再沿用充电宝'的措辞；转写稿中仅吴凯、郑佳吐槽充电宝土，周岚压后，故仍判为写成已定，但这属于措辞瑕疵而非结论区错误，严重程度低于 X3。另：结论区第3条'两个档期同时锁定'是钱一诺提出、周岚'好，辛苦'认可的做法，标准答案只列为待办 A2，故未计入 extra_false_conclusions。",
+      "两处判断偏两可：(1) A4 负责人，纪要表格写了具体人'郑佳'，字面上触发'把未落实到人的事写成具体人'的 wrong_person，但纪要在待决区和文末附注两处明确声明执行人会上未落实，整体信息无误导，故判 correct——规则对'表格写人+别处标注未明确'这种混合写法没有明确归口。(2) X4 伴手礼，纪要结论区正确写成'本次不议'，却在待决区用'确认不再沿用去年充电宝'这一已定口径表述，两处自相矛盾；按规则'在别处用确认之类说法陈述'判为写成已定，但这比典型的'写进结论区'性质要轻。另外纪要结论3'11/15 与 11/22 两个档期同时锁定'严格说是尚未执行的待办（钱一诺明天才打电话），只是周岚回了'好，辛苦'算默许，未单列为虚假结论。标准答案本身与转写稿一致，无错。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T2-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "True",
+      "X4": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "结论区第4条「档期两头占（15/22 号）」是钱一诺自己提出、周岚回「好，辛苦」，视为认可执行安排尚可，故未计入额外伪结论，但严格说属两可；标准答案未列此项也未列入 neutral，建议补充说明。另：标准答案 X3（100 家）在本纪要中被写进结论区，是本份纪要唯一的实质性误判。",
+      "结论区第4条'档期两头占15号和22号'严格说是钱一诺自提、周岚仅回'好，辛苦'，内容与待办2重复，按规则'把待办写进结论区不算'故未计为虚假结论，但此条放在'已定结论'里仍有抬高拍板力度之嫌，属两可判断。另外标准答案把日期分歧同时列入 traps(X1) 和 open(O1)，纪要用'暂定+尚未锁定'的写法同时满足两边，这种处理应视为正确而非骑墙。",
+      "结论区第4条'档期两头占（15/22）'严格说是钱一诺自提、周岚仅回'好，辛苦'，属默认认可且与A2待办一致，故未计入额外假结论，但边界略模糊。另：标准答案未将'邀请名单承接人未定'列为未决项，纪要把它写进未决区属合理增量，不扣分。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T2-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "True",
+      "X4": "True"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "X4 的判断略两可：纪要在结论区正确写了'伴手礼本次不议，择期再定'，只是在未决区措辞上用了'确认不再送同款充电宝'，严格按规则2的'在别处用确定类说法陈述'需判为写成已定，但其实质倾向并未把伴手礼当已拍板的事推进，扣分力度可酌情从轻。另外结论区第3条'档期双占'严格说也是待执行的待办（钱一诺明天才打电话），表述为'同时锁定'略超前于事实，但因同条已列入待办区，按规则不计为额外伪结论。",
+      "X4 的判定略两可：纪要结论区把伴手礼写为'本次不议，择期再定'，处理是对的，但未决区写'确认不再送同款充电宝'用了'确认'一词，严格按规则2判为写成已定；若按实质意图（放在未决区、替代方案未定）也可判未写成已定。另外结论区第3条'档期双占…同时锁定'表述有'已锁定'的歧义，但对应待办已存在，按规则不计入 extra_false_conclusions。",
+      "两处边界判断说明：(1) 结论区第3条'档期双占'本质是钱一诺认领的待办（周岚仅回'好，辛苦'），按规则3待办写进结论区不计为假结论，故未列入 extra_false_conclusions，但严格说它不是会上独立拍板的决议。(2) X4 的判定偏严——纪要结论区已正确写'伴手礼本次不议，择期再定'，只是在未达成一致区用了'确认不再送同款充电宝'的措辞；该区本身是未决区，读者不易误解为已定，但措辞中的'确认'二字确实超出转写稿（周岚只说'下次再说'，郑佳的'送个好点的'未被拍板），按规则2字面应判为写成已定。标准答案 neutral 项也认可伴手礼写进未谈拢区，此处仅扣措辞。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T3-r1": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [
+        {
+          "text": "夜间时段（20:00 后）单独处理，不纳入本次首响方案，另行想办法",
+          "why": "会上说话人1只说'晚上的单我们另外想办法'，并未拍板夜间单不适用4小时首响；纪要自身在未谈拢第2条也承认'是否适用于夜间工单未明确'，自相矛盾"
+        }
+      ],
+      [
+        {
+          "text": "夜间时段（20:00 后）单独处理，不纳入本次首响方案，另行想办法",
+          "why": "会上说话人1只说'晚上的单我们另外想办法'，并未拍定夜间豁免4小时首响；纪要自己在未谈拢区第2条也承认'是否适用夜间未明确'，自相矛盾"
+        }
+      ],
+      [
+        {
+          "text": "夜间时段（20:00 后）单独处理，不纳入本次首响方案，另行想办法",
+          "why": "会上说话人1只说'晚上的单我们另外想办法'，并未拍定夜间单不适用4小时首响；纪要自己在未谈拢区第2条也承认'4小时首响是否适用于夜间工单未明确'，自相矛盾"
+        }
+      ]
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "两点：1) 结论第2条是本份纪要的主要问题——它把说话人1一句'晚上的单我们另外想办法'扩写成'不纳入本次首响方案'的既定结论，又在未决区第2条说此事未明确，前后打架，我按额外伪结论计；2) 标准答案 neutral 里提到的投诉数核实（说话人3）纪要写进了待办4且负责人正确，规则下不计分但属加分项。标准答案本身与转写稿一致，137/170+ 的冲突确为原文所有。",
+      "标准答案把'查投诉具体数量'列为 neutral，纪要将其写入待办并指派说话人3，与转写稿一致，不应扣分；此外结论第2条是否算'额外假结论'有两可空间——会上确实说过'晚上的单另外想办法'，但'不纳入本次首响方案'是纪要自行推论且与其未决区冲突，故仍判为问题项。C2 虽未单列在未决区，但正文待办3与开场白均明确提示人名口径不一致，按提醒到位计。",
+      "标准答案的 X1 与 O1 实为同一事项（夜间外包），纪要把'暂不推进'放进结论区在规则下不算写成已定，但位置上仍属边界处理。另外纪要开头声明'人名对不上已列入待确认'，而待确认区实际只列了数字冲突，小蒋/小江的不一致仅在待办表括号中并列标注，C2 的提醒方式偏弱但可认定已提示。纪要新增的'核实投诉数量'待办对应标准答案 neutral 项，负责人说话人3正确，未计入 todos 评判。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T3-r2": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [
+        {
+          "text": "结论2：……按例外另行解决，不下调整体标准。",
+          "why": "'另想办法'确有其事，但'不下调整体标准'会上无人提出或讨论过，属被写入结论区的未拍板表述"
+        }
+      ],
+      []
+    ],
+    "fabrications": [
+      [
+        {
+          "text": "即日起作为标准执行",
+          "why": "转写稿只说'首响就按四个小时，定了啊'，没有提到生效时间"
+        }
+      ],
+      [
+        {
+          "text": "即日起作为标准执行",
+          "why": "转写稿只说'首响就按四个小时，定了'，没有提到生效时间或'即日起'执行"
+        }
+      ],
+      [
+        {
+          "text": "首次响应时效定为 4 小时……即日起作为标准执行",
+          "why": "转写稿只说'首响就按四个小时，定了'，未提生效时间或'即日起'"
+        }
+      ]
+    ],
+    "critique": [
+      "两点：1) A1/A2/A3 的负责人用【A】【B】占位符而非'待定'，并在附注里以行为特征唯一锁定了人（'认领系统提醒+外包报价的那位'/'负责排班表和投诉数的那位'），在转写稿本身无姓名的前提下这比猜名字更稳妥，故判 correct；但规则未覆盖'占位符+身份描述'这种写法，严格按字面也可能被判 over_flagged，建议规则补一条。2) 附注称10月23日为'明天'，相对会议日（10/21 周三）应为后天，相对纪要撰写日（10/22）才成立，属可容忍的时点依赖，未计入错误。",
+      "两点：(1) A1/A3 的负责人用【A】【B】占位符，严格看既不是具体人名也不是'待定'，但附注用行为特征唯一锁定了人并说明转写未识别姓名，比硬猜人名更稳妥，故判 correct；规则里缺少对这种'匿名但唯一可识别'写法的明确档位。(2) 纪要附注称 10月23日为'明天'，若以会议日 10/21 计应为'后天'（以评审当天 10/22 计才成立），属表述瑕疵，不影响日期本身正确。",
+      "A1–A3 的负责人用【A】【B】占位符而非'说话人2/说话人3'，严格说未落到转写稿已有的指代标签上；但附注明确绑定了'认领系统提醒+外包报价的那位'与'负责排班表和投诉数的那位'，指向唯一且与标准答案一致，故判 correct 而非 over_flagged。另：纪要附注称10月23日为'明天'，这是相对评审当日（10/22）而非会议日（10/21）而言，表述略松但不构成日期错误。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T3-r3": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {
+      "C1": "True",
+      "C2": "True"
+    },
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "两处边界值得说明：(1) 结论2'工单临近超时由系统自动提醒——确定要做'在严格意义上会上只有说话人2认领、说话人1答'好'，并未作为独立决议拍板；按规则'把待办写进结论区也不算'，且该项同时出现在待办表中，故未计入 extra_false_conclusions，但'确定要做'的措辞比转写稿略强。(2) 标准答案 neutral 项说投诉数核实的负责人'应写说话人3'，而纪要写'[小蒋]'——转写稿中小蒋被点名做排班、小江被提及排表，标准答案自己也承认'小蒋很可能是说话人3但未明说'，纪要用[小蒋]并在附注中提示同音歧义，处理合理，不宜算错。",
+      "结论2『工单临近超时由系统自动提醒——确定要做』属两可：转写稿中说话人1提出需求、说话人2认领并给出下周三期限、说话人1回『好』，可视为已拍板要做；标准答案只把它列为待办A1而未列入decided，若严格按结论区比对会被判为多余结论。本评按规则3『把待办写进结论区不算』未判为虚假结论，但建议标准答案补充该项为decided或明确标注为中性项。另：标准答案confirm未提及说话人3所说投诉数『十几个』仅凭印象，纪要主动提醒了这一点，属加分而非失分。",
+      "结论区第2条『系统自动提醒——确定要做』属两可：会上说话人1只是提问、说话人2当场认领并给了期限，可视为隐含拍板，也可视为仅待办；本次按『待办写进结论区不算假决议』处理，未计入 extra_false_conclusions。另外纪要把标准答案 neutral 项『核实投诉数』的负责人写成『小蒋』，而转写稿中说要查的是说话人3，两者是否同一人未经证实；因该项属 neutral 不在 todos 评分内，且纪要已用方括号并提示核对姓名，未判为编造。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T4-r1": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [
+        {
+          "text": "新系统操作简单，以拍照上传凭证为主；对习惯贴票的同事不另设过渡期。",
+          "why": "转写稿只有冯琳一句'不习惯也得习惯'，会上并未讨论或拍板过渡期安排，'不另设过渡期'是纪要自行推出的决定"
+        }
+      ],
+      [
+        {
+          "text": "新系统操作简单，以拍照上传凭证为主；对习惯贴票的同事不另设过渡期。",
+          "why": "会上冯琳只说'不习惯也得习惯，拍个照就行'，从未讨论或拍板'过渡期'安排，'不另设过渡期'是推断而非会议决定"
+        }
+      ],
+      [
+        {
+          "text": "对习惯贴票的同事不另设过渡期",
+          "why": "会上只有冯琳一句「不习惯也得习惯」，从未讨论或拍板「过渡期」这一安排，属于把推论写成已定事项"
+        }
+      ]
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "标准答案与规则基本可用。两点说明：一是纪要'未谈拢'区第2条（老同事适应问题）其实已由冯琳一句'不习惯也得习惯'定调，列为待定略显牵强，但属无害补充，未按未决条目扣判；二是纪要结论2把'不另设过渡期'写成既定安排，与第1点同源，我按规则3记为额外的伪结论而未在 fabrications 重复列出。",
+      "标准答案的 neutral 已允许把年会抽奖写进没谈拢，该纪要这样处理合理。另外纪要在「未谈拢」里额外加了'老同事适应问题'，转写稿中许诺确实提出过且冯琳未给出安排，属可接受的补充，不作扣分；但其结论2把'不另设过渡期'写成会议结论超出了转写稿依据。A1 的'未明确，建议11月1日前'属两可写法，因其明确标注为建议并在附注中请求确认，判为 correct。",
+      "两点说明：(1) 结论第2条前半句「新系统操作简单、以拍照上传为主」只是复述冯琳原话、属陈述现状，不计入虚假结论，仅后半句「不另设过渡期」被判为无依据的已定事项，此条有一定两可性；(2) A1 的期限判定也略两可——纪要同格内既写「未明确」又给出「建议 11月1日前」，严格看混入了未经会议确认的具体日期，但因明示为建议且在附注中单独提示确认，按规则第5条「会上没说的写了未说定/未提」判为 correct。标准答案本身与转写稿无冲突。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T4-r2": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "fabricated",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [
+        {
+          "text": "老同事（含习惯贴票的领导）一并切换，不另设过渡期",
+          "why": "会上只有冯琳一句'不习惯也得习惯'，从未讨论或拍板过渡期安排，'不另设过渡期'属于推演后写进结论区"
+        }
+      ],
+      [
+        {
+          "text": "老同事（含习惯贴票的领导）一并切换，不另设过渡期",
+          "why": "转写稿只有冯琳一句「不习惯也得习惯」，从未讨论或拍板「过渡期」，属于推断后写进结论区"
+        }
+      ],
+      [
+        {
+          "text": "老同事（含习惯贴票的领导）一并切换，不另设过渡期",
+          "why": "会上只有冯琳「不习惯也得习惯」的表态，从未讨论或拍板过渡期安排，「不另设过渡期」是推断而非会议决议"
+        }
+      ]
+    ],
+    "fabrications": [
+      [],
+      [],
+      [
+        {
+          "text": "不另设过渡期",
+          "why": "转写稿中无人提到过渡期或明确否定设置过渡期"
+        }
+      ]
+    ],
+    "critique": [
+      "两点可商榷：1) A1 的截止判为 fabricated 略偏严——纪要已显式标注'会上未指定具体日期'并在附注说明是按上线日倒推、提示用户改，透明度较高，但按现行规则'会上没说截止却写具体时间'仍只能记 fabricated。2) 标准答案 open 为空、并在 neutral 中允许把年会预算写进'没谈拢'，该纪要正是这样处理，属合理；但其'老同事切换阻力'一条混入未决区，其中'结论是直接切换、不做例外'与结论区同一处推演，建议视为同一问题，不重复扣。",
+      "A1 的截止判定略两可：纪要在表格内与文末附注均明示「会上未指定具体日期/按11月1日上线倒推」，透明度高，但按规则「会上没说截止却写具体时间」仍计 fabricated。另，标准答案未把「年会抽奖预算」列入 open（仅在 neutral 中允许），纪要将其写入未谈拢区是合理处理，不应视为失分。",
+      "A1的截止判为fabricated偏严：纪要已在表格内括注「会上未指定具体日期」并在附注明确说明是按11月1日上线倒推、建议用户改成确定时间，透明度较高，按规则仍属「会上没说却写了具体时间」。另外标准答案把年会预算列为trap、neutral中又允许写进「没谈拢」，本纪要采用后者处理，合规。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T4-r3": {
+    "traps_written_as_decided": {
+      "X1": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {},
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "两处边界需说明：(1) A1 的截止判定两可——纪要在'完成时间'栏填了'未约定（建议10/30前）'，严格按规则'会上没说却写具体时间=fabricated'可判编造，但它显式标注为建议、并在附注中要求用户确认或删除，实质未冒充会上承诺，故判 correct；若规则要求待办表格内一律不得出现未经会议确认的日期，此条应改判 fabricated。(2) 结论区第2条'新系统操作方式以手机拍照上传为主'并非会上拍板事项，但有转写稿依据（冯琳'拍个照就行'、周小川'一直用手机报'），属陈述现状/系统特性，按规则不计入 extra_false_conclusions。(3) 纪要把'老员工与领导贴票习惯过渡'列为没谈拢，标准答案 open 为空；转写稿中许诺确实提出该顾虑而冯琳以'不习惯也得习惯'带过、未安排过渡措施，此条属合理补充而非扣分项，标准答案可考虑在 neutral 中列出。",
+      "两处两可：(1) A1 的截止列同时出现『未约定』和『建议 10/30 前』，按规则第5条字面可读作『会上没说却写了具体时间』=fabricated，但纪要已明确标注为建议并在附注中请用户确认/删除，故判 correct；规则宜补充『明确标注为推测并提示确认』的处理口径。(2) 结论2『新系统操作方式以手机拍照上传为主』源自冯琳『拍个照就行』，属系统现状描述而非拍板事项，按『陈述现状不算』未计入 extra_false_conclusions。另：纪要把『老员工/领导贴票习惯过渡』列入没谈拢，标准答案 open 为空（冯琳以『不习惯也得习惯』收口），此为额外新增的未决项，规则未对多列 open 作惩罚，但其中『可能出现卡单』『一对一辅导』属纪要自行补充的风险推断，转写稿无对应内容，建议作为提示而非事实呈现。",
+      "两处两可：(1) 结论2「新系统操作方式以手机拍照上传为主」并非会上拍板事项，只是冯琳「拍个照就行」的描述，按规则属于陈述现状，未计入 extra_false_conclusions，但严格看它放在「结论」区略显越位。(2) A1 截止栏同时出现「未约定」和「建议 10/30 前」，按字面「写了一个具体时间」可判 fabricated，但该日期被明确标为建议、且在正文外附注中单独提示用户确认或删除，透明度已足，故判 correct；规则对「显式标注的推算建议值」缺少专门条款，建议补齐。标准答案本身与转写稿一致，无错。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T5-r1": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "1) 标准答案的 decided 只列了 D1，但转写稿中\"海报由田甜改派给白杨、田甜专注短视频\"同样是马骁明确拍板且白杨当场认领的决定（也对应 A3 的改派），纪要把它写进结论区是合理的，标准答案漏列了这条已定事项，容易被误判为 extra_false_conclusion。2) 纪要在\"未达成一致\"中新增了第3项\"短视频数量与排期\"，转写稿只提到\"这周排了六条、有点满\"，并未讨论双十一期间总量与交付节奏未定，这属于轻微外推；但它不是人名/数字/日期/承诺/决定类的硬编造，按规则7未计入 fabrications，此处属两可。",
+      "两点：1) 标准答案 decided 只列了 D1，但转写稿中「海报由田甜改派给白杨、白杨周日前给初稿」同样是马骁拍板且白杨应承的明确决定，纪要把它写进结论区是合理的，不应被当作多余结论——建议标准答案补一条 D2。2) 纪要「未达成一致」第3项「短视频数量与排期（双十一期间总量、交付节奏未定）」在转写稿中并无对应讨论，属纪要自行引申；它没有捏造具体数字或承诺，故未计入 fabrications，但严格说是会上未讨论的事项被列入未决区，属轻度越界。",
+      "标准答案的 decided 只列了 D1，但转写稿中'海报给白杨吧'—'行，我来，周日之前给初稿'同样是会上明确拍板的决定（标准答案在 A3 的 owner 注释里也承认这是会上改派），纪要把它写进结论2 是正确的，不应被算作多余的已定项。另外纪要在未决区新增了'短视频数量与排期（双十一期间总量、交付节奏未定）'，转写稿只提到本周6条偏满，这条属于合理推断而非捏造事实，故未计入 fabrications，但严格说超出了会议讨论范围。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T5-r2": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [
+        {
+          "text": "投放渠道维持信息流 + 搜索",
+          "why": "白杨只是陈述自己的投放计划「主要是信息流和搜索」，马骁的回应只针对预算，渠道本身未经拍板；写成「维持」放在结论区带有已定意味（判定偏严，见 critique）"
+        }
+      ],
+      [
+        {
+          "text": "投放渠道维持信息流 + 搜索",
+          "why": "转写稿中仅白杨说'主要是信息流和搜索'，马骁未对渠道拍板，也无'维持/沿用'的表述，不属会上结论"
+        }
+      ],
+      [
+        {
+          "text": "投放渠道维持信息流 + 搜索",
+          "why": "渠道只是白杨申报方案中的一句描述，马骁全程只回应了预算要跟财务核，没有对渠道做出任何拍板或确认，'维持'的措辞把提案抬成了已定事项"
+        }
+      ]
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "两处判定两可：(1)「投放渠道维持信息流+搜索」既可看作白杨陈述现状（按规则不算假结论），也可看作未拍板事项被写入结论区，我按后者记为 extra_false_conclusion，但分歧很小。(2) A4 截止「待预算确认后调整」是条件而非日期，严格说不等于「未说定」，但未虚构具体时间，故判 correct。另外标准答案 traps 的 X2（5万预算）与 open 的 O1 是同一事项，纪要已在未决区妥善处理，重复计分需注意。",
+      "两处判断偏两可：(1) A4'待预算确认后调整'严格说不是'未说定'的标准写法，但它不构成编造的具体时间，故判 correct；(2) 结论3把'信息流+搜索'写成'维持'，虽非标准答案列出的陷阱项，但确属未拍板内容被写入结论区，故计入 extra_false_conclusions。此外纪要对达人一项写'本次未讨论'与其自己记录的田甜提议/白杨回应略有自相矛盾，但不足以算编造。标准答案本身与转写稿一致，无错误。",
+      "两点说明：（1）'投放渠道维持信息流+搜索'是否算虚假结论两可——它本质在复述白杨方案内容，而非凭空新增决定，但放在结论区并用'维持'一词确实超出了转写稿中的拍板范围，我按偏严判定；（2）纪要在未决区写达人'本次未讨论'与同句'田甜提出……白杨认为预算不够'自相矛盾，实际会上有简短讨论，属表述瑕疵而非编造，不单独计入 fabrications。标准答案本身与转写稿一致，无错误。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  },
+  "without/T5-r3": {
+    "traps_written_as_decided": {
+      "X1": "False",
+      "X2": "False",
+      "X3": "False"
+    },
+    "decided_in_conclusions": {
+      "D1": "True"
+    },
+    "open_in_section": {
+      "O1": "True",
+      "O2": "True"
+    },
+    "todo_found": {
+      "A1": "True",
+      "A2": "True",
+      "A3": "True",
+      "A4": "True",
+      "A5": "True",
+      "A6": "True"
+    },
+    "todo_owner": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "todo_deadline": {
+      "A1": "correct",
+      "A2": "correct",
+      "A3": "correct",
+      "A4": "correct",
+      "A5": "correct",
+      "A6": "correct"
+    },
+    "confirm_flagged": {},
+    "extra_false_conclusions": [
+      [],
+      [],
+      []
+    ],
+    "fabrications": [
+      [],
+      [],
+      []
+    ],
+    "critique": [
+      "A4 的处理属边界：纪要在'未明确'之外附了'建议定在 10/26 前'，但已明确标为建议、且与会议决定分离，按规则不计为 fabricated。另外纪要把'客服话术谁来更新'同时放进待办和待定区，规则未规定此类重复出现是否扣分，本次按未虚报已定处理。",
+      "A4 的「建议定在 10/26 前」严格说是纪要自拟的时间，但已明确标注「时间未明确」并以建议口径呈现，按规则判为 correct 而非 fabricated；若规则想禁止任何自拟日期，需要更明确的表述。",
+      "A4 的截止标注为'时间未明确，建议定在 10/26 前'属两可写法：若按'写了具体时间即算编造'从严判会是 fabricated，但纪要明确把它标为'建议'而非会上约定，且另有附注说明会上没定，故判 correct。规则可考虑补一句：纪要自标为建议/推测的时间不计入 fabricated。"
+    ],
+    "skeleton": {
+      "三块齐且顺序对": true,
+      "第一块是结论或待办": true,
+      "开头有日期和参会人": true,
+      "没有按顺序复述的段落": true
+    }
+  }
+}

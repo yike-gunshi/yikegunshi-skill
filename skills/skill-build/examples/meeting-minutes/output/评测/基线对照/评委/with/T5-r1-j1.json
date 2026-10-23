@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明改为全场九折、满减不做，并注明被推翻"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区明确写满减方案不做，仅作为被推翻的旧方案提及"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论区无5万；未决区写明暂不确定，待办仅写'先按五万做方案'属会上原话的待办"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "列在'没谈拢'区并注明下次会再议"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢第1条完整记录5万/3万与下周一给准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "没谈拢第2条记录达人提议与预算不够、下次再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1邵军整理分渠道转化数据，截止明天10/23，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4马骁跟财务核预算，下周一10/26换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2写白杨出海报初稿，周日10/25，改派后负责人正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3白杨按五万做投放方案，截止标未说定"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5田甜排短视频，截止未说定"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6标'负责人待定'并附注说明无人认领，截止未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案的 decided 只列了优惠口径一条，但转写稿 00:06:33–00:06:51 马骁明确拍板'海报给白杨吧'、白杨应'我来'，这同样是会上拍定的分工变更；纪要把它写进结论区是合理的，不应按 extra_false_conclusions 扣。建议标准答案补一条 D2 或在 A3 备注中说明该项同时构成结论。",
+  "_meta": {
+    "cost": 0.09009000000000002,
+    "duration_ms": 21460
+  }
+}

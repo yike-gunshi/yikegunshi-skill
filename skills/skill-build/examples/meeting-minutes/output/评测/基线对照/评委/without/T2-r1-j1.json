@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确「场地：滨江会展中心 B 厅」并说明否掉城西方案"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论2写「暂按 11/15 排期…若无法支撑再议顺延」，且待决区1明确列为未定待吴凯答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论区未出现预算金额，待决区2写明「周岚权限不足，需刘总审批…金额未落定」"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": true,
+      "note": "结论4「经销商规模：从去年 60 家扩到约 100 家」写进已定结论，但会上仅郑佳提想法，周岚未拍板"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": true,
+      "note": "结论5虽写「本次不议」，但待决区4却写「确认不再沿用去年充电宝」，把换掉充电宝陈述为已确定；周岚只说下次再说"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "待决区1完整写出市场 11/15 与研发 11/20 的分歧及待 10/22 答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "待决区2写销售申请 12 万、去年 8 万、需刘总审批、可能 12/10/8 万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1吴凯，10/22（周四）换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2钱一诺，10/21 上午对应「明天上午」"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4周岚，截止标「未定」，附注明确说明 10/26 仅为建议值而非会上所定"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "wrong_person",
+      "deadline_verdict": "correct",
+      "note": "负责人栏写「销售部 / 郑佳」落到了具体人，而会上郑佳只说回去碰一下看谁来弄；截止 10/26（下周一）正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5郑佳按 12 万编方案，截止标「未定」"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两处判断偏两可：（1）A4 的负责人，纪要表格写「销售部 / 郑佳」，但待决区3和文末附注都明确说明执行人会上未落实、请用户替换，透明度很高，按字段判为 wrong_person 略显严苛，按整体表达也可算 correct。（2）X4 伴手礼，结论区处理正确（写「本次不议」），只是待决区用了「确认不再沿用去年充电宝」这一肯定表述；虽然吴凯和郑佳都吐槽土、郑佳说「今年送个好点的吧」，但周岚作为拍板人只说下次再说，故仍判为写成已定。另：标准答案 neutral 已说明伴手礼写进没谈拢可以，纪要两边都放了，不另扣。",
+  "_meta": {
+    "cost": 0.13818,
+    "duration_ms": 48230
+  }
+}

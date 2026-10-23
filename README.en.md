@@ -1,6 +1,6 @@
 <div align="center">
 
-# yikegunshi-skill
+# skills
 
 **A curated collection of Agent Skills for Claude Code / Codex.**
 
@@ -70,8 +70,8 @@ Skills that are not maintained for now live in [`archive/`](./archive/). `instal
 Clone the repo and install via `install.sh`, which symlinks skills into your agent's skills directory (avoid manual `cp` — copies drift as the repo updates):
 
 ```bash
-git clone https://github.com/antonailog/yikegunshi-skill.git
-cd yikegunshi-skill
+git clone https://github.com/antonailog/skills.git
+cd skills
 
 # Install all skills into ~/.claude/skills
 ./install.sh
@@ -103,7 +103,7 @@ Some skills call third-party APIs and need credentials. **No secrets are committ
 ## Repository structure
 
 ```
-yikegunshi-skill/
+skills/
 ├── skills/
 │   ├── _shared/     # shared code: figkit (renders figure drafts to Feishu-board SVG and checks them); not a skill, not installed
 │   ├── avatar-look/

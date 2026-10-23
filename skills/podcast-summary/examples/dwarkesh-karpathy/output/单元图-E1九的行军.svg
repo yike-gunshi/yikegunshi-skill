@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="496" viewBox="0 0 1600 496">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 4 L0 8 z"/></marker></defs>
+<rect id="canvas" x="0" y="0" width="1600" height="496" fill="#efe7d4"/>
+<text id="t1" x="60" y="88" font-family="Noto Sans SC" font-size="26" font-weight="700" fill="#2e4a2a" text-anchor="start">E1 九的行军：演示只是第一个 9，后面每个 9 都要同样多的工作</text>
+<rect id="r2" x="60" y="120" width="310" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c3" cx="94" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t4" x="94" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">1</text>
+<text id="t5" x="122" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">90%</text>
+<text id="t6" x="84" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">第一个 9</text>
+<text id="t7" x="84" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">演示能跑</text>
+<line id="a8" x1="378" y1="194" x2="442" y2="194" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect id="r9" x="450" y="120" width="310" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c10" cx="484" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t11" x="484" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">2</text>
+<text id="t12" x="512" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">99%</text>
+<text id="t13" x="474" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">第二个 9</text>
+<text id="t14" x="474" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">同样多的工作</text>
+<line id="a15" x1="768" y1="194" x2="832" y2="194" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect id="r16" x="840" y="120" width="310" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c17" cx="874" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t18" x="874" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">3</text>
+<text id="t19" x="902" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">99.9%</text>
+<text id="t20" x="864" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">第三个 9</text>
+<text id="t21" x="864" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">同样多的工作</text>
+<line id="a22" x1="1158" y1="194" x2="1222" y2="194" stroke="#2e4a2a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect id="r23" x="1230" y="120" width="310" height="148" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<circle id="c24" cx="1264" cy="154" r="18" fill="#2e4a2a"/>
+<text id="t25" x="1264" y="161" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#efe7d4" text-anchor="middle">4</text>
+<text id="t26" x="1292" y="161" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">更多个 9</text>
+<text id="t27" x="1254" y="198" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">第四个、第五个……</text>
+<text id="t28" x="1254" y="224" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">同样多的工作</text>
+<path id="l29" d="M60 304 L1540 304" stroke="#2e4a2a" stroke-width="2" fill="none"/>
+<text id="t30" x="60" y="292" font-family="Noto Sans SC" font-size="18" font-weight="700" fill="#2e4a2a" text-anchor="start">对照</text>
+<rect id="r31" x="60" y="338" width="728" height="98" rx="6" fill="#e6dcc4" stroke="#2e4a2a" stroke-width="2"/>
+<text id="t32" x="84" y="377" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#2e4a2a" text-anchor="start">自动驾驶</text>
+<text id="t33" x="84" y="406" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#1a1a17" text-anchor="start">1986 年就有演示；特斯拉五年大约走了两三个 9</text>
+<rect id="r34" x="812" y="338" width="728" height="98" rx="6" fill="#e89cb1" stroke="#d27e96" stroke-width="2"/>
+<text id="t35" x="836" y="377" font-family="Noto Sans SC" font-size="20" font-weight="700" fill="#243a21" text-anchor="start">生产级软件</text>
+<text id="t36" x="836" y="406" font-family="Noto Sans SC" font-size="18" font-weight="400" fill="#243a21" text-anchor="start">失败代价同样高，出错的后果「几乎没有上限」</text>
+</svg>

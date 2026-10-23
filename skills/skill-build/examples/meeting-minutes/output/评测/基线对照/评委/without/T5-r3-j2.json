@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写「优惠方式改为全场九折，满减不做」并附邵军数据理由"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "满200减30只作为「原定」背景出现，明确写了满减不做"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3写「投放预算未定」，待定区重申马骁没拍板"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人合作列在待定区，写明下次会再议、本次未形成结论"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "待定区1：白杨要5万、取决于财务、下周一出准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "待定区2：达人合作下次会再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "邵军，10/23（周五）＝会上「明天」，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "马骁，10/26（周一）＝会上「下周一」，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿记为白杨、10/25周日前，符合会上改派与白杨自述"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "白杨按5万做方案；写明「时间未明确」，10/26只作为建议而非会上承诺"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "田甜短视频，时间未明确"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "客服话术标「暂无人认领」「未定」，与会上无人应声一致"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "A4 的「建议定在 10/26 前」严格说是纪要自拟的时间，但已明确标注「时间未明确」并以建议口径呈现，按规则判为 correct 而非 fabricated；若规则想禁止任何自拟日期，需要更明确的表述。",
+  "_meta": {
+    "cost": 0.07761050000000001,
+    "duration_ms": 20210
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明「积分商城 10 月 30 日上线，前置条件是 10 月 27 日准时提测（林舟拍板）」"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "签到入口放在「没谈拢的问题」，明确写「林舟表态个人倾向加，但未拍板」「看完数据再定」"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "团建只在待办区写「地点统计交行政、群里投票」，未在结论区写任何地点已定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "「没谈拢的问题」第1条完整复述双方理由与「看完数据再定」的下一步"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1：赵一鸣完成订单回调联调并提测，截止下周二 10/27，与原话一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2：王蕾写用例发群，周四之前（10/22），10/19 为周一，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4：孙晓出轻量/正常两版设计，周五（10/23），换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6：标为「负责人待定」并附原话，截止写「未说定」，与会上无人认领一致"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5：陈默修支付页白屏并回话林舟，截止今天下午（10/19 下午）"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "结论2「积分商城测试安排两到三轮，排在 10/29–10/30（林舟拍板）」",
+      "why": "王蕾原话是「想多测两轮」「给我两天吧，两到三天」，转写稿中没有「两到三轮」的说法；且林舟只说「那就是 29、30 号这样」，并未就测试轮次/排期单独拍板，「林舟拍板」属拔高"
+    }
+  ],
+  "confirm": [],
+  "critique": "结论2是否构成 extra_false_conclusion 两可：它本质上是待办3（王蕾执行测试）的排期，按规则3「把待办写进结论区也不算」我未计入；但其中「两到三轮」与「林舟拍板」确有与转写稿不符之处，故按规则6单列为编造。另：标准答案 neutral 已覆盖该项，对纪要把它放进结论区未给明确倾向，建议后续标准答案对这类「排期类附带项」给出归属指引。",
+  "_meta": {
+    "cost": 0.116795,
+    "duration_ms": 31565
+  }
+}

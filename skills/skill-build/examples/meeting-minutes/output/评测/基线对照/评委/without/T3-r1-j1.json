@@ -1,0 +1,68 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "已定结论第1条'首次响应时效定为4小时，会上已明确拍定'"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论第3条写'夜间外包方案暂不推进，仅先问报价'，属暂缓表述，未写成已定"
+    }
+  ],
+  "extra_false_conclusions": [
+    {
+      "text": "夜间时段（20:00 后）单独处理，不纳入本次首响方案，另行想办法",
+      "why": "会上说话人1只说'晚上的单我们另外想办法'，并未拍板夜间单不适用4小时首响；纪要自身在未谈拢第2条也承认'是否适用于夜间工单未明确'，自相矛盾"
+    }
+  ],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未谈拢第1条写明夜间覆盖方案无结论、外包暂缓、替代方案未定"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1自动提醒，负责人说话人2，10/28（周三）与'下周三'换算一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2询价，说话人2认领，标注'未定期限'符合会上未说截止"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3排班表，标注说话人3（小蒋/小江），10/23（周五）换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "两点：1) 结论第2条是本份纪要的主要问题——它把说话人1一句'晚上的单我们另外想办法'扩写成'不纳入本次首响方案'的既定结论，又在未决区第2条说此事未明确，前后打架，我按额外伪结论计；2) 标准答案 neutral 里提到的投诉数核实（说话人3）纪要写进了待办4且负责人正确，规则下不计分但属加分项。标准答案本身与转写稿一致，137/170+ 的冲突确为原文所有。",
+  "_meta": {
+    "cost": 0.09962400000000002,
+    "duration_ms": 25853
+  }
+}

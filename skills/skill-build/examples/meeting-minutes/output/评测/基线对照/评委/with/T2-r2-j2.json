@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条明确场地为滨江会展中心B厅，并注明周岚拍板、郑佳吴凯无异议"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "日期只出现在「没谈拢」第1条，原样保留'先往15号排，实在不行再挪'及吴凯心里没底"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12万列在「没谈拢」第2条并写明需请示刘总、可能10万或维持8万；待办中仅为'按12万做方案/找刘总审批'，与会上一致"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "100家列在「没谈拢」第3条，明确'会上未就家数表态'"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼列在「没谈拢」第4条，注明未定具体方案、周岚说下次再说"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "「没谈拢」第1条完整覆盖15号vs20号分歧及等吴凯周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "「没谈拢」第2条覆盖8万→12万申请与刘总审批"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1吴凯、周四之前（10/22）换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2钱一诺、明天上午（10/21）正确，含11/15与11/22两档期"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4周岚找刘总，截止写'未说定'并附原话"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3写'负责人待定'并引用双方原话，截止下周一（10/26）正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5郑佳按12万编方案，截止未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两处可商榷但不影响判定：一是「没谈拢」第4条'下一步：周岚定为\"下次再说\"'表述别扭，伴手礼实际是被周岚搁置而非待议，不过标准答案 neutral 已允许写入未决区；二是第3条中'与预算额度绑定'是纪要的合理推断（会上未明说家数与预算挂钩），属弱化的书面归纳，尚不构成编造。",
+  "_meta": {
+    "cost": 0.08424,
+    "duration_ms": 20480
+  }
+}

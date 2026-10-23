@@ -15,6 +15,8 @@ node_modules/
 
 # Runtime / generated data
 **/output/
+# 宣传样例的产物要进仓库，只放行 examples 下的 output（2026-10-22）
+!skills/*/examples/*/output/
 **/downloads/
 **/cache/
 *_state.json

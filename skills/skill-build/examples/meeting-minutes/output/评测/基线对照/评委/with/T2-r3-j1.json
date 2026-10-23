@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条明确场地定为滨江会展中心 B 厅，并注明周岚拍板、郑佳吴凯同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "11/15 只出现在「没谈拢」区，表述为「先往 15 号排，实在不行再挪」，并附注说明未进结论"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12 万写在「没谈拢」区并说明需请示刘总、可能 10 万或 8 万；待办 4 仅为「先按 12 万做方案」"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "扩到约 100 家写在「没谈拢」第2条，并明确「规模一并未定」"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼写在「没谈拢」第3条，注明周岚「下次再说」、未定品类预算"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "「没谈拢」第1条完整记录 11/15 vs 11/20 分歧及吴凯周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "「没谈拢」第2条记录 8 万→12 万、需刘总审批"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 吴凯过排期答复能否 11/15，截止周四即 10/22，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 钱一诺致电滨江占 11/15 与 11/22，截止明天上午 10/21，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3 周岚找刘总沟通预算，截止标注原话「找个机会」未说定"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6 标「负责人待定」并附原话，截止下周一 10/26，换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 郑佳按 12 万编方案，截止未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": null,
+  "_meta": {
+    "cost": 0.101137,
+    "duration_ms": 20360
+  }
+}

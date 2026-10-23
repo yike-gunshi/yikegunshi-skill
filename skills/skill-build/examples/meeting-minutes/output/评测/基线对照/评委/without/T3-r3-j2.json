@@ -1,0 +1,63 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明首次响应时效定为4小时、当场确认通过"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论4写'夜班外包：暂不推进，先问报价再议'，属暂不定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1条完整列出外包分歧（报价、培训）并写明先搁置等报价"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办表第1行，说话人2认领，10/28（下周三）前，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办表第2行，说话人2顺手问报价，会上未说截止，纪要写'未定'"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办表第3行，小蒋被点名，10/23（本周五）前，10-21为周三故周五即10/23"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "结论2『工单临近超时由系统自动提醒——确定要做』属两可：转写稿中说话人1提出需求、说话人2认领并给出下周三期限、说话人1回『好』，可视为已拍板要做；标准答案只把它列为待办A1而未列入decided，若严格按结论区比对会被判为多余结论。本评按规则3『把待办写进结论区不算』未判为虚假结论，但建议标准答案补充该项为decided或明确标注为中性项。另：标准答案confirm未提及说话人3所说投诉数『十几个』仅凭印象，纪要主动提醒了这一点，属加分而非失分。",
+  "_meta": {
+    "cost": 0.091165,
+    "duration_ms": 25575
+  }
+}

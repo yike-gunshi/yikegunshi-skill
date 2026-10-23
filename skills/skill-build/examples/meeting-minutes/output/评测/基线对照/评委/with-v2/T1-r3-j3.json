@@ -1,0 +1,73 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1「积分商城 10 月 30 日上线（林舟拍板，赵一鸣、王蕾、陈默均无异议）」完全对应"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论3明确写「暂不决定加或不加……看完数据再定」，并在没谈拢区重复，未当成已定"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "团建地点只出现在「没谈拢的问题」3，结论区无；待办7仅为投票统计，未写成已定去向"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢1完整复述孙晓提议、陈默性能顾虑、林舟倾向加及看数据再定"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1赵一鸣提测，截止 10/27，与转写稿「下周二，就是 27 号」一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2王蕾写用例发群，周四之前，10/19 为周一故 10/22 换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4孙晓两版设计，周五即 10/23，换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6写「负责人待定」且截止「未说定」，与无人认领、林舟「回头再说」一致"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5陈默修支付页白屏并回报林舟，截止当天下午 10/19"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两点可商议：(1) 纪要结论2「10/27 提测、测试 2–3 天」被我判为可接受的已定项——林舟两次确认「27 号务必提测」且赵一鸣应下，属实际拍板，标准答案 decided 只列 D1 略有遗漏；若严格按标准答案字面比对，这条会被误判为 extra_false_conclusion，故规则 3 在标准答案 decided 不完整时容易产生两可判断。(2) 纪要把「团建地点」「谁拉数据」放进「没谈拢」区，标准答案将团建归为闲聊陷阱而非 open 项，这属于合理扩展、不构成错误，但规则未明确此类归类是否扣分。",
+  "_meta": {
+    "cost": 0.107977,
+    "duration_ms": 28344
+  }
+}

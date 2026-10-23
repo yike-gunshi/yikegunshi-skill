@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明优惠定为全场九折、满减不做，并注明是改口后的最终方案"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区明确写'满减不做'，仅作为被推翻的过程说明出现"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "5万只出现在待办'先做一版方案，待预算定了再调'及未决区，未写成已定预算"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人合作放在'没谈拢'区并写明下次会再议"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未决区第1条写白杨申请五万、马骁与财务核实、下周一给准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未决区第2条写达人合作分歧与下次再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "邵军整理分渠道转化数据交马骁，截止明天(10/23)，与转写稿一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "马骁跟财务核预算，下周一(10/26)给准数，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报归白杨（已按会上改派），周日之前(10/25)换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "白杨按五万做投放方案，截止标未说定"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "田甜推进短视频，截止标未说定"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "客服话术标'负责人待定'，符合会上未点名的事实，截止标未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案的 decided 只列了优惠方案一条，但转写稿里'海报从田甜改派给白杨、田甜专心做视频'同样是马骁当场拍板且白杨应承的决议（00:06:33–00:07:02），纪要把它写进结论区是有依据的，不应算 extra_false_conclusions；建议标准答案补一条 D2，或至少在 neutral 中说明。",
+  "_meta": {
+    "cost": 0.090159,
+    "duration_ms": 20019
+  }
+}

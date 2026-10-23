@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写\"优惠形式：全场九折，满减不做\"并说明推翻过程"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论1将满200减30写为\"先定了…后根据邵军的数据推翻\"，现行方案是九折"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3标题即\"投放预算待定\"，并注明下周一给准数"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "结论4写\"本次不议，下次会上再讨论\""
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1项\"投放预算金额：5万 vs 去年3万，下周一出结论\""
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未达成一致第2项\"是否做达人合作\"，含双方理由与搁置原因"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1邵军，10/23（周五）与\"明天\"换算一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2马骁，10/26（周一）换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4海报初稿归白杨，10/25（周日）前，改派后负责人写对"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3白杨按5万出方案，截止写\"暂无明确截止\"，会上确实未说"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5田甜短视频，\"本次未定截止时间\"与会上一致"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6客服话术负责人与时间均标\"未指定\"，且附注提醒补人补时间"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "1) 标准答案的 decided 只列了 D1，但转写稿中\"海报由田甜改派给白杨、田甜专注短视频\"同样是马骁明确拍板且白杨当场认领的决定（也对应 A3 的改派），纪要把它写进结论区是合理的，标准答案漏列了这条已定事项，容易被误判为 extra_false_conclusion。2) 纪要在\"未达成一致\"中新增了第3项\"短视频数量与排期\"，转写稿只提到\"这周排了六条、有点满\"，并未讨论双十一期间总量与交付节奏未定，这属于轻微外推；但它不是人名/数字/日期/承诺/决定类的硬编造，按规则7未计入 fabrications，此处属两可。",
+  "_meta": {
+    "cost": 0.105051,
+    "duration_ms": 29908
+  }
+}

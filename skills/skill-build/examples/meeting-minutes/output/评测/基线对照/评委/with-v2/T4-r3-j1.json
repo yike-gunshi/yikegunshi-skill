@@ -1,0 +1,48 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明11月1日起全走新系统、不再收纸质单，并注明冯琳拍板、另两人同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算/手机一等奖被放入「没谈拢的问题」，并写明冯琳说了不算、需找老板"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "负责人冯琳正确；截止直接沿用原话「回头」未编造具体日期，且在会后需确认中说明没说定时间"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "许诺认领「我今天就发」，纪要写今天（10/20）"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周小川交打车票，周五之前换算为10/23（10/20为周二）正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "A1 的截止写成「截止：回头」略显生硬——严格说「回头」不是时间，但它是会上原话且附注与「会后需确认」都明确指出未定时间、未代估日期，按规则（只写原话不换算也算对）判 correct。其余判断无歧义；标准答案与转写稿一致。",
+  "_meta": {
+    "cost": 0.06487699999999999,
+    "duration_ms": 13420
+  }
+}

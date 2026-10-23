@@ -1,0 +1,73 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "已定结论第1条明确写「积分商城 10 月 30 日上线」并列出 10/27 提测→2-3天测试→10/30 上线链路"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论第3条写「首页签到入口暂不拍板，先看数据再决定」，未当已定；第4条只是出两版设计的待办安排"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论第5条明确写「团建地点不在本次会议决定」，并在未达成一致区再列一次"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致区第1条完整复述孙晓主张、陈默性能顾虑、林舟倾向加但以数据为准，结论推迟"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 赵一鸣 / 10/27（周二）提测，与会上一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 王蕾 / 10/22（周四）前发群，10/19 为周一，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3 孙晓 / 10/23（周五）两版设计稿，换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办7 负责人与时间均标「待定」，符合会上无人认领、未说定的实际状态"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 陈默 / 10/19 下午，并注明修完同步林舟"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两点小瑕疵，未按规则扣在既有条目上：(1) 待办表第6行「积分商城上线 / 全体 / 10/30」把上线动作派给「全体」，转写稿中无人认领上线执行，属轻度填充（非具体人名，故未计入 fabrications）；(2) 结论区第2条（后端接口进度）、第4条（出两版设计）严格说是现状与待办，放在「已定结论」标题下略有混淆，但按规则均不计为虚假结论。另外标准答案 neutral 提到的「王蕾执行测试 29-30 号」纪要写为待办5，与 neutral 允许范围一致。",
+  "_meta": {
+    "cost": 0.111787,
+    "duration_ms": 25465
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明场地定为滨江会展中心B厅，并注明周岚拍板、郑佳同意、吴凯无异议"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "日期未进结论区，放在「没谈拢」首条，并注明先按15号排、吴凯周四给准话"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论2只写「方案先按12万编制，实际预算能否批下来另说」，与周岚原话一致；预算本身列在没谈拢区待刘总审批"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "100家列在没谈拢区第3条，注明「会上无人明确回应」"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼列在没谈拢区第4条，写明周岚「下次再说」"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢第1条完整记录15号vs20号分歧及周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "没谈拢第2条记录8万→12万及需请示刘总、可能10万或8万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1吴凯复核排期，截止周四(10/22)换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2钱一诺占15/22两档期，明天上午(10/21)换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5周岚找刘总沟通预算，标注未说定并附原话"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3标「负责人待定」符合未落实到人，截止下周一(10/26)换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4郑佳按12万做方案，截止标未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "结论2「方案先按12万编制」属两可：它确实是周岚当场给出的指令（「方案你可以先按十二万做」），且纪要明确切割了「预算批不批另说」，故不判为把陷阱X2写成已定；但同一事项同时出现在结论区与待办区（A5），严格看略有重复。标准答案其余部分与转写稿一致，无误。",
+  "_meta": {
+    "cost": 0.09934100000000001,
+    "duration_ms": 25361
+  }
+}

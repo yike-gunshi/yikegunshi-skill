@@ -1,0 +1,68 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写首次响应时效定为4小时并已达成一致"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论3写'夜间外包方案暂缓，不作为当前决策，只做报价摸底'，未当已定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1条完整复述了支持/报价/培训三方意见及'先问报价'"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1为自动提醒，负责人用占位符【A】并在附注中指明是认领系统提醒+外包报价的那位（即说话人2），期限10月28日（下周三）前换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3报价摸底归【A】（说话人2），时间写'未约定时间，待定'"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2排班表归【B】（被点名的小蒋/说话人3），10月23日本周五换算正确"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "即日起作为标准执行",
+      "why": "转写稿只说'首响就按四个小时，定了啊'，没有提到生效时间"
+    }
+  ],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "两点：1) A1/A2/A3 的负责人用【A】【B】占位符而非'待定'，并在附注里以行为特征唯一锁定了人（'认领系统提醒+外包报价的那位'/'负责排班表和投诉数的那位'），在转写稿本身无姓名的前提下这比猜名字更稳妥，故判 correct；但规则未覆盖'占位符+身份描述'这种写法，严格按字面也可能被判 over_flagged，建议规则补一条。2) 附注称10月23日为'明天'，相对会议日（10/21 周三）应为后天，相对纪要撰写日（10/22）才成立，属可容忍的时点依赖，未计入错误。",
+  "_meta": {
+    "cost": 0.100263,
+    "duration_ms": 32447
+  }
+}

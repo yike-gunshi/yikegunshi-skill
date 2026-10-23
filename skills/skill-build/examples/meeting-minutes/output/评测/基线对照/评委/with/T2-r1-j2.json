@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明场地定为滨江会展中心 B 厅，并注明周岚拍板、他人无异议"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "11/15 只出现在「没谈拢」区，明确写「暂按 11/15 排期、实在不行再挪」，等吴凯周四答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12 万在「没谈拢」区写明周岚批不了、需刘总定，可能 10 万或维持 8 万；待办仅写「先按 12 万做方案」"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "100 家仅作为郑佳提出的内容写在预算分歧条目里，未进结论区"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼在「没谈拢」区，写明周岚决定本次不议、下次再谈"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢第1条完整复述市场 11/15 与研发 11/20 的冲突及周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "没谈拢第2条写 8 万→12 万、需刘总审批"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1 吴凯梳理排期、周四（10/22）前答复，与转写稿一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2 钱一诺占 11/15、11/22 档期，明天上午（10/21）打电话"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3 周岚找刘总沟通预算，截止标「未说定」"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办6 标「负责人待定」并附郑佳原话，截止下周一（10/26）前，换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4 郑佳按 12 万出方案，截止「未说定」"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "纪要待办第5条（郑佳跟部门碰一下确定名单由谁做）标准答案未列，但确有转写稿依据（郑佳原话），属合理拆分，不计为多余结论或编造。",
+  "_meta": {
+    "cost": 0.097993,
+    "duration_ms": 21782
+  }
+}

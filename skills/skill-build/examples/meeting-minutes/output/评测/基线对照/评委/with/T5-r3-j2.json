@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写全场九折、满减不做，并注明推翻原因"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "满200减30仅作为'不做'的对象出现，未被当作现行方案"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "5万仅出现在'先按5万备方案'及没谈拢区，未写成已批预算"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人合作列在没谈拢区，标注下次会再议"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "没谈拢第1条完整记录5万申请与财务核实、下周一给准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "没谈拢第2条记录达人提议、预算异议与下次再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "邵军整理分渠道转化数据，截止明天10/23，与转写一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "马骁跟财务核预算，下周一10/26（10/22为周四，推算正确）"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿归白杨（已采纳改派），周日10/25换算正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "白杨先按5万做方案，截止标注未说定"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "田甜负责短视频，截止未说定"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "客服话术标'负责人待定'，截止未说定，且附注提醒认领"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案的 decided 只列了 D1，但转写中'那海报给白杨吧'—'行，我来'同样是会上拍板的分工调整（标准答案自己在 A3 里也承认是会上改派）。纪要把它写进结论区属于有依据的真结论，因此未计入 extra_false_conclusions；建议标准答案补一条 D2。",
+  "_meta": {
+    "cost": 0.089977,
+    "duration_ms": 20055
+  }
+}

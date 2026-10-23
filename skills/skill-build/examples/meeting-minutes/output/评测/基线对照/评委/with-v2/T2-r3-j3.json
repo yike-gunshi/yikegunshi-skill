@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条即滨江会展中心 B 厅，并注明周岚拍板、郑佳吴凯无异议"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "11/15 放在“没谈拢”区，注明“暂排”“实在不行再挪”，等吴凯周四答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12 万在“没谈拢”区，注明需请示刘总；待办仅写“先按 12 万做方案”，与原话一致"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "100 家列入“没谈拢”第3条，明确写会上无人确认"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "伴手礼列入“没谈拢”第4条，注明周岚“下次再说”、本次搁置"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "第1条完整覆盖 15 号 vs 20 号分歧及周四答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "第2条覆盖 8 万→12 万、需刘总审批、可能 10 万或 8 万"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "吴凯过排期，周四前答复，换算 10/22 正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "钱一诺占 11/15、11/22 档期，明天上午换算 10/21 正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周岚找刘总沟通预算；截止处引原话“找个机会”，未编造具体时间，等同未说定"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "标“负责人待定”符合会上未落实到人；下周一换算 10/26 正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "郑佳按 12 万做方案，截止写未说定"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "A3 截止处写成“原话‘找个机会跟刘总聊一下’”而非直接写“未说定”，严格看属于略含糊但不构成编造具体时间，按规则判 correct；附注中“吴凯周四（今天）的答复”依当前日期 2026-10-22 成立，非臆造。",
+  "_meta": {
+    "cost": 0.095494,
+    "duration_ms": 19453
+  }
+}

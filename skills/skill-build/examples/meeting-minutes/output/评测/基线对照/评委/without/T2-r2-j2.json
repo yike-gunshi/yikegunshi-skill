@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论区第1条明确'场地确定：滨江会展中心 B 厅'，并说明城西因停车被否"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区写'暂定11月15日，但尚未最终锁定'，并指向周四答复，未当已定"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论区无预算条目；未决区明确'周岚批不了，需刘总拍板，可能12/10/8万'"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": true,
+      "note": "结论区第3条'经销商邀请规模扩到100家左右'写成已定，实际仅郑佳提议、无人拍板"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": false,
+      "note": "未决区第4条写'周岚明确下次再说'，未当已定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未决区第1条写研发11/20后 vs 市场11/15，当前'先这么排'，周四吴凯答复为关键节点"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未决区第2条写12万需刘总拍板，去年8万的三种可能结果"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1：吴凯复核排期，10/22（周四）前，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2：钱一诺致电锁定11/15与11/22，10/21上午，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4：周岚向刘总争取预算，截止标'会上未定时间，找机会聊'"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5：负责人标'销售部（具体承接人未定）'，符合未落实到人；10/26下周一正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3：郑佳按12万出方案，截止标'会上未定时间，建议明确'"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "结论区第4条'档期两头占15号和22号'严格说是钱一诺自提、周岚仅回'好，辛苦'，内容与待办2重复，按规则'把待办写进结论区不算'故未计为虚假结论，但此条放在'已定结论'里仍有抬高拍板力度之嫌，属两可判断。另外标准答案把日期分歧同时列入 traps(X1) 和 open(O1)，纪要用'暂定+尚未锁定'的写法同时满足两边，这种处理应视为正确而非骑墙。",
+  "_meta": {
+    "cost": 0.108194,
+    "duration_ms": 28496
+  }
+}

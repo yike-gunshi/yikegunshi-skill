@@ -1,0 +1,58 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明自11月1日起报销全走新系统、财务不再收纸质单子"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算放在「未谈拢/待定」区，并注明需向老板申请、会上未定"
+    }
+  ],
+  "extra_false_conclusions": [
+    {
+      "text": "老同事（含习惯贴票的领导）一并切换，不另设过渡期",
+      "why": "会上只有冯琳「不习惯也得习惯」的表态，从未讨论或拍板过渡期安排，「不另设过渡期」是推断而非会议决议"
+    }
+  ],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "fabricated",
+      "note": "冯琳负责正确；原话仅「回头」，纪要填了「11月1日前」这一具体期限（虽括注并在附注说明是自行倒推）"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "许诺认领「我今天就发」，纪要写10月20日当天"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周小川交打车票，周五前换算为10月23日，与10/20为周二一致"
+    }
+  ],
+  "fabrications": [
+    {
+      "text": "不另设过渡期",
+      "why": "转写稿中无人提到过渡期或明确否定设置过渡期"
+    }
+  ],
+  "confirm": [],
+  "critique": "A1的截止判为fabricated偏严：纪要已在表格内括注「会上未指定具体日期」并在附注明确说明是按11月1日上线倒推、建议用户改成确定时间，透明度较高，按规则仍属「会上没说却写了具体时间」。另外标准答案把年会预算列为trap、neutral中又允许写进「没谈拢」，本纪要采用后者处理，合规。",
+  "_meta": {
+    "cost": 0.081895,
+    "duration_ms": 21403
+  }
+}

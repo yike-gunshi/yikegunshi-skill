@@ -1,0 +1,10 @@
+{
+  "_说明": "首轮触发评测正例全中、负例全不误触发。按 skill-build 的经验，首轮满分要先怀疑：可能是题目里'会议''纪要'的信号太强。这里补两条更隐晦的正例做探针，不进 train/test，不用来调 description。",
+  "should_trigger": [
+    {"id": "p1", "split": "probe", "why": "极简：只有文件名透露是会议",
+     "query": "transcripts/周会1019.txt 帮我理一下发群里"},
+    {"id": "p2", "split": "probe", "why": "隐含：要一个能转发给参会人的版本，没提纪要、结论、待办",
+     "query": "这份妙记 transcripts/客户对齐会.txt 太长了我不想看，给我个能直接转发给参会人的版本"}
+  ],
+  "should_not_trigger": []
+}

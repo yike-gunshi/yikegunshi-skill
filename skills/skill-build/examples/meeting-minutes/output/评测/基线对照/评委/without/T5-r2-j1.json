@@ -1,0 +1,95 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写「优惠形式改为全场九折，满减不做」，并附邵军的数据理由"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "满200减30只作为被推翻的原方案被提及，结论区写明「满减不做」"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3写「白杨申请预算5万……金额待定见下」，并在未决区说明需与财务核"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "达人合作列在「未达成一致/悬而未决」第2条，注明下次会再议"
+    }
+  ],
+  "extra_false_conclusions": [
+    {
+      "text": "投放渠道维持信息流 + 搜索",
+      "why": "白杨只是陈述自己的投放计划「主要是信息流和搜索」，马骁的回应只针对预算，渠道本身未经拍板；写成「维持」放在结论区带有已定意味（判定偏严，见 critique）"
+    }
+  ],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未决区第1条：白杨申请5万、马骁未拍板、与财务核后下周一给准数"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未决区第2条：田甜提议达人带货、白杨称预算不够、下次会再议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办表「去年双十一分渠道转化数据整理 / 邵军 / 10/23（周五）」，与「明天」换算一致"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "「跟财务核投放预算 / 马骁 / 10/26（下周一）」，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿记为白杨、10/25（周日）前，正确反映了会上由田甜改派给白杨"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "「按5万先出投放方案 / 白杨 / 待预算确认后调整」，未虚构具体日期"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "「短视频 + 九折口径文案 / 田甜 / 会上未定具体时间」"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "「客服话术更新为九折口径 / 未指派 / 未定」，并在附注中提醒补责任人与时间"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两处判定两可：(1)「投放渠道维持信息流+搜索」既可看作白杨陈述现状（按规则不算假结论），也可看作未拍板事项被写入结论区，我按后者记为 extra_false_conclusion，但分歧很小。(2) A4 截止「待预算确认后调整」是条件而非日期，严格说不等于「未说定」，但未虚构具体时间，故判 correct。另外标准答案 traps 的 X2（5万预算）与 open 的 O1 是同一事项，纪要已在未决区妥善处理，重复计分需注意。",
+  "_meta": {
+    "cost": 0.11507100000000002,
+    "duration_ms": 35598
+  }
+}

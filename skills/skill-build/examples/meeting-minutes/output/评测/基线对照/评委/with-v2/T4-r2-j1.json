@@ -1,0 +1,48 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明11月1日起报销全走新系统、不收纸质单，并注明冯琳拍板、二人同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算/手机一等奖被放入「没谈拢」区，并写明冯琳说了不算、下一步找老板"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1归冯琳，截止写「未说定」并附原话「回头」"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2归许诺，截止今天(10/20)，对应原话「我今天就发」"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3归周小川，周五之前换算为10/23，2026-10-20为周二，换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "纪要在「没谈拢」区多列了一条「老同事的纸质报销习惯」，而冯琳已用「不习惯也得习惯」实质驳回、三人随后一致同意改制，严格说这不是未决分歧；但该项被明确标注为「会上未就过渡办法做安排」，未被写成已定结论，且现行规则对「多列的未决项」没有扣分位，故未计入任何负面判项。",
+  "_meta": {
+    "cost": 0.07280400000000001,
+    "duration_ms": 15267
+  }
+}

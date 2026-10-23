@@ -1,0 +1,88 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论区第1条明确写场地定滨江会展中心B厅并说明放弃城西酒店"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "结论区第2条写'暂按11月15日排期，但未最终确认'，并在未达成一致区重申等吴凯答复"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "12万只出现在待办'按12万口径先行编制方案'和未达成一致区，并注明需刘总审批、可能10万或8万"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": true,
+      "note": "结论区第4条'经销商邀请规模扩大：从去年60家扩到约100家'写成已定，但转写稿中仅为郑佳想法，无人拍板"
+    },
+    {
+      "id": "X4",
+      "written_as_decided": true,
+      "note": "结论区虽写'本次不议'，但未达成一致区第4条称'确认不再送同款充电宝，替代方案未定'，把换掉充电宝陈述为已确认，而周岚说的是'下次再说'"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1条写明市场要11/15、研发认为11/20后才稳，等吴凯答复"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未达成一致第2条写明销售申请12万、去年8万、需刘总决定"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1吴凯复核排期，截止10/22（周四）换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2钱一诺致电锁定11/15+11/22，截止10/21上午与'明天上午'一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办4周岚与刘总沟通预算，截止写'未定（找个机会聊）'"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3写'销售部（郑佳部门，具体执行人待定）'，与未落实到人一致；10/26（下周一）换算正确"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办5郑佳按12万编制方案，截止写'未定'"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两处边界判断说明：(1) 结论区第3条'档期双占'本质是钱一诺认领的待办（周岚仅回'好，辛苦'），按规则3待办写进结论区不计为假结论，故未列入 extra_false_conclusions，但严格说它不是会上独立拍板的决议。(2) X4 的判定偏严——纪要结论区已正确写'伴手礼本次不议，择期再定'，只是在未达成一致区用了'确认不再送同款充电宝'的措辞；该区本身是未决区，读者不易误解为已定，但措辞中的'确认'二字确实超出转写稿（周岚只说'下次再说'，郑佳的'送个好点的'未被拍板），按规则2字面应判为写成已定。标准答案 neutral 项也认可伴手礼写进未谈拢区，此处仅扣措辞。",
+  "_meta": {
+    "cost": 0.120422,
+    "duration_ms": 30091
+  }
+}

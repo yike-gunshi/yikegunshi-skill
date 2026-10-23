@@ -1,0 +1,48 @@
+{"id": "t1", "run": 1, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.3}
+{"id": "t2", "run": 2, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.6}
+{"id": "t2", "run": 3, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.7}
+{"id": "t2", "run": 1, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.7}
+{"id": "t1", "run": 2, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 9.1}
+{"id": "t1", "run": 3, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 9.2}
+{"id": "t3", "run": 3, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 4.1}
+{"id": "t3", "run": 1, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.0}
+{"id": "t4", "run": 1, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.6}
+{"id": "t3", "run": 2, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.1}
+{"id": "t4", "run": 3, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 4.2}
+{"id": "t4", "run": 2, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.8}
+{"id": "t5", "run": 1, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.9}
+{"id": "t6", "run": 2, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.4}
+{"id": "t5", "run": 2, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 9.2}
+{"id": "t6", "run": 1, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 9.1}
+{"id": "t5", "run": 3, "should_trigger": true, "split": "train", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 9.9}
+{"id": "t7", "run": 1, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.7}
+{"id": "t7", "run": 2, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.6}
+{"id": "t8", "run": 1, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.4}
+{"id": "t7", "run": 3, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.6}
+{"id": "t8", "run": 2, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 6.4}
+{"id": "t8", "run": 3, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 5.3}
+{"id": "n1", "run": 2, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Skill"], "skill": "podcast-summary", "cost": null, "wall_s": 8.0}
+{"id": "n1", "run": 3, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Skill"], "skill": "podcast-summary", "cost": null, "wall_s": 7.2}
+{"id": "t6", "run": 3, "should_trigger": true, "split": "test", "triggered": true, "tools": ["Skill"], "skill": "meeting-minutes", "cost": null, "wall_s": 20.7}
+{"id": "n1", "run": 1, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Grep"], "skill": null, "cost": 0.22167050000000002, "wall_s": 15.2}
+{"id": "n2", "run": 2, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Read", "Read", "Glob"], "skill": null, "cost": 0.22717700000000002, "wall_s": 18.7}
+{"id": "n2", "run": 3, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Read", "Read", "Glob"], "skill": null, "cost": 0.2251305, "wall_s": 14.8}
+{"id": "n2", "run": 1, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Read", "Read"], "skill": null, "cost": 0.240756, "wall_s": 25.9}
+{"id": "n4", "run": 1, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Read", "Read", "Read", "Read", "Glob"], "skill": null, "cost": 0.39385149999999997, "wall_s": 16.5}
+{"id": "n4", "run": 3, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Read", "Read", "Read", "Read", "Glob"], "skill": null, "cost": 0.24799250000000003, "wall_s": 20.4}
+{"id": "n4", "run": 2, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Read", "Read", "Read", "Read"], "skill": null, "cost": 0.264914, "wall_s": 32.1}
+{"id": "n3", "run": 2, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Glob", "Read", "Write"], "skill": null, "cost": 0.4666555, "wall_s": 46.7}
+{"id": "n3", "run": 3, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Write"], "skill": null, "cost": 0.3133165, "wall_s": 44.4}
+{"id": "n6", "run": 1, "should_trigger": false, "split": "test", "triggered": false, "tools": ["Glob", "Skill"], "skill": "book-to-mindmap", "cost": null, "wall_s": 4.6}
+{"id": "n3", "run": 1, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Read", "Write"], "skill": null, "cost": 0.34353100000000003, "wall_s": 54.8}
+{"id": "n6", "run": 2, "should_trigger": false, "split": "test", "triggered": false, "tools": ["Skill"], "skill": "book-to-mindmap", "cost": null, "wall_s": 7.2}
+{"id": "n6", "run": 3, "should_trigger": false, "split": "test", "triggered": false, "tools": ["Skill"], "skill": "book-to-mindmap", "cost": null, "wall_s": 6.0}
+{"id": "n5", "run": 1, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Glob", "Glob", "Glob"], "skill": null, "cost": 0.24846700000000002, "wall_s": 39.6}
+{"id": "n5", "run": 2, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Glob", "Glob", "Glob", "Glob"], "skill": null, "cost": 0.254901, "wall_s": 39.2}
+{"id": "n8", "run": 1, "should_trigger": false, "split": "test", "triggered": false, "tools": ["Glob", "Read", "Read"], "skill": null, "cost": 0.21758899999999998, "wall_s": 13.8}
+{"id": "n5", "run": 3, "should_trigger": false, "split": "train", "triggered": false, "tools": ["Glob", "Glob", "Glob", "Glob", "Glob"], "skill": null, "cost": 0.252462, "wall_s": 37.3}
+{"id": "n8", "run": 2, "should_trigger": false, "split": "test", "triggered": false, "tools": ["Glob", "Read", "Read", "Read"], "skill": null, "cost": 0.371991, "wall_s": 12.5}
+{"id": "n8", "run": 3, "should_trigger": false, "split": "test", "triggered": false, "tools": ["Glob", "Read", "Read", "Read"], "skill": null, "cost": 0.22468399999999997, "wall_s": 16.8}
+{"id": "n7", "run": 1, "should_trigger": false, "split": "test", "triggered": false, "tools": [], "skill": null, "cost": 0.249699, "wall_s": 55.2}
+{"id": "n7", "run": 3, "should_trigger": false, "split": "test", "triggered": false, "tools": [], "skill": null, "cost": 0.237907, "wall_s": 60.8}
+{"id": "n7", "run": 2, "should_trigger": false, "split": "test", "triggered": false, "tools": [], "skill": null, "cost": 0.259579, "wall_s": 68.6}

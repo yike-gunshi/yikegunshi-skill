@@ -1,0 +1,22 @@
+题号   集合     应触发    触发次数     去向（每次）
+n1   train  否       0/3       自己动手:Glob/Read/Grep | podcast-summary | podcast-summary
+n2   train  否       0/3       自己动手:Glob/Read | 自己动手:Glob/Read | 自己动手:Glob/Read
+n3   train  否       0/3       自己动手:Glob/Read/Write | 自己动手:Glob/Read/Write | 自己动手:Glob/Read/Write
+n4   train  否       0/3       自己动手:Glob/Read | 自己动手:Glob/Read | 自己动手:Glob/Read
+n5   train  否       0/3       自己动手:Glob | 自己动手:Glob | 自己动手:Glob
+n6   test   否       0/3       book-to-mindmap | book-to-mindmap | book-to-mindmap
+n7   test   否       0/3       直接回答 | 直接回答 | 直接回答
+n8   test   否       0/3       自己动手:Glob/Read | 自己动手:Glob/Read | 自己动手:Glob/Read
+t1   train  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t2   train  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t3   train  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t4   train  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t5   train  是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t6   test   是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t7   test   是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+t8   test   是       3/3       meeting-minutes | meeting-minutes | meeting-minutes
+
+train  正例触发 5/5 · 负例误触发 0/5
+test   正例触发 3/3 · 负例误触发 0/3
+全部     正例触发 8/8 · 负例误触发 0/8
+按单次运行算：正例 24/24 次触发，负例 0/24 次误触发

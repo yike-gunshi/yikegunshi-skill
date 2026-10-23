@@ -1,0 +1,53 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1写明11月1日起全部走新系统、财务不再收纸质单据"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算与一等奖放在'未谈拢/待定'区，并注明冯琳无决定权、需老板定"
+    }
+  ],
+  "extra_false_conclusions": [
+    {
+      "text": "新系统操作简单，以拍照上传凭证为主；对习惯贴票的同事不另设过渡期。",
+      "why": "转写稿只有冯琳一句'不习惯也得习惯'，会上并未讨论或拍板过渡期安排，'不另设过渡期'是纪要自行推出的决定"
+    }
+  ],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "负责人冯琳，截止写'未明确'并另附建议值，且附注说明是倒推推断"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "许诺，10月20日，对应原话'我今天就发'"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周小川，10月23日（周五）前，10/20为周二，换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "标准答案与规则基本可用。两点说明：一是纪要'未谈拢'区第2条（老同事适应问题）其实已由冯琳一句'不习惯也得习惯'定调，列为待定略显牵强，但属无害补充，未按未决条目扣判；二是纪要结论2把'不另设过渡期'写成既定安排，与第1点同源，我按规则3记为额外的伪结论而未在 fabrications 重复列出。",
+  "_meta": {
+    "cost": 0.06514400000000001,
+    "duration_ms": 21767
+  }
+}

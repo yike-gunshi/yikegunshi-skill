@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1100" viewBox="0 0 1240 1100" font-family="PingFang SC, Noto Sans SC, sans-serif">
+  <rect x="0" y="0" width="1240" height="1100" fill="#ffffff"/>
+
+  <!-- 标题 -->
+  <text x="30" y="46" font-size="23" font-weight="700" fill="#111827">Transformer：去掉循环，只靠注意力读懂一句话</text>
+  <text x="30" y="78" font-size="15" fill="#6b7280">逐词排队太慢 → 自注意力让每个词一步看全句 → 编码器读懂原文、解码器逐词写译文 → 翻译更准、训练更省</text>
+
+  <!-- A 它回答什么问题 -->
+  <rect x="30" y="100" width="380" height="304" rx="14" fill="#f1f4f9" stroke="#e2e8f2"/>
+  <rect x="48" y="118" width="5" height="20" rx="2.5" fill="#2563eb"/>
+  <text x="62" y="134" font-size="17" font-weight="700" fill="#111827">它回答什么问题</text>
+  <text x="194" y="134" font-size="14" fill="#6b7280">2017 年以前的翻译模型</text>
+
+  <rect x="50" y="154" width="340" height="92" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="68" y="182" font-size="15" font-weight="700" fill="#111827">旧路：循环网络 RNN 逐词读</text>
+  <text x="68" y="207" font-size="14" fill="#6b7280">后一个词要等前一个算完，没法并行</text>
+  <text x="68" y="230" font-size="14" fill="#6b7280">句首信息一站站传到句尾，越传越淡</text>
+
+  <path d="M 220 246 V 283" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <path d="M 220 292 l-5 -9 h10 z" fill="#2563eb"/>
+  <text x="234" y="274" font-size="14" fill="#6b7280">拆掉循环和卷积</text>
+
+  <rect x="50" y="292" width="340" height="92" rx="8" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="68" y="320" font-size="15" font-weight="700" fill="#111827">新路：整个模型只用注意力</text>
+  <text x="68" y="345" font-size="14" fill="#6b7280">任意两个词之间一步直连</text>
+  <text x="68" y="368" font-size="14" fill="#6b7280">整句同时计算，GPU 可以并行</text>
+
+  <!-- B 怎么做的 -->
+  <rect x="430" y="100" width="780" height="304" rx="14" fill="#f1f4f9" stroke="#e2e8f2"/>
+  <rect x="448" y="118" width="5" height="20" rx="2.5" fill="#2563eb"/>
+  <text x="462" y="134" font-size="17" font-weight="700" fill="#111827">怎么做的</text>
+  <text x="544" y="134" font-size="14" fill="#6b7280">以英译德为例：编码器读懂原文，解码器逐词写出译文</text>
+
+  <rect x="450" y="154" width="170" height="90" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="466" y="182" font-size="15" font-weight="700" fill="#111827">输入一句英文</text>
+  <text x="466" y="207" font-size="14" fill="#6b7280">切成词片变成向量</text>
+  <text x="466" y="229" font-size="14" fill="#6b7280">再加上位置编码</text>
+
+  <path d="M 620 199 H 631" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <path d="M 640 199 l-9 -5 v10 z" fill="#2563eb"/>
+
+  <rect x="640" y="154" width="170" height="90" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="656" y="182" font-size="15" font-weight="700" fill="#111827">编码器 × 6 层</text>
+  <text x="656" y="207" font-size="14" fill="#6b7280">每层：自注意力</text>
+  <text x="656" y="229" font-size="14" fill="#6b7280">再接一个前馈网络</text>
+
+  <path d="M 810 199 H 821" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <path d="M 830 199 l-9 -5 v10 z" fill="#2563eb"/>
+
+  <rect x="830" y="154" width="170" height="90" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="846" y="182" font-size="15" font-weight="700" fill="#111827">解码器 × 6 层</text>
+  <text x="846" y="207" font-size="14" fill="#6b7280">遮住还没写的词</text>
+  <text x="846" y="229" font-size="14" fill="#6b7280">回看编码器的结果</text>
+
+  <path d="M 1000 199 H 1011" stroke="#2563eb" stroke-width="1.5" fill="none"/>
+  <path d="M 1020 199 l-9 -5 v10 z" fill="#2563eb"/>
+
+  <rect x="1020" y="154" width="170" height="90" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="1036" y="182" font-size="15" font-weight="700" fill="#111827">输出下一个词</text>
+  <text x="1036" y="207" font-size="14" fill="#6b7280">算出每个词的概率</text>
+  <text x="1036" y="229" font-size="14" fill="#6b7280">选出下一个德文词</text>
+
+  <!-- 自回归回环 -->
+  <path d="M 1105 244 V 266 H 915 V 253" stroke="#8a94a6" stroke-width="1.5" fill="none"/>
+  <path d="M 915 244 l-5 9 h10 z" fill="#8a94a6"/>
+  <text x="925" y="286" font-size="14" fill="#6b7280">写出的词接回去，再写下一个</text>
+
+  <!-- 唯一高亮：自注意力 -->
+  <rect x="450" y="298" width="740" height="80" rx="8" fill="#fdf3d8" stroke="#d9a514" stroke-width="2"/>
+  <text x="468" y="327" font-size="15" font-weight="700" fill="#111827">核心部件 自注意力：每个词给全句每个词打相关分，再按分数加权汇总</text>
+  <text x="468" y="356" font-size="14" fill="#6b7280">8 个注意力头并行，各看一个角度；附录里有两个头读到 its 时，都把注意力投向它指代的 Law</text>
+
+  <!-- C 发现了什么 -->
+  <rect x="30" y="424" width="1180" height="222" rx="14" fill="#f1f4f9" stroke="#e2e8f2"/>
+  <rect x="48" y="442" width="5" height="20" rx="2.5" fill="#2563eb"/>
+  <text x="62" y="458" font-size="17" font-weight="700" fill="#111827">发现了什么</text>
+  <text x="160" y="458" font-size="14" fill="#6b7280">WMT 2014 新闻翻译测试，BLEU 分越高，越接近人工译文</text>
+
+  <rect x="50" y="478" width="270" height="148" rx="8" fill="#eef4ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="66" y="508" font-size="15" font-weight="700" fill="#111827">英译德 BLEU 28.4</text>
+  <text x="66" y="534" font-size="14" fill="#6b7280">此前最好 26.36（多模型投票）</text>
+  <text x="66" y="558" font-size="14" fill="#6b7280">一次高出 2 分</text>
+  <text x="66" y="582" font-size="14" fill="#6b7280">表里相邻的单模型之间</text>
+  <text x="66" y="606" font-size="14" fill="#6b7280">只差 0.6 到 0.9 分</text>
+
+  <rect x="340" y="478" width="270" height="148" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="356" y="508" font-size="15" font-weight="700" fill="#111827">英译法 BLEU 41.8</text>
+  <text x="356" y="534" font-size="14" fill="#6b7280">单个模型的最好成绩</text>
+  <text x="356" y="558" font-size="14" fill="#6b7280">此前单模型最高 40.56</text>
+  <text x="356" y="582" font-size="14" fill="#6b7280">英法分数天然高于英德</text>
+  <text x="356" y="606" font-size="14" fill="#6b7280">两个任务的分数别横比</text>
+
+  <rect x="630" y="478" width="270" height="148" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="646" y="508" font-size="15" font-weight="700" fill="#111827">基础版只训练 12 小时</text>
+  <text x="646" y="534" font-size="14" fill="#6b7280">1 台机器、8 块 P100 GPU</text>
+  <text x="646" y="558" font-size="14" fill="#6b7280">英译德 27.3，已超过全部旧模型</text>
+  <text x="646" y="582" font-size="14" fill="#6b7280">算力不到旧冠军的 1/20</text>
+  <text x="646" y="606" font-size="14" fill="#6b7280">大号版训练 3.5 天</text>
+
+  <rect x="920" y="478" width="270" height="148" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="936" y="508" font-size="15" font-weight="700" fill="#111827">换到句法分析也能打</text>
+  <text x="936" y="534" font-size="14" fill="#6b7280">没为新任务专门调参</text>
+  <text x="936" y="558" font-size="14" fill="#6b7280">只用 4 万句训练，F1 91.3</text>
+  <text x="936" y="582" font-size="14" fill="#6b7280">超过经典的 BerkeleyParser</text>
+  <text x="936" y="606" font-size="14" fill="#6b7280">（同条件下 90.4）</text>
+
+  <!-- D 消融 -->
+  <rect x="30" y="666" width="760" height="260" rx="14" fill="#f1f4f9" stroke="#e2e8f2"/>
+  <rect x="48" y="684" width="5" height="20" rx="2.5" fill="#2563eb"/>
+  <text x="62" y="700" font-size="17" font-weight="700" fill="#111827">拆零件看贡献</text>
+  <text x="178" y="700" font-size="14" fill="#6b7280">消融实验：英译德开发集，基础版 25.8 分，其余设置不变</text>
+
+  <path d="M 520 722 V 888" stroke="#8a94a6" stroke-width="1.5" fill="none"/>
+
+  <text x="296" y="741" font-size="14" fill="#374151" text-anchor="end">只叠 2 层（原来 6 层）</text>
+  <rect x="310" y="728" width="210" height="16" rx="3" fill="#94a3b8"/>
+  <text x="532" y="741" font-size="14" fill="#374151">23.7（−2.1）</text>
+
+  <text x="296" y="769" font-size="14" fill="#374151" text-anchor="end">去掉 dropout 防过拟合</text>
+  <rect x="400" y="756" width="120" height="16" rx="3" fill="#94a3b8"/>
+  <text x="532" y="769" font-size="14" fill="#374151">24.6（−1.2）</text>
+
+  <text x="296" y="797" font-size="14" fill="#374151" text-anchor="end">只用 1 个注意力头</text>
+  <rect x="430" y="784" width="90" height="16" rx="3" fill="#94a3b8"/>
+  <text x="532" y="797" font-size="14" fill="#374151">24.9（−0.9）</text>
+
+  <text x="296" y="825" font-size="14" fill="#374151" text-anchor="end">头太多：32 个头</text>
+  <rect x="480" y="812" width="40" height="16" rx="3" fill="#94a3b8"/>
+  <text x="532" y="825" font-size="14" fill="#374151">25.4（−0.4）</text>
+
+  <text x="296" y="853" font-size="14" fill="#374151" text-anchor="end">位置编码改成学出来的</text>
+  <rect x="510" y="840" width="10" height="16" rx="3" fill="#94a3b8"/>
+  <text x="532" y="853" font-size="14" fill="#374151">25.7（−0.1）</text>
+
+  <text x="296" y="881" font-size="14" fill="#374151" text-anchor="end">整体放大成大号版</text>
+  <rect x="520" y="868" width="60" height="16" rx="3" fill="#2563eb"/>
+  <text x="592" y="881" font-size="14" fill="#374151">26.4（+0.6）</text>
+
+  <text x="50" y="910" font-size="14" fill="#6b7280">读法：层数和防过拟合影响最大；头数要适中；位置编码换做法几乎不影响</text>
+
+  <!-- E 适用边界 -->
+  <rect x="810" y="666" width="400" height="260" rx="14" fill="#f1f4f9" stroke="#e2e8f2"/>
+  <rect x="828" y="684" width="5" height="20" rx="2.5" fill="#2563eb"/>
+  <text x="842" y="700" font-size="17" font-weight="700" fill="#111827">适用边界</text>
+  <text x="924" y="700" font-size="14" fill="#6b7280">论文自己写明的限制</text>
+
+  <rect x="830" y="716" width="360" height="62" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="846" y="741" font-size="15" font-weight="700" fill="#111827">句子越长越贵</text>
+  <text x="846" y="765" font-size="14" fill="#6b7280">长度翻倍，注意力的计算量约翻四倍</text>
+
+  <rect x="830" y="786" width="360" height="62" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="846" y="811" font-size="15" font-weight="700" fill="#111827">生成仍要一个词一个词来</text>
+  <text x="846" y="835" font-size="14" fill="#6b7280">让生成不再逐词进行，被列为未来目标</text>
+
+  <rect x="830" y="856" width="360" height="62" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="846" y="881" font-size="15" font-weight="700" fill="#111827">只验证了文字任务</text>
+  <text x="846" y="905" font-size="14" fill="#6b7280">翻译和句法分析；图像、音频留待以后</text>
+
+  <!-- F 启示 -->
+  <rect x="30" y="946" width="1180" height="134" rx="14" fill="#f1f4f9" stroke="#e2e8f2"/>
+  <rect x="48" y="964" width="5" height="20" rx="2.5" fill="#2563eb"/>
+  <text x="62" y="980" font-size="17" font-weight="700" fill="#111827">对普通读者的启示</text>
+  <text x="212" y="980" font-size="14" fill="#6b7280">把论文里的部件，对上每天用的 ChatGPT</text>
+
+  <rect x="50" y="998" width="366" height="66" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="66" y="1024" font-size="15" font-weight="700" fill="#111827">回答是逐字蹦出来的</text>
+  <text x="66" y="1049" font-size="14" fill="#6b7280">对应解码器：写一个词，接回去再写下一个</text>
+
+  <rect x="437" y="998" width="366" height="66" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="453" y="1024" font-size="15" font-weight="700" fill="#111827">对话长度有上限</text>
+  <text x="453" y="1049" font-size="14" fill="#6b7280">每个新词都要和前文所有词算相关分</text>
+
+  <rect x="824" y="998" width="366" height="66" rx="8" fill="#ffffff" stroke="#d9dee8" stroke-width="1.5"/>
+  <text x="840" y="1024" font-size="15" font-weight="700" fill="#111827">GPT 的 T 就是 Transformer</text>
+  <text x="840" y="1049" font-size="14" fill="#6b7280">GPT 只保留了其中的解码器</text>
+</svg>

@@ -1,0 +1,48 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条写明11月1日起全走新系统、不再收纸质单，并注明冯琳拍板、两人同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "年会抽奖预算/手机一等奖被放在“没谈拢”区，并注明冯琳说了不算、需找老板"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "冯琳整理操作说明发群，截止写“未说定”并附原话“回头”"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "许诺行政群通知，截止今天10/20，与“我今天就发”一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "周小川交打车票，周五之前；10/20为周二，换算10/23正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "纪要在“没谈拢”区多列了一条“老同事的纸质报销习惯”，标准答案的 open 为空。但转写稿中许诺确实提出该顾虑、冯琳仅口头带过未作过渡安排，列为未决合理，且未写入结论区，不构成虚假结论，故不扣。另：标准答案 neutral 已允许年会预算列入未决，纪要处理与之一致。",
+  "_meta": {
+    "cost": 0.068004,
+    "duration_ms": 15451
+  }
+}

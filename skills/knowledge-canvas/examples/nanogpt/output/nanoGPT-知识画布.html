@@ -1,0 +1,3145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="use-iframe" content="true">
+<meta name="html-box-height-mode" content="auto">
+<title>知识画布</title>
+<style>
+:root{color-scheme:dark;--bg:#070e19;--panel:#101c2d;--line:#31445e;--text:#e5edf8;--muted:#9aadc5;--accent:#83d7c1;--radius:12px;--gap:12px;--node-title:20px;--node-summary:13px;--group-title:25px;--detail-width:455px;--embed-height:640px}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,.node:focus-visible{outline:2px solid var(--accent);outline-offset:3px}[hidden]{display:none!important}.shell{position:relative;display:flex;flex-direction:column;gap:var(--gap);padding:20px;height:100dvh;min-height:0;overflow:hidden}.shell.embedded{height:auto;overflow:visible}.shell:fullscreen{position:fixed;inset:0;height:100%;width:100%;max-height:none;padding:20px;overflow:hidden}.shell::backdrop{background:var(--bg)}header{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-shrink:0}h1{font-size:21px;margin:0 0 8px}.subtitle{color:var(--muted);font-size:12px;margin:0;line-height:1.7}.version{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:8px;border-radius:6px}.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);padding-bottom:7px;flex-shrink:0}.tabs button{padding:9px 23px;background:transparent;border:0;border-radius:7px;color:var(--muted);font-size:13px}.tabs button[aria-selected=true]{background:#1c2b40;color:var(--text);box-shadow:inset 0 -2px var(--accent)}.view{display:flex;flex-direction:column;flex:1;min-height:0;gap:var(--gap)}.navline{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;flex-shrink:0}.module-nav,.view-options,.controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.module-nav{font-size:12px;color:var(--muted)}select,button.control{color:var(--text);border:1px solid var(--line);border-radius:6px;background:#122035;padding:6px 9px;font-size:12px}button.control[aria-pressed=true]{border-color:var(--accent);color:#b2f4e0}.legend{display:flex;gap:12px;font-size:10px;color:var(--muted)}.legend i{display:inline-block;width:18px;vertical-align:middle;margin-right:5px;border-top:1px solid #92b8c4}.legend i.dashed{border-top-style:dashed;border-color:#9186a9}.legend i.composition{border-color:#aaa0be}.viewport{position:relative;flex:1;min-height:100px;overflow:hidden;touch-action:none;cursor:grab;border:1px solid var(--line);border-radius:var(--radius);background-color:#091322;background-image:radial-gradient(#23344d .8px,transparent .8px);background-size:24px 24px}.embedded .viewport{flex:none;height:var(--embed-height)}.shell:fullscreen .viewport{flex:1;height:auto;min-height:0}.viewport.dragging{cursor:grabbing}.world{position:absolute;inset:0;contain:layout paint}.world>svg{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}.motion-layer{pointer-events:none}.group-frame,.surface,.fold,.edge{vector-effect:non-scaling-stroke}.group-title{font-size:var(--group-title);font-weight:650}.group-summary{font-size:13px;fill:#afbed1}.node{cursor:pointer;outline:none}.surface{fill:#142136;stroke:#526681;stroke-width:1}.node:hover .surface,.node.active .surface,.node:focus-visible .surface{fill:#20334d;stroke:var(--node-color);stroke-width:1.8}.fold{fill:none;stroke:#637690;stroke-width:.7}.node-title{fill:var(--text);font-size:var(--node-title);font-weight:600}.node-summary{fill:#a6b8cf;font-size:var(--node-summary)}.node-english{fill:#b3c4dd;font-size:12px}.node-status{fill:#cbbceb;font-size:11px}.node.disabled .surface{fill:#121b29;stroke:#3b4658}.node.disabled .node-title,.node.disabled .node-summary,.node.disabled .node-english{fill:#7c8da5}.node.text .surface{fill:transparent;stroke:transparent}.edge{fill:none;stroke:#8caeba;stroke-width:1.2;opacity:.8;stroke-linecap:round;stroke-linejoin:round}.edge-set.secondary .edge{opacity:.55;stroke-width:1}.edge-set.auxiliary{display:none}.show-dependencies .edge-set.auxiliary{display:inline}.edge-set.auxiliary .edge{stroke:#9587ad;stroke-width:1;opacity:.4;stroke-dasharray:4 7}.edge-set.condition .edge,.edge-set.reference .edge{stroke:#998caf;stroke-dasharray:6 6}.edge-set.composition .edge{stroke:#aaa0be;stroke-dasharray:none;stroke-width:1}.edge-set.loop.primary .edge{stroke:#65ceb2}.edge-label{font-size:12px;fill:#a8b8ce;paint-order:stroke;stroke:#0b1423;stroke-width:5;stroke-linejoin:round}.motion-particle{fill:none;stroke:#b1f0db;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:none}.bottom{flex-shrink:0;display:flex;justify-content:space-between;align-items:center;gap:12px}.controls output{min-width:44px;text-align:center;font-size:12px;color:var(--muted)}.hint,.motion-note{font-size:10px;color:#8296b0;line-height:1.6}.status{font-size:12px;color:#f0c687;margin:0;flex-shrink:0}.reading-view{display:grid;grid-template-columns:210px minmax(0,1fr);overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:#0d1726}.embedded .reading-view{flex:none;height:760px}.shell:fullscreen .reading-view{flex:1;height:auto}.doc-nav{overflow:auto;padding:18px;border-right:1px solid var(--line);font-size:12px}.doc-nav a{display:block;color:#afc2db;text-decoration:none;line-height:1.7;padding:7px 8px;border-radius:5px}.doc-nav a:hover{background:#1a2b41}.doc-scroll,.faq-scroll{overflow:auto;padding:28px 36px 70px;overscroll-behavior:contain}.doc-body{max-width:940px;margin:auto;font-size:14px;line-height:1.9;overflow-wrap:anywhere}.doc-body h2{font-size:23px;margin:16px 0 24px;color:#90dec7}.doc-body h3{font-size:20px;color:#b9b0ea;margin:28px 0 16px}.doc-body h4,.doc-body h5,.doc-body h6{font-size:17px;margin:24px 0 15px;color:var(--text)}.doc-node{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:22px}.doc-path{font-size:11px;color:#8198b4;margin:0 0 15px}.rule{margin:0 0 12px}.rule strong{color:var(--text)}.rule ul{margin:6px 0 0;padding-left:21px}.rule li{margin:4px 0}.doc-body details{margin-top:16px}.doc-body summary{cursor:pointer;color:#9fbad8;font-size:12px}.faq-scroll{border:1px solid var(--line);border-radius:var(--radius);background:#0d1726;flex:1}.faq-item{margin:0 0 30px;border-bottom:1px solid var(--line);padding-bottom:20px}.faq-empty{display:grid;place-content:center;text-align:center;height:100%;color:var(--muted)}.faq-links{display:flex;gap:6px;flex-wrap:wrap}.panel{position:fixed;z-index:30;width:var(--detail-width);max-width:calc(100vw - 28px);display:flex;flex-direction:column;overflow:hidden;border:1px solid #61718c;border-radius:var(--radius);background:#0f1a2b;box-shadow:0 18px 60px #0009}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:15px 16px;background:#19283e;border-bottom:1px solid var(--line);flex-shrink:0}.panel-head h2{font-size:15px;margin:0;line-height:1.5}.actions{display:flex;gap:5px;flex-shrink:0}.actions button,.copy{font-size:11px;color:#c9d6e9;background:transparent;border:1px solid #4c607c;border-radius:5px;padding:4px 7px}.panel-body{padding:17px 16px;overflow:auto;overflow-anchor:none;overscroll-behavior:contain;font-size:13px;line-height:1.85;scrollbar-width:thin}.section-title{font-size:13px;color:#c6d5eb;margin:0 0 14px}.sample{border-top:1px solid var(--line);padding-top:15px;margin-top:18px}.sample h4{font-size:12px;color:#b7c9e2;margin:0 0 10px}.sample-meta,.source{font-size:11px;color:#899fbd;line-height:1.8;overflow-wrap:anywhere}.sample-meta{margin-bottom:12px}.sample-block{margin:12px 0}.block-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 10px;font-size:11px;background:#1a2940;border:1px solid var(--line);border-radius:6px 6px 0 0}.sample-raw{margin:0;padding:12px;background:#080f1d;border:1px solid var(--line);border-top:0;border-radius:0 0 6px 6px;font:12px/1.8 ui-monospace,SFMono-Regular,Menlo,'PingFang SC',monospace;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;max-height:290px;scrollbar-width:thin}.sample-raw.quote{font-family:inherit;border-left:3px solid #9186b7}.source{margin:16px 0 0}.panel-foot{padding:8px 16px;background:#162439;border-top:1px solid var(--line);font-size:10px;color:#879dbb}.noscript{padding:20px;color:#e5bd7b}
+@media(max-width:1000px){.legend,.version{display:none}.hint{display:none}.reading-view{grid-template-columns:170px minmax(0,1fr)}.doc-scroll{padding:22px}.bottom{justify-content:flex-end}}@media(max-width:600px){.shell,.shell:fullscreen{padding:10px;gap:9px}h1{font-size:17px}.subtitle{font-size:11px}.tabs button{padding:8px 17px}.reading-view{grid-template-columns:1fr}.doc-nav{display:none}.doc-scroll,.faq-scroll{padding:18px}.controls{gap:4px}.controls button.control{padding:6px 7px;font-size:11px}.motion-note{display:none}.bottom{justify-content:center}.view-options{margin-left:0}.version{display:none}.panel-head{padding:12px}.panel-body{padding:14px}.doc-body{font-size:13px}}
+</style>
+</head>
+<body>
+<main id="canvas-app" class="shell">
+ <header><div><h1 id="page-title"></h1><p id="page-subtitle" class="subtitle"></p></div><span id="version" class="version" hidden></span></header>
+ <nav class="tabs" role="tablist" aria-label="内容视图"><button id="tab-canvas" role="tab" aria-controls="view-canvas" aria-selected="true" tabindex="0" data-view="canvas">画布</button><button id="tab-document" role="tab" aria-controls="view-document" aria-selected="false" tabindex="-1" data-view="document">文档</button><button id="tab-faq" role="tab" aria-controls="view-faq" aria-selected="false" tabindex="-1" data-view="faq" hidden>FAQ</button></nav>
+ <section id="view-canvas" class="view" role="tabpanel" aria-labelledby="tab-canvas">
+  <div class="navline"><div class="module-nav"><label for="module-select">定位模块</label><select id="module-select"><option value="">选择模块</option></select></div><div class="view-options"><button id="dependencies" class="control" aria-pressed="false" aria-controls="world" hidden>显示全部依赖</button><div id="legend" class="legend"></div></div></div>
+  <div id="viewport" class="viewport" aria-label="可缩放、平移的知识画布"><div id="world" class="world"><svg id="base-layer" aria-label="知识结构"></svg><svg id="motion-layer" class="motion-layer" aria-hidden="true"></svg></div></div>
+  <div class="bottom"><span class="hint">滚轮缩放 · 拖动平移 · 悬停查看 · 点击固定</span><div class="controls"><button id="zoom-out" class="control" aria-label="缩小">−</button><output id="zoom-value">100%</output><button id="zoom-in" class="control" aria-label="放大">＋</button><button id="readable" class="control">100%</button><button id="fit" class="control">适配全图</button><button id="fullscreen" class="control">全屏</button><button id="motion" class="control" aria-pressed="false" hidden>暂停流动</button></div></div>
+  <div id="motion-note" class="motion-note" hidden>主流程按序示意 · 条件与辅助关系静态 · 动效不代表真实执行</div>
+ </section>
+ <section id="view-document" class="view reading-view" role="tabpanel" aria-labelledby="tab-document" hidden><nav id="doc-nav" class="doc-nav" aria-label="文档目录"></nav><div id="doc-scroll" class="doc-scroll" tabindex="0"><article id="doc-body" class="doc-body"></article></div></section>
+ <section id="view-faq" class="view" role="tabpanel" aria-labelledby="tab-faq" hidden><div class="faq-scroll"><article id="faq-body" class="doc-body"></article></div></section>
+ <p id="display-status" class="status" role="status" hidden></p>
+ <aside id="panel" class="panel" hidden role="dialog" aria-modal="false" aria-labelledby="panel-title"><div class="panel-head"><h2 id="panel-title"></h2><div class="actions"><button id="pin" aria-pressed="false">固定</button><button id="close" aria-label="关闭详情">关闭 ×</button></div></div><div id="panel-body" class="panel-body" tabindex="0"></div><div class="panel-foot">Esc 关闭 · 样例保留原始内容</div></aside>
+ <noscript><div class="noscript">当前环境未运行 JavaScript，交互画布不可用</div></noscript>
+</main>
+<script type="application/json" id="canvas-data">
+{
+  "meta": {
+    "title": "nanoGPT：一个 GPT 是怎么训练出来的",
+    "subtitle": "karpathy/nanoGPT 代码仓库 · 准备数据 → 训练循环 → 生成文本，以及它们共用的 GPT 模型 · 未纳入测速脚本 bench.py 与两个分析笔记",
+    "mode": "mixed",
+    "version": "commit 3adf61e · 2025-11-12"
+  },
+  "width": 2460,
+  "height": 1700,
+  "groups": [
+    {
+      "id": "data",
+      "title": "准备数据",
+      "summary": "data/*/prepare.py：把文本变成一长串整数",
+      "color": "cyan",
+      "x": 40,
+      "y": 40,
+      "w": 700,
+      "h": 590
+    },
+    {
+      "id": "config",
+      "title": "训练设定",
+      "summary": "configurator.py：默认值被配置文件、命令行改写",
+      "color": "slate",
+      "x": 40,
+      "y": 670,
+      "w": 700,
+      "h": 250
+    },
+    {
+      "id": "train",
+      "title": "训练循环",
+      "summary": "train.py：反复取数据、算损失、调参数",
+      "color": "green",
+      "x": 800,
+      "y": 40,
+      "w": 1120,
+      "h": 1020
+    },
+    {
+      "id": "speed",
+      "parent": "train",
+      "title": "提速选项",
+      "summary": "按设备与启动方式启用，不改变要算的内容",
+      "color": "slate",
+      "x": 1200,
+      "y": 800,
+      "w": 700,
+      "h": 230
+    },
+    {
+      "id": "sample",
+      "title": "生成文本",
+      "summary": "sample.py：用训练好的模型逐个续写",
+      "color": "amber",
+      "x": 1960,
+      "y": 40,
+      "w": 400,
+      "h": 910
+    },
+    {
+      "id": "model",
+      "title": "GPT 模型",
+      "summary": "model.py：从一串编号算出下一个词的分数",
+      "color": "violet",
+      "x": 800,
+      "y": 1120,
+      "w": 1620,
+      "h": 540
+    },
+    {
+      "id": "block",
+      "parent": "model",
+      "title": "Transformer 块",
+      "summary": "共 n_layer 块依次处理，每块先注意力、再前馈",
+      "color": "violet",
+      "x": 1180,
+      "y": 1220,
+      "w": 620,
+      "h": 280
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tiny_shakespeare",
+      "group": "data",
+      "title": "莎士比亚文本",
+      "summary": "入门练习和微调示例用的小文本",
+      "shape": "database",
+      "x": 80,
+      "y": 170,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "是什么",
+          "body": "来自 karpathy/char-rnn 项目的 tinyshakespeare 文本，准备脚本第一次运行时下载并存成 input.txt"
+        },
+        {
+          "label": "谁在用",
+          "body": [
+            "data/shakespeare_char/prepare.py：按字符编码，用于从零训练小模型",
+            "data/shakespeare/prepare.py：按 GPT-2 分词，用于微调示例"
+          ]
+        },
+        {
+          "label": "切分",
+          "body": "两个脚本都按字符位置取前 90% 作训练集、后 10% 作验证集"
+        },
+        {
+          "label": "规模",
+          "body": "README 称它是一个约 1MB 的文件；字符级脚本注释记录全文 1115394 个字符"
+        }
+      ],
+      "samples": [
+        {
+          "title": "下载与切分",
+          "type": "代码原文",
+          "source": "data/shakespeare_char/prepare.py 第 12-40 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "下载并读入",
+              "format": "code",
+              "raw": "# download the tiny shakespeare dataset\ninput_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')\nif not os.path.exists(input_file_path):\n    data_url = 'https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt'\n    with open(input_file_path, 'w') as f:\n        f.write(requests.get(data_url).text)\n\nwith open(input_file_path, 'r') as f:\n    data = f.read()\nprint(f\"length of dataset in characters: {len(data):,}\")"
+            },
+            {
+              "label": "前 90% 训练、后 10% 验证",
+              "format": "code",
+              "raw": "# create the train and test splits\nn = len(data)\ntrain_data = data[:int(n*0.9)]\nval_data = data[int(n*0.9):]"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：data/shakespeare_char/prepare.py 第 12-40 行；data/shakespeare/prepare.py 第 6-17 行；README.md quick start 一节"
+      ],
+      "english": "input.txt"
+    },
+    {
+      "id": "openwebtext",
+      "group": "data",
+      "title": "OpenWebText",
+      "summary": "复现 GPT-2 用的大规模网页文本",
+      "shape": "database",
+      "x": 420,
+      "y": 170,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "是什么",
+          "body": "README 称它是 OpenAI 未公开的 WebText 数据集的开源复刻，脚本通过 Hugging Face datasets 下载"
+        },
+        {
+          "label": "切分",
+          "body": "原数据只有 train 一份，脚本用 train_test_split 随机切出 0.05% 作验证集"
+        },
+        {
+          "label": "规模",
+          "body": "代码注释记录约 800 万篇文档，下载缓存约 54GB"
+        },
+        {
+          "label": "边界",
+          "body": "本次没有下载或运行，规模数字均来自代码注释"
+        }
+      ],
+      "samples": [
+        {
+          "title": "载入与切分",
+          "type": "代码原文",
+          "source": "data/openwebtext/prepare.py 第 21-40 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "data/openwebtext/prepare.py 21-40",
+              "format": "code",
+              "raw": "if __name__ == '__main__':\n    # takes 54GB in huggingface .cache dir, about 8M documents (8,013,769)\n    dataset = load_dataset(\"openwebtext\", num_proc=num_proc_load_dataset)\n\n    # owt by default only contains the 'train' split, so create a test split\n    split_dataset = dataset[\"train\"].train_test_split(test_size=0.0005, seed=2357, shuffle=True)\n    split_dataset['val'] = split_dataset.pop('test') # rename the test split to val\n\n    # this results in:\n    # >>> split_dataset\n    # DatasetDict({\n    #     train: Dataset({\n    #         features: ['text'],\n    #         num_rows: 8009762\n    #     })\n    #     val: Dataset({\n    #         features: ['text'],\n    #         num_rows: 4007\n    #     })\n    # })"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：data/openwebtext/prepare.py 第 21-40 行；README.md reproducing GPT-2 一节"
+      ],
+      "english": "openwebtext"
+    },
+    {
+      "id": "char_encode",
+      "group": "data",
+      "title": "按字符编码",
+      "summary": "每个字符对应一个整数",
+      "shape": "process",
+      "x": 80,
+      "y": 330,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "收集文本里出现过的所有字符并排序，按顺序编号：stoi 把字符变成整数，itos 把整数变回字符"
+        },
+        {
+          "label": "词表",
+          "body": "注释记录莎士比亚文本共 65 种字符（换行、空格、标点、数字 3 和大小写字母），所以词表只有 65 个编号"
+        },
+        {
+          "label": "产物",
+          "body": [
+            "train.bin、val.bin：编码后的整数序列",
+            "meta.pkl：字符表，生成文字时要用它解码"
+          ]
+        },
+        {
+          "label": "适用",
+          "body": "小数据、入门练习；词表小，模型的输入输出层也小"
+        }
+      ],
+      "samples": [
+        {
+          "title": "字符表与编码函数",
+          "type": "代码原文",
+          "source": "data/shakespeare_char/prepare.py 第 23-35 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "data/shakespeare_char/prepare.py 23-35",
+              "format": "code",
+              "raw": "# get all the unique characters that occur in this text\nchars = sorted(list(set(data)))\nvocab_size = len(chars)\nprint(\"all the unique characters:\", ''.join(chars))\nprint(f\"vocab size: {vocab_size:,}\")\n\n# create a mapping from characters to integers\nstoi = { ch:i for i,ch in enumerate(chars) }\nitos = { i:ch for i,ch in enumerate(chars) }\ndef encode(s):\n    return [stoi[c] for c in s] # encoder: take a string, output a list of integers\ndef decode(l):\n    return ''.join([itos[i] for i in l]) # decoder: take a list of integers, output a string"
+            }
+          ]
+        },
+        {
+          "title": "脚本运行时的输出",
+          "type": "代码注释记录（作者运行结果，本次未复现）",
+          "source": "data/shakespeare_char/prepare.py 第 63-68 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "文件末尾注释",
+              "format": "text",
+              "raw": "# length of dataset in characters:  1115394\n# all the unique characters:\n#  !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\n# vocab size: 65\n# train has 1003854 tokens\n# val has 111540 tokens"
+            }
+          ]
+        },
+        {
+          "title": "把 hello 编成数字",
+          "type": "推导（按代码计算，非运行日志）",
+          "source": "按上面注释记录的字符表排序编号推出：换行=0、空格=1，小写 a 从 39 开始",
+          "blocks": [
+            {
+              "label": "输入",
+              "format": "text",
+              "raw": "hello"
+            },
+            {
+              "label": "输出",
+              "format": "json",
+              "raw": "[46, 43, 50, 50, 53]"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：data/shakespeare_char/prepare.py 第 23-68 行"
+      ],
+      "english": "stoi / itos"
+    },
+    {
+      "id": "bpe_encode",
+      "group": "data",
+      "title": "GPT-2 分词",
+      "summary": "常见词或词片段各对应一个编号",
+      "shape": "process",
+      "x": 420,
+      "y": 330,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "用 tiktoken 的 GPT-2 BPE 编码，把文本切成子词，每个子词对应一个编号"
+        },
+        {
+          "label": "谁在用",
+          "body": "data/shakespeare/prepare.py 与 data/openwebtext/prepare.py"
+        },
+        {
+          "label": "细节",
+          "body": [
+            "encode_ordinary 忽略文本里的特殊标记",
+            "openwebtext 在每篇文档末尾追加结束标记 eot（编号 50256）"
+          ]
+        },
+        {
+          "label": "为什么能存成 uint16",
+          "body": "注释说明最大编号 50256 小于 2 的 16 次方"
+        },
+        {
+          "label": "边界",
+          "body": "本次没有运行分词器，不给出具体文本的编号"
+        }
+      ],
+      "samples": [
+        {
+          "title": "莎士比亚文本按 GPT-2 分词",
+          "type": "代码原文",
+          "source": "data/shakespeare/prepare.py 第 19-30 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "data/shakespeare/prepare.py 19-30",
+              "format": "code",
+              "raw": "# encode with tiktoken gpt2 bpe\nenc = tiktoken.get_encoding(\"gpt2\")\ntrain_ids = enc.encode_ordinary(train_data)\nval_ids = enc.encode_ordinary(val_data)\nprint(f\"train has {len(train_ids):,} tokens\")\nprint(f\"val has {len(val_ids):,} tokens\")\n\n# export to bin files\ntrain_ids = np.array(train_ids, dtype=np.uint16)\nval_ids = np.array(val_ids, dtype=np.uint16)\ntrain_ids.tofile(os.path.join(os.path.dirname(__file__), 'train.bin'))\nval_ids.tofile(os.path.join(os.path.dirname(__file__), 'val.bin'))"
+            }
+          ]
+        },
+        {
+          "title": "OpenWebText 每篇末尾加 eot",
+          "type": "代码原文",
+          "source": "data/openwebtext/prepare.py 第 42-48 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "data/openwebtext/prepare.py 42-48",
+              "format": "code",
+              "raw": "    # we now want to tokenize the dataset. first define the encoding function (gpt2 bpe)\n    def process(example):\n        ids = enc.encode_ordinary(example['text']) # encode_ordinary ignores any special tokens\n        ids.append(enc.eot_token) # add the end of text token, e.g. 50256 for gpt2 bpe\n        # note: I think eot should be prepended not appended... hmm. it's called \"eot\" though...\n        out = {'ids': ids, 'len': len(ids)}\n        return out"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：data/shakespeare/prepare.py 第 19-30 行；data/openwebtext/prepare.py 第 42-63 行"
+      ],
+      "english": "tiktoken gpt2"
+    },
+    {
+      "id": "meta_pkl",
+      "group": "data",
+      "title": "字符表",
+      "summary": "只有按字符编码时才生成",
+      "shape": "document",
+      "x": 80,
+      "y": 490,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "内容",
+          "body": "vocab_size、itos、stoi 三项"
+        },
+        {
+          "label": "谁读",
+          "body": [
+            "train.py：从零训练时用 vocab_size 决定词表大小",
+            "sample.py：检查点对应的数据目录里有它，就按字符表编码提示词、解码输出"
+          ]
+        },
+        {
+          "label": "不存在时",
+          "body": "train.py 默认词表 50304（GPT-2 的 50257 向上取到 64 的倍数）；sample.py 默认按 GPT-2 分词"
+        }
+      ],
+      "samples": [
+        {
+          "title": "保存字符表",
+          "type": "代码原文",
+          "source": "data/shakespeare_char/prepare.py 第 54-61 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "data/shakespeare_char/prepare.py 54-61",
+              "format": "code",
+              "raw": "# save the meta information as well, to help us encode/decode later\nmeta = {\n    'vocab_size': vocab_size,\n    'itos': itos,\n    'stoi': stoi,\n}\nwith open(os.path.join(os.path.dirname(__file__), 'meta.pkl'), 'wb') as f:\n    pickle.dump(meta, f)"
+            }
+          ]
+        },
+        {
+          "title": "train.py 读取词表大小",
+          "type": "代码原文",
+          "source": "train.py 第 137-144 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 137-144",
+              "format": "code",
+              "raw": "# attempt to derive vocab_size from the dataset\nmeta_path = os.path.join(data_dir, 'meta.pkl')\nmeta_vocab_size = None\nif os.path.exists(meta_path):\n    with open(meta_path, 'rb') as f:\n        meta = pickle.load(f)\n    meta_vocab_size = meta['vocab_size']\n    print(f\"found vocab_size = {meta_vocab_size} (inside {meta_path})\")"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：data/shakespeare_char/prepare.py 第 54-61 行；train.py 第 137-155 行；sample.py 第 56-74 行"
+      ],
+      "english": "meta.pkl",
+      "status": {
+        "kind": "conditional",
+        "label": "仅字符级"
+      }
+    },
+    {
+      "id": "bin_files",
+      "group": "data",
+      "title": "训练集与验证集文件",
+      "summary": "所有编号首尾相接存成一条",
+      "shape": "database",
+      "x": 420,
+      "y": 490,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "内容",
+          "body": "全部文本的编号首尾相接成一条长序列，不保留分篇、分行的结构"
+        },
+        {
+          "label": "格式",
+          "body": "每个编号占 2 字节（uint16），直接写成二进制文件"
+        },
+        {
+          "label": "读取",
+          "body": "训练时用 np.memmap 按需读取，不把整个文件载入内存"
+        },
+        {
+          "label": "规模（注释记录）",
+          "body": [
+            "字符级莎士比亚：训练集约 100 万个编号，验证集约 11 万个",
+            "OpenWebText：训练集约 90 亿个编号，文件约 17GB"
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "title": "字符级数据的规模",
+          "type": "代码注释记录（作者运行结果，本次未复现）",
+          "source": "data/shakespeare_char/readme.md 全文 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "readme.md",
+              "format": "markdown",
+              "raw": "# tiny shakespeare, character-level\n\nTiny shakespeare, of the good old char-rnn fame :) Treated on character-level.\n\nAfter running `prepare.py`:\n\n- train.bin has 1,003,854 tokens\n- val.bin has 111,540 tokens"
+            }
+          ]
+        },
+        {
+          "title": "OpenWebText 的规模",
+          "type": "代码注释记录（作者运行结果，本次未复现）",
+          "source": "data/openwebtext/readme.md 第 2-10 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "readme.md",
+              "format": "markdown",
+              "raw": "## openwebtext dataset\n\nafter running `prepare.py` (preprocess) we get:\n\n- train.bin is ~17GB, val.bin ~8.5MB\n- train has ~9B tokens (9,035,582,198)\n- val has ~4M tokens (4,434,897)\n\nthis came from 8,013,769 documents in total."
+            }
+          ]
+        },
+        {
+          "title": "写成文件",
+          "type": "代码原文",
+          "source": "data/shakespeare_char/prepare.py 第 48-52 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "data/shakespeare_char/prepare.py 48-52",
+              "format": "code",
+              "raw": "# export to bin files\ntrain_ids = np.array(train_ids, dtype=np.uint16)\nval_ids = np.array(val_ids, dtype=np.uint16)\ntrain_ids.tofile(os.path.join(os.path.dirname(__file__), 'train.bin'))\nval_ids.tofile(os.path.join(os.path.dirname(__file__), 'val.bin'))"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：data/shakespeare_char/prepare.py 第 48-52 行；data/openwebtext/prepare.py 第 58-81 行；train.py 第 119-122 行"
+      ],
+      "english": "train.bin / val.bin"
+    },
+    {
+      "id": "defaults",
+      "group": "config",
+      "title": "默认参数",
+      "summary": "默认按 GPT-2 小模型训练",
+      "shape": "document",
+      "x": 80,
+      "y": 780,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "位置",
+          "body": "train.py 开头的一组全局变量"
+        },
+        {
+          "label": "默认目标",
+          "body": "注释写明这组值用于在 OpenWebText 上训练 GPT-2（124M）"
+        },
+        {
+          "label": "分几类",
+          "body": [
+            "输入输出与检查点",
+            "wandb 日志",
+            "数据：数据集、批大小、上下文长度、梯度累积",
+            "模型：层数、头数、宽度、dropout、bias",
+            "AdamW 与学习率衰减",
+            "DDP 与设备、精度、编译"
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "title": "train.py 的默认值",
+          "type": "代码原文",
+          "source": "train.py 第 32-78 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 32-78",
+              "format": "code",
+              "raw": "# -----------------------------------------------------------------------------\n# default config values designed to train a gpt2 (124M) on OpenWebText\n# I/O\nout_dir = 'out'\neval_interval = 2000\nlog_interval = 1\neval_iters = 200\neval_only = False # if True, script exits right after the first eval\nalways_save_checkpoint = True # if True, always save a checkpoint after each eval\ninit_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'\n# wandb logging\nwandb_log = False # disabled by default\nwandb_project = 'owt'\nwandb_run_name = 'gpt2' # 'run' + str(time.time())\n# data\ndataset = 'openwebtext'\ngradient_accumulation_steps = 5 * 8 # used to simulate larger batch sizes\nbatch_size = 12 # if gradient_accumulation_steps > 1, this is the micro-batch size\nblock_size = 1024\n# model\nn_layer = 12\nn_head = 12\nn_embd = 768\ndropout = 0.0 # for pretraining 0 is good, for finetuning try 0.1+\nbias = False # do we use bias inside LayerNorm and Linear layers?\n# adamw optimizer\nlearning_rate = 6e-4 # max learning rate\nmax_iters = 600000 # total number of training iterations\nweight_decay = 1e-1\nbeta1 = 0.9\nbeta2 = 0.95\ngrad_clip = 1.0 # clip gradients at this value, or disable if == 0.0\n# learning rate decay settings\ndecay_lr = True # whether to decay the learning rate\nwarmup_iters = 2000 # how many steps to warm up for\nlr_decay_iters = 600000 # should be ~= max_iters per Chinchilla\nmin_lr = 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla\n# DDP settings\nbackend = 'nccl' # 'nccl', 'gloo', etc.\n# system\ndevice = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1' etc., or try 'mps' on macbooks\ndtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32', 'bfloat16', or 'float16', the latter will auto implement a GradScaler\ncompile = True # use PyTorch 2.0 to compile the model to be faster\n# -----------------------------------------------------------------------------\nconfig_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]\nexec(open('configurator.py').read()) # overrides from command line or config file\nconfig = {k: globals()[k] for k in config_keys} # will be useful for logging"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 32-78 行"
+      ]
+    },
+    {
+      "id": "override",
+      "group": "config",
+      "title": "配置覆盖",
+      "summary": "配置文件与 --key=value 依次改写",
+      "shape": "process",
+      "x": 420,
+      "y": 780,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "train.py、sample.py、bench.py 都在开头 exec configurator.py：不带等号的参数当作配置文件执行，带等号的 --key=value 改写同名变量"
+        },
+        {
+          "label": "顺序",
+          "body": "默认值 → 配置文件 → 命令行参数，后写的生效"
+        },
+        {
+          "label": "检查",
+          "body": "只能改已有的变量，新值类型必须和默认值一致，否则报错"
+        },
+        {
+          "label": "仓库自带配置",
+          "body": [
+            "train_shakespeare_char：字符级莎士比亚小模型",
+            "train_gpt2：多卡复现 GPT-2（124M）",
+            "finetune_shakespeare：从 gpt2-xl 出发微调",
+            "eval_gpt2 系列：只评估 OpenAI 发布的四个模型"
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "title": "覆盖逻辑",
+          "type": "代码原文",
+          "source": "configurator.py 第 17-47 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "configurator.py 17-47",
+              "format": "code",
+              "raw": "import sys\nfrom ast import literal_eval\n\nfor arg in sys.argv[1:]:\n    if '=' not in arg:\n        # assume it's the name of a config file\n        assert not arg.startswith('--')\n        config_file = arg\n        print(f\"Overriding config with {config_file}:\")\n        with open(config_file) as f:\n            print(f.read())\n        exec(open(config_file).read())\n    else:\n        # assume it's a --key=value argument\n        assert arg.startswith('--')\n        key, val = arg.split('=')\n        key = key[2:]\n        if key in globals():\n            try:\n                # attempt to eval it it (e.g. if bool, number, or etc)\n                attempt = literal_eval(val)\n            except (SyntaxError, ValueError):\n                # if that goes wrong, just use the string\n                attempt = val\n            # ensure the types match ok\n            assert type(attempt) == type(globals()[key])\n            # cross fingers\n            print(f\"Overriding: {key} = {attempt}\")\n            globals()[key] = attempt\n        else:\n            raise ValueError(f\"Unknown config key: {key}\")"
+            }
+          ]
+        },
+        {
+          "title": "入门配置：字符级莎士比亚",
+          "type": "代码原文",
+          "source": "config/train_shakespeare_char.py 全文 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "config/train_shakespeare_char.py 1-37",
+              "format": "code",
+              "raw": "# train a miniature character-level shakespeare model\n# good for debugging and playing on macbooks and such\n\nout_dir = 'out-shakespeare-char'\neval_interval = 250 # keep frequent because we'll overfit\neval_iters = 200\nlog_interval = 10 # don't print too too often\n\n# we expect to overfit on this small dataset, so only save when val improves\nalways_save_checkpoint = False\n\nwandb_log = False # override via command line if you like\nwandb_project = 'shakespeare-char'\nwandb_run_name = 'mini-gpt'\n\ndataset = 'shakespeare_char'\ngradient_accumulation_steps = 1\nbatch_size = 64\nblock_size = 256 # context of up to 256 previous characters\n\n# baby GPT model :)\nn_layer = 6\nn_head = 6\nn_embd = 384\ndropout = 0.2\n\nlearning_rate = 1e-3 # with baby networks can afford to go a bit higher\nmax_iters = 5000\nlr_decay_iters = 5000 # make equal to max_iters usually\nmin_lr = 1e-4 # learning_rate / 10 usually\nbeta2 = 0.99 # make a bit bigger because number of tokens per iter is small\n\nwarmup_iters = 100 # not super necessary potentially\n\n# on macbook also add\n# device = 'cpu'  # run on cpu only\n# compile = False # do not torch compile the model"
+            }
+          ]
+        },
+        {
+          "title": "没有 GPU 时在命令行继续改小",
+          "type": "README 原文（作者记录，本次未复现）",
+          "source": "README.md 第 84-86 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "命令",
+              "format": "code",
+              "raw": "python train.py config/train_shakespeare_char.py --device=cpu --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000 --lr_decay_iters=2000 --dropout=0.0"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：configurator.py 第 1-47 行；config/ 目录全部 7 个文件；README.md quick start 一节"
+      ],
+      "english": "configurator.py"
+    },
+    {
+      "id": "init_from",
+      "group": "train",
+      "title": "选择起点",
+      "summary": "从零、续训或 GPT-2 权重",
+      "shape": "decision",
+      "x": 840,
+      "y": 170,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "scratch",
+          "body": "新建 GPT，参数按均值 0、标准差 0.02 的正态分布随机初始化，残差输出层再按层数缩小；词表大小优先取 meta.pkl"
+        },
+        {
+          "label": "resume",
+          "body": "从 out_dir/ckpt.pt 读回模型参数、优化器状态、步数和最佳验证损失，接着训练"
+        },
+        {
+          "label": "gpt2*",
+          "body": "调用 GPT.from_pretrained 载入 OpenAI 的 GPT-2 权重，用于微调或评估"
+        },
+        {
+          "label": "之后",
+          "body": [
+            "设定的 block_size 比模型小时裁剪位置嵌入（crop_block_size）",
+            "建 AdamW 优化器，resume 时载入它的状态",
+            "按设置用 torch.compile 编译、用 DDP 包装"
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "title": "三种起点",
+          "type": "代码原文",
+          "source": "train.py 第 146-193 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 146-193",
+              "format": "code",
+              "raw": "# model init\nmodel_args = dict(n_layer=n_layer, n_head=n_head, n_embd=n_embd, block_size=block_size,\n                  bias=bias, vocab_size=None, dropout=dropout) # start with model_args from command line\nif init_from == 'scratch':\n    # init a new model from scratch\n    print(\"Initializing a new model from scratch\")\n    # determine the vocab size we'll use for from-scratch training\n    if meta_vocab_size is None:\n        print(\"defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)\")\n    model_args['vocab_size'] = meta_vocab_size if meta_vocab_size is not None else 50304\n    gptconf = GPTConfig(**model_args)\n    model = GPT(gptconf)\nelif init_from == 'resume':\n    print(f\"Resuming training from {out_dir}\")\n    # resume training from a checkpoint.\n    ckpt_path = os.path.join(out_dir, 'ckpt.pt')\n    checkpoint = torch.load(ckpt_path, map_location=device)\n    checkpoint_model_args = checkpoint['model_args']\n    # force these config attributes to be equal otherwise we can't even resume training\n    # the rest of the attributes (e.g. dropout) can stay as desired from command line\n    for k in ['n_layer', 'n_head', 'n_embd', 'block_size', 'bias', 'vocab_size']:\n        model_args[k] = checkpoint_model_args[k]\n    # create the model\n    gptconf = GPTConfig(**model_args)\n    model = GPT(gptconf)\n    state_dict = checkpoint['model']\n    # fix the keys of the state dictionary :(\n    # honestly no idea how checkpoints sometimes get this prefix, have to debug more\n    unwanted_prefix = '_orig_mod.'\n    for k,v in list(state_dict.items()):\n        if k.startswith(unwanted_prefix):\n            state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)\n    model.load_state_dict(state_dict)\n    iter_num = checkpoint['iter_num']\n    best_val_loss = checkpoint['best_val_loss']\nelif init_from.startswith('gpt2'):\n    print(f\"Initializing from OpenAI GPT-2 weights: {init_from}\")\n    # initialize from OpenAI GPT-2 weights\n    override_args = dict(dropout=dropout)\n    model = GPT.from_pretrained(init_from, override_args)\n    # read off the created config params, so we can store them into checkpoint correctly\n    for k in ['n_layer', 'n_head', 'n_embd', 'block_size', 'bias', 'vocab_size']:\n        model_args[k] = getattr(model.config, k)\n# crop down the model block size if desired, using model surgery\nif block_size \u003c model.config.block_size:\n    model.crop_block_size(block_size)\n    model_args['block_size'] = block_size # so that the checkpoint will have the right value\nmodel.to(device)"
+            }
+          ]
+        },
+        {
+          "title": "随机初始化的规则",
+          "type": "代码原文",
+          "source": "model.py 第 140-168 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "构造时初始化",
+              "format": "code",
+              "raw": "        # init all weights\n        self.apply(self._init_weights)\n        # apply special scaled init to the residual projections, per GPT-2 paper\n        for pn, p in self.named_parameters():\n            if pn.endswith('c_proj.weight'):\n                torch.nn.init.normal_(p, mean=0.0, std=0.02/math.sqrt(2 * config.n_layer))"
+            },
+            {
+              "label": "_init_weights",
+              "format": "code",
+              "raw": "    def _init_weights(self, module):\n        if isinstance(module, nn.Linear):\n            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)\n            if module.bias is not None:\n                torch.nn.init.zeros_(module.bias)\n        elif isinstance(module, nn.Embedding):\n            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 146-212 行；model.py 第 140-168 行"
+      ],
+      "english": "init_from"
+    },
+    {
+      "id": "set_lr",
+      "group": "train",
+      "title": "设定学习率",
+      "summary": "先线性预热，再余弦衰减",
+      "shape": "process",
+      "x": 840,
+      "y": 330,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "何时",
+          "body": "每一步循环的开头，按当前步数算出学习率并写入优化器"
+        },
+        {
+          "label": "三段",
+          "body": [
+            "前 warmup_iters 步从接近 0 线性升到 learning_rate",
+            "之后到 lr_decay_iters 步按余弦曲线降到 min_lr",
+            "超过 lr_decay_iters 后保持 min_lr"
+          ]
+        },
+        {
+          "label": "开关",
+          "body": "decay_lr=False 时全程用固定学习率，微调配置就是这样"
+        }
+      ],
+      "samples": [
+        {
+          "title": "get_lr",
+          "type": "代码原文",
+          "source": "train.py 第 230-260 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 230-242",
+              "format": "code",
+              "raw": "# learning rate decay scheduler (cosine with warmup)\ndef get_lr(it):\n    # 1) linear warmup for warmup_iters steps\n    if it \u003c warmup_iters:\n        return learning_rate * (it + 1) / (warmup_iters + 1)\n    # 2) if it > lr_decay_iters, return min learning rate\n    if it > lr_decay_iters:\n        return min_lr\n    # 3) in between, use cosine decay down to min learning rate\n    decay_ratio = (it - warmup_iters) / (lr_decay_iters - warmup_iters)\n    assert 0 \u003c= decay_ratio \u003c= 1\n    coeff = 0.5 * (1.0 + math.cos(math.pi * decay_ratio)) # coeff ranges 0..1\n    return min_lr + coeff * (learning_rate - min_lr)"
+            },
+            {
+              "label": "循环开头写入优化器",
+              "format": "code",
+              "raw": "while True:\n\n    # determine and set the learning rate for this iteration\n    lr = get_lr(iter_num) if decay_lr else learning_rate\n    for param_group in optimizer.param_groups:\n        param_group['lr'] = lr"
+            }
+          ]
+        },
+        {
+          "title": "字符级莎士比亚配置下的学习率",
+          "type": "推导（按代码计算，非运行日志）",
+          "source": "代入 config/train_shakespeare_char.py：learning_rate=1e-3、warmup_iters=100、lr_decay_iters=5000、min_lr=1e-4",
+          "blocks": [
+            {
+              "label": "步数 → 学习率",
+              "format": "text",
+              "raw": "step 0     -> 9.90099e-06\nstep 50    -> 0.00050495\nstep 99    -> 0.000990099\nstep 100   -> 0.001\nstep 1325  -> 0.000868198\nstep 2550  -> 0.00055\nstep 3775  -> 0.000231802\nstep 5000  -> 0.0001\nstep 5001  -> 0.0001"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 230-260 行；config/train_shakespeare_char.py"
+      ],
+      "english": "get_lr"
+    },
+    {
+      "id": "eval_save",
+      "group": "train",
+      "title": "评估并保存",
+      "summary": "算训练、验证损失，写检查点",
+      "shape": "process",
+      "x": 1240,
+      "y": 170,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "何时",
+          "body": "步数是 eval_interval 的整数倍时，在本步前向之前执行；多卡时只有主进程做"
+        },
+        {
+          "label": "评估",
+          "body": "切到 eval 模式，用 get_batch 在训练集和验证集各取 eval_iters 批，求平均损失，不更新参数"
+        },
+        {
+          "label": "保存",
+          "body": "验证损失创新低，或 always_save_checkpoint=True 时写 ckpt.pt；第 0 步不写"
+        },
+        {
+          "label": "eval_only",
+          "body": "为 True 时第一次评估后直接退出，eval_gpt2 系列配置用它测官方模型"
+        },
+        {
+          "label": "参照",
+          "body": "README 记录字符级莎士比亚的最佳验证损失约 1.47，复现 GPT-2（124M）约 2.85"
+        }
+      ],
+      "samples": [
+        {
+          "title": "estimate_loss",
+          "type": "代码原文",
+          "source": "train.py 第 214-228 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 214-228",
+              "format": "code",
+              "raw": "# helps estimate an arbitrarily accurate loss over either split using many batches\n@torch.no_grad()\ndef estimate_loss():\n    out = {}\n    model.eval()\n    for split in ['train', 'val']:\n        losses = torch.zeros(eval_iters)\n        for k in range(eval_iters):\n            X, Y = get_batch(split)\n            with ctx:\n                logits, loss = model(X, Y)\n            losses[k] = loss.item()\n        out[split] = losses.mean()\n    model.train()\n    return out"
+            }
+          ]
+        },
+        {
+          "title": "评估与写检查点",
+          "type": "代码原文",
+          "source": "train.py 第 262-288 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 262-288",
+              "format": "code",
+              "raw": "    # evaluate the loss on train/val sets and write checkpoints\n    if iter_num % eval_interval == 0 and master_process:\n        losses = estimate_loss()\n        print(f\"step {iter_num}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}\")\n        if wandb_log:\n            wandb.log({\n                \"iter\": iter_num,\n                \"train/loss\": losses['train'],\n                \"val/loss\": losses['val'],\n                \"lr\": lr,\n                \"mfu\": running_mfu*100, # convert to percentage\n            })\n        if losses['val'] \u003c best_val_loss or always_save_checkpoint:\n            best_val_loss = losses['val']\n            if iter_num > 0:\n                checkpoint = {\n                    'model': raw_model.state_dict(),\n                    'optimizer': optimizer.state_dict(),\n                    'model_args': model_args,\n                    'iter_num': iter_num,\n                    'best_val_loss': best_val_loss,\n                    'config': config,\n                }\n                print(f\"saving checkpoint to {out_dir}\")\n                torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))\n    if iter_num == 0 and eval_only:\n        break"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI 模型的评估结果",
+          "type": "README 原文（作者记录，本次未复现）",
+          "source": "README.md 第 147-154 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "baselines",
+              "format": "markdown",
+              "raw": "and observe the following losses on train and val:\n\n| model | params | train loss | val loss |\n| ------| ------ | ---------- | -------- |\n| gpt2 | 124M         | 3.11  | 3.12     |\n| gpt2-medium | 350M  | 2.85  | 2.84     |\n| gpt2-large | 774M   | 2.66  | 2.67     |\n| gpt2-xl | 1558M     | 2.56  | 2.54     |"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 214-288 行；README.md quick start、baselines 两节"
+      ],
+      "english": "estimate_loss",
+      "status": {
+        "kind": "conditional",
+        "label": "定期执行"
+      }
+    },
+    {
+      "id": "ckpt",
+      "group": "train",
+      "title": "检查点",
+      "summary": "参数、优化器状态与训练配置",
+      "shape": "database",
+      "x": 1620,
+      "y": 170,
+      "w": 260,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "内容",
+          "body": [
+            "model：模型参数",
+            "optimizer：AdamW 的状态",
+            "model_args：层数、宽度等结构参数",
+            "iter_num、best_val_loss：训练进度",
+            "config：全部超参数"
+          ]
+        },
+        {
+          "label": "位置",
+          "body": "out_dir/ckpt.pt，每次保存覆盖同一个文件"
+        },
+        {
+          "label": "谁读",
+          "body": [
+            "train.py：init_from=resume 时接着训练",
+            "sample.py：默认从这里载入模型来生成"
+          ]
+        },
+        {
+          "label": "细节",
+          "body": "读回时两处代码都会去掉参数名里有时出现的 _orig_mod. 前缀，代码注释称原因还没查清"
+        }
+      ],
+      "samples": [
+        {
+          "title": "写入的字段",
+          "type": "代码原文",
+          "source": "train.py 第 277-286 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 277-286",
+              "format": "code",
+              "raw": "                checkpoint = {\n                    'model': raw_model.state_dict(),\n                    'optimizer': optimizer.state_dict(),\n                    'model_args': model_args,\n                    'iter_num': iter_num,\n                    'best_val_loss': best_val_loss,\n                    'config': config,\n                }\n                print(f\"saving checkpoint to {out_dir}\")\n                torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))"
+            }
+          ]
+        },
+        {
+          "title": "sample.py 读回",
+          "type": "代码原文",
+          "source": "sample.py 第 35-46 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "sample.py 35-46",
+              "format": "code",
+              "raw": "if init_from == 'resume':\n    # init from a model saved in a specific directory\n    ckpt_path = os.path.join(out_dir, 'ckpt.pt')\n    checkpoint = torch.load(ckpt_path, map_location=device)\n    gptconf = GPTConfig(**checkpoint['model_args'])\n    model = GPT(gptconf)\n    state_dict = checkpoint['model']\n    unwanted_prefix = '_orig_mod.'\n    for k,v in list(state_dict.items()):\n        if k.startswith(unwanted_prefix):\n            state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)\n    model.load_state_dict(state_dict)"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 274-286 行；train.py 第 158-180 行；sample.py 第 35-46 行"
+      ],
+      "english": "ckpt.pt"
+    },
+    {
+      "id": "train_end",
+      "group": "train",
+      "title": "训练结束",
+      "summary": "跳出循环，多卡时关闭进程组",
+      "shape": "text",
+      "x": 1620,
+      "y": 330,
+      "w": 260,
+      "h": 90,
+      "explanation": [
+        {
+          "label": "何时",
+          "body": "步数超过 max_iters，或 eval_only 模式在第一次评估之后"
+        },
+        {
+          "label": "收尾",
+          "body": "多卡运行调用 destroy_process_group"
+        },
+        {
+          "label": "注意",
+          "body": "结束时不会再额外保存，留下的是最后一次评估时写入的 ckpt.pt"
+        }
+      ],
+      "samples": [
+        {
+          "title": "结束条件",
+          "type": "代码原文",
+          "source": "train.py 第 331-336 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 331-336",
+              "format": "code",
+              "raw": "    # termination conditions\n    if iter_num > max_iters:\n        break\n\nif ddp:\n    destroy_process_group()"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 287-288 行；train.py 第 331-336 行"
+      ]
+    },
+    {
+      "id": "get_batch",
+      "group": "train",
+      "title": "取一批数据",
+      "summary": "随机截一段，目标是右移一位的同一段",
+      "shape": "process",
+      "x": 840,
+      "y": 490,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "在 train.bin 或 val.bin 上随机选 batch_size 个起点，各截 block_size 个编号作输入 x"
+        },
+        {
+          "label": "目标",
+          "body": "y 是同一段往后挪一格，于是每个位置的正确答案就是它的下一个编号"
+        },
+        {
+          "label": "读取",
+          "body": "每次重建 np.memmap 以避免内存泄漏（代码注释）；在 GPU 上用 pin_memory 异步搬运"
+        },
+        {
+          "label": "顺序",
+          "body": "第一批在循环开始前取好；之后每次前向一结束就取下一批，让取数和 GPU 计算重叠"
+        }
+      ],
+      "samples": [
+        {
+          "title": "get_batch",
+          "type": "代码原文",
+          "source": "train.py 第 114-131 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 114-131",
+              "format": "code",
+              "raw": "# poor man's data loader\ndata_dir = os.path.join('data', dataset)\ndef get_batch(split):\n    # We recreate np.memmap every batch to avoid a memory leak, as per\n    # https://stackoverflow.com/questions/45132940/numpy-memmap-memory-usage-want-to-iterate-once/61472122#61472122\n    if split == 'train':\n        data = np.memmap(os.path.join(data_dir, 'train.bin'), dtype=np.uint16, mode='r')\n    else:\n        data = np.memmap(os.path.join(data_dir, 'val.bin'), dtype=np.uint16, mode='r')\n    ix = torch.randint(len(data) - block_size, (batch_size,))\n    x = torch.stack([torch.from_numpy((data[i:i+block_size]).astype(np.int64)) for i in ix])\n    y = torch.stack([torch.from_numpy((data[i+1:i+1+block_size]).astype(np.int64)) for i in ix])\n    if device_type == 'cuda':\n        # pin arrays x,y, which allows us to move them to GPU asynchronously (non_blocking=True)\n        x, y = x.pin_memory().to(device, non_blocking=True), y.pin_memory().to(device, non_blocking=True)\n    else:\n        x, y = x.to(device), y.to(device)\n    return x, y"
+            }
+          ]
+        },
+        {
+          "title": "x 与 y 错开一位",
+          "type": "构造示例",
+          "source": "文本 hello world 为构造；编号按字符级 prepare.py 注释记录的字符表推出；block_size 取 8",
+          "blocks": [
+            {
+              "label": "输入 x",
+              "format": "text",
+              "raw": "'hello wo'\n[46, 43, 50, 50, 53, 1, 61, 53]"
+            },
+            {
+              "label": "目标 y",
+              "format": "text",
+              "raw": "'ello wor'\n[43, 50, 50, 53, 1, 61, 53, 56]"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 114-131 行；train.py 第 250 行；train.py 第 302-303 行"
+      ],
+      "english": "get_batch"
+    },
+    {
+      "id": "forward",
+      "group": "train",
+      "title": "前向与损失",
+      "summary": "模型读入 x，算出预测和损失",
+      "shape": "process",
+      "x": 840,
+      "y": 650,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "调用 model(X, Y)，拿回每个位置的分数 logits 和平均损失 loss；模型内部见下方「GPT 模型」"
+        },
+        {
+          "label": "精度",
+          "body": "在 CUDA 设备上包在 autocast 里，用 bfloat16 或 float16 计算"
+        },
+        {
+          "label": "梯度累积",
+          "body": "损失先除以 gradient_accumulation_steps，几个小批的梯度加起来，效果相当于一次用更大的批"
+        },
+        {
+          "label": "每步规模",
+          "body": "train.py 会打印每步处理的编号数：梯度累积次数 × 卡数 × batch_size × block_size"
+        }
+      ],
+      "samples": [
+        {
+          "title": "一个微步的前向",
+          "type": "代码原文",
+          "source": "train.py 第 299-303 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 299-303",
+              "format": "code",
+              "raw": "        with ctx:\n            logits, loss = model(X, Y)\n            loss = loss / gradient_accumulation_steps # scale the loss to account for gradient accumulation\n        # immediately async prefetch next batch while model is doing the forward pass on the GPU\n        X, Y = get_batch('train')"
+            }
+          ]
+        },
+        {
+          "title": "每步处理多少编号",
+          "type": "代码原文",
+          "source": "train.py 第 101-102 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 101-102",
+              "format": "code",
+              "raw": "tokens_per_iter = gradient_accumulation_steps * ddp_world_size * batch_size * block_size\nprint(f\"tokens per iteration will be: {tokens_per_iter:,}\")"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 290-305 行；train.py 第 101-102 行"
+      ],
+      "english": "model(X, Y)"
+    },
+    {
+      "id": "backward",
+      "group": "train",
+      "title": "反向传播",
+      "summary": "算出每个参数该往哪边调",
+      "shape": "process",
+      "x": 1240,
+      "y": 650,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "scaler.scale(loss).backward() 求损失对所有参数的梯度，累加到各参数上"
+        },
+        {
+          "label": "GradScaler",
+          "body": "只在 float16 时启用，用来避免半精度下梯度过小而丢失；bfloat16、float32 时不起作用"
+        },
+        {
+          "label": "回路",
+          "body": "取批、前向、反向重复 gradient_accumulation_steps 次之后，才更新一次参数"
+        },
+        {
+          "label": "多卡",
+          "body": "DDP 下只在最后一个微步同步各卡梯度"
+        }
+      ],
+      "samples": [
+        {
+          "title": "微步循环与反向",
+          "type": "代码原文",
+          "source": "train.py 第 290-305 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "微步循环与 DDP 同步开关",
+              "format": "code",
+              "raw": "    # forward backward update, with optional gradient accumulation to simulate larger batch size\n    # and using the GradScaler if data type is float16\n    for micro_step in range(gradient_accumulation_steps):\n        if ddp:\n            # in DDP training we only need to sync gradients at the last micro step.\n            # the official way to do this is with model.no_sync() context manager, but\n            # I really dislike that this bloats the code and forces us to repeat code\n            # looking at the source of that context manager, it just toggles this variable\n            model.require_backward_grad_sync = (micro_step == gradient_accumulation_steps - 1)"
+            },
+            {
+              "label": "反向传播",
+              "format": "code",
+              "raw": "        # backward pass, with gradient scaling if training in fp16\n        scaler.scale(loss).backward()"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 290-305 行；train.py 第 195-196 行"
+      ],
+      "english": "loss.backward()"
+    },
+    {
+      "id": "update",
+      "group": "train",
+      "title": "更新参数",
+      "summary": "裁剪梯度后用 AdamW 走一步",
+      "shape": "process",
+      "x": 1240,
+      "y": 490,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "裁剪",
+          "body": "grad_clip 不为 0 时，把全部梯度的整体长度限制在 grad_clip 以内（默认 1.0）"
+        },
+        {
+          "label": "AdamW",
+          "body": [
+            "二维及以上的参数（各层矩阵、嵌入）做权重衰减",
+            "偏置和 LayerNorm 参数不衰减",
+            "CUDA 上可用时用 fused 版本"
+          ]
+        },
+        {
+          "label": "收尾",
+          "body": "scaler.update()，再把梯度清空释放显存"
+        }
+      ],
+      "samples": [
+        {
+          "title": "裁剪、更新、清空",
+          "type": "代码原文",
+          "source": "train.py 第 306-314 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 306-314",
+              "format": "code",
+              "raw": "    # clip the gradient\n    if grad_clip != 0.0:\n        scaler.unscale_(optimizer)\n        torch.nn.utils.clip_grad_norm_(model.parameters(), grad_clip)\n    # step the optimizer and scaler if training in fp16\n    scaler.step(optimizer)\n    scaler.update()\n    # flush the gradients as soon as we can, no need for this memory anymore\n    optimizer.zero_grad(set_to_none=True)"
+            }
+          ]
+        },
+        {
+          "title": "优化器分组",
+          "type": "代码原文",
+          "source": "model.py 第 263-287 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 263-287",
+              "format": "code",
+              "raw": "    def configure_optimizers(self, weight_decay, learning_rate, betas, device_type):\n        # start with all of the candidate parameters\n        param_dict = {pn: p for pn, p in self.named_parameters()}\n        # filter out those that do not require grad\n        param_dict = {pn: p for pn, p in param_dict.items() if p.requires_grad}\n        # create optim groups. Any parameters that is 2D will be weight decayed, otherwise no.\n        # i.e. all weight tensors in matmuls + embeddings decay, all biases and layernorms don't.\n        decay_params = [p for n, p in param_dict.items() if p.dim() >= 2]\n        nodecay_params = [p for n, p in param_dict.items() if p.dim() \u003c 2]\n        optim_groups = [\n            {'params': decay_params, 'weight_decay': weight_decay},\n            {'params': nodecay_params, 'weight_decay': 0.0}\n        ]\n        num_decay_params = sum(p.numel() for p in decay_params)\n        num_nodecay_params = sum(p.numel() for p in nodecay_params)\n        print(f\"num decayed parameter tensors: {len(decay_params)}, with {num_decay_params:,} parameters\")\n        print(f\"num non-decayed parameter tensors: {len(nodecay_params)}, with {num_nodecay_params:,} parameters\")\n        # Create AdamW optimizer and use the fused version if it is available\n        fused_available = 'fused' in inspect.signature(torch.optim.AdamW).parameters\n        use_fused = fused_available and device_type == 'cuda'\n        extra_args = dict(fused=True) if use_fused else dict()\n        optimizer = torch.optim.AdamW(optim_groups, lr=learning_rate, betas=betas, **extra_args)\n        print(f\"using fused AdamW: {use_fused}\")\n\n        return optimizer"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 306-314 行；model.py 第 263-287 行"
+      ],
+      "english": "optimizer.step()"
+    },
+    {
+      "id": "stop_check",
+      "group": "train",
+      "title": "是否结束",
+      "summary": "记日志，步数加一，看是否到头",
+      "shape": "decision",
+      "x": 1240,
+      "y": 330,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "日志",
+          "body": "每 log_interval 步打印损失、耗时和 MFU（按 A100 bfloat16 峰值估算的算力利用率）"
+        },
+        {
+          "label": "判断",
+          "body": "步数加一后超过 max_iters 就跳出循环，否则回到下一步开头"
+        }
+      ],
+      "samples": [
+        {
+          "title": "日志与终止",
+          "type": "代码原文",
+          "source": "train.py 第 316-333 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 316-333",
+              "format": "code",
+              "raw": "    # timing and logging\n    t1 = time.time()\n    dt = t1 - t0\n    t0 = t1\n    if iter_num % log_interval == 0 and master_process:\n        # get loss as float. note: this is a CPU-GPU sync point\n        # scale up to undo the division above, approximating the true total loss (exact would have been a sum)\n        lossf = loss.item() * gradient_accumulation_steps\n        if local_iter_num >= 5: # let the training loop settle a bit\n            mfu = raw_model.estimate_mfu(batch_size * gradient_accumulation_steps, dt)\n            running_mfu = mfu if running_mfu == -1.0 else 0.9*running_mfu + 0.1*mfu\n        print(f\"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%\")\n    iter_num += 1\n    local_iter_num += 1\n\n    # termination conditions\n    if iter_num > max_iters:\n        break"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 316-333 行；model.py 第 289-303 行"
+      ],
+      "english": "max_iters"
+    },
+    {
+      "id": "ddp",
+      "group": "speed",
+      "title": "多卡并行",
+      "summary": "多张 GPU 一起训练",
+      "shape": "process",
+      "x": 1225,
+      "y": 900,
+      "w": 200,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "何时启用",
+          "body": "用 torchrun 启动、环境变量 RANK 存在时"
+        },
+        {
+          "label": "分工",
+          "body": [
+            "每个进程用一张卡，随机种子各不相同",
+            "梯度累积次数按卡数平分",
+            "只有 0 号进程负责评估、日志和保存"
+          ]
+        },
+        {
+          "label": "同步",
+          "body": "只在最后一个微步同步梯度"
+        },
+        {
+          "label": "多机",
+          "body": "README 给了两台机器的启动命令，没有 Infiniband 时建议加 NCCL_IB_DISABLE=1"
+        }
+      ],
+      "samples": [
+        {
+          "title": "DDP 初始化",
+          "type": "代码原文",
+          "source": "train.py 第 81-100 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 81-100",
+              "format": "code",
+              "raw": "# various inits, derived attributes, I/O setup\nddp = int(os.environ.get('RANK', -1)) != -1 # is this a ddp run?\nif ddp:\n    init_process_group(backend=backend)\n    ddp_rank = int(os.environ['RANK'])\n    ddp_local_rank = int(os.environ['LOCAL_RANK'])\n    ddp_world_size = int(os.environ['WORLD_SIZE'])\n    device = f'cuda:{ddp_local_rank}'\n    torch.cuda.set_device(device)\n    master_process = ddp_rank == 0 # this process will do logging, checkpointing etc.\n    seed_offset = ddp_rank # each process gets a different seed\n    # world_size number of processes will be training simultaneously, so we can scale\n    # down the desired gradient accumulation iterations per process proportionally\n    assert gradient_accumulation_steps % ddp_world_size == 0\n    gradient_accumulation_steps //= ddp_world_size\nelse:\n    # if not ddp, we are running on a single gpu, and one process\n    master_process = True\n    seed_offset = 0\n    ddp_world_size = 1"
+            }
+          ]
+        },
+        {
+          "title": "单机 8 卡复现 GPT-2",
+          "type": "README 原文（作者记录，本次未复现）",
+          "source": "README.md 第 117-119 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "命令",
+              "format": "code",
+              "raw": "torchrun --standalone --nproc_per_node=8 train.py config/train_gpt2.py"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 81-100 行；train.py 第 210-212 行；train.py 第 293-298 行；README.md reproducing GPT-2 一节"
+      ],
+      "english": "DDP",
+      "status": {
+        "kind": "conditional",
+        "label": "torchrun 启动时"
+      }
+    },
+    {
+      "id": "amp",
+      "group": "speed",
+      "title": "混合精度",
+      "summary": "用 16 位浮点数计算",
+      "shape": "process",
+      "x": 1450,
+      "y": 900,
+      "w": 200,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "何时启用",
+          "body": "device 含 cuda 时前向包在 torch.amp.autocast 里；CPU 和 mps 不启用"
+        },
+        {
+          "label": "用哪种",
+          "body": "GPU 支持 bfloat16 就默认用它，否则用 float16；float16 时额外启用 GradScaler"
+        },
+        {
+          "label": "TF32",
+          "body": "同时允许矩阵乘法使用 TF32"
+        }
+      ],
+      "samples": [
+        {
+          "title": "精度设置",
+          "type": "代码原文",
+          "source": "train.py 第 104-112 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "dtype 默认值",
+              "format": "code",
+              "raw": "dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32', 'bfloat16', or 'float16', the latter will auto implement a GradScaler"
+            },
+            {
+              "label": "autocast 上下文",
+              "format": "code",
+              "raw": "torch.backends.cuda.matmul.allow_tf32 = True # allow tf32 on matmul\ntorch.backends.cudnn.allow_tf32 = True # allow tf32 on cudnn\ndevice_type = 'cuda' if 'cuda' in device else 'cpu' # for later use in torch.autocast\n# note: float16 data type will automatically use a GradScaler\nptdtype = {'float32': torch.float32, 'bfloat16': torch.bfloat16, 'float16': torch.float16}[dtype]\nctx = nullcontext() if device_type == 'cpu' else torch.amp.autocast(device_type=device_type, dtype=ptdtype)"
+            },
+            {
+              "label": "GradScaler",
+              "format": "code",
+              "raw": "# initialize a GradScaler. If enabled=False scaler is a no-op\nscaler = torch.cuda.amp.GradScaler(enabled=(dtype == 'float16'))"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 73 行；train.py 第 107-112 行；train.py 第 195-196 行"
+      ],
+      "english": "autocast",
+      "status": {
+        "kind": "conditional",
+        "label": "CUDA 时"
+      }
+    },
+    {
+      "id": "compile",
+      "group": "speed",
+      "title": "编译加速",
+      "summary": "PyTorch 2.0 编译模型",
+      "shape": "process",
+      "x": 1675,
+      "y": 900,
+      "w": 200,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "默认",
+          "body": "train.py 默认 compile=True，sample.py 默认 False"
+        },
+        {
+          "label": "效果",
+          "body": "README 记录单次迭代约从 250ms 降到 135ms"
+        },
+        {
+          "label": "限制",
+          "body": "需要 PyTorch 2.0，README 提到某些平台（如 Windows）不可用，可加 --compile=False 关掉"
+        }
+      ],
+      "samples": [
+        {
+          "title": "编译模型",
+          "type": "代码原文",
+          "source": "train.py 第 204-208 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "train.py 204-208",
+              "format": "code",
+              "raw": "# compile the model\nif compile:\n    print(\"compiling the model... (takes a ~minute)\")\n    unoptimized_model = model\n    model = torch.compile(model) # requires PyTorch 2.0"
+            }
+          ]
+        },
+        {
+          "title": "效果与限制",
+          "type": "README 原文（作者记录，本次未复现）",
+          "source": "README.md 第 209、224 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "efficiency notes",
+              "format": "quote",
+              "raw": "Note that the code by default uses [PyTorch 2.0](https://pytorch.org/get-started/pytorch-2.0/). At the time of writing (Dec 29, 2022) this makes `torch.compile()` available in the nightly release. The improvement from the one line of code is noticeable, e.g. cutting down iteration time from ~250ms / iter to 135ms / iter. Nice work PyTorch team!"
+            },
+            {
+              "label": "troubleshooting",
+              "format": "quote",
+              "raw": "Note that by default this repo uses PyTorch 2.0 (i.e. `torch.compile`). This is fairly new and experimental, and not yet available on all platforms (e.g. Windows). If you're running into related error messages try to disable this by adding `--compile=False` flag. This will slow down the code but at least it will run."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：train.py 第 74 行；train.py 第 204-208 行；README.md efficiency notes、troubleshooting 两节"
+      ],
+      "english": "torch.compile"
+    },
+    {
+      "id": "load_model",
+      "group": "sample",
+      "title": "载入模型",
+      "summary": "读检查点，或直接用 GPT-2",
+      "shape": "process",
+      "x": 2020,
+      "y": 170,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "resume（默认）",
+          "body": "从 out_dir/ckpt.pt 按 model_args 重建 GPT 并载入参数"
+        },
+        {
+          "label": "gpt2*",
+          "body": "调用 GPT.from_pretrained，dropout 设为 0"
+        },
+        {
+          "label": "之后",
+          "body": "model.eval() 切到推理模式，可选 torch.compile"
+        }
+      ],
+      "samples": [
+        {
+          "title": "载入",
+          "type": "代码原文",
+          "source": "sample.py 第 34-54 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "sample.py 34-54",
+              "format": "code",
+              "raw": "# model\nif init_from == 'resume':\n    # init from a model saved in a specific directory\n    ckpt_path = os.path.join(out_dir, 'ckpt.pt')\n    checkpoint = torch.load(ckpt_path, map_location=device)\n    gptconf = GPTConfig(**checkpoint['model_args'])\n    model = GPT(gptconf)\n    state_dict = checkpoint['model']\n    unwanted_prefix = '_orig_mod.'\n    for k,v in list(state_dict.items()):\n        if k.startswith(unwanted_prefix):\n            state_dict[k[len(unwanted_prefix):]] = state_dict.pop(k)\n    model.load_state_dict(state_dict)\nelif init_from.startswith('gpt2'):\n    # init from a given GPT-2 model\n    model = GPT.from_pretrained(init_from, dict(dropout=0.0))\n\nmodel.eval()\nmodel.to(device)\nif compile:\n    model = torch.compile(model) # requires PyTorch 2.0 (optional)"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：sample.py 第 11-54 行"
+      ],
+      "english": "init_from"
+    },
+    {
+      "id": "encode_prompt",
+      "group": "sample",
+      "title": "编码提示词",
+      "summary": "用训练时同一套规则变成整数",
+      "shape": "process",
+      "x": 2020,
+      "y": 330,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "选编码",
+          "body": "检查点记录的数据集目录里有 meta.pkl 就按字符表；否则按 GPT-2 分词"
+        },
+        {
+          "label": "提示词",
+          "body": "start 默认是一个换行符，也可以写 FILE:路径 从文件读入"
+        },
+        {
+          "label": "产物",
+          "body": "形状为 (1, 提示词长度) 的整数张量"
+        }
+      ],
+      "samples": [
+        {
+          "title": "选编码并编码提示词",
+          "type": "代码原文",
+          "source": "sample.py 第 56-81 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "sample.py 56-81",
+              "format": "code",
+              "raw": "# look for the meta pickle in case it is available in the dataset folder\nload_meta = False\nif init_from == 'resume' and 'config' in checkpoint and 'dataset' in checkpoint['config']: # older checkpoints might not have these...\n    meta_path = os.path.join('data', checkpoint['config']['dataset'], 'meta.pkl')\n    load_meta = os.path.exists(meta_path)\nif load_meta:\n    print(f\"Loading meta from {meta_path}...\")\n    with open(meta_path, 'rb') as f:\n        meta = pickle.load(f)\n    # TODO want to make this more general to arbitrary encoder/decoder schemes\n    stoi, itos = meta['stoi'], meta['itos']\n    encode = lambda s: [stoi[c] for c in s]\n    decode = lambda l: ''.join([itos[i] for i in l])\nelse:\n    # ok let's assume gpt-2 encodings by default\n    print(\"No meta.pkl found, assuming GPT-2 encodings...\")\n    enc = tiktoken.get_encoding(\"gpt2\")\n    encode = lambda s: enc.encode(s, allowed_special={\"\u003c|endoftext|>\"})\n    decode = lambda l: enc.decode(l)\n\n# encode the beginning of the prompt\nif start.startswith('FILE:'):\n    with open(start[5:], 'r', encoding='utf-8') as f:\n        start = f.read()\nstart_ids = encode(start)\nx = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：sample.py 第 14 行；sample.py 第 56-81 行"
+      ],
+      "english": "start"
+    },
+    {
+      "id": "predict_next",
+      "group": "sample",
+      "title": "预测下一个词元",
+      "summary": "只用最后一个位置的分数",
+      "shape": "process",
+      "x": 2020,
+      "y": 490,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "截断",
+          "body": "序列超过 block_size 时只保留最后 block_size 个编号"
+        },
+        {
+          "label": "前向",
+          "body": "不传目标，模型只为最后一个位置算分数"
+        },
+        {
+          "label": "调整",
+          "body": [
+            "分数除以 temperature：小于 1 更保守，大于 1 更随机（默认 0.8）",
+            "设了 top_k 就只保留分数最高的 k 个（默认 200）"
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "title": "generate 前半段",
+          "type": "代码原文",
+          "source": "model.py 第 305-322 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 305-322",
+              "format": "code",
+              "raw": "    @torch.no_grad()\n    def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):\n        \"\"\"\n        Take a conditioning sequence of indices idx (LongTensor of shape (b,t)) and complete\n        the sequence max_new_tokens times, feeding the predictions back into the model each time.\n        Most likely you'll want to make sure to be in model.eval() mode of operation for this.\n        \"\"\"\n        for _ in range(max_new_tokens):\n            # if the sequence context is growing too long we must crop it at block_size\n            idx_cond = idx if idx.size(1) \u003c= self.config.block_size else idx[:, -self.config.block_size:]\n            # forward the model to get the logits for the index in the sequence\n            logits, _ = self(idx_cond)\n            # pluck the logits at the final step and scale by desired temperature\n            logits = logits[:, -1, :] / temperature\n            # optionally crop the logits to only the top k options\n            if top_k is not None:\n                v, _ = torch.topk(logits, min(top_k, logits.size(-1)))\n                logits[logits \u003c v[:, [-1]]] = -float('Inf')"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 305-322 行；sample.py 第 17-18 行"
+      ],
+      "english": "generate"
+    },
+    {
+      "id": "sample_next",
+      "group": "sample",
+      "title": "抽样并接上",
+      "summary": "按概率抽一个编号，接到末尾",
+      "shape": "process",
+      "x": 2020,
+      "y": 650,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "softmax 把分数变成概率，按概率随机抽一个编号，接到序列末尾，再回到上一步"
+        },
+        {
+          "label": "次数",
+          "body": "每段重复 max_new_tokens 次（默认 500），共生成 num_samples 段（默认 10）"
+        },
+        {
+          "label": "随机性",
+          "body": "抽样带随机性，sample.py 开头固定了随机种子 seed=1337"
+        }
+      ],
+      "samples": [
+        {
+          "title": "generate 后半段",
+          "type": "代码原文",
+          "source": "model.py 第 323-330 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 323-330",
+              "format": "code",
+              "raw": "            # apply softmax to convert logits to (normalized) probabilities\n            probs = F.softmax(logits, dim=-1)\n            # sample from the distribution\n            idx_next = torch.multinomial(probs, num_samples=1)\n            # append sampled index to the running sequence and continue\n            idx = torch.cat((idx, idx_next), dim=1)\n\n        return idx"
+            }
+          ]
+        },
+        {
+          "title": "sample.py 的默认值",
+          "type": "代码原文",
+          "source": "sample.py 第 11-22 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "sample.py 11-22",
+              "format": "code",
+              "raw": "# -----------------------------------------------------------------------------\ninit_from = 'resume' # either 'resume' (from an out_dir) or a gpt2 variant (e.g. 'gpt2-xl')\nout_dir = 'out' # ignored if init_from is not 'resume'\nstart = \"\\n\" # or \"\u003c|endoftext|>\" or etc. Can also specify a file, use as: \"FILE:prompt.txt\"\nnum_samples = 10 # number of samples to draw\nmax_new_tokens = 500 # number of tokens generated in each sample\ntemperature = 0.8 # 1.0 = no change, \u003c 1.0 = less random, > 1.0 = more random, in predictions\ntop_k = 200 # retain only the top_k most likely tokens, clamp others to have 0 probability\nseed = 1337\ndevice = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1', etc.\ndtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32' or 'bfloat16' or 'float16'\ncompile = False # use PyTorch 2.0 to compile the model to be faster"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 323-330 行；sample.py 第 11-22 行"
+      ],
+      "english": "torch.multinomial"
+    },
+    {
+      "id": "decode_output",
+      "group": "sample",
+      "title": "解码输出",
+      "summary": "把整数换回文字并打印",
+      "shape": "process",
+      "x": 2020,
+      "y": 810,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "用编码时同一套表把整段编号（含提示词）变回文字，段与段之间打印分隔线"
+        },
+        {
+          "label": "样例",
+          "body": "README 记录了作者在 GPU 上训练字符级莎士比亚模型约 3 分钟后的输出"
+        }
+      ],
+      "samples": [
+        {
+          "title": "生成循环",
+          "type": "代码原文",
+          "source": "sample.py 第 83-89 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "sample.py 83-89",
+              "format": "code",
+              "raw": "# run generation\nwith torch.no_grad():\n    with ctx:\n        for k in range(num_samples):\n            y = model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)\n            print(decode(y[0].tolist()))\n            print('---------------')"
+            }
+          ]
+        },
+        {
+          "title": "字符级莎士比亚模型的输出",
+          "type": "README 原文（作者记录，本次未复现）",
+          "source": "README.md 第 59-78 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "输出",
+              "format": "text",
+              "raw": "ANGELO:\nAnd cowards it be strawn to my bed,\nAnd thrust the gates of my threats,\nBecause he that ale away, and hang'd\nAn one with him.\n\nDUKE VINCENTIO:\nI thank your eyes against it.\n\nDUKE VINCENTIO:\nThen will answer him to save the malm:\nAnd what have you tyrannous shall do this?\n\nDUKE VINCENTIO:\nIf you have done evils of all disposition\nTo end his power, the day of thrust for a common men\nThat I leave, to fight with over-liking\nHasting in a roseman."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：sample.py 第 83-89 行；README.md quick start 一节"
+      ],
+      "english": "decode"
+    },
+    {
+      "id": "embed",
+      "group": "model",
+      "title": "词元与位置嵌入",
+      "summary": "编号查向量，再加上位置向量",
+      "shape": "process",
+      "x": 840,
+      "y": 1320,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "词元嵌入 wte",
+          "body": "词表里每个编号对应一个 n_embd 维向量"
+        },
+        {
+          "label": "位置嵌入 wpe",
+          "body": "0 到 block_size-1 每个位置也有一个向量，模型靠它区分先后"
+        },
+        {
+          "label": "合并",
+          "body": "两者相加后做 dropout，形状变成（批大小，序列长度，n_embd）"
+        },
+        {
+          "label": "权重共享",
+          "body": "wte 和最后的输出层 lm_head 共用同一份矩阵"
+        }
+      ],
+      "samples": [
+        {
+          "title": "模块定义",
+          "type": "代码原文",
+          "source": "model.py 第 126-138 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 126-138",
+              "format": "code",
+              "raw": "        self.transformer = nn.ModuleDict(dict(\n            wte = nn.Embedding(config.vocab_size, config.n_embd),\n            wpe = nn.Embedding(config.block_size, config.n_embd),\n            drop = nn.Dropout(config.dropout),\n            h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),\n            ln_f = LayerNorm(config.n_embd, bias=config.bias),\n        ))\n        self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)\n        # with weight tying when using torch.compile() some warnings get generated:\n        # \"UserWarning: functional_call was passed multiple values for tied weights.\n        # This behavior is deprecated and will be an error in future versions\"\n        # not 100% sure what this is, so far seems to be harmless. TODO investigate\n        self.transformer.wte.weight = self.lm_head.weight # https://paperswithcode.com/method/weight-tying"
+            }
+          ]
+        },
+        {
+          "title": "前向的开头",
+          "type": "代码原文",
+          "source": "model.py 第 170-179 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 170-179",
+              "format": "code",
+              "raw": "    def forward(self, idx, targets=None):\n        device = idx.device\n        b, t = idx.size()\n        assert t \u003c= self.config.block_size, f\"Cannot forward sequence of length {t}, block size is only {self.config.block_size}\"\n        pos = torch.arange(0, t, dtype=torch.long, device=device) # shape (t)\n\n        # forward the GPT model itself\n        tok_emb = self.transformer.wte(idx) # token embeddings of shape (b, t, n_embd)\n        pos_emb = self.transformer.wpe(pos) # position embeddings of shape (t, n_embd)\n        x = self.transformer.drop(tok_emb + pos_emb)"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 108-138 行；model.py 第 170-179 行"
+      ],
+      "english": "wte + wpe"
+    },
+    {
+      "id": "attention",
+      "group": "block",
+      "title": "因果自注意力",
+      "summary": "每个位置只看自己和前面",
+      "shape": "process",
+      "x": 1210,
+      "y": 1320,
+      "w": 270,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "先归一化",
+          "body": "输入先过 LayerNorm（ln_1），注意力的结果再加回输入（残差连接）"
+        },
+        {
+          "label": "计算",
+          "body": "一次线性变换同时得到 q、k、v，拆成 n_head 个头；每个头按 q 与 k 的相似度，对前面各位置的 v 加权平均"
+        },
+        {
+          "label": "因果",
+          "body": "每个位置只能看到它之前的内容，看不到要预测的答案；PyTorch 2.0 起用 scaled_dot_product_attention(is_causal=True)，否则用下三角遮罩手算"
+        },
+        {
+          "label": "输出",
+          "body": "各头结果拼回原宽度，再过一层线性投影"
+        }
+      ],
+      "samples": [
+        {
+          "title": "CausalSelfAttention.forward",
+          "type": "代码原文",
+          "source": "model.py 第 52-76 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 52-76",
+              "format": "code",
+              "raw": "    def forward(self, x):\n        B, T, C = x.size() # batch size, sequence length, embedding dimensionality (n_embd)\n\n        # calculate query, key, values for all heads in batch and move head forward to be the batch dim\n        q, k, v  = self.c_attn(x).split(self.n_embd, dim=2)\n        k = k.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)\n        q = q.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)\n        v = v.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)\n\n        # causal self-attention; Self-attend: (B, nh, T, hs) x (B, nh, hs, T) -> (B, nh, T, T)\n        if self.flash:\n            # efficient attention using Flash Attention CUDA kernels\n            y = torch.nn.functional.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=self.dropout if self.training else 0, is_causal=True)\n        else:\n            # manual implementation of attention\n            att = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(k.size(-1)))\n            att = att.masked_fill(self.bias[:,:,:T,:T] == 0, float('-inf'))\n            att = F.softmax(att, dim=-1)\n            att = self.attn_dropout(att)\n            y = att @ v # (B, nh, T, T) x (B, nh, T, hs) -> (B, nh, T, hs)\n        y = y.transpose(1, 2).contiguous().view(B, T, C) # re-assemble all head outputs side by side\n\n        # output projection\n        y = self.resid_dropout(self.c_proj(y))\n        return y"
+            }
+          ]
+        },
+        {
+          "title": "Block：先归一化，再加回输入",
+          "type": "代码原文",
+          "source": "model.py 第 103-106 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 103-106",
+              "format": "code",
+              "raw": "    def forward(self, x):\n        x = x + self.attn(self.ln_1(x))\n        x = x + self.mlp(self.ln_2(x))\n        return x"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 29-76 行；model.py 第 94-106 行"
+      ],
+      "english": "CausalSelfAttention"
+    },
+    {
+      "id": "mlp",
+      "group": "block",
+      "title": "前馈网络",
+      "summary": "每个位置各自过两层",
+      "shape": "process",
+      "x": 1520,
+      "y": 1320,
+      "w": 250,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "先归一化",
+          "body": "经 ln_2 后进入 MLP，结果同样加回输入"
+        },
+        {
+          "label": "结构",
+          "body": "线性层放大到 4 倍宽 → GELU 激活 → 线性层缩回 n_embd → dropout"
+        },
+        {
+          "label": "和注意力的区别",
+          "body": "MLP 对每个位置单独计算，位置之间不交换信息；交换信息靠注意力"
+        }
+      ],
+      "samples": [
+        {
+          "title": "MLP",
+          "type": "代码原文",
+          "source": "model.py 第 78-92 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 78-92",
+              "format": "code",
+              "raw": "class MLP(nn.Module):\n\n    def __init__(self, config):\n        super().__init__()\n        self.c_fc    = nn.Linear(config.n_embd, 4 * config.n_embd, bias=config.bias)\n        self.gelu    = nn.GELU()\n        self.c_proj  = nn.Linear(4 * config.n_embd, config.n_embd, bias=config.bias)\n        self.dropout = nn.Dropout(config.dropout)\n\n    def forward(self, x):\n        x = self.c_fc(x)\n        x = self.gelu(x)\n        x = self.c_proj(x)\n        x = self.dropout(x)\n        return x"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 78-106 行"
+      ],
+      "english": "MLP"
+    },
+    {
+      "id": "lm_head",
+      "group": "model",
+      "title": "输出词表分数",
+      "summary": "给词表里每个词打一个分",
+      "shape": "process",
+      "x": 1860,
+      "y": 1320,
+      "w": 250,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "最后一块的输出先过 ln_f，再用 lm_head 线性层映射成 vocab_size 个分数（logits）"
+        },
+        {
+          "label": "训练时",
+          "body": "所有位置都算分数，用来和目标比对"
+        },
+        {
+          "label": "生成时",
+          "body": "只算最后一个位置，代码注释称这是推理时的小优化"
+        }
+      ],
+      "samples": [
+        {
+          "title": "前向的后半段",
+          "type": "代码原文",
+          "source": "model.py 第 180-193 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 180-193",
+              "format": "code",
+              "raw": "        for block in self.transformer.h:\n            x = block(x)\n        x = self.transformer.ln_f(x)\n\n        if targets is not None:\n            # if we are given some desired targets also calculate the loss\n            logits = self.lm_head(x)\n            loss = F.cross_entropy(logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=-1)\n        else:\n            # inference-time mini-optimization: only forward the lm_head on the very last position\n            logits = self.lm_head(x[:, [-1], :]) # note: using list [-1] to preserve the time dim\n            loss = None\n\n        return logits, loss"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 180-193 行"
+      ],
+      "english": "ln_f + lm_head"
+    },
+    {
+      "id": "loss",
+      "group": "model",
+      "title": "计算损失",
+      "summary": "预测和正确答案差多少",
+      "shape": "process",
+      "x": 2170,
+      "y": 1320,
+      "w": 200,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "做法",
+          "body": "对每个位置用交叉熵衡量：模型给正确的下一个编号分到的概率越低，损失越大；取所有位置的平均"
+        },
+        {
+          "label": "去向",
+          "body": "loss 返回 train.py，反向传播从这里开始"
+        },
+        {
+          "label": "参照",
+          "body": "README 记录 OpenAI 的 GPT-2（124M）在 OpenWebText 上的验证损失约 3.12，作者复现训练降到约 2.85"
+        }
+      ],
+      "samples": [
+        {
+          "title": "交叉熵",
+          "type": "代码原文",
+          "source": "model.py 第 184-187 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 184-187",
+              "format": "code",
+              "raw": "        if targets is not None:\n            # if we are given some desired targets also calculate the loss\n            logits = self.lm_head(x)\n            loss = F.cross_entropy(logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=-1)"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 184-187 行；README.md reproducing GPT-2、baselines 两节"
+      ],
+      "english": "cross_entropy",
+      "status": {
+        "kind": "conditional",
+        "label": "传入目标时"
+      }
+    },
+    {
+      "id": "pretrained",
+      "group": "model",
+      "title": "载入 GPT-2 权重",
+      "summary": "从 Hugging Face 复制官方参数",
+      "shape": "process",
+      "x": 840,
+      "y": 1520,
+      "w": 280,
+      "h": 100,
+      "explanation": [
+        {
+          "label": "可选",
+          "body": "gpt2、gpt2-medium、gpt2-large、gpt2-xl 四种，层数、头数、宽度随之确定"
+        },
+        {
+          "label": "做法",
+          "body": "先建一个同结构的模型，再从 transformers 的 GPT2LMHeadModel 逐个复制参数；OpenAI 原模型用 Conv1D，四类权重要转置"
+        },
+        {
+          "label": "固定项",
+          "body": "vocab_size 50257、block_size 1024、bias=True，只允许改 dropout"
+        },
+        {
+          "label": "依赖",
+          "body": "需要安装 transformers 并能下载权重；本次没有运行"
+        }
+      ],
+      "samples": [
+        {
+          "title": "结构参数",
+          "type": "代码原文",
+          "source": "model.py 第 206-231 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 206-231",
+              "format": "code",
+              "raw": "    @classmethod\n    def from_pretrained(cls, model_type, override_args=None):\n        assert model_type in {'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'}\n        override_args = override_args or {} # default to empty dict\n        # only dropout can be overridden see more notes below\n        assert all(k == 'dropout' for k in override_args)\n        from transformers import GPT2LMHeadModel\n        print(\"loading weights from pretrained gpt: %s\" % model_type)\n\n        # n_layer, n_head and n_embd are determined from model_type\n        config_args = {\n            'gpt2':         dict(n_layer=12, n_head=12, n_embd=768),  # 124M params\n            'gpt2-medium':  dict(n_layer=24, n_head=16, n_embd=1024), # 350M params\n            'gpt2-large':   dict(n_layer=36, n_head=20, n_embd=1280), # 774M params\n            'gpt2-xl':      dict(n_layer=48, n_head=25, n_embd=1600), # 1558M params\n        }[model_type]\n        print(\"forcing vocab_size=50257, block_size=1024, bias=True\")\n        config_args['vocab_size'] = 50257 # always 50257 for GPT model checkpoints\n        config_args['block_size'] = 1024 # always 1024 for GPT model checkpoints\n        config_args['bias'] = True # always True for GPT model checkpoints\n        # we can override the dropout rate, if desired\n        if 'dropout' in override_args:\n            print(f\"overriding dropout rate to {override_args['dropout']}\")\n            config_args['dropout'] = override_args['dropout']\n        # create a from-scratch initialized minGPT model\n        config = GPTConfig(**config_args)"
+            }
+          ]
+        },
+        {
+          "title": "复制并转置",
+          "type": "代码原文",
+          "source": "model.py 第 241-261 行 · commit 3adf61e",
+          "blocks": [
+            {
+              "label": "model.py 241-261",
+              "format": "code",
+              "raw": "        # copy while ensuring all of the parameters are aligned and match in names and shapes\n        sd_keys_hf = sd_hf.keys()\n        sd_keys_hf = [k for k in sd_keys_hf if not k.endswith('.attn.masked_bias')] # ignore these, just a buffer\n        sd_keys_hf = [k for k in sd_keys_hf if not k.endswith('.attn.bias')] # same, just the mask (buffer)\n        transposed = ['attn.c_attn.weight', 'attn.c_proj.weight', 'mlp.c_fc.weight', 'mlp.c_proj.weight']\n        # basically the openai checkpoints use a \"Conv1D\" module, but we only want to use a vanilla Linear\n        # this means that we have to transpose these weights when we import them\n        assert len(sd_keys_hf) == len(sd_keys), f\"mismatched keys: {len(sd_keys_hf)} != {len(sd_keys)}\"\n        for k in sd_keys_hf:\n            if any(k.endswith(w) for w in transposed):\n                # special treatment for the Conv1D weights we need to transpose\n                assert sd_hf[k].shape[::-1] == sd[k].shape\n                with torch.no_grad():\n                    sd[k].copy_(sd_hf[k].t())\n            else:\n                # vanilla copy over the other parameters\n                assert sd_hf[k].shape == sd[k].shape\n                with torch.no_grad():\n                    sd[k].copy_(sd_hf[k])\n\n        return model"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "来源（commit 3adf61e）：model.py 第 206-261 行"
+      ],
+      "english": "from_pretrained",
+      "status": {
+        "kind": "conditional",
+        "label": "init_from=gpt2*"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "text-char",
+      "from": "tiny_shakespeare",
+      "to": "char_encode",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          220,
+          270
+        ],
+        [
+          220,
+          330
+        ]
+      ],
+      "label": "shakespeare_char",
+      "labelAt": [
+        92,
+        306
+      ]
+    },
+    {
+      "id": "text-bpe",
+      "from": "tiny_shakespeare",
+      "to": "bpe_encode",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          220,
+          270
+        ],
+        [
+          220,
+          300
+        ],
+        [
+          500,
+          300
+        ],
+        [
+          500,
+          330
+        ]
+      ],
+      "label": "shakespeare",
+      "labelAt": [
+        290,
+        293
+      ]
+    },
+    {
+      "id": "owt-bpe",
+      "from": "openwebtext",
+      "to": "bpe_encode",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          560,
+          270
+        ],
+        [
+          560,
+          330
+        ]
+      ],
+      "label": "openwebtext",
+      "labelAt": [
+        570,
+        306
+      ]
+    },
+    {
+      "id": "char-meta",
+      "from": "char_encode",
+      "to": "meta_pkl",
+      "relation": "data",
+      "importance": "secondary",
+      "points": [
+        [
+          220,
+          430
+        ],
+        [
+          220,
+          490
+        ]
+      ]
+    },
+    {
+      "id": "char-bin",
+      "from": "char_encode",
+      "to": "bin_files",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          360,
+          380
+        ],
+        [
+          390,
+          380
+        ],
+        [
+          390,
+          540
+        ],
+        [
+          420,
+          540
+        ]
+      ]
+    },
+    {
+      "id": "bpe-bin",
+      "from": "bpe_encode",
+      "to": "bin_files",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          560,
+          430
+        ],
+        [
+          560,
+          490
+        ]
+      ]
+    },
+    {
+      "id": "bin-batch",
+      "from": "bin_files",
+      "to": "get_batch",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          700,
+          540
+        ],
+        [
+          840,
+          540
+        ]
+      ],
+      "label": "随机截取",
+      "labelAt": [
+        706,
+        530
+      ]
+    },
+    {
+      "id": "meta-init",
+      "from": "meta_pkl",
+      "to": "init_from",
+      "relation": "dependency",
+      "importance": "auxiliary",
+      "points": [
+        [
+          80,
+          540
+        ],
+        [
+          60,
+          540
+        ],
+        [
+          60,
+          144
+        ],
+        [
+          940,
+          144
+        ],
+        [
+          940,
+          170
+        ]
+      ],
+      "label": "词表大小",
+      "labelAt": [
+        600,
+        138
+      ]
+    },
+    {
+      "id": "meta-prompt",
+      "from": "meta_pkl",
+      "to": "encode_prompt",
+      "relation": "dependency",
+      "importance": "auxiliary",
+      "points": [
+        [
+          220,
+          590
+        ],
+        [
+          220,
+          650
+        ],
+        [
+          760,
+          650
+        ],
+        [
+          760,
+          1090
+        ],
+        [
+          1940,
+          1090
+        ],
+        [
+          1940,
+          380
+        ],
+        [
+          2020,
+          380
+        ]
+      ],
+      "label": "字符表",
+      "labelAt": [
+        1500,
+        1082
+      ]
+    },
+    {
+      "id": "defaults-override",
+      "from": "defaults",
+      "to": "override",
+      "relation": "flow",
+      "importance": "secondary",
+      "points": [
+        [
+          360,
+          830
+        ],
+        [
+          420,
+          830
+        ]
+      ],
+      "label": "被改写",
+      "labelAt": [
+        372,
+        820
+      ]
+    },
+    {
+      "id": "override-train",
+      "from": "override",
+      "to": "train",
+      "relation": "dependency",
+      "importance": "secondary",
+      "points": [
+        [
+          700,
+          830
+        ],
+        [
+          800,
+          830
+        ]
+      ],
+      "label": "超参数",
+      "labelAt": [
+        712,
+        820
+      ]
+    },
+    {
+      "id": "init-lr",
+      "from": "init_from",
+      "to": "set_lr",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          980,
+          270
+        ],
+        [
+          980,
+          330
+        ]
+      ]
+    },
+    {
+      "id": "lr-batch",
+      "from": "set_lr",
+      "to": "get_batch",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          980,
+          430
+        ],
+        [
+          980,
+          490
+        ]
+      ]
+    },
+    {
+      "id": "batch-forward",
+      "from": "get_batch",
+      "to": "forward",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          980,
+          590
+        ],
+        [
+          980,
+          650
+        ]
+      ],
+      "label": "x, y",
+      "labelAt": [
+        990,
+        624
+      ]
+    },
+    {
+      "id": "forward-backward",
+      "from": "forward",
+      "to": "backward",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          1120,
+          715
+        ],
+        [
+          1240,
+          715
+        ]
+      ]
+    },
+    {
+      "id": "backward-update",
+      "from": "backward",
+      "to": "update",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          1380,
+          650
+        ],
+        [
+          1380,
+          590
+        ]
+      ],
+      "label": "累积满",
+      "labelAt": [
+        1390,
+        624
+      ]
+    },
+    {
+      "id": "update-stop",
+      "from": "update",
+      "to": "stop_check",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          1380,
+          490
+        ],
+        [
+          1380,
+          430
+        ]
+      ]
+    },
+    {
+      "id": "stop-lr",
+      "from": "stop_check",
+      "to": "set_lr",
+      "relation": "loop",
+      "importance": "primary",
+      "points": [
+        [
+          1240,
+          380
+        ],
+        [
+          1120,
+          380
+        ]
+      ],
+      "label": "下一步",
+      "labelAt": [
+        1150,
+        398
+      ]
+    },
+    {
+      "id": "backward-batch",
+      "from": "backward",
+      "to": "get_batch",
+      "relation": "loop",
+      "importance": "secondary",
+      "points": [
+        [
+          1240,
+          685
+        ],
+        [
+          1180,
+          685
+        ],
+        [
+          1180,
+          540
+        ],
+        [
+          1120,
+          540
+        ]
+      ],
+      "label": "未满累积次数",
+      "labelAt": [
+        1188,
+        626
+      ]
+    },
+    {
+      "id": "stop-end",
+      "from": "stop_check",
+      "to": "train_end",
+      "relation": "condition",
+      "importance": "secondary",
+      "points": [
+        [
+          1520,
+          380
+        ],
+        [
+          1620,
+          380
+        ]
+      ],
+      "label": "超过 max_iters",
+      "labelAt": [
+        1528,
+        372
+      ]
+    },
+    {
+      "id": "lr-eval",
+      "from": "set_lr",
+      "to": "eval_save",
+      "relation": "condition",
+      "importance": "secondary",
+      "points": [
+        [
+          1120,
+          355
+        ],
+        [
+          1180,
+          355
+        ],
+        [
+          1180,
+          220
+        ],
+        [
+          1240,
+          220
+        ]
+      ],
+      "label": "每 eval_interval 步",
+      "labelAt": [
+        1190,
+        304
+      ]
+    },
+    {
+      "id": "eval-ckpt",
+      "from": "eval_save",
+      "to": "ckpt",
+      "relation": "data",
+      "importance": "secondary",
+      "points": [
+        [
+          1520,
+          220
+        ],
+        [
+          1620,
+          220
+        ]
+      ],
+      "label": "写入",
+      "labelAt": [
+        1552,
+        212
+      ]
+    },
+    {
+      "id": "ckpt-init",
+      "from": "ckpt",
+      "to": "init_from",
+      "relation": "condition",
+      "importance": "secondary",
+      "points": [
+        [
+          1750,
+          170
+        ],
+        [
+          1750,
+          144
+        ],
+        [
+          1020,
+          144
+        ],
+        [
+          1020,
+          170
+        ]
+      ],
+      "label": "resume 时读回",
+      "labelAt": [
+        1560,
+        138
+      ]
+    },
+    {
+      "id": "forward-model",
+      "from": "forward",
+      "to": "model",
+      "relation": "reference",
+      "importance": "secondary",
+      "points": [
+        [
+          980,
+          750
+        ],
+        [
+          980,
+          1120
+        ]
+      ],
+      "label": "调用 model(X, Y)",
+      "labelAt": [
+        990,
+        1012
+      ]
+    },
+    {
+      "id": "ckpt-load",
+      "from": "ckpt",
+      "to": "load_model",
+      "relation": "data",
+      "importance": "secondary",
+      "points": [
+        [
+          1880,
+          220
+        ],
+        [
+          2020,
+          220
+        ]
+      ],
+      "label": "生成时载入",
+      "labelAt": [
+        1888,
+        212
+      ]
+    },
+    {
+      "id": "pretrained-init",
+      "from": "pretrained",
+      "to": "init_from",
+      "relation": "condition",
+      "importance": "auxiliary",
+      "points": [
+        [
+          840,
+          1570
+        ],
+        [
+          785,
+          1570
+        ],
+        [
+          785,
+          220
+        ],
+        [
+          840,
+          220
+        ]
+      ],
+      "label": "gpt2*",
+      "labelAt": [
+        792,
+        212
+      ]
+    },
+    {
+      "id": "pretrained-load",
+      "from": "pretrained",
+      "to": "load_model",
+      "relation": "condition",
+      "importance": "auxiliary",
+      "points": [
+        [
+          980,
+          1620
+        ],
+        [
+          980,
+          1645
+        ],
+        [
+          2395,
+          1645
+        ],
+        [
+          2395,
+          144
+        ],
+        [
+          2160,
+          144
+        ],
+        [
+          2160,
+          170
+        ]
+      ],
+      "label": "gpt2*",
+      "labelAt": [
+        2200,
+        138
+      ]
+    },
+    {
+      "id": "ddp-backward",
+      "from": "ddp",
+      "to": "backward",
+      "relation": "reference",
+      "importance": "auxiliary",
+      "points": [
+        [
+          1225,
+          950
+        ],
+        [
+          1190,
+          950
+        ],
+        [
+          1190,
+          775
+        ],
+        [
+          1380,
+          775
+        ],
+        [
+          1380,
+          750
+        ]
+      ],
+      "label": "同步梯度",
+      "labelAt": [
+        1290,
+        790
+      ]
+    },
+    {
+      "id": "amp-forward",
+      "from": "amp",
+      "to": "forward",
+      "relation": "reference",
+      "importance": "auxiliary",
+      "points": [
+        [
+          1550,
+          1000
+        ],
+        [
+          1550,
+          1045
+        ],
+        [
+          1060,
+          1045
+        ],
+        [
+          1060,
+          750
+        ]
+      ],
+      "label": "包住前向",
+      "labelAt": [
+        1100,
+        1040
+      ]
+    },
+    {
+      "id": "compile-model",
+      "from": "compile",
+      "to": "model",
+      "relation": "reference",
+      "importance": "auxiliary",
+      "points": [
+        [
+          1775,
+          1000
+        ],
+        [
+          1775,
+          1120
+        ]
+      ],
+      "label": "编译模型",
+      "labelAt": [
+        1784,
+        1106
+      ]
+    },
+    {
+      "id": "load-encode",
+      "from": "load_model",
+      "to": "encode_prompt",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          2160,
+          270
+        ],
+        [
+          2160,
+          330
+        ]
+      ]
+    },
+    {
+      "id": "encode-predict",
+      "from": "encode_prompt",
+      "to": "predict_next",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          2160,
+          430
+        ],
+        [
+          2160,
+          490
+        ]
+      ]
+    },
+    {
+      "id": "predict-sample",
+      "from": "predict_next",
+      "to": "sample_next",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          2160,
+          590
+        ],
+        [
+          2160,
+          650
+        ]
+      ]
+    },
+    {
+      "id": "sample-predict",
+      "from": "sample_next",
+      "to": "predict_next",
+      "relation": "loop",
+      "importance": "primary",
+      "points": [
+        [
+          2020,
+          700
+        ],
+        [
+          1990,
+          700
+        ],
+        [
+          1990,
+          540
+        ],
+        [
+          2020,
+          540
+        ]
+      ],
+      "label": "再来一个",
+      "labelAt": [
+        1998,
+        626
+      ]
+    },
+    {
+      "id": "sample-decode",
+      "from": "sample_next",
+      "to": "decode_output",
+      "relation": "flow",
+      "importance": "primary",
+      "points": [
+        [
+          2160,
+          750
+        ],
+        [
+          2160,
+          810
+        ]
+      ],
+      "label": "满 max_new_tokens 个",
+      "labelAt": [
+        2170,
+        786
+      ]
+    },
+    {
+      "id": "predict-model",
+      "from": "predict_next",
+      "to": "model",
+      "relation": "reference",
+      "importance": "secondary",
+      "points": [
+        [
+          2300,
+          540
+        ],
+        [
+          2330,
+          540
+        ],
+        [
+          2330,
+          1120
+        ]
+      ],
+      "label": "调用模型",
+      "labelAt": [
+        2266,
+        1012
+      ]
+    },
+    {
+      "id": "embed-attn",
+      "from": "embed",
+      "to": "attention",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          1120,
+          1370
+        ],
+        [
+          1210,
+          1370
+        ]
+      ]
+    },
+    {
+      "id": "attn-mlp",
+      "from": "attention",
+      "to": "mlp",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          1480,
+          1370
+        ],
+        [
+          1520,
+          1370
+        ]
+      ]
+    },
+    {
+      "id": "mlp-attn",
+      "from": "mlp",
+      "to": "attention",
+      "relation": "loop",
+      "importance": "secondary",
+      "points": [
+        [
+          1645,
+          1420
+        ],
+        [
+          1645,
+          1460
+        ],
+        [
+          1345,
+          1460
+        ],
+        [
+          1345,
+          1420
+        ]
+      ],
+      "label": "下一块，共 n_layer 块",
+      "labelAt": [
+        1400,
+        1482
+      ]
+    },
+    {
+      "id": "mlp-head",
+      "from": "mlp",
+      "to": "lm_head",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          1770,
+          1370
+        ],
+        [
+          1860,
+          1370
+        ]
+      ]
+    },
+    {
+      "id": "head-loss",
+      "from": "lm_head",
+      "to": "loss",
+      "relation": "data",
+      "importance": "primary",
+      "points": [
+        [
+          2110,
+          1370
+        ],
+        [
+          2170,
+          1370
+        ]
+      ],
+      "label": "有目标时",
+      "labelAt": [
+        2116,
+        1360
+      ]
+    }
+  ],
+  "motion": {
+    "steps": [
+      [
+        "init-lr"
+      ],
+      [
+        "lr-batch"
+      ],
+      [
+        "batch-forward"
+      ],
+      [
+        "forward-backward"
+      ],
+      [
+        "backward-update"
+      ],
+      [
+        "update-stop"
+      ],
+      [
+        "stop-lr"
+      ]
+    ]
+  },
+  "faq": [
+    {
+      "question": "训练时，模型到底在学什么？",
+      "answer": [
+        {
+          "label": "直接回答",
+          "body": "学「看到前面的内容，猜下一个编号」。每个位置都有一个正确答案，就是文本里紧跟着的那个编号"
+        },
+        {
+          "label": "机制",
+          "body": [
+            "取一批数据时，目标 y 就是输入 x 往后挪一格的同一段文本",
+            "模型给每个位置输出对整个词表的打分，交叉熵衡量正确答案分到的概率有多低",
+            "反向传播和 AdamW 把参数往让损失变小的方向调一点，循环到 max_iters 步为止"
+          ]
+        },
+        {
+          "label": "例子",
+          "body": "输入 hello wo 时，各位置要猜的依次是 e、l、l、o、空格、w、o、r（构造示例，见「取一批数据」节点）"
+        }
+      ],
+      "nodeIds": [
+        "get_batch",
+        "loss",
+        "update"
+      ],
+      "source": "据 train.py 第 114-131 行与 model.py 第 184-187 行整理的易混淆点，不是用户提问"
+    },
+    {
+      "question": "微调和从零训练有什么不同？",
+      "answer": [
+        {
+          "label": "直接回答",
+          "body": "训练循环完全一样，区别在起点和学习率。微调从 GPT-2 权重出发，用更小的学习率、跑更少的步数"
+        },
+        {
+          "label": "README 原话",
+          "body": "Finetuning is no different than training, we just make sure to initialize from a pretrained model and train with a smaller learning rate"
+        },
+        {
+          "label": "仓库里的例子",
+          "body": [
+            "config/finetune_shakespeare.py 设 init_from=gpt2-xl",
+            "学习率 3e-5 且关闭衰减，只跑 20 步",
+            "数据集是 shakespeare，即按 GPT-2 分词的版本；载入的 GPT-2 权重固定使用 50257 个编号的词表"
+          ]
+        }
+      ],
+      "nodeIds": [
+        "init_from",
+        "pretrained",
+        "override",
+        "bpe_encode"
+      ],
+      "source": "README.md finetuning 一节、config/finetune_shakespeare.py"
+    },
+    {
+      "question": "训练用的模型和生成用的模型是同一个吗？",
+      "answer": [
+        {
+          "label": "直接回答",
+          "body": "是同一个 GPT 类、同一份参数。区别只在调用方式：训练时传入目标，生成时不传"
+        },
+        {
+          "label": "训练时",
+          "body": "所有位置都算分数，和目标比出损失，用来更新参数"
+        },
+        {
+          "label": "生成时",
+          "body": "只算最后一个位置的分数，按概率抽一个编号接到末尾，再把加长的序列送回模型，一次一个地续写"
+        },
+        {
+          "label": "怎么接上",
+          "body": "train.py 把参数存进 ckpt.pt，sample.py 默认从这个文件载入"
+        }
+      ],
+      "nodeIds": [
+        "lm_head",
+        "loss",
+        "ckpt",
+        "load_model",
+        "predict_next",
+        "sample_next"
+      ],
+      "source": "据 model.py 第 170-193、305-330 行与 sample.py 整理的易混淆点，不是用户提问"
+    },
+    {
+      "question": "没有 GPU 能跑吗？",
+      "answer": [
+        {
+          "label": "直接回答",
+          "body": "能跑字符级莎士比亚的小模型。README 给了 CPU 上的命令，并建议 Apple 芯片的 Mac 加 --device=mps"
+        },
+        {
+          "label": "要改什么",
+          "body": [
+            "--device=cpu，并用 --compile=False 关掉编译",
+            "把模型和上下文改小：层数、头数、宽度、block_size、batch_size",
+            "减少评估批数和总步数"
+          ]
+        },
+        {
+          "label": "代价",
+          "body": "README 记录这样跑约 3 分钟，损失只降到 1.88 左右，生成的文字更差"
+        }
+      ],
+      "nodeIds": [
+        "override",
+        "compile",
+        "amp"
+      ],
+      "source": "README.md quick start 一节（作者记录，本次未复现）"
+    }
+  ]
+}
+</script>
+<script>
+(()=>{
+'use strict';
+const DATA=JSON.parse(document.getElementById('canvas-data').textContent),$=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const app=$('canvas-app'),viewport=$('viewport'),world=$('world'),base=$('base-layer'),motion=$('motion-layer'),panel=$('panel'),panelBody=$('panel-body');
+const nodes=new Map(DATA.nodes.map(n=>[n.id,n])),groups=new Map(DATA.groups.map(g=>[g.id,g])),edges=new Map(DATA.edges.map(e=>[e.id,e]));
+const colors={cyan:['#0e202d','#173144','#55b7d0'],green:['#0e2428','#163b38','#65cdb0'],violet:['#1b1d31','#29283f','#ad9cde'],amber:['#272218','#3a3020','#d8b66d'],slate:['#142032','#1d2c40','#98adc9']};
+const timing={hover:600,leave:320};
+const state=window.canvasState={ready:false,scale:1,x:12,y:12,active:null,pinned:false,view:'canvas',dependencies:false,userPaused:false};
+let hoverTimer,closeTimer,drag=null;
+app.classList.toggle('embedded',window.self!==window.top);
+function element(tag,attrs={},text){const el=document.createElement(tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;return el}
+function svg(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;return el}
+function path(points){let d='M'+points[0].join(' ');for(let i=1;i<points.length-1;i++){const a=points[i-1],b=points[i],c=points[i+1],u=Math.hypot(b[0]-a[0],b[1]-a[1]),v=Math.hypot(c[0]-b[0],c[1]-b[1]),r=Math.min(13,u/2,v/2);if(!r)continue;const p=[b[0]+(a[0]-b[0])*r/u,b[1]+(a[1]-b[1])*r/u],q=[b[0]+(c[0]-b[0])*r/v,b[1]+(c[1]-b[1])*r/v];d+=' L'+p.join(' ')+' Q'+b.join(' ')+' '+q.join(' ')}return d+' L'+points.at(-1).join(' ')}
+function depth(g){return g.parent?depth(groups.get(g.parent))+1:0}
+function ancestors(id){const g=groups.get(id);return g?[...ancestors(g.parent),g.title]:[]}
+$('page-title').textContent=DATA.meta.title;document.title=DATA.meta.title;$('page-subtitle').textContent=DATA.meta.subtitle||'';
+$('tab-canvas').textContent=DATA.meta.canvasLabel||(DATA.meta.mode==='process'?'链路':'画布');
+if(DATA.meta.version){$('version').textContent=DATA.meta.version;$('version').hidden=false}
+const defs=svg('defs'),marker=svg('marker',{id:'arrow',markerWidth:11,markerHeight:11,refX:8,refY:5.5,orient:'auto',markerUnits:'userSpaceOnUse'});marker.append(svg('path',{d:'M2 2 L8 5.5 L2 9',fill:'none',stroke:'#9db8c6','stroke-width':1.6,'stroke-linecap':'round','stroke-linejoin':'round'}));defs.append(marker);base.append(defs);
+for(const g of [...DATA.groups].sort((a,b)=>depth(a)-depth(b))){const c=colors[g.color||'slate'],el=svg('g',{'data-group':g.id});el.append(svg('rect',{class:'group-frame',x:g.x,y:g.y,width:g.w,height:g.h,rx:14,fill:c[0],stroke:c[2],'stroke-opacity':.65,'stroke-width':depth(g)?1:1.5}),svg('rect',{x:g.x+1,y:g.y+1,width:g.w-2,height:77,rx:13,fill:c[1]}),svg('text',{class:'group-title',x:g.x+20,y:g.y+33,fill:c[2]},g.title),svg('text',{class:'group-summary',x:g.x+20,y:g.y+59},g.summary||''));base.append(el);$('module-select').append(element('option',{value:g.id},'　'.repeat(depth(g))+g.title))}
+function drawEdge(e,connector=false){const el=svg('g',{class:'edge-set '+e.relation+' '+e.importance,[connector?'data-connector':'data-edge']:e.id}),p=svg('path',{class:'edge',d:path(e.renderPoints||e.points)});if(e.arrow!==false)p.setAttribute('marker-end','url(#arrow)');el.append(p);if(e.label)el.append(svg('text',{class:'edge-label',x:e.labelAt[0],y:e.labelAt[1]},e.label));base.append(el)}
+DATA.edges.forEach(e=>drawEdge(e));(DATA.connectors||[]).forEach(e=>drawEdge(e,true));
+function shape(n){const {x,y,w,h}=n;let d;if(n.shape==='decision')d=`M${x+24} ${y} H${x+w-24} L${x+w} ${y+h/2} L${x+w-24} ${y+h} H${x+24} L${x} ${y+h/2} Z`;if(n.shape==='document')d=`M${x} ${y} H${x+w-18} L${x+w} ${y+18} V${y+h} H${x} Z`;if(n.shape==='database')d=`M${x} ${y+14} C${x} ${y-4} ${x+w} ${y-4} ${x+w} ${y+14} V${y+h-14} C${x+w} ${y+h+4} ${x} ${y+h+4} ${x} ${y+h-14} Z`;return d?svg('path',{class:'surface',d}):svg('rect',{class:'surface',x,y,width:w,height:h,rx:9})}
+for(const n of DATA.nodes){const el=svg('g',{id:'node-'+n.id,class:'node '+n.shape+(n.status?.kind==='disabled'?' disabled':''),'data-node':n.id,tabindex:0,role:'button','aria-label':n.title+' '+n.summary,'aria-haspopup':'dialog','aria-controls':'panel','aria-expanded':'false'});el.style.setProperty('--node-color',colors[groups.get(n.group)?.color||'slate'][2]);el.append(shape(n));const centered=n.shape==='decision',x=centered?n.x+n.w/2:n.x+16,align=centered?'middle':'start',y=n.y+(n.shape==='database'?38:30);el.append(svg('text',{class:'node-title',x,y,'text-anchor':align},n.title));if(n.english)el.append(svg('text',{class:'node-english',x,y:y+24,'text-anchor':align},n.english));String(n.summary||'').split('\n').forEach((line,i)=>el.append(svg('text',{class:'node-summary',x,y:y+(n.english?49:25)+i*19,'text-anchor':align},line)));if(n.shape==='document')el.append(svg('path',{class:'fold',d:`M${n.x+n.w-18} ${n.y} V${n.y+18} H${n.x+n.w}`}));if(n.shape==='database')el.append(svg('path',{class:'fold',d:`M${n.x} ${n.y+14} C${n.x} ${n.y+30} ${n.x+n.w} ${n.y+30} ${n.x+n.w} ${n.y+14}`}));if(n.status)el.append(svg('text',{class:'node-status',x:n.x+n.w-8,y:n.y-7,'text-anchor':'end'},n.status.label));base.append(el);
+ el.addEventListener('pointerenter',ev=>{if(ev.pointerType==='touch'||drag||state.pinned)return;cancelHover();clearTimeout(closeTimer);if(state.active!==n.id)hide();hoverTimer=setTimeout(()=>{if(el.matches(':hover')&&!drag&&!state.pinned)show(n.id)},timing.hover)});
+ el.addEventListener('pointerleave',scheduleClose);el.addEventListener('focus',()=>{if(el.matches(':focus-visible')&&!state.pinned)show(n.id)});el.addEventListener('blur',scheduleClose);
+ el.addEventListener('click',ev=>{ev.stopPropagation();show(n.id);setPinned(true)});el.addEventListener('keydown',ev=>{if(['Enter',' '].includes(ev.key)){ev.preventDefault();show(n.id);setPinned(true)}});
+}
+const motionDefs=svg('defs'),mask=svg('mask',{id:'motion-mask',maskUnits:'userSpaceOnUse',x:0,y:0,width:DATA.width,height:DATA.height});mask.append(svg('rect',{width:DATA.width,height:DATA.height,fill:'white'}));DATA.nodes.forEach(n=>mask.append(svg('rect',{x:n.x-2,y:n.y-2,width:n.w+4,height:n.h+4,fill:'black'})));motionDefs.append(mask);motion.append(motionDefs);const particles=svg('g',{mask:'url(#motion-mask)'});motion.append(particles);
+const steps=DATA.motion?.steps||[],plan=[];let clock=.4;
+for(const step of steps){const duration=Math.min(3.2,Math.max(.85,...step.map(id=>{const p=edges.get(id).points;return p.slice(1).reduce((sum,b,i)=>sum+Math.hypot(b[0]-p[i][0],b[1]-p[i][1]),0)/500})));step.forEach(id=>plan.push({id,start:clock,end:clock+duration}));clock+=duration+.18}const cycle=clock+2;
+for(const t of plan){const e=edges.get(t.id),a=t.start/cycle,b=t.end/cycle,fade=(b-a)*.15,p=svg('g',{class:'motion-particle','data-edge':e.id,'data-start':t.start,'data-end':t.end,opacity:0}),glyph=svg('g',{class:'motion-glyph'});glyph.append(svg('path',{d:'M-6 -3 L0 0 L-6 3'}));p.append(glyph,svg('animateMotion',{dur:cycle+'s',repeatCount:'indefinite',path:path(e.points),keyPoints:'0;0;1;1',keyTimes:`0;${a};${b};1`,calcMode:'linear',rotate:'auto'}),svg('animate',{attributeName:'opacity',values:'0;0;1;1;0;0',keyTimes:`0;${a};${a+fade};${b-fade};${b};1`,dur:cycle+'s',repeatCount:'indefinite'}));particles.append(p)}
+$('motion').hidden=!plan.length;$('motion-note').hidden=!plan.length;
+const auxiliary=[...DATA.edges,...(DATA.connectors||[])].some(e=>e.importance==='auxiliary');$('dependencies').hidden=!auxiliary;
+const legendEntries=[];if(DATA.edges.some(e=>e.importance==='primary'))legendEntries.push(['','主要关系']);if(DATA.edges.some(e=>['condition','reference'].includes(e.relation)))legendEntries.push(['dashed','条件 / 引用']);if(DATA.edges.some(e=>e.relation==='composition'))legendEntries.push(['composition','组成']);for(const [cls,label] of legendEntries){const item=element('span');item.append(element('i',{class:cls}),document.createTextNode(label));$('legend').append(item)}
+function list(items){const ul=element('ul');for(const item of items){const li=element('li',{},typeof item==='string'?item:item.text);if(typeof item==='object'&&item.children?.length)li.append(list(item.children));ul.append(li)}return ul}
+function explain(rows){const box=element('div',{class:'explanation'});for(const row of rows){const line=element('div',{class:'rule'});line.append(element('strong',{},row.label+'：'));if(Array.isArray(row.body))line.append(list(row.body));else line.append(document.createTextNode(row.body));box.append(line)}return box}
+function sampleContent(n){const box=element('div',{class:'samples'});n.samples.forEach((sample,si)=>{const article=element('section',{class:'sample'});article.append(element('h4',{},sample.title),element('div',{class:'sample-meta'},sample.type+' · '+sample.source));sample.blocks.forEach((b,bi)=>{const block=element('div',{class:'sample-block'}),head=element('div',{class:'block-head'}),copy=element('button',{class:'copy'},'复制'),pre=element('pre',{class:'sample-raw '+b.format,'data-sample':n.id+':'+si+':'+bi});head.append(element('span',{},b.label+' · '+b.format),copy);pre.textContent=b.raw;copy.onclick=async()=>{if(panel.contains(copy))setPinned(true);try{await navigator.clipboard.writeText(b.raw);copy.textContent='已复制'}catch{const range=document.createRange();range.selectNodeContents(pre);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);copy.textContent='已选中，可复制'}setTimeout(()=>copy.textContent='复制',1600)};block.append(head,pre);article.append(block)});box.append(article)});return box}
+function sourceContent(n){return element('p',{class:'source'},(n.sources||[]).join('\n'))}
+function setPinned(value){state.pinned=value;$('pin').setAttribute('aria-pressed',String(value));$('pin').textContent=value?'已固定':'固定'}
+function cancelHover(){clearTimeout(hoverTimer)}
+function hide(){cancelHover();clearTimeout(closeTimer);panel.hidden=true;state.active=null;setPinned(false);base.querySelectorAll('.node.active').forEach(el=>{el.classList.remove('active');el.setAttribute('aria-expanded','false')})}
+function show(id){cancelHover();clearTimeout(closeTimer);state.active=id;const n=nodes.get(id);$('panel-title').textContent=n.title;panelBody.replaceChildren(element('div',{class:'doc-path'},ancestors(n.group).join(' › ')),element('h3',{class:'section-title'},'说明'),explain(n.explanation),element('h3',{class:'section-title'},'样例与依据'),sampleContent(n),sourceContent(n));if(!n.samples.length)panelBody.append(element('p',{class:'source'},'本节点没有可展示的样例，请查看说明中的证据范围'));panel.hidden=false;base.querySelectorAll('.node').forEach(el=>{const on=el.dataset.node===id;el.classList.toggle('active',on);el.setAttribute('aria-expanded',String(on))});place();const reset=()=>{if(state.active===id){panelBody.scrollTop=0;panelBody.scrollLeft=0;panelBody.querySelectorAll('pre').forEach(el=>{el.scrollTop=0;el.scrollLeft=0})}};reset();requestAnimationFrame(reset)}
+function place(){if(panel.hidden)return;const gap=14,r=$('node-'+state.active).getBoundingClientRect(),w=Math.min(parseFloat(getComputedStyle(app).getPropertyValue('--detail-width')),innerWidth-gap*2);panel.style.width=w+'px';panel.style.maxHeight=Math.max(120,innerHeight-gap*2)+'px';let x=r.right+gap;if(x+w>innerWidth-gap)x=r.left-w-gap;panel.style.left=Math.max(gap,Math.min(x,innerWidth-w-gap))+'px';panel.style.top=Math.max(gap,Math.min(r.top-12,innerHeight-panel.offsetHeight-gap))+'px'}
+function scheduleClose(){cancelHover();clearTimeout(closeTimer);closeTimer=setTimeout(()=>{if(!state.pinned&&!panel.matches(':hover')&&!panel.contains(document.activeElement))hide()},timing.leave)}
+panel.addEventListener('pointerenter',()=>{cancelHover();clearTimeout(closeTimer)});panel.addEventListener('pointerleave',scheduleClose);panel.addEventListener('focusout',scheduleClose);$('pin').onclick=()=>setPinned(!state.pinned);$('close').onclick=hide;
+document.addEventListener('pointerdown',ev=>{if(!panel.hidden&&!panel.contains(ev.target)&&!ev.target.closest('.node'))hide()});
+function render(){const w=viewport.clientWidth,h=viewport.clientHeight;if(!w||!h)return;const view=[-state.x/state.scale,-state.y/state.scale,w/state.scale,h/state.scale].join(' ');for(const layer of [base,motion]){layer.setAttribute('viewBox',view);layer.setAttribute('width',w);layer.setAttribute('height',h)}motion.querySelectorAll('.motion-glyph').forEach(el=>el.setAttribute('transform','scale('+1/state.scale+')'));$('zoom-value').textContent=Math.round(state.scale*100)+'%';place()}
+function zoom(value,cx=viewport.clientWidth/2,cy=viewport.clientHeight/2){cancelHover();if(!state.pinned)hide();const next=Math.max(.08,Math.min(2.5,value));state.x=cx-(cx-state.x)*next/state.scale;state.y=cy-(cy-state.y)*next/state.scale;state.scale=next;render()}
+function fit(id){hide();const box=groups.get(id)||nodes.get(id)||{x:0,y:0,w:DATA.width,h:DATA.height};state.scale=Math.min(id?1.35:1,(viewport.clientWidth-40)/box.w,(viewport.clientHeight-40)/box.h);state.x=(viewport.clientWidth-box.w*state.scale)/2-box.x*state.scale;state.y=(viewport.clientHeight-box.h*state.scale)/2-box.y*state.scale;render()}
+$('readable').onclick=()=>{hide();state.scale=1;state.x=12;state.y=12;render()};$('fit').onclick=()=>fit();$('zoom-in').onclick=()=>zoom(state.scale*1.2);$('zoom-out').onclick=()=>zoom(state.scale/1.2);$('module-select').onchange=ev=>{if(ev.target.value)fit(ev.target.value)};
+viewport.addEventListener('wheel',ev=>{ev.preventDefault();const r=viewport.getBoundingClientRect();zoom(state.scale*Math.exp(-ev.deltaY*.0018),ev.clientX-r.left,ev.clientY-r.top)},{passive:false});
+viewport.addEventListener('pointerdown',ev=>{if(ev.button!==0||ev.target.closest('.node'))return;hide();drag={x:ev.clientX,y:ev.clientY,tx:state.x,ty:state.y};viewport.setPointerCapture(ev.pointerId);viewport.classList.add('dragging')});
+viewport.addEventListener('pointermove',ev=>{if(drag){state.x=drag.tx+ev.clientX-drag.x;state.y=drag.ty+ev.clientY-drag.y;render()}});const stop=()=>{drag=null;viewport.classList.remove('dragging');cancelHover()};viewport.addEventListener('pointerup',stop);viewport.addEventListener('pointercancel',stop);
+$('dependencies').onclick=()=>{state.dependencies=!state.dependencies;world.classList.toggle('show-dependencies',state.dependencies);$('dependencies').setAttribute('aria-pressed',String(state.dependencies))};
+function syncMotion(){const paused=state.userPaused||state.view!=='canvas'||document.hidden;if(paused)motion.pauseAnimations();else motion.unpauseAnimations();$('motion').textContent=state.userPaused?'播放流动':'暂停流动';$('motion').setAttribute('aria-pressed',String(state.userPaused))}
+const preference=matchMedia('(prefers-reduced-motion: reduce)');state.userPaused=preference.matches;preference.addEventListener('change',ev=>{state.userPaused=ev.matches;syncMotion()});$('motion').onclick=()=>{state.userPaused=!state.userPaused;syncMotion()};document.addEventListener('visibilitychange',syncMotion);
+function switchView(view){hide();state.view=view;document.querySelectorAll('[data-view]').forEach(el=>{const on=el.dataset.view===view;el.setAttribute('aria-selected',String(on));el.tabIndex=on?0:-1;$('view-'+el.dataset.view).hidden=!on});syncMotion();if(view==='canvas')requestAnimationFrame(render)}
+const faq=DATA.faq||[];$('tab-faq').hidden=!faq.length&&!DATA.meta.reserveFAQ;
+const tabs=[...document.querySelectorAll('[data-view]')].filter(el=>!el.hidden);tabs.forEach((el,i)=>{el.onclick=()=>switchView(el.dataset.view);el.onkeydown=ev=>{let next;if(ev.key==='ArrowRight')next=(i+1)%tabs.length;else if(ev.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;else if(ev.key==='Home')next=0;else if(ev.key==='End')next=tabs.length-1;else return;ev.preventDefault();tabs[next].focus();switchView(tabs[next].dataset.view)}});
+function documentNode(n,level){const article=element('section',{id:'doc-node-'+n.id,class:'doc-node','data-doc-node':n.id});article.append(element('h'+Math.min(6,level),{},n.title));if(n.english)article.append(element('p',{class:'doc-path'},n.english));article.append(explain(n.explanation));if(n.samples.length){const details=element('details');details.append(element('summary',{},'样例与依据'),sampleContent(n));article.append(details)}article.append(sourceContent(n));return article}
+function documentGroup(g,level){const section=element('section',{id:'doc-group-'+g.id});section.append(element('h'+Math.min(6,level),{},g.title),element('p',{class:'doc-path'},g.summary||''));const link=element('a',{href:'#doc-group-'+g.id},'　'.repeat(Math.min(2,level-2))+g.title);link.onclick=ev=>{ev.preventDefault();section.scrollIntoView({block:'start'})};$('doc-nav').append(link);DATA.nodes.filter(n=>n.group===g.id).forEach(n=>section.append(documentNode(n,level+1)));DATA.groups.filter(child=>child.parent===g.id).forEach(child=>section.append(documentGroup(child,level+1)));return section}
+$('doc-body').append(element('h2',{},DATA.meta.title),element('p',{},DATA.meta.subtitle||''));DATA.nodes.filter(n=>!n.group).forEach(n=>$('doc-body').append(documentNode(n,3)));DATA.groups.filter(g=>!g.parent).forEach(g=>$('doc-body').append(documentGroup(g,3)));
+for(const f of faq){const article=element('section',{class:'faq-item'});article.append(element('h3',{},f.question),explain(f.answer));const links=element('div',{class:'faq-links'});for(const id of f.nodeIds||[]){const b=element('button',{class:'control'},nodes.get(id).title);b.onclick=()=>{switchView('canvas');requestAnimationFrame(()=>{fit(id);show(id);setPinned(true)})};links.append(b)}article.append(links);if(f.source)article.append(element('p',{class:'source'},f.source));$('faq-body').append(article)}if(!faq.length){$('faq-body').classList.add('faq-empty');$('faq-body').append(element('h2',{},'FAQ'),element('p',{},'待补充，收到问题后再整理'))}
+function fullscreenStatus(message=''){const available=Boolean(document.fullscreenEnabled&&app.requestFullscreen);$('fullscreen').textContent=document.fullscreenElement?'退出全屏':'全屏';$('display-status').textContent=message||(!available?'当前浏览器或嵌入容器未开放全屏，仍可缩放与平移':'');$('display-status').hidden=!$('display-status').textContent}
+$('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.fullscreenEnabled&&app.requestFullscreen)await app.requestFullscreen();else fullscreenStatus('当前浏览器或嵌入容器未开放全屏，仍可缩放与平移')}catch{fullscreenStatus('全屏请求未获允许，仍可缩放与平移')}};
+document.addEventListener('fullscreenchange',()=>{cancelHover();fullscreenStatus();render()});document.addEventListener('keydown',ev=>{if(ev.key==='Escape')hide()});new ResizeObserver(()=>{cancelHover();render()}).observe(viewport);
+// Read-only data plus small controls make the regression checker independent of demo names
+window.canvasAPI={data:DATA,show,hide,fit,zoom,render,switchView,motionPlan:plan,motionCycle:cycle};
+state.ready=true;render();syncMotion();fullscreenStatus();
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 #!/bin/bash
-# yikegunshi-skill install script
+# skills (antonailog/skills) install script
 # Creates symlinks for Claude Code and Codex-compatible skill directories.
 # Adapted from forge-cookbook's install.sh (auto-discovery variant).
 

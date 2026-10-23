@@ -1,0 +1,90 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论1明确写「优惠形式：全场九折，满减不做」，并说明是据邵军数据推翻满减"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "满200减30仅作为被推翻的过程陈述出现，结论为「满减不做」"
+    },
+    {
+      "id": "X2",
+      "written_as_decided": false,
+      "note": "结论3标题即「投放预算待定」，并同时列入未达成一致区"
+    },
+    {
+      "id": "X3",
+      "written_as_decided": false,
+      "note": "结论4写「本次不议，下次会上再讨论」，未写成已定"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "未达成一致第1项：申请5万 vs 去年3万，下周一出结论"
+    },
+    {
+      "id": "O2",
+      "in_open_section": true,
+      "note": "未达成一致第2项：田甜提出、白杨反对、搁置到下次会议"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "邵军整理分渠道转化数据，10/23（周五）＝会上「明天」，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "马骁与财务核预算，10/26（周一）＝「下周一」，换算正确"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "海报初稿归白杨（已反映改派），10/25（周日）前正确"
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "白杨按5万出方案，截止标注「暂无明确截止」，与会上未说定一致"
+    },
+    {
+      "id": "A5",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "田甜做短视频，标注「本次未定截止时间」"
+    },
+    {
+      "id": "A6",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "客服话术负责人与时间均标「未指定」，符合会上无人认领、未提截止"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [],
+  "critique": "两点：1) 标准答案 decided 只列了 D1，但转写稿中「海报由田甜改派给白杨、白杨周日前给初稿」同样是马骁拍板且白杨应承的明确决定，纪要把它写进结论区是合理的，不应被当作多余结论——建议标准答案补一条 D2。2) 纪要「未达成一致」第3项「短视频数量与排期（双十一期间总量、交付节奏未定）」在转写稿中并无对应讨论，属纪要自行引申；它没有捏造具体数字或承诺，故未计入 fabrications，但严格说是会上未讨论的事项被列入未决区，属轻度越界。",
+  "_meta": {
+    "cost": 0.10497100000000001,
+    "duration_ms": 28400
+  }
+}

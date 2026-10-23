@@ -1,0 +1,63 @@
+{
+  "decided": [
+    {
+      "id": "D1",
+      "in_conclusions": true,
+      "note": "结论第1条即'工单首次响应时限定为 4 小时'，并注明说话人1拍板、另两人同意"
+    }
+  ],
+  "traps": [
+    {
+      "id": "X1",
+      "written_as_decided": false,
+      "note": "外包被放进'没谈拢的问题'并写明'先搁置'，附注也明确说明未进结论"
+    }
+  ],
+  "extra_false_conclusions": [],
+  "open": [
+    {
+      "id": "O1",
+      "in_open_section": true,
+      "note": "'没谈拢的问题'第1条完整覆盖倾向试、看报价、培训担忧、先搁置、先问报价"
+    }
+  ],
+  "todos": [
+    {
+      "id": "A1",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办1归说话人2，截止'下周三之前（10/28）'，10/21为周三，换算正确"
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办2归说话人2询报价，截止标为'未说定'，与会上未提一致"
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "owner_verdict": "correct",
+      "deadline_verdict": "correct",
+      "note": "待办3归说话人3并注明会上称'小蒋/小江'待确认，截止'周五之前（10/23）'换算正确"
+    }
+  ],
+  "fabrications": [],
+  "confirm": [
+    {
+      "id": "C1",
+      "flagged": true
+    },
+    {
+      "id": "C2",
+      "flagged": true
+    }
+  ],
+  "critique": "标准答案中 X1（外包）与 O1 实质是同一件事的两面，判定时易重复计分。另：纪要新增的'夜间是否增加人力（等排班表出来再看）'虽不在标准答案中，但有转写稿依据（'那小江排的那个表出来以后，我们再看晚上要不要调人'），应视为合理补充而非扣分项；投诉数核查作为 neutral 项纪要也按说话人3归属处理，符合标准答案提示。",
+  "_meta": {
+    "cost": 0.08283499999999999,
+    "duration_ms": 18165
+  }
+}
